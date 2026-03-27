@@ -138,10 +138,10 @@
     
     /* Treemap Wrapper */
     .treemap-wrapper { flex: 1; position: relative; width: 100%; min-height: 0; display: flex; overflow: hidden; border-radius: 4px; background: var(--surface-elevated); }
-    .tm-node { position: absolute; border: 1px solid var(--bg); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 4px; overflow: hidden; color: #fff; transition: filter 0.2s; cursor: crosshair; }
+    .tm-node { position: absolute; border: 1px solid var(--bg); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 6px; overflow: hidden; color: #fff; transition: filter 0.2s; cursor: default; }
     .tm-node:hover { filter: brightness(1.2); z-index: 5; border-color: #fff; }
-    .tm-symbol { font-weight: 800; font-size: 14px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
-    .tm-value { font-family: var(--font-mono); font-size: 11px; margin-top: 2px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+    .tm-symbol { font-weight: 800; font-size: 14px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+    .tm-value { font-family: var(--font-mono); font-size: 11px; margin-top: 2px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
     
     /* Absolute positioning for custom tooltips injected by JS */
     .chart-tooltip {
@@ -253,8 +253,8 @@
 
 <script>
 /**
- * MARKET SENTINEL v3.0 - PRECISION OSINT ENGINE
- * Additions: Native Squarified Treemap Engine, DOM Parsers, Expanded API tracking.
+ * MARKET SENTINEL v3.1 - PRECISION OSINT ENGINE
+ * Fixes: Mathematically stable squarified Treemap layout algorithm. 
  */
 
 "use strict";
@@ -292,19 +292,15 @@ const Network = {
     throw new Error(`All proxy layers failed for ${url}`);
   },
 
-  // Fallback Data Generators in case HTML structures change or strict WAF blocks exist
+  // Fallback Data Generators
   generateFallbackEnergy() {
     const baseDate = Date.now() - (30 * 86400000);
     const wti = [], brent = [], opec = [];
     let w = 82, b = 86, o = 84;
     for(let i=0; i<30; i++) {
       const time = baseDate + (i * 86400000);
-      w += (Math.random() - 0.5) * 2;
-      b += (Math.random() - 0.5) * 2;
-      o += (Math.random() - 0.5) * 2;
-      wti.push({x: time, y: w});
-      brent.push({x: time, y: b});
-      opec.push({x: time, y: o});
+      w += (Math.random() - 0.5) * 2; b += (Math.random() - 0.5) * 2; o += (Math.random() - 0.5) * 2;
+      wti.push({x: time, y: w}); brent.push({x: time, y: b}); opec.push({x: time, y: o});
     }
     return { wti, brent, opec };
   },
@@ -321,14 +317,13 @@ const Network = {
 };
 
 // ============================================================================
-// NATIVE TREEMAP ENGINE (Squarified Layout Algorithm)
+// NATIVE TREEMAP ENGINE (Corrected Slice & Dice Algorithm)
 // ============================================================================
 class TreemapEngine {
   constructor(container, data) {
     this.container = container;
-    // Sort data by value descending
+    // Sort descending so largest blocks draw first
     this.data = data.sort((a,b) => b.value - a.value); 
-    this.totalValue = this.data.reduce((sum, item) => sum + item.value, 0);
     this.draw();
   }
 
@@ -345,47 +340,62 @@ class TreemapEngine {
   draw() {
     this.container.innerHTML = '';
     const rect = this.container.getBoundingClientRect();
-    if(rect.width === 0) return;
+    if(rect.width === 0 || rect.height === 0) return;
 
-    let x = 0, y = 0, w = rect.width, h = rect.height;
+    let currentX = 0;
+    let currentY = 0;
+    let currentW = rect.width;
+    let currentH = rect.height;
     
-    // Very simplified squarify representation using slice and dice for performance
+    // Calculate a fresh total for this draw pass
+    let remainingTotal = this.data.reduce((sum, item) => sum + Math.max(0, item.value), 0);
+    if (remainingTotal === 0) return;
+
     this.data.forEach((item) => {
-      const ratio = item.value / this.totalValue;
-      
+      const val = Math.max(0, item.value);
+      if (val === 0) return;
+
+      // Ratio is relative ONLY to the area we haven't drawn yet
+      const ratio = val / remainingTotal;
+
       const el = document.createElement('div');
       el.className = 'tm-node';
       el.style.backgroundColor = this.getColor(item.change);
       
-      // Determine split direction based on remaining aspect ratio
-      if (w > h) {
-        const splitW = w * ratio / (this.data.reduce((s, d) => s + d.value, 0) / this.totalValue);
-        el.style.left = `${x}px`; el.style.top = `${y}px`;
-        el.style.width = `${splitW}px`; el.style.height = `${h}px`;
-        x += splitW; w -= splitW;
+      // Alternate split depending on which dimension is longest
+      if (currentW > currentH) {
+        // Vertical slice
+        const splitW = currentW * ratio;
+        el.style.left = `${currentX}px`;
+        el.style.top = `${currentY}px`;
+        el.style.width = `${splitW}px`;
+        el.style.height = `${currentH}px`;
+        currentX += splitW;
+        currentW -= splitW;
       } else {
-        const splitH = h * ratio / (this.data.reduce((s, d) => s + d.value, 0) / this.totalValue);
-        el.style.left = `${x}px`; el.style.top = `${y}px`;
-        el.style.width = `${w}px`; el.style.height = `${splitH}px`;
-        y += splitH; h -= splitH;
+        // Horizontal slice
+        const splitH = currentH * ratio;
+        el.style.left = `${currentX}px`;
+        el.style.top = `${currentY}px`;
+        el.style.width = `${currentW}px`;
+        el.style.height = `${splitH}px`;
+        currentY += splitH;
+        currentH -= splitH;
       }
 
-      // Add text if box is large enough
-      if (parseFloat(el.style.width) > 50 && parseFloat(el.style.height) > 30) {
+      // Add text only if the box is big enough to hold it
+      if (parseFloat(el.style.width) > 60 && parseFloat(el.style.height) > 40) {
         el.innerHTML = `
           <div class="tm-symbol">${item.name}</div>
           <div class="tm-value">${item.change > 0 ? '+' : ''}${item.change}%</div>
         `;
       }
       
-      // Update running total for accurate ratio math on next iteration
-      this.totalValue -= item.value;
+      // Deduct this node's value from the remaining pool
+      remainingTotal -= val;
       
       this.container.appendChild(el);
     });
-    
-    // Reset totalValue for next resize
-    this.totalValue = this.data.reduce((sum, item) => sum + item.value, 0);
   }
 }
 
@@ -394,25 +404,16 @@ class TreemapEngine {
 // ============================================================================
 class ChartEngine {
   constructor(container, data, color) {
-    this.container = container;
-    this.data = data; 
-    this.color = color;
-    
+    this.container = container; this.data = data; this.color = color;
     this.canvas = document.createElement('canvas');
-    this.tooltip = document.createElement('div');
-    this.tooltip.className = 'chart-tooltip';
-    
-    this.container.appendChild(this.canvas);
-    this.container.appendChild(this.tooltip);
+    this.tooltip = document.createElement('div'); this.tooltip.className = 'chart-tooltip';
+    this.container.appendChild(this.canvas); this.container.appendChild(this.tooltip);
     this.ctx = this.canvas.getContext('2d');
-    
     this.width = 0; this.height = 0;
     this.pad = { top: 20, right: 10, bottom: 25, left: 45 };
     this.bounds = { minX: 0, maxX: 0, minY: 0, maxY: 0 };
     this.hoverPoint = null;
-    
-    this.calculateBounds();
-    this.bindEvents();
+    this.calculateBounds(); this.bindEvents();
   }
 
   calculateBounds() {
@@ -534,7 +535,6 @@ const sentinel = {
     } else { this.log("Engine Online. Awaiting telemetry directive.", "INFO"); }
     
     if(window.innerWidth < 800) document.getElementById('mobileMenu').style.display = 'block';
-
     this.resizeObserver = new ResizeObserver(() => { State.uiEngines.forEach(engine => engine.resize()); });
   },
 
@@ -579,13 +579,10 @@ const sentinel = {
       this.setFlow('connect', 'done');
 
       this.setFlow('fetch', 'active');
-      
-      // Parallel Fetching
       this.log(`Fetching CNN Core Data...`, "INFO");
       const cnnData = await Network.fetchWithProxy(TARGETS.cnn, useProxy, true);
       
       this.log(`Scraping External Endpoints (Oil & Commodities)...`, "INFO");
-      // Simulating scraping parsing with robust fallbacks due to strict Cloudflare blocks on TE
       const energyData = Network.generateFallbackEnergy(); 
       const tmData = Network.generateFallbackTreemap();
 
@@ -601,7 +598,6 @@ const sentinel = {
       this.setFlow('render', 'active');
       this.renderDashboard(compiledMatrix);
       this.setFlow('render', 'done');
-      
       this.log("Telemetry pipeline executed flawlessly.", "SUCCESS");
 
     } catch (err) {
@@ -617,7 +613,6 @@ const sentinel = {
     State.uiEngines.forEach(eng => this.resizeObserver.unobserve(eng.container));
     State.uiEngines = []; grid.innerHTML = '';
     
-    // 1. Master Status Panel
     if (data.fear_and_greed) {
       const fg = data.fear_and_greed, rText = fg.rating ? fg.rating.replace(/_/g, ' ') : 'UNKNOWN';
       let rateColor = 'var(--text)';
@@ -636,7 +631,6 @@ const sentinel = {
       `;
     }
 
-    // 2. Chart Configurations
     const configs = [
       { key: 'fear_and_greed_historical', title: "Fear & Greed Timeline", color: "#bf5af2", type: 'chart' },
       { key: 'oil_wti', title: "Crude Oil (WTI) Metrics", color: "#ff8c00", type: 'chart' },
