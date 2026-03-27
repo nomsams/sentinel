@@ -136,12 +136,12 @@
     .canvas-wrapper { flex: 1; position: relative; width: 100%; min-height: 0; cursor: crosshair; }
     canvas { width: 100%; height: 100%; display: block; position: absolute; top: 0; left: 0; }
     
-    /* Treemap Wrapper */
-    .treemap-wrapper { flex: 1; position: relative; width: 100%; min-height: 0; display: flex; overflow: hidden; border-radius: 4px; background: var(--surface-elevated); }
-    .tm-node { position: absolute; border: 1px solid var(--bg); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 4px; overflow: hidden; color: #fff; transition: filter 0.2s; cursor: default; }
+    /* Treemap Wrapper - Finviz Style Fixes */
+    .treemap-wrapper { flex: 1; position: relative; width: 100%; min-height: 0; display: flex; overflow: hidden; border-radius: 4px; background: #000; }
+    .tm-node { position: absolute; border: 1px solid #000; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px; overflow: hidden; color: #fff; transition: filter 0.2s; cursor: default; }
     .tm-node:hover { filter: brightness(1.2); z-index: 5; border-color: #fff; }
-    .tm-symbol { font-weight: 800; font-size: 14px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
-    .tm-value { font-family: var(--font-mono); font-size: 11px; margin-top: 2px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+    .tm-symbol { font-weight: 700; font-size: 13px; text-shadow: 0 1px 2px rgba(0,0,0,0.8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+    .tm-value { font-family: var(--font-mono); font-size: 11px; margin-top: 1px; text-shadow: 0 1px 2px rgba(0,0,0,0.8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
     
     /* Absolute positioning for custom tooltips injected by JS */
     .chart-tooltip {
@@ -254,8 +254,8 @@
 
 <script>
 /**
- * MARKET SENTINEL v4.0 - PRECISION OSINT ENGINE
- * Upgrades: Finviz S&P500 Map Integration, Viewport-Aware Squarified Text Scaling.
+ * MARKET SENTINEL v4.1 - PRECISION OSINT ENGINE
+ * Upgrades: Finviz S&P500 Map Integration, True Squarified Aspect-Ratio Algorithm.
  */
 
 "use strict";
@@ -270,7 +270,7 @@ const TARGETS = {
   treemap: "https://tradingeconomics.com/commodities/treemap",
   finviz: "https://finviz.com/map.ashx"
 };
-const CACHE_KEY = "ms_telemetry_cache_v4";
+const CACHE_KEY = "ms_telemetry_cache_v4_1";
 
 // ============================================================================
 // NETWORK LAYER & PARSERS
@@ -294,7 +294,7 @@ const Network = {
     throw new Error(`All proxy layers failed for ${url}`);
   },
 
-  // Fallback Data Generators for heavily protected external endpoints
+  // Fallback Data Generators
   generateFallbackEnergy() {
     const baseDate = Date.now() - (30 * 86400000);
     const wti = [], brent = [], opec = [];
@@ -339,23 +339,28 @@ const Network = {
 };
 
 // ============================================================================
-// NATIVE TREEMAP ENGINE (Superior Viewport-Aware Squarified Layout)
+// NATIVE TREEMAP ENGINE (True Squarified Layout Algorithm)
+// Ensures perfectly proportioned boxes for clear text rendering
 // ============================================================================
 class TreemapEngine {
   constructor(container, data) {
     this.container = container;
-    this.data = data.sort((a,b) => b.value - a.value); 
+    // Filter out 0 or negative values, sort descending for Squarify
+    this.data = data.filter(d => d.value > 0).sort((a,b) => b.value - a.value); 
     this.draw();
   }
 
   resize() { this.draw(); }
 
+  // Finviz accurate heatmap color thresholds
   getColor(change) {
-    if (change > 2.5) return '#28cd41'; // Strong Green
-    if (change > 0) return '#1b872b'; // Dark Green
-    if (change < -2.5) return '#ff3b30'; // Strong Red
-    if (change < 0) return '#a3261f'; // Dark Red
-    return '#444444'; // Neutral
+    if (change >= 3) return '#15b01e'; // Bright Green
+    if (change >= 1) return '#1b872b'; // Green
+    if (change > 0) return '#165a20'; // Dark Green
+    if (change <= -3) return '#f23645'; // Bright Red
+    if (change <= -1) return '#c71a22'; // Red
+    if (change < 0) return '#8b151a'; // Dark Red
+    return '#414554'; // Neutral greyish
   }
 
   draw() {
@@ -363,52 +368,102 @@ class TreemapEngine {
     const rect = this.container.getBoundingClientRect();
     if(rect.width === 0 || rect.height === 0) return;
 
-    let currentX = 0, currentY = 0;
-    let currentW = rect.width, currentH = rect.height;
+    const totalValue = this.data.reduce((sum, item) => sum + item.value, 0);
+    if (totalValue === 0) return;
+
+    const totalArea = rect.width * rect.height;
     
-    let remainingTotal = this.data.reduce((sum, item) => sum + Math.max(0, item.value), 0);
-    if (remainingTotal === 0) return;
+    // Scale values directly into target area pixels to avoid complex ratio math during layout
+    const nodes = this.data.map(d => ({ ...d, _area: (d.value / totalValue) * totalArea }));
 
-    this.data.forEach((item) => {
-      const val = Math.max(0, item.value);
-      if (val === 0) return;
+    let bounds = { x: 0, y: 0, w: rect.width, h: rect.height };
+    let currentRow = [];
+    let rectsToRender = [];
 
-      const ratio = val / remainingTotal;
+    // Helper: Calculates the worst aspect ratio in a row given the current constrained edge width
+    const getWorstRatio = (row, w) => {
+      if (row.length === 0) return Infinity;
+      let sum = 0, maxArea = 0, minArea = Infinity;
+      for (let item of row) {
+        sum += item._area;
+        if (item._area > maxArea) maxArea = item._area;
+        if (item._area < minArea) minArea = item._area;
+      }
+      if (sum === 0 || minArea === 0) return Infinity;
+      let w2 = w * w, sum2 = sum * sum;
+      return Math.max((w2 * maxArea) / sum2, sum2 / (w2 * minArea));
+    };
+
+    // Helper: Commits the row to geometry and returns the remaining unallocated bounds
+    const layoutRow = (row, b) => {
+      let rowArea = row.reduce((s, n) => s + n._area, 0);
+      let isVertical = b.w >= b.h; 
+      let shortestSide = isVertical ? b.h : b.w;
+      let rowThickness = rowArea / shortestSide;
+
+      let cx = b.x, cy = b.y;
+      for (let node of row) {
+        let nodeLength = node._area / rowThickness;
+        if (isVertical) {
+          rectsToRender.push({ node, x: cx, y: cy, w: rowThickness, h: nodeLength });
+          cy += nodeLength;
+        } else {
+          rectsToRender.push({ node, x: cx, y: cy, w: nodeLength, h: rowThickness });
+          cx += nodeLength;
+        }
+      }
+      return isVertical 
+        ? { x: b.x + rowThickness, y: b.y, w: b.w - rowThickness, h: b.h }
+        : { x: b.x, y: b.y + rowThickness, w: b.w, h: b.h - rowThickness };
+    };
+
+    // Squarify Loop
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      const shortestSide = Math.min(bounds.w, bounds.h);
+      
+      if (currentRow.length === 0) {
+        currentRow.push(node);
+        continue;
+      }
+
+      const currentWorst = getWorstRatio(currentRow, shortestSide);
+      const nextWorst = getWorstRatio([...currentRow, node], shortestSide);
+
+      // If adding this node improves or maintains the squares ratio, add it
+      if (nextWorst <= currentWorst) {
+        currentRow.push(node);
+      } else {
+        // Otherwise commit the row and start a new one
+        bounds = layoutRow(currentRow, bounds);
+        currentRow = [node];
+      }
+    }
+    // Layout any remaining nodes in the final pass
+    if (currentRow.length > 0) layoutRow(currentRow, bounds);
+
+    // Dom Insertion 
+    rectsToRender.forEach(({ node, x, y, w, h }) => {
       const el = document.createElement('div');
       el.className = 'tm-node';
-      el.style.backgroundColor = this.getColor(item.change);
+      el.style.backgroundColor = this.getColor(node.change);
       
-      let boxW, boxH;
+      el.style.left = `${x}px`;
+      el.style.top = `${y}px`;
+      el.style.width = `${w}px`;
+      el.style.height = `${h}px`;
 
-      if (currentW > currentH) {
-        boxW = currentW * ratio;
-        boxH = currentH;
-        el.style.left = `${currentX}px`; el.style.top = `${currentY}px`;
-        el.style.width = `${boxW}px`; el.style.height = `${boxH}px`;
-        currentX += boxW; currentW -= boxW;
-      } else {
-        boxW = currentW;
-        boxH = currentH * ratio;
-        el.style.left = `${currentX}px`; el.style.top = `${currentY}px`;
-        el.style.width = `${boxW}px`; el.style.height = `${boxH}px`;
-        currentY += boxH; currentH -= boxH;
-      }
-
-      // Superior Viewport-Aware Text Scaling
-      const minDim = Math.min(boxW, boxH);
+      const minDim = Math.min(w, h);
       
-      if (minDim > 45) {
-        // Full Details
-        el.innerHTML = `<div class="tm-symbol">${item.name}</div><div class="tm-value">${item.change > 0 ? '+' : ''}${item.change}%</div>`;
-      } else if (minDim > 25 && boxW > 40) {
-        // Just the Ticker/Name
-        el.innerHTML = `<div class="tm-symbol" style="font-size: 11px;">${item.name}</div>`;
-      } else if (minDim > 15 && boxW > 30) {
-        // Micro Ticker
-        el.innerHTML = `<div class="tm-symbol" style="font-size: 9px; font-weight: normal;">${item.name}</div>`;
+      // Viewport-Aware text fitting (now highly reliable due to perfect squaring)
+      if (minDim > 35 && w > 40) {
+        el.innerHTML = `<div class="tm-symbol">${node.name}</div><div class="tm-value">${node.change > 0 ? '+' : ''}${node.change}%</div>`;
+      } else if (minDim > 20 && w > 30) {
+        el.innerHTML = `<div class="tm-symbol" style="font-size: 10px;">${node.name}</div>`;
+      } else if (minDim > 12 && w > 20) {
+        el.innerHTML = `<div class="tm-symbol" style="font-size: 8px;">${node.name}</div>`;
       }
       
-      remainingTotal -= val;
       this.container.appendChild(el);
     });
   }
