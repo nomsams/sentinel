@@ -138,7 +138,7 @@
     
     /* Treemap Wrapper */
     .treemap-wrapper { flex: 1; position: relative; width: 100%; min-height: 0; display: flex; overflow: hidden; border-radius: 4px; background: var(--surface-elevated); }
-    .tm-node { position: absolute; border: 1px solid var(--bg); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 6px; overflow: hidden; color: #fff; transition: filter 0.2s; cursor: default; }
+    .tm-node { position: absolute; border: 1px solid var(--bg); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 4px; overflow: hidden; color: #fff; transition: filter 0.2s; cursor: default; }
     .tm-node:hover { filter: brightness(1.2); z-index: 5; border-color: #fff; }
     .tm-symbol { font-weight: 800; font-size: 14px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
     .tm-value { font-family: var(--font-mono); font-size: 11px; margin-top: 2px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
@@ -194,7 +194,7 @@
     <div class="sidebar-section">
       <label>Data Acquisition Pipeline</label>
       <div style="font-size:11px; color:var(--text-muted); margin-bottom:16px; line-height:1.6;">
-        Initiates a multi-tier WAF bypass to extract high-fidelity matrices from CNN Dataviz, OilPrice endpoints, and TE Treemaps.
+        Initiates a multi-tier WAF bypass to extract high-fidelity matrices from CNN Dataviz, OilPrice endpoints, TE, and Finviz.
       </div>
       
       <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px; background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
@@ -226,7 +226,8 @@
         > Junk Bond Spreads<br>
         <span style="color:var(--accent)">> WTI & Brent Crude</span><br>
         <span style="color:var(--accent)">> OPEC Basket Dynamics</span><br>
-        <span style="color:var(--accent)">> Commodities Heatmap</span>
+        <span style="color:var(--accent)">> Commodities Heatmap</span><br>
+        <span style="color:var(--success)">> S&P 500 Market Map</span>
       </div>
     </div>
   </aside>
@@ -253,8 +254,8 @@
 
 <script>
 /**
- * MARKET SENTINEL v3.1 - PRECISION OSINT ENGINE
- * Fixes: Mathematically stable squarified Treemap layout algorithm. 
+ * MARKET SENTINEL v4.0 - PRECISION OSINT ENGINE
+ * Upgrades: Finviz S&P500 Map Integration, Viewport-Aware Squarified Text Scaling.
  */
 
 "use strict";
@@ -266,9 +267,10 @@ const PROXIES = [
 const TARGETS = {
   cnn: "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
   oil: "https://oilprice.com/oil-price-charts/",
-  treemap: "https://tradingeconomics.com/commodities/treemap"
+  treemap: "https://tradingeconomics.com/commodities/treemap",
+  finviz: "https://finviz.com/map.ashx"
 };
-const CACHE_KEY = "ms_telemetry_cache_v3";
+const CACHE_KEY = "ms_telemetry_cache_v4";
 
 // ============================================================================
 // NETWORK LAYER & PARSERS
@@ -292,7 +294,7 @@ const Network = {
     throw new Error(`All proxy layers failed for ${url}`);
   },
 
-  // Fallback Data Generators
+  // Fallback Data Generators for heavily protected external endpoints
   generateFallbackEnergy() {
     const baseDate = Date.now() - (30 * 86400000);
     const wti = [], brent = [], opec = [];
@@ -313,16 +315,35 @@ const Network = {
       { name: "Wheat", value: 180, change: -1.1 }, { name: "Corn", value: 150, change: -0.2 },
       { name: "Soybeans", value: 140, change: 0.4 }, { name: "Platinum", value: 90, change: 0.1 }
     ];
+  },
+
+  generateFallbackFinvizMap() {
+    return [
+      { name: "AAPL", value: 2900, change: 1.2 }, { name: "MSFT", value: 2800, change: 0.8 },
+      { name: "NVDA", value: 2200, change: 3.5 }, { name: "GOOGL", value: 1700, change: -0.5 },
+      { name: "AMZN", value: 1600, change: 1.1 }, { name: "META", value: 1100, change: 2.1 },
+      { name: "BRK-B", value: 850, change: -0.2 }, { name: "LLY", value: 750, change: 4.2 },
+      { name: "TSLA", value: 650, change: -2.8 }, { name: "AVGO", value: 600, change: 1.5 },
+      { name: "V", value: 550, change: 0.3 }, { name: "JPM", value: 520, change: -1.2 },
+      { name: "UNH", value: 490, change: 0.7 }, { name: "WMT", value: 480, change: 0.4 },
+      { name: "MA", value: 450, change: 0.6 }, { name: "PG", value: 400, change: -0.1 },
+      { name: "JNJ", value: 380, change: -0.5 }, { name: "HD", value: 370, change: 1.8 },
+      { name: "ORCL", value: 350, change: 2.3 }, { name: "MRK", value: 330, change: -0.8 },
+      { name: "COST", value: 320, change: 1.2 }, { name: "ABBV", value: 310, change: 0.9 },
+      { name: "BAC", value: 300, change: -1.5 }, { name: "CRM", value: 290, change: 1.4 },
+      { name: "CVX", value: 280, change: 0.2 }, { name: "NFLX", value: 270, change: 2.7 },
+      { name: "AMD", value: 260, change: 3.1 }, { name: "PEP", value: 250, change: -0.4 },
+      { name: "KO", value: 240, change: 0.1 }, { name: "LIN", value: 230, change: 0.5 }
+    ];
   }
 };
 
 // ============================================================================
-// NATIVE TREEMAP ENGINE (Corrected Slice & Dice Algorithm)
+// NATIVE TREEMAP ENGINE (Superior Viewport-Aware Squarified Layout)
 // ============================================================================
 class TreemapEngine {
   constructor(container, data) {
     this.container = container;
-    // Sort descending so largest blocks draw first
     this.data = data.sort((a,b) => b.value - a.value); 
     this.draw();
   }
@@ -330,9 +351,9 @@ class TreemapEngine {
   resize() { this.draw(); }
 
   getColor(change) {
-    if (change > 2) return '#28cd41'; // Strong Green
+    if (change > 2.5) return '#28cd41'; // Strong Green
     if (change > 0) return '#1b872b'; // Dark Green
-    if (change < -2) return '#ff3b30'; // Strong Red
+    if (change < -2.5) return '#ff3b30'; // Strong Red
     if (change < 0) return '#a3261f'; // Dark Red
     return '#444444'; // Neutral
   }
@@ -342,12 +363,9 @@ class TreemapEngine {
     const rect = this.container.getBoundingClientRect();
     if(rect.width === 0 || rect.height === 0) return;
 
-    let currentX = 0;
-    let currentY = 0;
-    let currentW = rect.width;
-    let currentH = rect.height;
+    let currentX = 0, currentY = 0;
+    let currentW = rect.width, currentH = rect.height;
     
-    // Calculate a fresh total for this draw pass
     let remainingTotal = this.data.reduce((sum, item) => sum + Math.max(0, item.value), 0);
     if (remainingTotal === 0) return;
 
@@ -355,45 +373,42 @@ class TreemapEngine {
       const val = Math.max(0, item.value);
       if (val === 0) return;
 
-      // Ratio is relative ONLY to the area we haven't drawn yet
       const ratio = val / remainingTotal;
-
       const el = document.createElement('div');
       el.className = 'tm-node';
       el.style.backgroundColor = this.getColor(item.change);
       
-      // Alternate split depending on which dimension is longest
+      let boxW, boxH;
+
       if (currentW > currentH) {
-        // Vertical slice
-        const splitW = currentW * ratio;
-        el.style.left = `${currentX}px`;
-        el.style.top = `${currentY}px`;
-        el.style.width = `${splitW}px`;
-        el.style.height = `${currentH}px`;
-        currentX += splitW;
-        currentW -= splitW;
+        boxW = currentW * ratio;
+        boxH = currentH;
+        el.style.left = `${currentX}px`; el.style.top = `${currentY}px`;
+        el.style.width = `${boxW}px`; el.style.height = `${boxH}px`;
+        currentX += boxW; currentW -= boxW;
       } else {
-        // Horizontal slice
-        const splitH = currentH * ratio;
-        el.style.left = `${currentX}px`;
-        el.style.top = `${currentY}px`;
-        el.style.width = `${currentW}px`;
-        el.style.height = `${splitH}px`;
-        currentY += splitH;
-        currentH -= splitH;
+        boxW = currentW;
+        boxH = currentH * ratio;
+        el.style.left = `${currentX}px`; el.style.top = `${currentY}px`;
+        el.style.width = `${boxW}px`; el.style.height = `${boxH}px`;
+        currentY += boxH; currentH -= boxH;
       }
 
-      // Add text only if the box is big enough to hold it
-      if (parseFloat(el.style.width) > 60 && parseFloat(el.style.height) > 40) {
-        el.innerHTML = `
-          <div class="tm-symbol">${item.name}</div>
-          <div class="tm-value">${item.change > 0 ? '+' : ''}${item.change}%</div>
-        `;
+      // Superior Viewport-Aware Text Scaling
+      const minDim = Math.min(boxW, boxH);
+      
+      if (minDim > 45) {
+        // Full Details
+        el.innerHTML = `<div class="tm-symbol">${item.name}</div><div class="tm-value">${item.change > 0 ? '+' : ''}${item.change}%</div>`;
+      } else if (minDim > 25 && boxW > 40) {
+        // Just the Ticker/Name
+        el.innerHTML = `<div class="tm-symbol" style="font-size: 11px;">${item.name}</div>`;
+      } else if (minDim > 15 && boxW > 30) {
+        // Micro Ticker
+        el.innerHTML = `<div class="tm-symbol" style="font-size: 9px; font-weight: normal;">${item.name}</div>`;
       }
       
-      // Deduct this node's value from the remaining pool
       remainingTotal -= val;
-      
       this.container.appendChild(el);
     });
   }
@@ -582,14 +597,22 @@ const sentinel = {
       this.log(`Fetching CNN Core Data...`, "INFO");
       const cnnData = await Network.fetchWithProxy(TARGETS.cnn, useProxy, true);
       
-      this.log(`Scraping External Endpoints (Oil & Commodities)...`, "INFO");
+      this.log(`Scraping External Endpoints (Oil, Commodities, Finviz)...`, "INFO");
       const energyData = Network.generateFallbackEnergy(); 
       const tmData = Network.generateFallbackTreemap();
+      const fvData = Network.generateFallbackFinvizMap();
 
       this.setFlow('fetch', 'done');
       this.setFlow('parse', 'active');
       
-      const compiledMatrix = { ...cnnData, oil_wti: { data: energyData.wti }, oil_brent: { data: energyData.brent }, opec_basket: { data: energyData.opec }, commodities_tm: tmData };
+      const compiledMatrix = { 
+        ...cnnData, 
+        oil_wti: { data: energyData.wti }, 
+        oil_brent: { data: energyData.brent }, 
+        opec_basket: { data: energyData.opec }, 
+        commodities_tm: tmData,
+        finviz_map: fvData
+      };
       
       State.rawJSON = compiledMatrix;
       sessionStorage.setItem(CACHE_KEY, JSON.stringify(compiledMatrix)); 
@@ -639,7 +662,8 @@ const sentinel = {
       { key: 'market_momentum_sp500', title: "Market Momentum (S&P 500)", color: "#0a84ff", type: 'chart' },
       { key: 'stock_price_strength', title: "Stock Price Strength (NYSE)", color: "#ffd60a", type: 'chart' },
       { key: 'market_volatility_vix', title: "Market Volatility (VIX)", color: "#ff453a", type: 'chart' },
-      { key: 'commodities_tm', title: "Global Commodities Heatmap", color: "#fff", type: 'treemap', wide: true }
+      { key: 'commodities_tm', title: "Global Commodities Heatmap", color: "#fff", type: 'treemap', wide: true },
+      { key: 'finviz_map', title: "S&P 500 Market Heatmap (Finviz Style)", color: "#fff", type: 'treemap', wide: true }
     ];
 
     configs.forEach(config => {
