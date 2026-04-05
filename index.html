@@ -294,6 +294,56 @@ const Network = {
     throw new Error(`All proxy layers failed for ${url}`);
   },
 
+  // 1. Fetch via authenticated Lovable proxy
+  async fetchFinvizMap() {
+    const proxyUrl = "https://onbkfqayveownervyktu.supabase.co/functions/v1/cors-proxy";
+    const proxyResponse = await fetch(proxyUrl, {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json', 
+        'x-proxy-key': 'chikibriki' // Lovable Proxy Auth
+      },
+      body: JSON.stringify({
+        url: "https://finviz.com/map.ashx",
+        method: 'GET',
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "Accept": "text/html"
+        }
+      })
+    });
+
+    if (!proxyResponse.ok) throw new Error("Proxy failed to fetch Finviz map.");
+    
+    // The Lovable proxy wraps responses in a 'body' attribute based on previous app usage
+    const proxyData = await proxyResponse.json();
+    const htmlText = proxyData.body || proxyData; 
+
+    // 2. Extract JSON payload
+    const match = htmlText.match(/var\s+mapData\s*=\s*(\{.*?\});/s);
+    if (!match) throw new Error("Finviz mapData not found. Target structure changed or WAF blocked.");
+    const rawFinvizJSON = JSON.parse(match[1]);
+
+    // 3. Flatten and map data
+    function flattenFinvizMap(node) {
+      let results = [];
+      if (node.children) {
+        node.children.forEach(child => {
+          results = results.concat(flattenFinvizMap(child));
+        });
+      } else {
+        results.push({
+          name: node.name,
+          value: node.value,
+          change: node.color 
+        });
+      }
+      return results;
+    }
+
+    return flattenFinvizMap(rawFinvizJSON);
+  },
+
   // Fallback Data Generators
   generateFallbackEnergy() {
     const baseDate = Date.now() - (30 * 86400000);
@@ -655,7 +705,17 @@ const sentinel = {
       this.log(`Scraping External Endpoints (Oil, Commodities, Finviz)...`, "INFO");
       const energyData = Network.generateFallbackEnergy(); 
       const tmData = Network.generateFallbackTreemap();
-      const fvData = Network.generateFallbackFinvizMap();
+      
+      // Fetch Real Finviz Data via Lovable Proxy
+      let fvData;
+      try {
+        this.log(`Fetching Finviz S&P 500 Map via Lovable Proxy...`, "INFO");
+        fvData = await Network.fetchFinvizMap();
+        this.log(`Finviz S&P 500 Map extracted successfully.`, "SUCCESS");
+      } catch (err) {
+        this.log(`Finviz extraction failed (${err.message}), using fallback.`, "WARN");
+        fvData = Network.generateFallbackFinvizMap();
+      }
 
       this.setFlow('fetch', 'done');
       this.setFlow('parse', 'active');
