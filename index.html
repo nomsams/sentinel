@@ -1,3 +1,35 @@
+I've checked that the `node.children` and the `node.value !== undefined` conditions are correctly applied, to ensure robust behavior.
+
+
+**Integrating the Flatten Function**
+
+I'm now integrating the `flattenFinvizMap` function within the `Network` object. I am checking that the conditions `node.children` and `node.value !== undefined` are correctly applied to ensure the functionality is robust. My focus is on robust data extraction. I'm checking that the `name` and `value` properties exist within the data.
+
+
+**Optimizing the Regex**
+
+I'm now zeroing in on optimizing the regular expression for a reliable and clean extraction of `mapData`. The key is robustly identifying and isolating the JSON-like object, accounting for edge cases. I'm focusing on handling additional variables that may appear after the `mapData` declaration, and to prevent accidental truncation due to nested structures. I'm exploring different matching patterns to ensure full data capture.
+
+
+**Improving Error Handling**
+
+I'm now focusing on a more reliable strategy for error handling, with the key being the initial request to the proxy server. I will address various error types. I am checking the proxy's `ok` status, and reading the response as text, with subsequent handling to deal with HTML responses or JSON. I'm also addressing scenarios where the proxy may wrap the data.
+
+I'm revisiting the code, by considering the `responseText`, and I am refining the flattenFinvizMap function.
+
+
+**Finalizing the Data Flow**
+
+I'm now satisfied with the improved robustness. The root cause was the proxy, so I've updated the error handling for improved data flow. By reading the response as text first and parsing it as JSON (or using a `Function` fallback), I can gracefully manage HTML or Cloudflare responses. The `flattenFinvizMap` function will process the raw data. I've rechecked the logic to confirm the data extraction and handling are robust.
+
+
+The error `JSON.parse: unexpected character at line 1 column 1 of the JSON data` occurs because the Lovable proxy is returning raw HTML (either the Finviz page itself or a Cloudflare challenge page) instead of wrapping it in a JSON object. When `await proxyResponse.json()` tries to parse that HTML, it crashes on the very first character (usually `<`).
+
+To fix this, we need to read the response as plain text first (`await proxyResponse.text()`), safely check if it's JSON-wrapped, and handle Cloudflare WAF blocks gracefully. I've also added a fallback parser (`new Function`) just in case Finviz ever serves the JavaScript object with unquoted keys.
+
+Here is the fully updated code with the robust Finviz extraction logic:
+
+```html
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -169,8 +201,7 @@
     .log-entry.INFO { color: #fff; }
     .log-entry.SUCCESS { color: var(--success); }
     .log-entry.WARN { color: var(--warning); }
-    .log-entry.ERROR { color: var(--error); }
-    [data-theme="light"] .log-entry.INFO { color: #000; }
+    .log-entry.ERROR { color: var(--error); }[data-theme="light"] .log-entry.INFO { color: #000; }
 
   </style>
 </head>
@@ -234,8 +265,7 @@
 
   <main class="dashboard-view" id="mainDashboard">
     <div class="dashboard-grid" id="dashboardGrid">
-      <div style="color: var(--text-muted); font-size: 12px; grid-column: 1 / -1; padding: 40px 20px; font-family: var(--font-mono); text-align: center; border: 1px dashed var(--border); border-radius: var(--radius);">
-         [ DATA_MATRIX_EMPTY ]<br><br>Initiate 'Acquire Telemetry' from the command panel.
+      <div style="color: var(--text-muted); font-size: 12px; grid-column: 1 / -1; padding: 40px 20px; font-family: var(--font-mono); text-align: center; border: 1px dashed var(--border); border-radius: var(--radius);">[ DATA_MATRIX_EMPTY ]<br><br>Initiate 'Acquire Telemetry' from the command panel.
       </div>
     </div>
   </main>
@@ -260,7 +290,7 @@
 
 "use strict";
 
-const PROXIES = [
+const PROXIES =[
   "https://corsproxy.io/?",
   "https://api.allorigins.win/raw?url="
 ];
@@ -308,84 +338,124 @@ const Network = {
         method: 'GET',
         headers: {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "Accept": "text/html"
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+          "Accept-Language": "en-US,en;q=0.5",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-User": "?1",
+          "Upgrade-Insecure-Requests": "1"
         }
       })
     });
 
-    if (!proxyResponse.ok) throw new Error("Proxy failed to fetch Finviz map.");
+    if (!proxyResponse.ok) throw new Error(`Proxy HTTP Error: ${proxyResponse.status}`);
     
-    // The Lovable proxy wraps responses in a 'body' attribute based on previous app usage
-    const proxyData = await proxyResponse.json();
-    const htmlText = proxyData.body || proxyData; 
+    // Safely parse the response. If the proxy returns raw HTML (e.g. Cloudflare challenge),
+    // proxyResponse.json() will throw "unexpected character at line 1 column 1".
+    // We read as text first to prevent this crash.
+    const responseText = await proxyResponse.text();
+    let htmlText = responseText;
+    
+    try {
+      const proxyData = JSON.parse(responseText);
+      if (proxyData && typeof proxyData === 'object') {
+        htmlText = proxyData.body || proxyData.content || proxyData.data || responseText;
+      }
+    } catch (e) {
+      // Response is not JSON, meaning the proxy returned the raw HTML directly.
+    }
+
+    if (!htmlText || typeof htmlText !== 'string') {
+      throw new Error("Invalid response format from proxy.");
+    }
+
+    // Check for Cloudflare WAF blocks
+    if (htmlText.includes("Just a moment...") || htmlText.includes("Cloudflare") || htmlText.includes("cf-browser-verification")) {
+      throw new Error("Finviz WAF (Cloudflare) blocked the proxy request.");
+    }
 
     // 2. Extract JSON payload
-    const match = htmlText.match(/var\s+mapData\s*=\s*(\{.*?\});/s);
-    if (!match) throw new Error("Finviz mapData not found. Target structure changed or WAF blocked.");
-    const rawFinvizJSON = JSON.parse(match[1]);
+    const match = htmlText.match(/var\s+mapData\s*=\s*(\{[\s\S]*?\});/);
+    if (!match) throw new Error("Finviz mapData not found. Target structure changed.");
+
+    let rawFinvizJSON;
+    try {
+      rawFinvizJSON = JSON.parse(match[1]);
+    } catch (parseErr) {
+      // Fallback to Function constructor if Finviz uses unquoted keys or invalid strict JSON
+      try {
+        rawFinvizJSON = new Function("return " + match[1])();
+      } catch (evalErr) {
+        throw new Error("Failed to parse Finviz mapData: " + parseErr.message);
+      }
+    }
 
     // 3. Flatten and map data
     function flattenFinvizMap(node) {
-      let results = [];
-      if (node.children) {
+      let results =[];
+      if (node.children && Array.isArray(node.children)) {
         node.children.forEach(child => {
           results = results.concat(flattenFinvizMap(child));
         });
-      } else {
+      } else if (node.name && node.value !== undefined) {
         results.push({
           name: node.name,
-          value: node.value,
-          change: node.color 
+          value: Number(node.value) || 0,
+          change: Number(node.color) || 0 
         });
       }
       return results;
     }
 
-    return flattenFinvizMap(rawFinvizJSON);
-  },
-
-  // Fallback Data Generators
-  generateFallbackEnergy() {
-    const baseDate = Date.now() - (30 * 86400000);
-    const wti = [], brent = [], opec = [];
-    let w = 82, b = 86, o = 84;
-    for(let i=0; i<30; i++) {
-      const time = baseDate + (i * 86400000);
-      w += (Math.random() - 0.5) * 2; b += (Math.random() - 0.5) * 2; o += (Math.random() - 0.5) * 2;
-      wti.push({x: time, y: w}); brent.push({x: time, y: b}); opec.push({x: time, y: o});
-    }
-    return { wti, brent, opec };
-  },
-
-  generateFallbackTreemap() {
-    return [
-      { name: "Gold", value: 450, change: 1.2 }, { name: "Silver", value: 200, change: -0.5 },
-      { name: "Crude Oil", value: 600, change: 2.1 }, { name: "Brent", value: 550, change: 1.8 },
-      { name: "Natural Gas", value: 300, change: -4.2 }, { name: "Copper", value: 250, change: 0.8 },
-      { name: "Wheat", value: 180, change: -1.1 }, { name: "Corn", value: 150, change: -0.2 },
-      { name: "Soybeans", value: 140, change: 0.4 }, { name: "Platinum", value: 90, change: 0.1 }
-    ];
-  },
-
-  generateFallbackFinvizMap() {
-    return [
-      { name: "AAPL", value: 2900, change: 1.2 }, { name: "MSFT", value: 2800, change: 0.8 },
-      { name: "NVDA", value: 2200, change: 3.5 }, { name: "GOOGL", value: 1700, change: -0.5 },
-      { name: "AMZN", value: 1600, change: 1.1 }, { name: "META", value: 1100, change: 2.1 },
-      { name: "BRK-B", value: 850, change: -0.2 }, { name: "LLY", value: 750, change: 4.2 },
-      { name: "TSLA", value: 650, change: -2.8 }, { name: "AVGO", value: 600, change: 1.5 },
-      { name: "V", value: 550, change: 0.3 }, { name: "JPM", value: 520, change: -1.2 },
-      { name: "UNH", value: 490, change: 0.7 }, { name: "WMT", value: 480, change: 0.4 },
-      { name: "MA", value: 450, change: 0.6 }, { name: "PG", value: 400, change: -0.1 },
-      { name: "JNJ", value: 380, change: -0.5 }, { name: "HD", value: 370, change: 1.8 },
-      { name: "ORCL", value: 350, change: 2.3 }, { name: "MRK", value: 330, change: -0.8 },
-      { name: "COST", value: 320, change: 1.2 }, { name: "ABBV", value: 310, change: 0.9 },
-      { name: "BAC", value: 300, change: -1.5 }, { name: "CRM", value: 290, change: 1.4 },
-      { name: "CVX", value: 280, change: 0.2 }, { name: "NFLX", value: 270, change: 2.7 },
-      { name: "AMD", value: 260, change: 3.1 }, { name: "PEP", value: 250, change: -0.4 },
-      { name: "KO", value: 240, change: 0.1 }, { name: "LIN", value: 230, change: 0.5 }
-    ];
+    const finalData = flattenFinvizMap(rawFinvizJSON);
+    if (finalData.length === 0) throw new Error("Finviz mapData contained no valid nodes.");
+    
+    return finalData;
   }
+};
+
+// Fallback Data Generators
+Network.generateFallbackEnergy = function() {
+  const baseDate = Date.now() - (30 * 86400000);
+  const wti = [], brent = [], opec =[];
+  let w = 82, b = 86, o = 84;
+  for(let i=0; i<30; i++) {
+    const time = baseDate + (i * 86400000);
+    w += (Math.random() - 0.5) * 2; b += (Math.random() - 0.5) * 2; o += (Math.random() - 0.5) * 2;
+    wti.push({x: time, y: w}); brent.push({x: time, y: b}); opec.push({x: time, y: o});
+  }
+  return { wti, brent, opec };
+};
+
+Network.generateFallbackTreemap = function() {
+  return[
+    { name: "Gold", value: 450, change: 1.2 }, { name: "Silver", value: 200, change: -0.5 },
+    { name: "Crude Oil", value: 600, change: 2.1 }, { name: "Brent", value: 550, change: 1.8 },
+    { name: "Natural Gas", value: 300, change: -4.2 }, { name: "Copper", value: 250, change: 0.8 },
+    { name: "Wheat", value: 180, change: -1.1 }, { name: "Corn", value: 150, change: -0.2 },
+    { name: "Soybeans", value: 140, change: 0.4 }, { name: "Platinum", value: 90, change: 0.1 }
+  ];
+};
+
+Network.generateFallbackFinvizMap = function() {
+  return[
+    { name: "AAPL", value: 2900, change: 1.2 }, { name: "MSFT", value: 2800, change: 0.8 },
+    { name: "NVDA", value: 2200, change: 3.5 }, { name: "GOOGL", value: 1700, change: -0.5 },
+    { name: "AMZN", value: 1600, change: 1.1 }, { name: "META", value: 1100, change: 2.1 },
+    { name: "BRK-B", value: 850, change: -0.2 }, { name: "LLY", value: 750, change: 4.2 },
+    { name: "TSLA", value: 650, change: -2.8 }, { name: "AVGO", value: 600, change: 1.5 },
+    { name: "V", value: 550, change: 0.3 }, { name: "JPM", value: 520, change: -1.2 },
+    { name: "UNH", value: 490, change: 0.7 }, { name: "WMT", value: 480, change: 0.4 },
+    { name: "MA", value: 450, change: 0.6 }, { name: "PG", value: 400, change: -0.1 },
+    { name: "JNJ", value: 380, change: -0.5 }, { name: "HD", value: 370, change: 1.8 },
+    { name: "ORCL", value: 350, change: 2.3 }, { name: "MRK", value: 330, change: -0.8 },
+    { name: "COST", value: 320, change: 1.2 }, { name: "ABBV", value: 310, change: 0.9 },
+    { name: "BAC", value: 300, change: -1.5 }, { name: "CRM", value: 290, change: 1.4 },
+    { name: "CVX", value: 280, change: 0.2 }, { name: "NFLX", value: 270, change: 2.7 },
+    { name: "AMD", value: 260, change: 3.1 }, { name: "PEP", value: 250, change: -0.4 },
+    { name: "KO", value: 240, change: 0.1 }, { name: "LIN", value: 230, change: 0.5 }
+  ];
 };
 
 // ============================================================================
@@ -428,7 +498,7 @@ class TreemapEngine {
 
     let bounds = { x: 0, y: 0, w: rect.width, h: rect.height };
     let currentRow = [];
-    let rectsToRender = [];
+    let rectsToRender =[];
 
     // Helper: Calculates the worst aspect ratio in a row given the current constrained edge width
     const getWorstRatio = (row, w) => {
@@ -601,9 +671,7 @@ class ChartEngine {
     const textColor = isDark ? '#666666' : '#999999';
 
     ctx.clearRect(0, 0, this.width, this.height);
-    ctx.fillStyle = textColor; ctx.font = '10px monospace'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle'; ctx.lineWidth = 1;
-
-    [minY, minY + (maxY-minY)/2, maxY].forEach(val => {
+    ctx.fillStyle = textColor; ctx.font = '10px monospace'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle'; ctx.lineWidth = 1;[minY, minY + (maxY-minY)/2, maxY].forEach(val => {
       const y = this.pad.top + chartH - ((val - minY) / (maxY - minY)) * chartH;
       ctx.strokeStyle = gridColor; ctx.beginPath(); ctx.moveTo(this.pad.left, y); ctx.lineTo(this.width - this.pad.right, y); ctx.stroke();
       ctx.fillText(val.toFixed(0), this.pad.left - 8, y);
@@ -643,7 +711,7 @@ class ChartEngine {
 // ============================================================================
 // APP CONTROLLER
 // ============================================================================
-const State = { rawJSON: null, uiEngines: [] };
+const State = { rawJSON: null, uiEngines:[] };
 
 const sentinel = {
   init() {
@@ -690,8 +758,7 @@ const sentinel = {
     const btn = document.getElementById('executeBtn'), dot = document.getElementById('statusDot');
 
     btn.disabled = true; dot.classList.add('working');
-    document.getElementById('logsDrawer').classList.remove('collapsed');
-    ['connect', 'fetch', 'parse', 'render'].forEach(s => this.setFlow(s, ''));
+    document.getElementById('logsDrawer').classList.remove('collapsed');['connect', 'fetch', 'parse', 'render'].forEach(s => this.setFlow(s, ''));
 
     try {
       this.setFlow('connect', 'active');
@@ -749,7 +816,7 @@ const sentinel = {
   renderDashboard(data) {
     const grid = document.getElementById('dashboardGrid');
     State.uiEngines.forEach(eng => this.resizeObserver.unobserve(eng.container));
-    State.uiEngines = []; grid.innerHTML = '';
+    State.uiEngines =[]; grid.innerHTML = '';
     
     if (data.fear_and_greed) {
       const fg = data.fear_and_greed, rText = fg.rating ? fg.rating.replace(/_/g, ' ') : 'UNKNOWN';
@@ -769,7 +836,7 @@ const sentinel = {
       `;
     }
 
-    const configs = [
+    const configs =[
       { key: 'fear_and_greed_historical', title: "Fear & Greed Timeline", color: "#bf5af2", type: 'chart' },
       { key: 'oil_wti', title: "Crude Oil (WTI) Metrics", color: "#ff8c00", type: 'chart' },
       { key: 'oil_brent', title: "Brent Crude Flow", color: "#ff8c00", type: 'chart' },
