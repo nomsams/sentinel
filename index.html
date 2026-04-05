@@ -150,8 +150,7 @@
       padding: 10px 14px; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.6);
       font-family: var(--font-mono); color: #fff; z-index: 50; transition: opacity 0.15s;
       transform: translate(-50%, -120%); white-space: nowrap; backdrop-filter: blur(4px);
-    }
-    [data-theme="light"] .chart-tooltip { background: rgba(255, 255, 255, 0.95); color: #000; }
+    }[data-theme="light"] .chart-tooltip { background: rgba(255, 255, 255, 0.95); color: #000; }
     .chart-tooltip .tt-date { font-size: 10px; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; }
     .chart-tooltip .tt-val { font-size: 14px; font-weight: bold; }
     .chart-tooltip .tt-rate { font-size: 9px; margin-top: 4px; text-transform: uppercase; opacity: 0.8; }
@@ -169,7 +168,8 @@
     .log-entry.INFO { color: #fff; }
     .log-entry.SUCCESS { color: var(--success); }
     .log-entry.WARN { color: var(--warning); }
-    .log-entry.ERROR { color: var(--error); }[data-theme="light"] .log-entry.INFO { color: #000; }
+    .log-entry.ERROR { color: var(--error); }
+    [data-theme="light"] .log-entry.INFO { color: #000; }
 
   </style>
 </head>
@@ -233,7 +233,8 @@
 
   <main class="dashboard-view" id="mainDashboard">
     <div class="dashboard-grid" id="dashboardGrid">
-      <div style="color: var(--text-muted); font-size: 12px; grid-column: 1 / -1; padding: 40px 20px; font-family: var(--font-mono); text-align: center; border: 1px dashed var(--border); border-radius: var(--radius);">[ DATA_MATRIX_EMPTY ]<br><br>Initiate 'Acquire Telemetry' from the command panel.
+      <div style="color: var(--text-muted); font-size: 12px; grid-column: 1 / -1; padding: 40px 20px; font-family: var(--font-mono); text-align: center; border: 1px dashed var(--border); border-radius: var(--radius);">
+         [ DATA_MATRIX_EMPTY ]<br><br>Initiate 'Acquire Telemetry' from the command panel.
       </div>
     </div>
   </main>
@@ -252,8 +253,8 @@
 
 <script>
 /**
- * MARKET SENTINEL v4.1 - PRECISION OSINT ENGINE
- * Upgrades: Finviz S&P500 Map Integration, True Squarified Aspect-Ratio Algorithm.
+ * MARKET SENTINEL v4.2 - PRECISION OSINT ENGINE
+ * Upgrades: Bulletproof Brace-Matching Parser for Finviz WAF evasion.
  */
 
 "use strict";
@@ -268,7 +269,7 @@ const TARGETS = {
   treemap: "https://tradingeconomics.com/commodities/treemap",
   finviz: "https://finviz.com/map.ashx"
 };
-const CACHE_KEY = "ms_telemetry_cache_v4_1";
+const CACHE_KEY = "ms_telemetry_cache_v4_2";
 
 // ============================================================================
 // NETWORK LAYER & PARSERS
@@ -319,9 +320,6 @@ const Network = {
 
     if (!proxyResponse.ok) throw new Error(`Proxy HTTP Error: ${proxyResponse.status}`);
     
-    // Safely parse the response. If the proxy returns raw HTML (e.g. Cloudflare challenge),
-    // proxyResponse.json() will throw "unexpected character at line 1 column 1".
-    // We read as text first to prevent this crash.
     const responseText = await proxyResponse.text();
     let htmlText = responseText;
     
@@ -330,33 +328,89 @@ const Network = {
       if (proxyData && typeof proxyData === 'object') {
         htmlText = proxyData.body || proxyData.content || proxyData.data || responseText;
       }
-    } catch (e) {
-      // Response is not JSON, meaning the proxy returned the raw HTML directly.
-    }
+    } catch (e) {}
 
     if (!htmlText || typeof htmlText !== 'string') {
       throw new Error("Invalid response format from proxy.");
     }
 
     // Check for Cloudflare WAF blocks
-    if (htmlText.includes("Just a moment...") || htmlText.includes("Cloudflare") || htmlText.includes("cf-browser-verification")) {
+    if (htmlText.includes("<title>Just a moment...</title>") || 
+        htmlText.includes("<title>Attention Required!") || 
+        htmlText.includes("cf-browser-verification")) {
       throw new Error("Finviz WAF (Cloudflare) blocked the proxy request.");
     }
 
-    // 2. Extract JSON payload
-    const match = htmlText.match(/var\s+mapData\s*=\s*(\{[\s\S]*?\});/);
-    if (!match) throw new Error("Finviz mapData not found. Target structure changed.");
-
-    let rawFinvizJSON;
-    try {
-      rawFinvizJSON = JSON.parse(match[1]);
-    } catch (parseErr) {
-      // Fallback to Function constructor if Finviz uses unquoted keys or invalid strict JSON
-      try {
-        rawFinvizJSON = new Function("return " + match[1])();
-      } catch (evalErr) {
-        throw new Error("Failed to parse Finviz mapData: " + parseErr.message);
+    // 2. Extract JSON payload using Bulletproof Brace-Matching
+    let rawFinvizJSON = null;
+    
+    // Method A: Brace matching on known variable names (ignores missing semicolons/newlines)
+    const searchStrings = ["mapData = ", "mapData=", "data = ", "data=", "mapData:"];
+    let startIndex = -1;
+    
+    for (const str of searchStrings) {
+      const idx = htmlText.indexOf(str);
+      if (idx !== -1) {
+        const braceIdx = htmlText.indexOf('{', idx);
+        if (braceIdx !== -1 && braceIdx - idx < 25) { 
+          startIndex = braceIdx;
+          break;
+        }
       }
+    }
+
+    if (startIndex !== -1) {
+      let braceCount = 0;
+      let endIndex = -1;
+      let inString = false;
+      let escapeNext = false;
+
+      for (let i = startIndex; i < htmlText.length; i++) {
+        const char = htmlText[i];
+        if (escapeNext) { escapeNext = false; continue; }
+        if (char === '\\') { escapeNext = true; continue; }
+        if (char === '"') { inString = !inString; continue; }
+        if (!inString) {
+          if (char === '{') braceCount++;
+          else if (char === '}') braceCount--;
+          if (braceCount === 0) { endIndex = i; break; }
+        }
+      }
+
+      if (endIndex !== -1) {
+        const jsonString = htmlText.substring(startIndex, endIndex + 1);
+        try {
+          rawFinvizJSON = JSON.parse(jsonString);
+        } catch (e) {
+          try { rawFinvizJSON = new Function("return " + jsonString)(); } catch (err) {}
+        }
+      }
+    }
+
+    // Method B: Fallback Regex if brace matching failed
+    if (!rawFinvizJSON || (!rawFinvizJSON.children && !rawFinvizJSON.name)) {
+      const patterns =[
+        /(?:var|let|const|window\.)?\s*mapData\s*=\s*(\{[\s\S]*?\})\s*;/i,
+        /(\{[\s\S]{100,}?"name"\s*:\s*"S&P 500"[\s\S]*?"children"\s*:\s*\[[\s\S]*?\})/i
+      ];
+      for (let regex of patterns) {
+        const match = htmlText.match(regex);
+        if (match) {
+          try {
+            rawFinvizJSON = JSON.parse(match[1]);
+            if (rawFinvizJSON && (rawFinvizJSON.children || rawFinvizJSON.name)) break;
+          } catch (e) {
+            try {
+              rawFinvizJSON = new Function("return " + match[1])();
+              if (rawFinvizJSON && (rawFinvizJSON.children || rawFinvizJSON.name)) break;
+            } catch (err) {}
+          }
+        }
+      }
+    }
+
+    if (!rawFinvizJSON || (!rawFinvizJSON.children && !rawFinvizJSON.name)) {
+      throw new Error("Finviz mapData not found. Target structure changed.");
     }
 
     // 3. Flatten and map data
@@ -370,7 +424,7 @@ const Network = {
         results.push({
           name: node.name,
           value: Number(node.value) || 0,
-          change: Number(node.color) || 0 
+          change: Number(node.color !== undefined ? node.color : node.change) || 0 
         });
       }
       return results;
@@ -386,7 +440,7 @@ const Network = {
 // Fallback Data Generators
 Network.generateFallbackEnergy = function() {
   const baseDate = Date.now() - (30 * 86400000);
-  const wti = [], brent = [], opec =[];
+  const wti = [], brent =[], opec =[];
   let w = 82, b = 86, o = 84;
   for(let i=0; i<30; i++) {
     const time = baseDate + (i * 86400000);
@@ -465,7 +519,7 @@ class TreemapEngine {
     const nodes = this.data.map(d => ({ ...d, _area: (d.value / totalValue) * totalArea }));
 
     let bounds = { x: 0, y: 0, w: rect.width, h: rect.height };
-    let currentRow = [];
+    let currentRow =[];
     let rectsToRender =[];
 
     // Helper: Calculates the worst aspect ratio in a row given the current constrained edge width
@@ -639,7 +693,9 @@ class ChartEngine {
     const textColor = isDark ? '#666666' : '#999999';
 
     ctx.clearRect(0, 0, this.width, this.height);
-    ctx.fillStyle = textColor; ctx.font = '10px monospace'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle'; ctx.lineWidth = 1;[minY, minY + (maxY-minY)/2, maxY].forEach(val => {
+    ctx.fillStyle = textColor; ctx.font = '10px monospace'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle'; ctx.lineWidth = 1;
+
+    [minY, minY + (maxY-minY)/2, maxY].forEach(val => {
       const y = this.pad.top + chartH - ((val - minY) / (maxY - minY)) * chartH;
       ctx.strokeStyle = gridColor; ctx.beginPath(); ctx.moveTo(this.pad.left, y); ctx.lineTo(this.width - this.pad.right, y); ctx.stroke();
       ctx.fillText(val.toFixed(0), this.pad.left - 8, y);
@@ -726,7 +782,8 @@ const sentinel = {
     const btn = document.getElementById('executeBtn'), dot = document.getElementById('statusDot');
 
     btn.disabled = true; dot.classList.add('working');
-    document.getElementById('logsDrawer').classList.remove('collapsed');['connect', 'fetch', 'parse', 'render'].forEach(s => this.setFlow(s, ''));
+    document.getElementById('logsDrawer').classList.remove('collapsed');
+    ['connect', 'fetch', 'parse', 'render'].forEach(s => this.setFlow(s, ''));
 
     try {
       this.setFlow('connect', 'active');
