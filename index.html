@@ -19,9 +19,7 @@
       --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
       --radius: 8px; --shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
       --transition: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    [data-theme="light"] {
+    }[data-theme="light"] {
       --bg: #f2f2f7; --surface: #ffffff; --surface-elevated: #e5e5ea;
       --border: #d1d1d6; --border-focus: #aeaeb2;
       --text: #1c1c1e; --text-muted: #8e8e93;
@@ -253,8 +251,8 @@
 
 <script>
 /**
- * MARKET SENTINEL v4.2 - PRECISION OSINT ENGINE
- * Upgrades: Bulletproof Brace-Matching Parser for Finviz WAF evasion.
+ * MARKET SENTINEL v4.3 - PRECISION OSINT ENGINE
+ * Upgrades: Universal Deep-Search JSON Extractor (Bypasses Next.js/Nuxt structural changes).
  */
 
 "use strict";
@@ -269,7 +267,7 @@ const TARGETS = {
   treemap: "https://tradingeconomics.com/commodities/treemap",
   finviz: "https://finviz.com/map.ashx"
 };
-const CACHE_KEY = "ms_telemetry_cache_v4_2";
+const CACHE_KEY = "ms_telemetry_cache_v4_3";
 
 // ============================================================================
 // NETWORK LAYER & PARSERS
@@ -341,98 +339,178 @@ const Network = {
       throw new Error("Finviz WAF (Cloudflare) blocked the proxy request.");
     }
 
-    // 2. Extract JSON payload using Bulletproof Brace-Matching
+    // 2. Universal Deep-Search JSON Extractor
     let rawFinvizJSON = null;
-    
-    // Method A: Brace matching on known variable names (ignores missing semicolons/newlines)
-    const searchStrings = ["mapData = ", "mapData=", "data = ", "data=", "mapData:"];
-    let startIndex = -1;
-    
-    for (const str of searchStrings) {
-      const idx = htmlText.indexOf(str);
-      if (idx !== -1) {
-        const braceIdx = htmlText.indexOf('{', idx);
-        if (braceIdx !== -1 && braceIdx - idx < 25) { 
-          startIndex = braceIdx;
-          break;
+    let isFlatArray = false;
+
+    // Helper: Recursively find the hierarchical map node
+    function findMapNode(obj) {
+      if (!obj || typeof obj !== 'object') return null;
+      if (Array.isArray(obj.children) && obj.children.length > 2) {
+          const isMap = obj.children.some(c => Array.isArray(c.children) || (c.name && c.value !== undefined));
+          if (isMap && (obj.name === 'S&P 500' || obj.children.length > 5)) return obj;
+      }
+      if (Array.isArray(obj)) {
+        for (let item of obj) {
+          const res = findMapNode(item);
+          if (res) return res;
+        }
+      } else {
+        for (let key in obj) {
+          const res = findMapNode(obj[key]);
+          if (res) return res;
         }
       }
+      return null;
     }
 
-    if (startIndex !== -1) {
-      let braceCount = 0;
-      let endIndex = -1;
-      let inString = false;
-      let escapeNext = false;
+    // Helper: Recursively find a flat array of stocks (if Finviz flattened their data)
+    function findFlatArray(obj) {
+       if (Array.isArray(obj) && obj.length > 50) {
+           const sample = obj[0];
+           if (sample && typeof sample === 'object' && (sample.ticker || sample.name || sample.symbol) && (sample.value !== undefined || sample.marketCap !== undefined || sample.cap !== undefined)) {
+               return obj;
+           }
+       }
+       if (obj && typeof obj === 'object') {
+           if (Array.isArray(obj)) {
+               for (let item of obj) {
+                   const res = findFlatArray(item);
+                   if (res) return res;
+               }
+           } else {
+               for (let key in obj) {
+                   const res = findFlatArray(obj[key]);
+                   if (res) return res;
+               }
+           }
+       }
+       return null;
+    }
 
-      for (let i = startIndex; i < htmlText.length; i++) {
-        const char = htmlText[i];
-        if (escapeNext) { escapeNext = false; continue; }
-        if (char === '\\') { escapeNext = true; continue; }
-        if (char === '"') { inString = !inString; continue; }
-        if (!inString) {
-          if (char === '{') braceCount++;
-          else if (char === '}') braceCount--;
-          if (braceCount === 0) { endIndex = i; break; }
-        }
-      }
-
-      if (endIndex !== -1) {
-        const jsonString = htmlText.substring(startIndex, endIndex + 1);
+    function extractFromJsonString(jsonString) {
         try {
-          rawFinvizJSON = JSON.parse(jsonString);
-        } catch (e) {
-          try { rawFinvizJSON = new Function("return " + jsonString)(); } catch (err) {}
-        }
-      }
+            const parsed = JSON.parse(jsonString);
+            const mapNode = findMapNode(parsed);
+            if (mapNode) return { data: mapNode, flat: false };
+            const flatNode = findFlatArray(parsed);
+            if (flatNode) return { data: flatNode, flat: true };
+        } catch (e) {}
+        return null;
     }
 
-    // Method B: Fallback Regex if brace matching failed
-    if (!rawFinvizJSON || (!rawFinvizJSON.children && !rawFinvizJSON.name)) {
-      const patterns =[
-        /(?:var|let|const|window\.)?\s*mapData\s*=\s*(\{[\s\S]*?\})\s*;/i,
-        /(\{[\s\S]{100,}?"name"\s*:\s*"S&P 500"[\s\S]*?"children"\s*:\s*\[[\s\S]*?\})/i
-      ];
-      for (let regex of patterns) {
-        const match = htmlText.match(regex);
-        if (match) {
-          try {
-            rawFinvizJSON = JSON.parse(match[1]);
-            if (rawFinvizJSON && (rawFinvizJSON.children || rawFinvizJSON.name)) break;
-          } catch (e) {
-            try {
-              rawFinvizJSON = new Function("return " + match[1])();
-              if (rawFinvizJSON && (rawFinvizJSON.children || rawFinvizJSON.name)) break;
-            } catch (err) {}
+    // Method A: Search all <script type="application/json"> tags (catches Next.js __NEXT_DATA__, Nuxt, etc.)
+    const scriptRegex = /<script[^>]*type="application\/json"[^>]*>([\s\S]*?)<\/script>/gi;
+    let match;
+    while ((match = scriptRegex.exec(htmlText)) !== null) {
+        const extracted = extractFromJsonString(match[1]);
+        if (extracted) {
+            rawFinvizJSON = extracted.data;
+            isFlatArray = extracted.flat;
+            break;
+        }
+    }
+
+    // Method B: Brace matching on known variable names (if injected via raw JS)
+    if (!rawFinvizJSON) {
+        const searchStrings =["mapData = ", "mapData=", "data = ", "data=", "mapData:", "window.__INITIAL_STATE__="];
+        let startIndex = -1;
+        for (const str of searchStrings) {
+          const idx = htmlText.indexOf(str);
+          if (idx !== -1) {
+            const braceIdx = htmlText.indexOf('{', idx);
+            const bracketIdx = htmlText.indexOf('[', idx);
+            let startCharIdx = -1;
+            if (braceIdx !== -1 && bracketIdx !== -1) startCharIdx = Math.min(braceIdx, bracketIdx);
+            else if (braceIdx !== -1) startCharIdx = braceIdx;
+            else if (bracketIdx !== -1) startCharIdx = bracketIdx;
+
+            if (startCharIdx !== -1 && startCharIdx - idx < 30) { 
+              startIndex = startCharIdx;
+              break;
+            }
           }
         }
-      }
+
+        if (startIndex !== -1) {
+          let braceCount = 0;
+          let bracketCount = 0;
+          let endIndex = -1;
+          let inString = false;
+          let escapeNext = false;
+          const isObject = htmlText[startIndex] === '{';
+
+          for (let i = startIndex; i < htmlText.length; i++) {
+            const char = htmlText[i];
+            if (escapeNext) { escapeNext = false; continue; }
+            if (char === '\\') { escapeNext = true; continue; }
+            if (char === '"') { inString = !inString; continue; }
+            if (!inString) {
+              if (isObject) {
+                  if (char === '{') braceCount++;
+                  else if (char === '}') braceCount--;
+                  if (braceCount === 0) { endIndex = i; break; }
+              } else {
+                  if (char === '[') bracketCount++;
+                  else if (char === ']') bracketCount--;
+                  if (bracketCount === 0) { endIndex = i; break; }
+              }
+            }
+          }
+
+          if (endIndex !== -1) {
+            const jsonString = htmlText.substring(startIndex, endIndex + 1);
+            const extracted = extractFromJsonString(jsonString);
+            if (extracted) {
+                rawFinvizJSON = extracted.data;
+                isFlatArray = extracted.flat;
+            } else {
+                try { 
+                    const parsed = new Function("return " + jsonString)(); 
+                    const mapNode = findMapNode(parsed);
+                    if (mapNode) { rawFinvizJSON = mapNode; isFlatArray = false; }
+                    else {
+                        const flatNode = findFlatArray(parsed);
+                        if (flatNode) { rawFinvizJSON = flatNode; isFlatArray = true; }
+                    }
+                } catch (err) {}
+            }
+          }
+        }
     }
 
-    if (!rawFinvizJSON || (!rawFinvizJSON.children && !rawFinvizJSON.name)) {
+    if (!rawFinvizJSON) {
       throw new Error("Finviz mapData not found. Target structure changed.");
     }
 
     // 3. Flatten and map data
-    function flattenFinvizMap(node) {
-      let results =[];
-      if (node.children && Array.isArray(node.children)) {
-        node.children.forEach(child => {
-          results = results.concat(flattenFinvizMap(child));
-        });
-      } else if (node.name && node.value !== undefined) {
-        results.push({
-          name: node.name,
-          value: Number(node.value) || 0,
-          change: Number(node.color !== undefined ? node.color : node.change) || 0 
-        });
-      }
-      return results;
+    let finalData =[];
+    if (isFlatArray) {
+        finalData = rawFinvizJSON.map(node => ({
+            name: node.ticker || node.name || node.symbol || 'UNK',
+            value: Number(node.value || node.marketCap || node.cap) || 0,
+            change: Number(node.change || node.color || node.perf) || 0
+        })).filter(d => d.value > 0);
+    } else {
+        function flattenFinvizMap(node) {
+          let results =[];
+          if (node.children && Array.isArray(node.children)) {
+            node.children.forEach(child => {
+              results = results.concat(flattenFinvizMap(child));
+            });
+          } else if ((node.name || node.ticker) && (node.value !== undefined || node.marketCap !== undefined)) {
+            results.push({
+              name: node.ticker || node.name,
+              value: Number(node.value || node.marketCap) || 0,
+              change: Number(node.color !== undefined ? node.color : node.change) || 0 
+            });
+          }
+          return results;
+        }
+        finalData = flattenFinvizMap(rawFinvizJSON);
     }
 
-    const finalData = flattenFinvizMap(rawFinvizJSON);
     if (finalData.length === 0) throw new Error("Finviz mapData contained no valid nodes.");
-    
     return finalData;
   }
 };
@@ -693,9 +771,7 @@ class ChartEngine {
     const textColor = isDark ? '#666666' : '#999999';
 
     ctx.clearRect(0, 0, this.width, this.height);
-    ctx.fillStyle = textColor; ctx.font = '10px monospace'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle'; ctx.lineWidth = 1;
-
-    [minY, minY + (maxY-minY)/2, maxY].forEach(val => {
+    ctx.fillStyle = textColor; ctx.font = '10px monospace'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle'; ctx.lineWidth = 1;[minY, minY + (maxY-minY)/2, maxY].forEach(val => {
       const y = this.pad.top + chartH - ((val - minY) / (maxY - minY)) * chartH;
       ctx.strokeStyle = gridColor; ctx.beginPath(); ctx.moveTo(this.pad.left, y); ctx.lineTo(this.width - this.pad.right, y); ctx.stroke();
       ctx.fillText(val.toFixed(0), this.pad.left - 8, y);
@@ -782,8 +858,7 @@ const sentinel = {
     const btn = document.getElementById('executeBtn'), dot = document.getElementById('statusDot');
 
     btn.disabled = true; dot.classList.add('working');
-    document.getElementById('logsDrawer').classList.remove('collapsed');
-    ['connect', 'fetch', 'parse', 'render'].forEach(s => this.setFlow(s, ''));
+    document.getElementById('logsDrawer').classList.remove('collapsed');['connect', 'fetch', 'parse', 'render'].forEach(s => this.setFlow(s, ''));
 
     try {
       this.setFlow('connect', 'active');
