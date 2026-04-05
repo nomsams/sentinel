@@ -150,7 +150,8 @@
       padding: 10px 14px; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.6);
       font-family: var(--font-mono); color: #fff; z-index: 50; transition: opacity 0.15s;
       transform: translate(-50%, -120%); white-space: nowrap; backdrop-filter: blur(4px);
-    }[data-theme="light"] .chart-tooltip { background: rgba(255, 255, 255, 0.95); color: #000; }
+    }
+    [data-theme="light"] .chart-tooltip { background: rgba(255, 255, 255, 0.95); color: #000; }
     .chart-tooltip .tt-date { font-size: 10px; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; }
     .chart-tooltip .tt-val { font-size: 14px; font-weight: bold; }
     .chart-tooltip .tt-rate { font-size: 9px; margin-top: 4px; text-transform: uppercase; opacity: 0.8; }
@@ -168,8 +169,7 @@
     .log-entry.INFO { color: #fff; }
     .log-entry.SUCCESS { color: var(--success); }
     .log-entry.WARN { color: var(--warning); }
-    .log-entry.ERROR { color: var(--error); }
-    [data-theme="light"] .log-entry.INFO { color: #000; }
+    .log-entry.ERROR { color: var(--error); }[data-theme="light"] .log-entry.INFO { color: #000; }
 
   </style>
 </head>
@@ -193,7 +193,7 @@
     <div class="sidebar-section">
       <label>Data Acquisition Pipeline</label>
       <div style="font-size:11px; color:var(--text-muted); margin-bottom:16px; line-height:1.6;">
-        Initiates a multi-tier WAF bypass to extract high-fidelity matrices from CNN Dataviz, OilPrice endpoints, TE, and Finviz.
+        Initiates a multi-tier WAF bypass to extract high-fidelity matrices from CNN Dataviz, OilPrice endpoints, TE, and Market Maps.
       </div>
       
       <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px; background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
@@ -226,7 +226,7 @@
         <span style="color:var(--accent)">> WTI & Brent Crude</span><br>
         <span style="color:var(--accent)">> OPEC Basket Dynamics</span><br>
         <span style="color:var(--accent)">> Commodities Heatmap</span><br>
-        <span style="color:var(--success)">> S&P 500 Market Map</span>
+        <span style="color:var(--success)">> Top 500 Market Map</span>
       </div>
     </div>
   </aside>
@@ -253,8 +253,8 @@
 
 <script>
 /**
- * MARKET SENTINEL v4.4 - PRECISION OSINT ENGINE
- * Upgrades: Verbose Telemetry Logging, Multi-Endpoint Waterfall, Multi-Proxy Routing.
+ * MARKET SENTINEL v4.5 - PRECISION OSINT ENGINE
+ * Upgrades: Dual-Engine Map Architecture (TradingView Scanner API + Finviz AST Fallback).
  */
 
 "use strict";
@@ -268,7 +268,7 @@ const TARGETS = {
   oil: "https://oilprice.com/oil-price-charts/",
   treemap: "https://tradingeconomics.com/commodities/treemap"
 };
-const CACHE_KEY = "ms_telemetry_cache_v4_4";
+const CACHE_KEY = "ms_telemetry_cache_v4_5";
 
 // ============================================================================
 // NETWORK LAYER & PARSERS
@@ -292,265 +292,127 @@ const Network = {
     throw new Error(`All proxy layers failed for ${url}`);
   },
 
-  // Helper: Recursively find the hierarchical map node
-  findMapNode(obj) {
-    if (!obj || typeof obj !== 'object') return null;
-    if (Array.isArray(obj.children) && obj.children.length > 2) {
-        const isMap = obj.children.some(c => Array.isArray(c.children) || (c.name && c.value !== undefined));
-        if (isMap && (obj.name === 'S&P 500' || obj.children.length > 5)) return obj;
-    }
-    if (Array.isArray(obj)) {
-      for (let item of obj) {
-        const res = this.findMapNode(item);
-        if (res) return res;
-      }
-    } else {
-      for (let key in obj) {
-        const res = this.findMapNode(obj[key]);
-        if (res) return res;
-      }
-    }
-    return null;
-  },
-
-  // Helper: Recursively find a flat array of stocks
-  findFlatArray(obj) {
-     if (Array.isArray(obj) && obj.length > 50) {
-         const sample = obj[0];
-         if (sample && typeof sample === 'object' && (sample.ticker || sample.name || sample.symbol) && (sample.value !== undefined || sample.marketCap !== undefined || sample.cap !== undefined)) {
-             return obj;
-         }
-     }
-     if (obj && typeof obj === 'object') {
-         if (Array.isArray(obj)) {
-             for (let item of obj) {
-                 const res = this.findFlatArray(item);
-                 if (res) return res;
-             }
-         } else {
-             for (let key in obj) {
-                 const res = this.findFlatArray(obj[key]);
-                 if (res) return res;
-             }
-         }
-     }
-     return null;
-  },
-
-  extractFromHtml(htmlText) {
-    // Method A: Search all <script type="application/json"> tags
-    const scriptRegex = /<script[^>]*type="application\/json"[^>]*>([\s\S]*?)<\/script>/gi;
-    let match;
-    while ((match = scriptRegex.exec(htmlText)) !== null) {
-        try {
-            const parsed = JSON.parse(match[1]);
-            const mapNode = this.findMapNode(parsed);
-            if (mapNode) return { data: mapNode, flat: false };
-            const flatNode = this.findFlatArray(parsed);
-            if (flatNode) return { data: flatNode, flat: true };
-        } catch (e) {}
-    }
-
-    // Method B: Brace matching on known variable names
-    const searchStrings =["mapData = ", "mapData=", "data = ", "data=", "mapData:", "window.__INITIAL_STATE__="];
-    let startIndex = -1;
-    for (const str of searchStrings) {
-      const idx = htmlText.indexOf(str);
-      if (idx !== -1) {
-        const braceIdx = htmlText.indexOf('{', idx);
-        const bracketIdx = htmlText.indexOf('[', idx);
-        let startCharIdx = -1;
-        if (braceIdx !== -1 && bracketIdx !== -1) startCharIdx = Math.min(braceIdx, bracketIdx);
-        else if (braceIdx !== -1) startCharIdx = braceIdx;
-        else if (bracketIdx !== -1) startCharIdx = bracketIdx;
-
-        if (startCharIdx !== -1 && startCharIdx - idx < 30) { 
-          startIndex = startCharIdx;
-          break;
-        }
-      }
-    }
-
-    if (startIndex !== -1) {
-      let braceCount = 0;
-      let bracketCount = 0;
-      let endIndex = -1;
-      let inString = false;
-      let escapeNext = false;
-      const isObject = htmlText[startIndex] === '{';
-
-      for (let i = startIndex; i < htmlText.length; i++) {
-        const char = htmlText[i];
-        if (escapeNext) { escapeNext = false; continue; }
-        if (char === '\\') { escapeNext = true; continue; }
-        if (char === '"') { inString = !inString; continue; }
-        if (!inString) {
-          if (isObject) {
-              if (char === '{') braceCount++;
-              else if (char === '}') braceCount--;
-              if (braceCount === 0) { endIndex = i; break; }
-          } else {
-              if (char === '[') bracketCount++;
-              else if (char === ']') bracketCount--;
-              if (bracketCount === 0) { endIndex = i; break; }
-          }
-        }
-      }
-
-      if (endIndex !== -1) {
-        const jsonString = htmlText.substring(startIndex, endIndex + 1);
-        try { 
-            const parsed = new Function("return " + jsonString)(); 
-            const mapNode = this.findMapNode(parsed);
-            if (mapNode) return { data: mapNode, flat: false };
-            const flatNode = this.findFlatArray(parsed);
-            if (flatNode) return { data: flatNode, flat: true };
-        } catch (err) {}
-      }
-    }
-    return null;
-  },
-
-  flattenFinvizData(rawFinvizJSON, isFlatArray) {
-    let finalData =[];
-    if (isFlatArray) {
-        finalData = rawFinvizJSON.map(node => ({
-            name: node.ticker || node.name || node.symbol || 'UNK',
-            value: Number(node.value || node.marketCap || node.cap) || 0,
-            change: Number(node.change || node.color || node.perf) || 0
-        })).filter(d => d.value > 0);
-    } else {
-        function flatten(node) {
-          let results =[];
-          if (node.children && Array.isArray(node.children)) {
-            node.children.forEach(child => {
-              results = results.concat(flatten(child));
-            });
-          } else if ((node.name || node.ticker) && (node.value !== undefined || node.marketCap !== undefined)) {
-            results.push({
-              name: node.ticker || node.name,
-              value: Number(node.value || node.marketCap) || 0,
-              change: Number(node.color !== undefined ? node.color : node.change) || 0 
-            });
-          }
-          return results;
-        }
-        finalData = flatten(rawFinvizJSON);
-    }
-    return finalData;
-  },
-
-  // Multi-Endpoint Waterfall Fetcher
-  async fetchFinvizMap() {
-    const endpoints =[
-      { url: "https://finviz.com/api/map_perf.json", type: "json", useLovable: true },
-      { url: "https://finviz.com/map.ashx?t=sec", type: "html", useLovable: true },
-      { url: "https://corsproxy.io/?https://finviz.com/api/map_perf.json", type: "json", useLovable: false },
-      { url: "https://api.allorigins.win/raw?url=" + encodeURIComponent("https://finviz.com/map.ashx?t=sec"), type: "html", useLovable: false }
-    ];
-
+  // Dual-Engine Market Map Fetcher
+  async fetchMarketMapData() {
+    let fvData = null;
     let lastError = "";
 
-    for (let i = 0; i < endpoints.length; i++) {
-      const ep = endpoints[i];
-      sentinel.log(`[FINVIZ] Attempt ${i+1}: Fetching ${ep.url}...`, "INFO");
+    // STRATEGY 1: TradingView Scanner API (Fastest, most reliable, no WAF)
+    try {
+      sentinel.log(`[MAP] Attempt 1: Fetching Top 500 via TradingView API...`, "INFO");
+      const tvUrl = "https://scanner.tradingview.com/america/scan";
+      const tvPayload = {
+        "filter":[{"left": "market_cap_basic", "operation": "nempty"}],
+        "options": {"lang": "en"},
+        "markets": ["america"],
+        "symbols": {"query": {"types": ["stock"]}},
+        "columns": ["name", "market_cap_basic", "change"],
+        "sort": {"sortBy": "market_cap_basic", "sortOrder": "desc"},
+        "range":[0, 500]
+      };
       
-      try {
-        let responseText = "";
-        let status = 0;
-
-        if (ep.useLovable) {
-          const proxyUrl = "https://onbkfqayveownervyktu.supabase.co/functions/v1/cors-proxy";
-          const proxyResponse = await fetch(proxyUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'x-proxy-key': 'chikibriki' },
-            body: JSON.stringify({
-              url: ep.url,
-              method: 'GET',
-              headers: {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                "Accept": "application/json, text/html, */*"
-              }
-            })
-          });
-          status = proxyResponse.status;
-          responseText = await proxyResponse.text();
+      const tvRes = await fetch(tvUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(tvPayload)
+      });
+      
+      if (tvRes.ok) {
+        const tvJson = await tvRes.json();
+        if (tvJson.data && Array.isArray(tvJson.data)) {
+          fvData = tvJson.data.map(item => ({
+            name: item.d[0],
+            value: item.d[1] || 0,
+            change: item.d[2] || 0
+          })).filter(d => d.value > 0);
           
-          // Unwrap Lovable proxy response
-          try {
-            const proxyData = JSON.parse(responseText);
-            if (proxyData && typeof proxyData === 'object') {
-              responseText = proxyData.body || proxyData.content || proxyData.data || responseText;
-            }
-          } catch (e) {}
-        } else {
-          const res = await fetch(ep.url, { cache: "no-store" });
-          status = res.status;
-          responseText = await res.text();
+          sentinel.log(`[MAP] TradingView extraction successful (${fvData.length} tickers).`, "SUCCESS");
+          return fvData;
         }
-
-        sentinel.log(`[FINVIZ] Response Status: ${status} | Length: ${responseText.length} bytes`, "INFO");
-        
-        // Log a snippet of the response for debugging
-        const snippet = responseText.substring(0, 100).replace(/[\r\n]+/g, " ");
-        sentinel.log(`[FINVIZ] Snippet: ${snippet}...`, "INFO");
-
-        if (status !== 200) {
-          throw new Error(`HTTP ${status}`);
-        }
-
-        if (responseText.includes("<title>Just a moment...</title>") || responseText.includes("cf-browser-verification") || responseText.includes("Attention Required!")) {
-          throw new Error("Cloudflare WAF Blocked Request");
-        }
-
-        let rawFinvizJSON = null;
-        let isFlatArray = false;
-
-        // If the endpoint is expected to return JSON directly
-        if (ep.type === "json" || responseText.trim().startsWith("{") || responseText.trim().startsWith("[")) {
-          try {
-            const parsed = JSON.parse(responseText);
-            const mapNode = this.findMapNode(parsed);
-            if (mapNode) { rawFinvizJSON = mapNode; isFlatArray = false; }
-            else {
-              const flatNode = this.findFlatArray(parsed);
-              if (flatNode) { rawFinvizJSON = flatNode; isFlatArray = true; }
-              else { rawFinvizJSON = parsed; isFlatArray = Array.isArray(parsed); } // Fallback
-            }
-          } catch (e) {
-            sentinel.log(`[FINVIZ] JSON parse failed: ${e.message}`, "WARN");
-          }
-        }
-
-        // If it's HTML or JSON parsing failed, use the Deep-Search Extractor
-        if (!rawFinvizJSON) {
-          const extracted = this.extractFromHtml(responseText);
-          if (extracted) {
-            rawFinvizJSON = extracted.data;
-            isFlatArray = extracted.flat;
-          }
-        }
-
-        if (!rawFinvizJSON) {
-          throw new Error("Data structure not found in response.");
-        }
-
-        sentinel.log(`[FINVIZ] Successfully extracted data structure. Flattening...`, "SUCCESS");
-        const finalData = this.flattenFinvizData(rawFinvizJSON, isFlatArray);
-        
-        if (finalData.length > 0) {
-          return finalData;
-        } else {
-          throw new Error("Flattened data is empty.");
-        }
-
-      } catch (err) {
-        lastError = err.message;
-        sentinel.log(`[FINVIZ] Attempt ${i+1} Failed: ${err.message}`, "WARN");
+      } else {
+        throw new Error(`TradingView HTTP ${tvRes.status}`);
       }
+    } catch (err) {
+      lastError = err.message;
+      sentinel.log(`[MAP] TradingView failed: ${err.message}. Falling back to Finviz...`, "WARN");
     }
 
-    throw new Error(`All Finviz extraction methods failed. Last error: ${lastError}`);
+    // STRATEGY 2: Finviz via Lovable Proxy (Aggressive AST Search)
+    try {
+      sentinel.log(`[MAP] Attempt 2: Fetching Finviz via Lovable Proxy...`, "INFO");
+      const proxyUrl = "https://onbkfqayveownervyktu.supabase.co/functions/v1/cors-proxy";
+      const proxyResponse = await fetch(proxyUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-proxy-key': 'chikibriki' },
+        body: JSON.stringify({
+          url: "https://finviz.com/map.ashx?t=sec",
+          method: 'GET',
+          headers: {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Accept": "text/html"
+          }
+        })
+      });
+      
+      let responseText = await proxyResponse.text();
+      try {
+        const proxyData = JSON.parse(responseText);
+        if (proxyData && typeof proxyData === 'object') {
+          responseText = proxyData.body || proxyData.content || proxyData.data || responseText;
+        }
+      } catch (e) {}
+
+      sentinel.log(`[MAP] Finviz Response Length: ${responseText.length} bytes`, "INFO");
+
+      if (responseText.includes("Just a moment...") || responseText.includes("cf-browser-verification")) {
+        throw new Error("Cloudflare WAF Blocked Request");
+      }
+
+      // Aggressive Deep-Search for largest array
+      let largestArray =[];
+      function traverse(obj) {
+          if (!obj || typeof obj !== 'object') return;
+          if (Array.isArray(obj)) {
+              if (obj.length > largestArray.length) {
+                  largestArray = obj;
+              }
+              obj.forEach(traverse);
+          } else {
+              Object.values(obj).forEach(traverse);
+          }
+      }
+
+      // Parse <script type="application/json">
+      const scriptRegex = /<script[^>]*type="application\/json"[^>]*>([\s\S]*?)<\/script>/gi;
+      let match;
+      while ((match = scriptRegex.exec(responseText)) !== null) {
+          try { traverse(JSON.parse(match[1])); } catch (e) {}
+      }
+
+      if (largestArray.length > 100) {
+          fvData = largestArray.map(item => {
+              if (typeof item === 'object' && !Array.isArray(item)) {
+                  return {
+                      name: item.ticker || item.name || item.symbol || 'UNK',
+                      value: Number(item.value || item.marketCap || item.cap) || 0,
+                      change: Number(item.change || item.color || item.perf) || 0
+                  };
+              }
+              return null;
+          }).filter(d => d && d.value > 0);
+          
+          if (fvData.length > 0) {
+              sentinel.log(`[MAP] Finviz extraction successful (${fvData.length} tickers).`, "SUCCESS");
+              return fvData;
+          }
+      }
+      throw new Error("No valid data array found in Finviz HTML.");
+    } catch (err) {
+      lastError = err.message;
+      sentinel.log(`[MAP] Finviz failed: ${err.message}.`, "WARN");
+    }
+
+    throw new Error(`All map extraction methods failed. Last error: ${lastError}`);
   }
 };
 
@@ -908,18 +770,17 @@ const sentinel = {
       this.log(`Fetching CNN Core Data...`, "INFO");
       const cnnData = await Network.fetchWithProxy(TARGETS.cnn, useProxy, true);
       
-      this.log(`Scraping External Endpoints (Oil, Commodities, Finviz)...`, "INFO");
+      this.log(`Scraping External Endpoints (Oil, Commodities, Market Maps)...`, "INFO");
       const energyData = Network.generateFallbackEnergy(); 
       const tmData = Network.generateFallbackTreemap();
       
-      // Fetch Real Finviz Data via Multi-Endpoint Waterfall
+      // Fetch Real Market Map Data via Dual-Engine
       let fvData;
       try {
-        this.log(`Initiating Finviz Multi-Endpoint Waterfall...`, "INFO");
-        fvData = await Network.fetchFinvizMap();
-        this.log(`Finviz S&P 500 Map extracted successfully.`, "SUCCESS");
+        this.log(`Initiating Dual-Engine Market Map Fetcher...`, "INFO");
+        fvData = await Network.fetchMarketMapData();
       } catch (err) {
-        this.log(`Finviz extraction failed (${err.message}), using fallback.`, "WARN");
+        this.log(`Map extraction failed (${err.message}), using fallback.`, "WARN");
         fvData = Network.generateFallbackFinvizMap();
       }
 
@@ -984,7 +845,7 @@ const sentinel = {
       { key: 'stock_price_strength', title: "Stock Price Strength (NYSE)", color: "#ffd60a", type: 'chart' },
       { key: 'market_volatility_vix', title: "Market Volatility (VIX)", color: "#ff453a", type: 'chart' },
       { key: 'commodities_tm', title: "Global Commodities Heatmap", color: "#fff", type: 'treemap', wide: true },
-      { key: 'finviz_map', title: "S&P 500 Market Heatmap (Finviz Style)", color: "#fff", type: 'treemap', wide: true }
+      { key: 'finviz_map', title: "Top 500 Market Heatmap", color: "#fff", type: 'treemap', wide: true }
     ];
 
     configs.forEach(config => {
