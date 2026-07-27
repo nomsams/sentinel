@@ -40,8 +40,11 @@
        ========================================================================== */
     header { height: 54px; background: rgba(10,10,10,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-shrink: 0; z-index: 200; user-select: none; }
     .brand { font-size: 14px; font-weight: 800; letter-spacing: 0.5px; display: flex; align-items: center; gap: 10px; text-transform: uppercase; }
-    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); box-shadow: 0 0 10px var(--success); transition: background 0.3s; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-muted); box-shadow: none; transition: background 0.3s; }
+    .status-dot.live { background: var(--success); box-shadow: 0 0 10px var(--success); }
     .status-dot.working { background: var(--warning); box-shadow: 0 0 10px var(--warning); animation: pulse 1s infinite alternate; }
+    .status-dot.error { background: var(--error); box-shadow: 0 0 10px var(--error); }
+    .data-status { color: var(--text-muted); font: 10px/1.4 var(--font-mono); text-align: right; white-space: nowrap; }
     @keyframes pulse { 0% { opacity: 0.4; } 100% { opacity: 1; } }
     
     .workspace { display: flex; flex: 1; overflow: hidden; position: relative; }
@@ -125,12 +128,34 @@
       grid-column: 1 / -1;
       height: 480px;
     }
+    .chart-card.quote-card { height: 220px; }
+    .chart-card.board-card { height: auto; min-height: 480px; }
     .chart-card:hover { border-color: var(--border-focus); transform: translateY(-2px); z-index: 10; }
     .chart-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; user-select: none; }
     .chart-title { font-size: 13px; font-weight: 800; color: var(--text); text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; }
     .chart-value-block { text-align: right; }
     .chart-value { font-family: var(--font-mono); font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
     .chart-rating { font-size: 10px; text-transform: uppercase; color: var(--text-muted); margin-top: 4px; font-weight: 600; letter-spacing: 0.5px; }
+
+    .quote-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+    .quote-price { font: 700 42px/1 var(--font-mono); letter-spacing: -2px; }
+    .quote-change { font: 700 16px/1 var(--font-mono); }
+    .quote-meta { color: var(--text-muted); font: 10px/1.6 var(--font-mono); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .futures-board { display: flex; flex-direction: column; gap: 18px; }
+    .futures-category { border-top: 1px solid var(--border); padding-top: 12px; }
+    .futures-category:first-child { border-top: 0; padding-top: 0; }
+    .futures-category-title { color: var(--text-muted); font-size: 10px; font-weight: 800; letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase; }
+    .futures-rows { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 6px; }
+    .futures-row { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 10px 12px; }
+    .futures-name { font-size: 11px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .futures-symbol { color: var(--text-muted); font: 9px/1.5 var(--font-mono); }
+    .futures-numbers { font-family: var(--font-mono); text-align: right; }
+    .futures-price { font-size: 12px; font-weight: 700; }
+    .futures-change { font-size: 10px; margin-top: 3px; }
+    .positive { color: var(--success); }
+    .negative { color: var(--error); }
+    .neutral { color: var(--text-muted); }
 
     /* Interactive Canvas Wrapper */
     .canvas-wrapper { flex: 1; position: relative; width: 100%; min-height: 0; cursor: crosshair; }
@@ -182,6 +207,7 @@
   </div>
 
   <div style="display:flex; gap:16px; align-items:center;">
+    <div class="data-status" id="dataStatus">LIVE FEED NOT CONNECTED</div>
     <button onclick="sentinel.exportData()">Export Matrix (JSON)</button>
     <div class="switch on" id="themeToggle" title="Toggle UI Theme"></div>
     <button id="mobileMenu" style="display:none; padding:6px 10px;" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
@@ -193,18 +219,18 @@
     <div class="sidebar-section">
       <label>Data Acquisition Pipeline</label>
       <div style="font-size:11px; color:var(--text-muted); margin-bottom:16px; line-height:1.6;">
-        Initiates a multi-tier WAF bypass to extract high-fidelity matrices from CNN Dataviz, OilPrice endpoints, TE, and Market Maps.
+        Pulls the futures board from a live market scanner on every refresh. No generated quotes and no preloaded market matrix.
       </div>
       
       <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px; background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
         <div style="flex:1;">
-          <label style="margin-bottom: 4px;">Relay Obfuscation</label>
-          <span style="font-size: 9px; color: var(--text-muted);">Route traffic through CORS proxies</span>
+          <label style="margin-bottom: 4px;">CNN Relay Fallback</label>
+          <span style="font-size: 9px; color: var(--text-muted);">Only used for sentiment data</span>
         </div>
         <div class="switch on" id="proxyToggle"></div>
       </div>
 
-      <button id="executeBtn" class="primary" onclick="sentinel.executePipeline()">Acquire Telemetry</button>
+      <button id="executeBtn" class="primary" onclick="sentinel.executePipeline()">Refresh Live Telemetry</button>
       
       <div class="flow-path" id="flowPath">
         <div class="flow-step" id="step-connect">1. Node Handshake</div>
@@ -223,9 +249,9 @@
         > Options Ratio (Put/Call)<br>
         > Volatility Matrix (VIX)<br>
         > Junk Bond Spreads<br>
-        <span style="color:var(--accent)">> WTI & Brent Crude</span><br>
-        <span style="color:var(--accent)">> OPEC Basket Dynamics</span><br>
-        <span style="color:var(--accent)">> Commodities Heatmap</span><br>
+        <span style="color:var(--accent)">> WTI, Brent & Natural Gas</span><br>
+        <span style="color:var(--accent)">> 48 Futures Contracts</span><br>
+        <span style="color:var(--accent)">> Futures Performance Heatmap</span><br>
         <span style="color:var(--success)">> Top 500 Market Map</span>
       </div>
     </div>
@@ -234,7 +260,7 @@
   <main class="dashboard-view" id="mainDashboard">
     <div class="dashboard-grid" id="dashboardGrid">
       <div style="color: var(--text-muted); font-size: 12px; grid-column: 1 / -1; padding: 40px 20px; font-family: var(--font-mono); text-align: center; border: 1px dashed var(--border); border-radius: var(--radius);">
-         [ DATA_MATRIX_EMPTY ]<br><br>Initiate 'Acquire Telemetry' from the command panel.
+         [ LIVE_FEED_CONNECTING ]<br><br>Requesting the latest market telemetry.
       </div>
     </div>
   </main>
@@ -253,8 +279,8 @@
 
 <script>
 /**
- * MARKET SENTINEL v4.5 - PRECISION OSINT ENGINE
- * Upgrades: Dual-Engine Map Architecture (TradingView Scanner API + Finviz AST Fallback).
+ * MARKET SENTINEL v5.0 - LIVE MARKET TELEMETRY
+ * Futures quotes are requested at runtime; the app contains no generated market fallbacks.
  */
 
 "use strict";
@@ -265,10 +291,62 @@ const PROXIES =[
 ];
 const TARGETS = {
   cnn: "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
-  oil: "https://oilprice.com/oil-price-charts/",
-  treemap: "https://tradingeconomics.com/commodities/treemap"
+  futures: "https://scanner.tradingview.com/futures/scan",
+  stocks: "https://scanner.tradingview.com/america/scan"
 };
-const CACHE_KEY = "ms_telemetry_cache_v4_5";
+
+const FUTURES_CONTRACTS =[
+  { symbol: "CBOT_MINI:YM1!", name: "DJIA", category: "Indices" },
+  { symbol: "CME_MINI:ES1!", name: "S&P 500", category: "Indices" },
+  { symbol: "CME_MINI:NQ1!", name: "Nasdaq 100", category: "Indices" },
+  { symbol: "CME_MINI:RTY1!", name: "Russell 2000", category: "Indices" },
+  { symbol: "CME:NKD1!", name: "Nikkei 225", category: "Indices" },
+  { symbol: "EUREX:FESX1!", name: "Euro Stoxx 50", category: "Indices" },
+  { symbol: "EUREX:FDAX1!", name: "DAX", category: "Indices" },
+  { symbol: "CBOE:VX1!", name: "VIX", category: "Indices" },
+  { symbol: "NYMEX:CL1!", name: "Crude Oil WTI", category: "Energy" },
+  { symbol: "ICEEUR:BRN1!", name: "Crude Oil Brent", category: "Energy" },
+  { symbol: "NYMEX:RB1!", name: "Gasoline RBOB", category: "Energy" },
+  { symbol: "NYMEX:HO1!", name: "Heating Oil", category: "Energy" },
+  { symbol: "NYMEX:NG1!", name: "Natural Gas", category: "Energy" },
+  { symbol: "CBOT:ZB1!", name: "30 Year Bond", category: "Bonds" },
+  { symbol: "CBOT:ZN1!", name: "10 Year Note", category: "Bonds" },
+  { symbol: "CBOT:ZF1!", name: "5 Year Note", category: "Bonds" },
+  { symbol: "CBOT:ZT1!", name: "2 Year Note", category: "Bonds" },
+  { symbol: "ICEUS:CC1!", name: "Cocoa", category: "Softs" },
+  { symbol: "ICEUS:CT1!", name: "Cotton", category: "Softs" },
+  { symbol: "ICEUS:OJ1!", name: "Orange Juice", category: "Softs" },
+  { symbol: "ICEUS:KC1!", name: "Coffee", category: "Softs" },
+  { symbol: "CME:LBR1!", name: "Lumber", category: "Softs" },
+  { symbol: "ICEUS:SB1!", name: "Sugar", category: "Softs" },
+  { symbol: "COMEX:GC1!", name: "Gold", category: "Metals" },
+  { symbol: "COMEX:SI1!", name: "Silver", category: "Metals" },
+  { symbol: "NYMEX:PL1!", name: "Platinum", category: "Metals" },
+  { symbol: "COMEX:HG1!", name: "Copper", category: "Metals" },
+  { symbol: "NYMEX:PA1!", name: "Palladium", category: "Metals" },
+  { symbol: "CME:LE1!", name: "Live Cattle", category: "Meats" },
+  { symbol: "CME:GF1!", name: "Feeder Cattle", category: "Meats" },
+  { symbol: "CME:HE1!", name: "Lean Hogs", category: "Meats" },
+  { symbol: "CBOT:ZS1!", name: "Soybeans", category: "Grains" },
+  { symbol: "CBOT:ZM1!", name: "Soybean Meal", category: "Grains" },
+  { symbol: "CBOT:ZL1!", name: "Soybean Oil", category: "Grains" },
+  { symbol: "CBOT:ZC1!", name: "Corn", category: "Grains" },
+  { symbol: "CBOT:ZW1!", name: "Wheat", category: "Grains" },
+  { symbol: "CBOT:ZR1!", name: "Rough Rice", category: "Grains" },
+  { symbol: "CBOT:ZO1!", name: "Oats", category: "Grains" },
+  { symbol: "ICEUS:RS1!", name: "Canola", category: "Grains" },
+  { symbol: "ICEUS:DX1!", name: "USD", category: "Currencies" },
+  { symbol: "CME:6E1!", name: "EUR", category: "Currencies" },
+  { symbol: "CME:6J1!", name: "JPY", category: "Currencies" },
+  { symbol: "CME:6B1!", name: "GBP", category: "Currencies" },
+  { symbol: "CME:6C1!", name: "CAD", category: "Currencies" },
+  { symbol: "CME:6S1!", name: "CHF", category: "Currencies" },
+  { symbol: "CME:6A1!", name: "AUD", category: "Currencies" },
+  { symbol: "CME:6N1!", name: "NZD", category: "Currencies" },
+  { symbol: "CME:BTC1!", name: "Bitcoin", category: "Currencies" }
+];
+const FUTURES_BY_SYMBOL = new Map(FUTURES_CONTRACTS.map((item, index) => [item.symbol, { ...item, index }]));
+const FUTURES_CATEGORY_ORDER =["Indices", "Energy", "Bonds", "Softs", "Metals", "Meats", "Grains", "Currencies"];
 
 // ============================================================================
 // NETWORK LAYER & PARSERS
@@ -292,171 +370,94 @@ const Network = {
     throw new Error(`All proxy layers failed for ${url}`);
   },
 
-  // Dual-Engine Market Map Fetcher
-  async fetchMarketMapData() {
-    let fvData = null;
-    let lastError = "";
+  async fetchFuturesData() {
+    sentinel.log(`[FUTURES] Requesting ${FUTURES_CONTRACTS.length} continuous contracts...`, "INFO");
+    const payload = {
+      symbols: { tickers: FUTURES_CONTRACTS.map(item => item.symbol), query: { types:[] } },
+      columns:["name", "description", "close", "change", "volume", "update_mode"],
+      range:[0, FUTURES_CONTRACTS.length]
+    };
+    const res = await fetch(TARGETS.futures, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: JSON.stringify(payload),
+      cache: "no-store"
+    });
+    if (!res.ok) throw new Error(`Futures scanner HTTP ${res.status}`);
 
-    // STRATEGY 1: TradingView Scanner API (Fastest, most reliable, no WAF)
-    try {
-      sentinel.log(`[MAP] Attempt 1: Fetching Top 500 via TradingView API...`, "INFO");
-      const tvUrl = "https://scanner.tradingview.com/america/scan";
-      const tvPayload = {
-        "filter":[{"left": "market_cap_basic", "operation": "nempty"}],
-        "options": {"lang": "en"},
-        "markets": ["america"],
-        "symbols": {"query": {"types": ["stock"]}},
-        "columns": ["name", "market_cap_basic", "change"],
-        "sort": {"sortBy": "market_cap_basic", "sortOrder": "desc"},
-        "range":[0, 500]
+    const json = await res.json();
+    if (!Array.isArray(json.data)) throw new Error("Futures scanner returned no quote array.");
+
+    const quotes = json.data.map(item => {
+      const contract = FUTURES_BY_SYMBOL.get(item.s);
+      const price = Number(item.d?.[2]);
+      const change = Number(item.d?.[3]);
+      const volume = Number(item.d?.[4]);
+      if (!contract || !Number.isFinite(price) || !Number.isFinite(change)) return null;
+      const delaySeconds = Number(String(item.d?.[5] || "").match(/(\d+)$/)?.[1] || 0);
+      return {
+        name: contract.name,
+        category: contract.category,
+        symbol: item.d?.[0] || item.s.split(":")[1],
+        providerSymbol: item.s,
+        description: item.d?.[1] || contract.name,
+        price,
+        change,
+        volume: Number.isFinite(volume) ? volume : 0,
+        delayMinutes: Math.round(delaySeconds / 60),
+        updateMode: item.d?.[5] || "unknown",
+        value: 1,
+        order: contract.index
       };
-      
-      const tvRes = await fetch(tvUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(tvPayload)
-      });
-      
-      if (tvRes.ok) {
-        const tvJson = await tvRes.json();
-        if (tvJson.data && Array.isArray(tvJson.data)) {
-          fvData = tvJson.data.map(item => ({
-            name: item.d[0],
-            value: item.d[1] || 0,
-            change: item.d[2] || 0
-          })).filter(d => d.value > 0);
-          
-          sentinel.log(`[MAP] TradingView extraction successful (${fvData.length} tickers).`, "SUCCESS");
-          return fvData;
-        }
-      } else {
-        throw new Error(`TradingView HTTP ${tvRes.status}`);
+    }).filter(Boolean).sort((a, b) => a.order - b.order);
+
+    if (quotes.length < 40) throw new Error(`Only ${quotes.length} futures contracts returned; refusing an incomplete matrix.`);
+    const delayValues = quotes.map(item => item.delayMinutes).filter(Boolean);
+    const minDelay = delayValues.length ? Math.min(...delayValues) : 0;
+    const maxDelay = delayValues.length ? Math.max(...delayValues) : 0;
+    const fetchedAt = new Date().toISOString();
+    sentinel.log(`[FUTURES] Live scanner returned ${quotes.length} contracts.`, "SUCCESS");
+    return {
+      quotes,
+      source: {
+        provider: "TradingView Futures Scanner",
+        reference: "https://www.tradingview.com/markets/futures/quotes-all/",
+        fetchedAt,
+        minDelayMinutes: minDelay,
+        maxDelayMinutes: maxDelay
       }
-    } catch (err) {
-      lastError = err.message;
-      sentinel.log(`[MAP] TradingView failed: ${err.message}. Falling back to Finviz...`, "WARN");
-    }
+    };
+  },
 
-    // STRATEGY 2: Finviz via Lovable Proxy (Aggressive AST Search)
-    try {
-      sentinel.log(`[MAP] Attempt 2: Fetching Finviz via Lovable Proxy...`, "INFO");
-      const proxyUrl = "https://onbkfqayveownervyktu.supabase.co/functions/v1/cors-proxy";
-      const proxyResponse = await fetch(proxyUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-proxy-key': 'chikibriki' },
-        body: JSON.stringify({
-          url: "https://finviz.com/map.ashx?t=sec",
-          method: 'GET',
-          headers: {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            "Accept": "text/html"
-          }
-        })
-      });
-      
-      let responseText = await proxyResponse.text();
-      try {
-        const proxyData = JSON.parse(responseText);
-        if (proxyData && typeof proxyData === 'object') {
-          responseText = proxyData.body || proxyData.content || proxyData.data || responseText;
-        }
-      } catch (e) {}
-
-      sentinel.log(`[MAP] Finviz Response Length: ${responseText.length} bytes`, "INFO");
-
-      if (responseText.includes("Just a moment...") || responseText.includes("cf-browser-verification")) {
-        throw new Error("Cloudflare WAF Blocked Request");
-      }
-
-      // Aggressive Deep-Search for largest array
-      let largestArray =[];
-      function traverse(obj) {
-          if (!obj || typeof obj !== 'object') return;
-          if (Array.isArray(obj)) {
-              if (obj.length > largestArray.length) {
-                  largestArray = obj;
-              }
-              obj.forEach(traverse);
-          } else {
-              Object.values(obj).forEach(traverse);
-          }
-      }
-
-      // Parse <script type="application/json">
-      const scriptRegex = /<script[^>]*type="application\/json"[^>]*>([\s\S]*?)<\/script>/gi;
-      let match;
-      while ((match = scriptRegex.exec(responseText)) !== null) {
-          try { traverse(JSON.parse(match[1])); } catch (e) {}
-      }
-
-      if (largestArray.length > 100) {
-          fvData = largestArray.map(item => {
-              if (typeof item === 'object' && !Array.isArray(item)) {
-                  return {
-                      name: item.ticker || item.name || item.symbol || 'UNK',
-                      value: Number(item.value || item.marketCap || item.cap) || 0,
-                      change: Number(item.change || item.color || item.perf) || 0
-                  };
-              }
-              return null;
-          }).filter(d => d && d.value > 0);
-          
-          if (fvData.length > 0) {
-              sentinel.log(`[MAP] Finviz extraction successful (${fvData.length} tickers).`, "SUCCESS");
-              return fvData;
-          }
-      }
-      throw new Error("No valid data array found in Finviz HTML.");
-    } catch (err) {
-      lastError = err.message;
-      sentinel.log(`[MAP] Finviz failed: ${err.message}.`, "WARN");
-    }
-
-    throw new Error(`All map extraction methods failed. Last error: ${lastError}`);
+  async fetchMarketMapData() {
+    sentinel.log(`[MAP] Requesting the top 500 US equities...`, "INFO");
+    const payload = {
+      filter:[{ left: "market_cap_basic", operation: "nempty" }],
+      options: { lang: "en" },
+      markets:["america"],
+      symbols: { query: { types:["stock"] } },
+      columns:["name", "market_cap_basic", "change"],
+      sort: { sortBy: "market_cap_basic", sortOrder: "desc" },
+      range:[0, 500]
+    };
+    const res = await fetch(TARGETS.stocks, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: JSON.stringify(payload),
+      cache: "no-store"
+    });
+    if (!res.ok) throw new Error(`Equity scanner HTTP ${res.status}`);
+    const json = await res.json();
+    if (!Array.isArray(json.data)) throw new Error("Equity scanner returned no map data.");
+    const stocks = json.data.map(item => ({
+      name: item.d?.[0],
+      value: Number(item.d?.[1]) || 0,
+      change: Number(item.d?.[2]) || 0
+    })).filter(item => item.name && item.value > 0);
+    if (stocks.length < 100) throw new Error(`Only ${stocks.length} equities returned.`);
+    sentinel.log(`[MAP] Live scanner returned ${stocks.length} equities.`, "SUCCESS");
+    return stocks;
   }
-};
-
-// Fallback Data Generators
-Network.generateFallbackEnergy = function() {
-  const baseDate = Date.now() - (30 * 86400000);
-  const wti = [], brent =[], opec =[];
-  let w = 82, b = 86, o = 84;
-  for(let i=0; i<30; i++) {
-    const time = baseDate + (i * 86400000);
-    w += (Math.random() - 0.5) * 2; b += (Math.random() - 0.5) * 2; o += (Math.random() - 0.5) * 2;
-    wti.push({x: time, y: w}); brent.push({x: time, y: b}); opec.push({x: time, y: o});
-  }
-  return { wti, brent, opec };
-};
-
-Network.generateFallbackTreemap = function() {
-  return[
-    { name: "Gold", value: 450, change: 1.2 }, { name: "Silver", value: 200, change: -0.5 },
-    { name: "Crude Oil", value: 600, change: 2.1 }, { name: "Brent", value: 550, change: 1.8 },
-    { name: "Natural Gas", value: 300, change: -4.2 }, { name: "Copper", value: 250, change: 0.8 },
-    { name: "Wheat", value: 180, change: -1.1 }, { name: "Corn", value: 150, change: -0.2 },
-    { name: "Soybeans", value: 140, change: 0.4 }, { name: "Platinum", value: 90, change: 0.1 }
-  ];
-};
-
-Network.generateFallbackFinvizMap = function() {
-  return[
-    { name: "AAPL", value: 2900, change: 1.2 }, { name: "MSFT", value: 2800, change: 0.8 },
-    { name: "NVDA", value: 2200, change: 3.5 }, { name: "GOOGL", value: 1700, change: -0.5 },
-    { name: "AMZN", value: 1600, change: 1.1 }, { name: "META", value: 1100, change: 2.1 },
-    { name: "BRK-B", value: 850, change: -0.2 }, { name: "LLY", value: 750, change: 4.2 },
-    { name: "TSLA", value: 650, change: -2.8 }, { name: "AVGO", value: 600, change: 1.5 },
-    { name: "V", value: 550, change: 0.3 }, { name: "JPM", value: 520, change: -1.2 },
-    { name: "UNH", value: 490, change: 0.7 }, { name: "WMT", value: 480, change: 0.4 },
-    { name: "MA", value: 450, change: 0.6 }, { name: "PG", value: 400, change: -0.1 },
-    { name: "JNJ", value: 380, change: -0.5 }, { name: "HD", value: 370, change: 1.8 },
-    { name: "ORCL", value: 350, change: 2.3 }, { name: "MRK", value: 330, change: -0.8 },
-    { name: "COST", value: 320, change: 1.2 }, { name: "ABBV", value: 310, change: 0.9 },
-    { name: "BAC", value: 300, change: -1.5 }, { name: "CRM", value: 290, change: 1.4 },
-    { name: "CVX", value: 280, change: 0.2 }, { name: "NFLX", value: 270, change: 2.7 },
-    { name: "AMD", value: 260, change: 3.1 }, { name: "PEP", value: 250, change: -0.4 },
-    { name: "KO", value: 240, change: 0.1 }, { name: "LIN", value: 230, change: 0.5 }
-  ];
 };
 
 // ============================================================================
@@ -568,6 +569,11 @@ class TreemapEngine {
       const el = document.createElement('div');
       el.className = 'tm-node';
       el.style.backgroundColor = this.getColor(node.change);
+      const safeName = String(node.name).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      const change = Number(node.change);
+      const changeText = `${change > 0 ? '+' : ''}${change.toFixed(2)}%`;
+      const priceText = Number.isFinite(Number(node.price)) ? ` · ${Number(node.price).toLocaleString(undefined, { maximumFractionDigits: 6 })}` : "";
+      el.title = `${node.name}${node.symbol ? ` (${node.symbol})` : ""}: ${changeText}${priceText}`;
       
       el.style.left = `${x}px`;
       el.style.top = `${y}px`;
@@ -578,11 +584,11 @@ class TreemapEngine {
       
       // Viewport-Aware text fitting (now highly reliable due to perfect squaring)
       if (minDim > 35 && w > 40) {
-        el.innerHTML = `<div class="tm-symbol">${node.name}</div><div class="tm-value">${node.change > 0 ? '+' : ''}${node.change}%</div>`;
+        el.innerHTML = `<div class="tm-symbol">${safeName}</div><div class="tm-value">${changeText}</div>`;
       } else if (minDim > 20 && w > 30) {
-        el.innerHTML = `<div class="tm-symbol" style="font-size: 10px;">${node.name}</div>`;
+        el.innerHTML = `<div class="tm-symbol" style="font-size: 10px;">${safeName}</div>`;
       } else if (minDim > 12 && w > 20) {
-        el.innerHTML = `<div class="tm-symbol" style="font-size: 8px;">${node.name}</div>`;
+        el.innerHTML = `<div class="tm-symbol" style="font-size: 8px;">${safeName}</div>`;
       }
       
       this.container.appendChild(el);
@@ -712,19 +718,18 @@ class ChartEngine {
 // ============================================================================
 // APP CONTROLLER
 // ============================================================================
-const State = { rawJSON: null, uiEngines:[] };
+const State = { rawJSON: null, uiEngines:[], refreshInFlight: false };
 
 const sentinel = {
   init() {
     this.bindDOM();
-    const cached = sessionStorage.getItem(CACHE_KEY);
-    if (cached) {
-      try { State.rawJSON = JSON.parse(cached); this.log("Local cache matrix restored.", "SUCCESS"); this.renderDashboard(State.rawJSON); } 
-      catch(e) { sessionStorage.removeItem(CACHE_KEY); }
-    } else { this.log("Engine Online. Awaiting telemetry directive.", "INFO"); }
-    
+    this.log("Engine online. Connecting to live market feeds.", "INFO");
     if(window.innerWidth < 800) document.getElementById('mobileMenu').style.display = 'block';
     this.resizeObserver = new ResizeObserver(() => { State.uiEngines.forEach(engine => engine.resize()); });
+    this.executePipeline({ silent: true });
+    this.autoRefreshTimer = window.setInterval(() => {
+      if (!document.hidden) this.executePipeline({ silent: true });
+    }, 60000);
   },
 
   bindDOM() {
@@ -754,62 +759,95 @@ const sentinel = {
     el.classList.remove('active', 'done', 'fail'); if (status) el.classList.add(status);
   },
 
-  async executePipeline() {
-    const useProxy = document.getElementById('proxyToggle').classList.contains('on');
-    const btn = document.getElementById('executeBtn'), dot = document.getElementById('statusDot');
+  escapeHTML(value) {
+    return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  },
 
-    btn.disabled = true; dot.classList.add('working');
-    document.getElementById('logsDrawer').classList.remove('collapsed');['connect', 'fetch', 'parse', 'render'].forEach(s => this.setFlow(s, ''));
+  formatMarketNumber(value) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return "—";
+    const magnitude = Math.abs(number);
+    const maximumFractionDigits = magnitude >= 1000 ? 2 : magnitude >= 1 ? 4 : 6;
+    return number.toLocaleString(undefined, { maximumFractionDigits });
+  },
+
+  sourceDelayLabel(source) {
+    const min = Number(source?.minDelayMinutes) || 0;
+    const max = Number(source?.maxDelayMinutes) || min;
+    if (!max) return "DELAY UNKNOWN";
+    return min === max ? `${max} MIN DELAY` : `${min}–${max} MIN DELAY`;
+  },
+
+  setDataStatus(text, state) {
+    document.getElementById('dataStatus').textContent = text;
+    const dot = document.getElementById('statusDot');
+    dot.classList.remove('live', 'working', 'error');
+    if (state) dot.classList.add(state);
+  },
+
+  async executePipeline({ silent = false } = {}) {
+    if (State.refreshInFlight) return;
+    State.refreshInFlight = true;
+    const useProxy = document.getElementById('proxyToggle').classList.contains('on');
+    const btn = document.getElementById('executeBtn');
+
+    btn.disabled = true;
+    this.setDataStatus("REFRESHING LIVE FEEDS…", "working");
+    if (!silent) document.getElementById('logsDrawer').classList.remove('collapsed');
+    ['connect', 'fetch', 'parse', 'render'].forEach(s => this.setFlow(s, ''));
 
     try {
       this.setFlow('connect', 'active');
-      this.log(`Initiating Target Protocol Matrix...`, "INFO");
+      this.log(`Opening live market connections...`, "INFO");
       this.setFlow('connect', 'done');
 
       this.setFlow('fetch', 'active');
-      this.log(`Fetching CNN Core Data...`, "INFO");
-      const cnnData = await Network.fetchWithProxy(TARGETS.cnn, useProxy, true);
-      
-      this.log(`Scraping External Endpoints (Oil, Commodities, Market Maps)...`, "INFO");
-      const energyData = Network.generateFallbackEnergy(); 
-      const tmData = Network.generateFallbackTreemap();
-      
-      // Fetch Real Market Map Data via Dual-Engine
-      let fvData;
-      try {
-        this.log(`Initiating Dual-Engine Market Map Fetcher...`, "INFO");
-        fvData = await Network.fetchMarketMapData();
-      } catch (err) {
-        this.log(`Map extraction failed (${err.message}), using fallback.`, "WARN");
-        fvData = Network.generateFallbackFinvizMap();
-      }
+      const [futuresResult, cnnResult, mapResult] = await Promise.allSettled([
+        Network.fetchFuturesData(),
+        Network.fetchWithProxy(TARGETS.cnn, useProxy, true),
+        Network.fetchMarketMapData()
+      ]);
+      if (futuresResult.status === "rejected") throw futuresResult.reason;
+      if (cnnResult.status === "rejected") this.log(`[CNN] Sentiment feed unavailable: ${cnnResult.reason.message}`, "WARN");
+      if (mapResult.status === "rejected") this.log(`[MAP] Equity map unavailable: ${mapResult.reason.message}`, "WARN");
 
       this.setFlow('fetch', 'done');
       this.setFlow('parse', 'active');
-      
-      const compiledMatrix = { 
-        ...cnnData, 
-        oil_wti: { data: energyData.wti }, 
-        oil_brent: { data: energyData.brent }, 
-        opec_basket: { data: energyData.opec }, 
-        commodities_tm: tmData,
-        finviz_map: fvData
+
+      const { quotes, source } = futuresResult.value;
+      const compiledMatrix = {
+        ...(cnnResult.status === "fulfilled" ? cnnResult.value : {}),
+        futures_source: source,
+        futures_quotes: quotes,
+        oil_wti: quotes.find(item => item.providerSymbol === "NYMEX:CL1!"),
+        oil_brent: quotes.find(item => item.providerSymbol === "ICEEUR:BRN1!"),
+        natural_gas: quotes.find(item => item.providerSymbol === "NYMEX:NG1!"),
+        futures_tm: quotes,
+        ...(mapResult.status === "fulfilled" ? { finviz_map: mapResult.value } : {})
       };
-      
+
       State.rawJSON = compiledMatrix;
-      sessionStorage.setItem(CACHE_KEY, JSON.stringify(compiledMatrix)); 
       this.setFlow('parse', 'done');
 
       this.setFlow('render', 'active');
       this.renderDashboard(compiledMatrix);
       this.setFlow('render', 'done');
-      this.log("Telemetry pipeline executed flawlessly.", "SUCCESS");
+      const fetchedTime = new Date(source.fetchedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      this.setDataStatus(`${quotes.length} FUTURES · ${this.sourceDelayLabel(source)} · ${fetchedTime}`, "live");
+      this.log(`Live telemetry refreshed at ${fetchedTime}.`, "SUCCESS");
 
     } catch (err) {
       this.setFlow('fetch', 'fail');
+      State.rawJSON = null;
+      document.getElementById('dashboardGrid').innerHTML = `
+        <div style="color:var(--error); font-size:12px; grid-column:1/-1; padding:40px 20px; font-family:var(--font-mono); text-align:center; border:1px dashed var(--error); border-radius:var(--radius);">
+          [ LIVE_FEED_UNAVAILABLE ]<br><br>${this.escapeHTML(err.message)}
+        </div>`;
+      this.setDataStatus("LIVE FEED ERROR", "error");
       this.log(`CRITICAL FAILURE: ${err.message}`, "ERROR");
     } finally {
-      btn.disabled = false; dot.classList.remove('working');
+      State.refreshInFlight = false;
+      btn.disabled = false;
     }
   },
 
@@ -836,15 +874,19 @@ const sentinel = {
       `;
     }
 
+    const source = data.futures_source;
+    const sourceStamp = source ? new Date(source.fetchedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "";
+    const sourceMeta = source ? `${source.provider} · ${this.sourceDelayLabel(source)} · fetched ${sourceStamp}` : "";
     const configs =[
+      { key: 'oil_wti', title: "Crude Oil WTI", color: "#ff8c00", type: 'quote' },
+      { key: 'oil_brent', title: "Crude Oil Brent", color: "#ff8c00", type: 'quote' },
+      { key: 'natural_gas', title: "Natural Gas", color: "#ff8c00", type: 'quote' },
+      { key: 'futures_tm', title: "Futures 1-Day Performance", color: "#fff", type: 'treemap', wide: true, live: true },
+      { key: 'futures_quotes', title: "Global Futures Board", color: "#fff", type: 'futures-board', wide: true, live: true },
       { key: 'fear_and_greed_historical', title: "Fear & Greed Timeline", color: "#bf5af2", type: 'chart' },
-      { key: 'oil_wti', title: "Crude Oil (WTI) Metrics", color: "#ff8c00", type: 'chart' },
-      { key: 'oil_brent', title: "Brent Crude Flow", color: "#ff8c00", type: 'chart' },
-      { key: 'opec_basket', title: "OPEC Basket Dynamics", color: "#ff8c00", type: 'chart' },
       { key: 'market_momentum_sp500', title: "Market Momentum (S&P 500)", color: "#0a84ff", type: 'chart' },
       { key: 'stock_price_strength', title: "Stock Price Strength (NYSE)", color: "#ffd60a", type: 'chart' },
       { key: 'market_volatility_vix', title: "Market Volatility (VIX)", color: "#ff453a", type: 'chart' },
-      { key: 'commodities_tm', title: "Global Commodities Heatmap", color: "#fff", type: 'treemap', wide: true },
       { key: 'finviz_map', title: "Top 500 Market Heatmap", color: "#fff", type: 'treemap', wide: true }
     ];
 
@@ -853,11 +895,64 @@ const sentinel = {
       if (!payload) return;
 
       const card = document.createElement('div');
-      card.className = `chart-card ${config.wide ? 'wide' : ''}`;
-      
-      if (config.type === 'chart') {
+      card.className = `chart-card ${config.wide ? 'wide' : ''} ${config.type === 'quote' ? 'quote-card' : ''} ${config.type === 'futures-board' ? 'board-card' : ''}`;
+
+      if (config.type === 'quote') {
+        const changeClass = payload.change > 0 ? "positive" : payload.change < 0 ? "negative" : "neutral";
+        const changeText = `${payload.change > 0 ? "+" : ""}${Number(payload.change).toFixed(2)}%`;
+        card.innerHTML = `
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">${config.title}</div>
+              <div class="chart-rating">${this.escapeHTML(payload.symbol)} · ${this.escapeHTML(payload.category)}</div>
+            </div>
+          </div>
+          <div class="quote-body">
+            <div class="quote-price" style="color:${config.color}">${this.formatMarketNumber(payload.price)}</div>
+            <div class="quote-change ${changeClass}">${changeText} · 1 DAY</div>
+            <div class="quote-meta">${this.escapeHTML(sourceMeta)}</div>
+          </div>
+        `;
+        grid.appendChild(card);
+      }
+      else if (config.type === 'futures-board') {
+        const sections = FUTURES_CATEGORY_ORDER.map(category => {
+          const rows = payload.filter(item => item.category === category).map(item => {
+            const changeClass = item.change > 0 ? "positive" : item.change < 0 ? "negative" : "neutral";
+            const changeText = `${item.change > 0 ? "+" : ""}${Number(item.change).toFixed(2)}%`;
+            return `
+              <div class="futures-row" title="${this.escapeHTML(item.description)}">
+                <div>
+                  <div class="futures-name">${this.escapeHTML(item.name)}</div>
+                  <div class="futures-symbol">${this.escapeHTML(item.symbol)} · VOL ${this.formatMarketNumber(item.volume)}</div>
+                </div>
+                <div class="futures-numbers">
+                  <div class="futures-price">${this.formatMarketNumber(item.price)}</div>
+                  <div class="futures-change ${changeClass}">${changeText}</div>
+                </div>
+              </div>`;
+          }).join("");
+          return rows ? `
+            <section class="futures-category">
+              <div class="futures-category-title">${category}</div>
+              <div class="futures-rows">${rows}</div>
+            </section>` : "";
+        }).join("");
+        card.innerHTML = `
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">${config.title}</div>
+              <div class="chart-rating">${this.escapeHTML(sourceMeta)} · auto-refresh 60 sec</div>
+            </div>
+            <div class="chart-value">${payload.length}</div>
+          </div>
+          <div class="futures-board">${sections}</div>
+        `;
+        grid.appendChild(card);
+      }
+      else if (config.type === 'chart') {
         const pts = payload.data || payload;
-        if(pts.length === 0) return;
+        if(!Array.isArray(pts) || pts.length === 0) return;
         const latest = pts[pts.length - 1];
         card.innerHTML = `
           <div class="chart-header"><div class="chart-title">${config.title}</div>
@@ -872,7 +967,12 @@ const sentinel = {
       } 
       else if (config.type === 'treemap') {
         card.innerHTML = `
-          <div class="chart-header"><div class="chart-title">${config.title}</div></div>
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">${config.title}</div>
+              ${config.live ? `<div class="chart-rating">${this.escapeHTML(sourceMeta)}</div>` : ""}
+            </div>
+          </div>
           <div class="treemap-wrapper" id="wrap_${config.key}"></div>
         `;
         grid.appendChild(card);
