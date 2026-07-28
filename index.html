@@ -163,10 +163,25 @@
     
     /* Treemap Wrapper - Finviz Style Fixes */
     .treemap-wrapper { flex: 1; position: relative; width: 100%; min-height: 0; display: flex; overflow: hidden; border-radius: 4px; background: #000; }
-    .tm-node { position: absolute; border: 1px solid #000; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px; overflow: hidden; color: #fff; transition: filter 0.2s; cursor: default; }
-    .tm-node:hover { filter: brightness(1.2); z-index: 5; border-color: #fff; }
+    .tm-node { position: absolute; border: 1px solid #000; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2px; overflow: hidden; color: #fff; transition: filter 0.2s, outline-color 0.2s; cursor: help; }
+    .tm-node:hover { filter: brightness(1.25); z-index: 5; border-color: #fff; outline: 1px solid rgba(255,255,255,0.8); outline-offset: -2px; }
     .tm-symbol { font-weight: 700; font-size: 13px; text-shadow: 0 1px 2px rgba(0,0,0,0.8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
     .tm-value { font-family: var(--font-mono); font-size: 11px; margin-top: 1px; text-shadow: 0 1px 2px rgba(0,0,0,0.8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+
+    .treemap-tooltip {
+      position: absolute; z-index: 100; min-width: 210px; max-width: min(300px, calc(100% - 16px));
+      padding: 12px 14px; pointer-events: none; opacity: 0; visibility: hidden;
+      color: #fff; background: rgba(12,12,14,0.97); border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 7px; box-shadow: 0 10px 30px rgba(0,0,0,0.75);
+      font-family: var(--font-mono); transition: opacity 0.1s ease; backdrop-filter: blur(8px);
+    }
+    .treemap-tooltip.visible { opacity: 1; visibility: visible; }
+    .treemap-tooltip-title { font: 800 13px/1.25 var(--font-ui); padding-right: 8px; }
+    .treemap-tooltip-symbol { color: var(--text-muted); font-size: 9px; margin-top: 3px; text-transform: uppercase; }
+    .treemap-tooltip-grid { display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; margin-top: 10px; padding-top: 9px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .treemap-tooltip-label { color: #9b9ba1; font-size: 9px; text-transform: uppercase; }
+    .treemap-tooltip-value { font-size: 11px; font-weight: 700; text-align: right; }
+    [data-theme="light"] .treemap-tooltip { color: #fff; background: rgba(20,20,22,0.97); }
     
     /* Absolute positioning for custom tooltips injected by JS */
     .chart-tooltip {
@@ -467,6 +482,7 @@ const Network = {
 class TreemapEngine {
   constructor(container, data) {
     this.container = container;
+    this.tooltip = null;
     // Filter out 0 or negative values, sort descending for Squarify
     this.data = data.filter(d => d.value > 0).sort((a,b) => b.value - a.value); 
     this.draw();
@@ -485,10 +501,85 @@ class TreemapEngine {
     return '#414554'; // Neutral greyish
   }
 
+  escapeHTML(value) {
+    return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  formatNumber(value, maximumFractionDigits = 6) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return "—";
+    return number.toLocaleString(undefined, { maximumFractionDigits });
+  }
+
+  formatCompact(value) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return "—";
+    return new Intl.NumberFormat(undefined, { notation: "compact", maximumFractionDigits: 2 }).format(number);
+  }
+
+  showTooltip(event, node) {
+    if (!this.tooltip) return;
+    const change = Number(node.change);
+    const changeText = `${change > 0 ? "+" : ""}${change.toFixed(2)}%`;
+    const changeClass = change > 0 ? "positive" : change < 0 ? "negative" : "neutral";
+    const rows =[
+      ["1 Day", `<span class="${changeClass}">${changeText}</span>`]
+    ];
+
+    if (Number.isFinite(Number(node.price))) {
+      rows.unshift(["Price", this.formatNumber(node.price)]);
+      if (Number(node.volume) > 0) rows.push(["Volume", this.formatNumber(node.volume, 0)]);
+      if (node.category) rows.push(["Category", this.escapeHTML(node.category)]);
+    } else if (Number.isFinite(Number(node.value))) {
+      rows.push(["Market cap", this.formatCompact(node.value)]);
+    }
+
+    this.tooltip.innerHTML = `
+      <div class="treemap-tooltip-title">${this.escapeHTML(node.name)}</div>
+      <div class="treemap-tooltip-symbol">${this.escapeHTML(node.symbol || node.description || "Equity")}</div>
+      <div class="treemap-tooltip-grid">
+        ${rows.map(([label, value]) => `
+          <div class="treemap-tooltip-label">${label}</div>
+          <div class="treemap-tooltip-value">${value}</div>
+        `).join("")}
+      </div>
+    `;
+    this.tooltip.classList.add("visible");
+    this.positionTooltip(event);
+  }
+
+  positionTooltip(event) {
+    if (!this.tooltip) return;
+    const bounds = this.container.getBoundingClientRect();
+    const gap = 14;
+    const edge = 8;
+    const pointerX = event.clientX - bounds.left;
+    const pointerY = event.clientY - bounds.top;
+    const width = this.tooltip.offsetWidth;
+    const height = this.tooltip.offsetHeight;
+    let left = pointerX + gap;
+    let top = pointerY + gap;
+
+    if (left + width > bounds.width - edge) left = pointerX - width - gap;
+    if (top + height > bounds.height - edge) top = pointerY - height - gap;
+
+    this.tooltip.style.left = `${Math.max(edge, Math.min(left, bounds.width - width - edge))}px`;
+    this.tooltip.style.top = `${Math.max(edge, Math.min(top, bounds.height - height - edge))}px`;
+  }
+
+  hideTooltip() {
+    if (this.tooltip) this.tooltip.classList.remove("visible");
+  }
+
   draw() {
     this.container.innerHTML = '';
     const rect = this.container.getBoundingClientRect();
     if(rect.width === 0 || rect.height === 0) return;
+
+    this.tooltip = document.createElement("div");
+    this.tooltip.className = "treemap-tooltip";
+    this.tooltip.setAttribute("role", "tooltip");
+    this.container.appendChild(this.tooltip);
 
     const totalValue = this.data.reduce((sum, item) => sum + item.value, 0);
     if (totalValue === 0) return;
@@ -573,7 +664,7 @@ class TreemapEngine {
       const change = Number(node.change);
       const changeText = `${change > 0 ? '+' : ''}${change.toFixed(2)}%`;
       const priceText = Number.isFinite(Number(node.price)) ? ` · ${Number(node.price).toLocaleString(undefined, { maximumFractionDigits: 6 })}` : "";
-      el.title = `${node.name}${node.symbol ? ` (${node.symbol})` : ""}: ${changeText}${priceText}`;
+      el.setAttribute("aria-label", `${node.name}${node.symbol ? ` (${node.symbol})` : ""}: ${changeText}${priceText}`);
       
       el.style.left = `${x}px`;
       el.style.top = `${y}px`;
@@ -590,6 +681,11 @@ class TreemapEngine {
       } else if (minDim > 12 && w > 20) {
         el.innerHTML = `<div class="tm-symbol" style="font-size: 8px;">${safeName}</div>`;
       }
+
+      el.addEventListener("pointerenter", event => this.showTooltip(event, node));
+      el.addEventListener("pointermove", event => this.positionTooltip(event));
+      el.addEventListener("pointerdown", event => this.showTooltip(event, node));
+      el.addEventListener("pointerleave", () => this.hideTooltip());
       
       this.container.appendChild(el);
     });
