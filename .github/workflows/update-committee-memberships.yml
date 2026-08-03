@@ -1,0 +1,42 @@
+name: Update congressional committee memberships
+
+on:
+  schedule:
+    - cron: "43 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sentinel-data-updates
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out dashboard
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh committee memberships from Wikipedia
+        run: node scripts/fetch-committee-memberships.mjs
+
+      - name: Commit refreshed membership list
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/committee-memberships.json
+          if git diff --cached --quiet; then
+            echo "Committee membership snapshot is unchanged."
+          else
+            git commit -m "Update congressional committee memberships"
+            git push
+          fi

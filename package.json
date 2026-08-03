@@ -1,0 +1,15 @@
+{
+  "name": "market-sentinel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --check server.mjs && node --check scripts/fetch-openinsider.mjs && node --check scripts/fetch-capitol-trades.mjs && node --check scripts/fetch-committee-memberships.mjs && node scripts/validate-data.mjs && node scripts/smoke-server.mjs",
+    "refresh:openinsider": "node scripts/fetch-openinsider.mjs",
+    "refresh:capitol": "node scripts/fetch-capitol-trades.mjs",
+    "refresh:committees": "node scripts/fetch-committee-memberships.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

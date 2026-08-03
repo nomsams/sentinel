@@ -1,0 +1,41 @@
+name: Update OpenInsider snapshot
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sentinel-data-updates
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out dashboard
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch OpenInsider
+        run: node scripts/fetch-openinsider.mjs
+
+      - name: Commit refreshed snapshot
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/openinsider.json
+          if git diff --cached --quiet; then
+            echo "OpenInsider snapshot is unchanged."
+          else
+            git commit -m "Update OpenInsider snapshot"
+            git push
+          fi

@@ -80,6 +80,21 @@
     .flow-step.fail { color: var(--error); }
     .flow-step.fail::before { background: var(--error); box-shadow: 0 0 8px var(--error); }
 
+    .live-jobs-panel { display: grid; gap: 8px; margin-top: 12px; }
+    .live-job-row { padding: 9px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; }
+    .live-job-heading { display: flex; justify-content: space-between; gap: 10px; color: var(--text); font: 800 9px/1.2 var(--font-mono); text-transform: uppercase; }
+    .live-job-status { color: var(--text-muted); }
+    .live-job-row.running .live-job-status { color: var(--warning); }
+    .live-job-row.completed .live-job-status { color: var(--success); }
+    .live-job-row.failed .live-job-status { color: var(--error); }
+    .live-job-track { height: 5px; margin-top: 7px; overflow: hidden; background: var(--border); border-radius: 999px; }
+    .live-job-bar { width: 0; height: 100%; background: var(--accent); border-radius: inherit; transition: width 0.25s ease; }
+    .live-job-row.running .live-job-bar { background: var(--warning); }
+    .live-job-row.completed .live-job-bar { background: var(--success); }
+    .live-job-row.failed .live-job-bar { background: var(--error); }
+    .live-job-message { margin-top: 6px; overflow: hidden; color: var(--text-muted); font: 8px/1.35 var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
+    .live-collector-note { margin-top: 10px; color: var(--text-muted); font: 8px/1.45 var(--font-mono); }
+
     /* ==========================================================================
        3. DASHBOARD & DATA VIZ
        ========================================================================== */
@@ -156,6 +171,142 @@
     .positive { color: var(--success); }
     .negative { color: var(--error); }
     .neutral { color: var(--text-muted); }
+
+    .insider-board { display: flex; flex-direction: column; gap: 12px; }
+    .insider-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+    .insider-tab { padding: 7px 10px; font-size: 9px; border-radius: 6px; }
+    .insider-tab.active { color: #fff; background: var(--accent); border-color: var(--accent); box-shadow: 0 3px 12px var(--accent-glow); }
+    .insider-list { display: grid; gap: 7px; }
+    .insider-row {
+      position: relative; z-index: 1; display: grid;
+      grid-template-columns: minmax(150px, 1.2fr) minmax(150px, 1fr) minmax(135px, 0.8fr) minmax(125px, auto);
+      align-items: center; gap: 14px; min-height: 64px; padding: 10px 12px;
+      background: var(--bg); border: 1px solid var(--border); border-radius: 7px;
+      cursor: help; transition: border-color var(--transition), background var(--transition), transform var(--transition);
+    }
+    .insider-row:hover, .insider-row:focus { z-index: 40; border-color: var(--border-focus); background: var(--surface-elevated); transform: translateY(-1px); }
+    .insider-security, .insider-party, .insider-action { min-width: 0; }
+    .insider-ticker { color: var(--accent); font: 800 13px/1.2 var(--font-mono); letter-spacing: 0.5px; }
+    .insider-company, .insider-primary { margin-top: 4px; overflow: hidden; color: var(--text); font-size: 10px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+    .insider-meta { margin-top: 4px; overflow: hidden; color: var(--text-muted); font: 9px/1.3 var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
+    .insider-trade { display: inline-flex; max-width: 100%; padding: 4px 7px; border: 1px solid currentColor; border-radius: 999px; font: 800 9px/1 var(--font-mono); white-space: nowrap; }
+    .insider-numbers { min-width: 0; text-align: right; }
+    .insider-value { font: 800 13px/1.2 var(--font-mono); white-space: nowrap; }
+    .insider-hover-detail {
+      position: absolute; top: calc(100% + 5px); left: 10px; right: 10px; z-index: 100;
+      display: none; padding: 12px 14px; color: #fff; background: rgba(12,12,14,0.98);
+      border: 1px solid rgba(255,255,255,0.22); border-radius: 7px; box-shadow: 0 12px 32px rgba(0,0,0,0.8);
+      font-family: var(--font-mono); backdrop-filter: blur(8px);
+    }
+    .insider-row.tooltip-up .insider-hover-detail { top: auto; bottom: calc(100% + 5px); }
+    .insider-row:hover .insider-hover-detail, .insider-row:focus .insider-hover-detail { display: block; }
+    .insider-hover-title { font: 800 12px/1.3 var(--font-ui); }
+    .insider-hover-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px 16px; margin-top: 10px; padding-top: 9px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .insider-hover-label { color: #9b9ba1; font-size: 8px; text-transform: uppercase; }
+    .insider-hover-value { margin-top: 3px; overflow-wrap: anywhere; font-size: 10px; font-weight: 700; }
+    .insider-source { display: flex; justify-content: space-between; gap: 12px; color: var(--text-muted); font: 9px/1.4 var(--font-mono); }
+    .insider-source a { color: var(--accent); text-decoration: none; }
+    .insider-source a:hover { text-decoration: underline; }
+    [data-theme="light"] .insider-hover-detail { color: #fff; background: rgba(20,20,22,0.98); }
+
+    .data-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .data-toolbar .toolbar-spacer { flex: 1; }
+    .data-toolbar select, .data-toolbar input {
+      min-height: 32px; padding: 7px 10px; color: var(--text); background: var(--bg);
+      border: 1px solid var(--border); border-radius: 6px; font: 10px/1 var(--font-mono);
+    }
+    .data-toolbar input { min-width: min(260px, 100%); }
+    .data-toolbar select:focus, .data-toolbar input:focus { border-color: var(--accent); }
+    .data-toolbar button { min-height: 32px; padding: 7px 10px; font-size: 9px; }
+    .data-export-group { display: flex; gap: 6px; }
+    .data-export-button { color: var(--accent); }
+
+    .congressional-board { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+    .congressional-info {
+      padding: 12px 14px; color: var(--text-muted); background: var(--bg);
+      border-left: 3px solid var(--warning); border-radius: 4px; font-size: 11px; line-height: 1.6;
+    }
+    .congressional-stats { display: flex; flex-wrap: wrap; gap: 8px; }
+    .congressional-stat { padding: 7px 10px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; font: 9px/1.2 var(--font-mono); }
+    .congressional-stat strong { color: var(--text); font-size: 11px; }
+    .trade-table-scroll { max-height: 680px; overflow: auto; border: 1px solid var(--border); border-radius: 7px; background: var(--bg); }
+    .trade-table { width: 100%; min-width: 1120px; border-collapse: collapse; table-layout: fixed; }
+    .trade-table th { position: sticky; top: 0; z-index: 4; padding: 0; color: var(--text-muted); background: var(--surface-elevated); border-bottom: 1px solid var(--border-focus); text-align: left; }
+    .trade-table th:nth-child(1) { width: 180px; }
+    .trade-table th:nth-child(2) { width: 240px; }
+    .trade-table th:nth-child(3), .trade-table th:nth-child(4) { width: 105px; }
+    .trade-table th:nth-child(5) { width: 95px; }
+    .trade-table th:nth-child(6) { width: 105px; }
+    .trade-table th:nth-child(7) { width: 78px; }
+    .trade-table th:nth-child(8) { width: 92px; }
+    .trade-table th:nth-child(9) { width: 92px; }
+    .trade-sort-button { width: 100%; justify-content: flex-start; padding: 10px 9px; border: 0; border-radius: 0; background: transparent; font-size: 9px; }
+    .trade-sort-button.active { color: var(--accent); }
+    .trade-sort-arrow { margin-left: auto; font-family: var(--font-mono); }
+    .trade-table td { padding: 9px; border-bottom: 1px solid var(--border); color: var(--text); font: 10px/1.35 var(--font-mono); vertical-align: middle; }
+    .trade-table tbody tr { transition: background var(--transition); }
+    .trade-table tbody tr:hover { background: var(--surface-elevated); }
+    .trade-table tbody tr:last-child td { border-bottom: 0; }
+    .trade-cell-main { overflow: hidden; font: 700 10px/1.3 var(--font-ui); text-overflow: ellipsis; white-space: nowrap; }
+    .trade-cell-meta { margin-top: 4px; overflow: hidden; color: var(--text-muted); font-size: 8px; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+    .politician-link { display: block; max-width: 100%; padding: 0; overflow: hidden; color: var(--accent); background: transparent; border: 0; border-radius: 0; font: 800 10px/1.3 var(--font-ui); text-align: left; text-overflow: ellipsis; text-transform: none; white-space: nowrap; }
+    .politician-link:hover:not(:disabled) { color: var(--text); background: transparent; text-decoration: underline; }
+    .trade-type-pill { display: inline-flex; padding: 4px 6px; border: 1px solid currentColor; border-radius: 999px; font: 800 9px/1 var(--font-mono); text-transform: uppercase; }
+    .trade-pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+    .trade-page-label { min-width: 150px; color: var(--text-muted); font: 9px/1.3 var(--font-mono); text-align: center; }
+
+    .politician-modal { position: fixed; inset: 0; z-index: 500; display: grid; place-items: center; padding: 20px; background: rgba(0,0,0,0.78); backdrop-filter: blur(9px); }
+    .politician-modal[hidden] { display: none; }
+    .politician-summary-panel { width: min(980px, 100%); max-height: 90vh; overflow: auto; background: var(--surface); border: 1px solid var(--border-focus); border-radius: 10px; box-shadow: 0 28px 80px rgba(0,0,0,0.9); }
+    .politician-summary-header { position: sticky; top: 0; z-index: 3; display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; padding: 20px; background: var(--surface); border-bottom: 1px solid var(--border); }
+    .politician-summary-name { font-size: 23px; font-weight: 850; letter-spacing: -0.5px; }
+    .politician-summary-meta { margin-top: 7px; color: var(--text-muted); font: 10px/1.4 var(--font-mono); text-transform: uppercase; }
+    .politician-summary-body { display: grid; gap: 18px; padding: 20px; }
+    .politician-summary-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+    .politician-summary-stat { min-width: 0; padding: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 7px; }
+    .politician-summary-stat label { margin: 0 0 8px; }
+    .politician-summary-stat strong { display: block; overflow-wrap: anywhere; font: 800 17px/1.2 var(--font-mono); }
+    .politician-summary-section h3 { margin-bottom: 10px; color: var(--text-muted); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+    .politician-detail-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+    .politician-detail { padding: 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; }
+    .politician-detail span { display: block; color: var(--text-muted); font: 8px/1.2 var(--font-mono); text-transform: uppercase; }
+    .politician-detail strong { display: block; margin-top: 5px; font-size: 10px; overflow-wrap: anywhere; }
+    .committee-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .committee-chip { padding: 8px 10px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; font-size: 9px; text-decoration: none; }
+    .committee-chip:hover { border-color: var(--accent); }
+    .committee-role { color: var(--text-muted); font-family: var(--font-mono); }
+    .politician-issuer-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+    .politician-issuer { display: flex; justify-content: space-between; gap: 10px; padding: 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; font-size: 10px; }
+    .politician-issuer span:last-child { color: var(--text-muted); font-family: var(--font-mono); white-space: nowrap; }
+    .summary-trade-list { display: grid; gap: 6px; }
+    .summary-trade-row { display: grid; grid-template-columns: 90px minmax(0, 1fr) 90px 110px; gap: 10px; padding: 9px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; font: 9px/1.35 var(--font-mono); }
+    .summary-trade-row:hover { border-color: var(--border-focus); }
+    .summary-source-link { color: var(--accent); text-decoration: none; }
+    .summary-source-link:hover { text-decoration: underline; }
+
+    @media (max-width: 900px) {
+      .insider-row { grid-template-columns: minmax(130px, 1fr) minmax(130px, 1fr) auto; }
+      .insider-numbers { grid-column: 3; }
+      .insider-hover-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .dashboard-grid { grid-template-columns: minmax(0, 1fr); padding: 12px; }
+      .insider-row { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; }
+      .insider-party { grid-column: 1 / -1; grid-row: 2; }
+      .insider-action { grid-column: 1; grid-row: 3; }
+      .insider-numbers { grid-column: 2; grid-row: 3; }
+      .insider-hover-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .insider-source { flex-direction: column; }
+      .data-toolbar { align-items: stretch; }
+      .data-toolbar .toolbar-spacer { display: none; }
+      .data-toolbar input, .data-toolbar select { width: 100%; }
+      .politician-modal { padding: 8px; }
+      .politician-summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .politician-detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .politician-issuer-list { grid-template-columns: 1fr; }
+      .summary-trade-row { grid-template-columns: 78px minmax(0, 1fr) 80px; }
+      .summary-trade-row > :last-child { grid-column: 2 / -1; }
+    }
 
     /* Interactive Canvas Wrapper */
     .canvas-wrapper { flex: 1; position: relative; width: 100%; min-height: 0; cursor: crosshair; }
@@ -234,7 +385,7 @@
     <div class="sidebar-section">
       <label>Data Acquisition Pipeline</label>
       <div style="font-size:11px; color:var(--text-muted); margin-bottom:16px; line-height:1.6;">
-        Pulls the futures board from a live market scanner on every refresh. No generated quotes and no preloaded market matrix.
+        Starts the website collectors from this app, writes a fresh cache only after a complete run, and shows every live job below.
       </div>
       
       <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px; background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
@@ -245,7 +396,26 @@
         <div class="switch on" id="proxyToggle"></div>
       </div>
 
-      <button id="executeBtn" class="primary" onclick="sentinel.executePipeline()">Refresh Live Telemetry</button>
+      <button id="executeBtn" class="primary" onclick="sentinel.refreshEverything()">Fetch All Live Website Data</button>
+
+      <div class="live-jobs-panel" id="liveJobsPanel" aria-label="Live website collection progress">
+        <div class="live-job-row" data-live-job="openinsider">
+          <div class="live-job-heading"><span>OpenInsider</span><span class="live-job-status" data-job-status>Waiting</span></div>
+          <div class="live-job-track"><div class="live-job-bar" data-job-bar></div></div>
+          <div class="live-job-message" data-job-message>Ready to fetch directly from the website.</div>
+        </div>
+        <div class="live-job-row" data-live-job="capitol">
+          <div class="live-job-heading"><span>Capitol Trades</span><span class="live-job-status" data-job-status>Waiting</span></div>
+          <div class="live-job-track"><div class="live-job-bar" data-job-bar></div></div>
+          <div class="live-job-message" data-job-message>Ready to fetch every results page.</div>
+        </div>
+        <div class="live-job-row" data-live-job="committees">
+          <div class="live-job-heading"><span>Committees</span><span class="live-job-status" data-job-status>Waiting</span></div>
+          <div class="live-job-track"><div class="live-job-bar" data-job-bar></div></div>
+          <div class="live-job-message" data-job-message>Ready to refresh House and Senate rosters.</div>
+        </div>
+      </div>
+      <div class="live-collector-note">Cached JSON is the last successful run only. Each fetch above replaces it after the live collector finishes.</div>
       
       <div class="flow-path" id="flowPath">
         <div class="flow-step" id="step-connect">1. Node Handshake</div>
@@ -267,6 +437,8 @@
         <span style="color:var(--accent)">> WTI, Brent & Natural Gas</span><br>
         <span style="color:var(--accent)">> 48 Futures Contracts</span><br>
         <span style="color:var(--accent)">> Futures Performance Heatmap</span><br>
+        <span style="color:var(--warning)">> SEC Form 4 Insider Activity</span><br>
+        <span style="color:#bf5af2">> Congressional Trades & Committees</span><br>
         <span style="color:var(--success)">> Top 500 Market Map</span>
       </div>
     </div>
@@ -292,6 +464,10 @@
   <div class="log-scroll" id="logScroll"></div>
 </div>
 
+<div class="politician-modal" id="politicianModal" hidden role="dialog" aria-modal="true" aria-label="Politician trade summary">
+  <div class="politician-summary-panel" id="politicianSummaryPanel"></div>
+</div>
+
 <script>
 /**
  * MARKET SENTINEL v5.0 - LIVE MARKET TELEMETRY
@@ -307,7 +483,29 @@ const PROXIES =[
 const TARGETS = {
   cnn: "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
   futures: "https://scanner.tradingview.com/futures/scan",
-  stocks: "https://scanner.tradingview.com/america/scan"
+  stocks: "https://scanner.tradingview.com/america/scan",
+  insiders: "./data/openinsider.json",
+  congressional: "./data/capitol-trades.json",
+  committees: "./data/committee-memberships.json",
+  jobs: "./api/jobs"
+};
+
+const CONGRESSIONAL_COLUMNS = [
+  { key: "politicianName", label: "Politician", sortKey: "politicianName" },
+  { key: "issuerName", label: "Traded Issuer", sortKey: "issuerName" },
+  { key: "publishedDisplay", label: "Published", sortKey: "publishedAt" },
+  { key: "tradedDisplay", label: "Traded", sortKey: "tradedAt" },
+  { key: "filedAfterDisplay", label: "Filed After", sortKey: "reportingGap" },
+  { key: "ownerDisplay", label: "Owner", sortKey: "ownerDisplay" },
+  { key: "typeDisplay", label: "Type", sortKey: "type" },
+  { key: "sizeDisplay", label: "Size", sortKey: "estimatedValue" },
+  { key: "priceDisplay", label: "Price", sortKey: "price" }
+];
+
+const LIVE_SOURCE_MAX_AGE_MS = {
+  openinsider: 30 * 60 * 1000,
+  capitol: 6 * 60 * 60 * 1000,
+  committees: 24 * 60 * 60 * 1000
 };
 
 const FUTURES_CONTRACTS =[
@@ -383,6 +581,45 @@ const Network = {
       } catch (err) {}
     }
     throw new Error(`All proxy layers failed for ${url}`);
+  },
+
+  async startCollectorJob(source) {
+    const response = await fetch(`${TARGETS.jobs}/${encodeURIComponent(source)}`, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      cache: "no-store"
+    });
+    if (!response.ok) {
+      if (response.status === 404) throw new Error("The live collector API is unavailable. Start this app with npm start instead of opening index.html directly.");
+      throw new Error(`Live collector HTTP ${response.status}`);
+    }
+    return response.json();
+  },
+
+  async fetchCollectorJob(jobId) {
+    const response = await fetch(`${TARGETS.jobs}/${encodeURIComponent(jobId)}?v=${Date.now()}`, {
+      headers: { "Accept": "application/json" },
+      cache: "no-store"
+    });
+    if (!response.ok) throw new Error(`Collector status HTTP ${response.status}`);
+    return response.json();
+  },
+
+  async fetchLatestCollectorJobs() {
+    const response = await fetch(`${TARGETS.jobs}?v=${Date.now()}`, {
+      headers: { "Accept": "application/json" },
+      cache: "no-store"
+    });
+    if (!response.ok) throw new Error(`Collector API HTTP ${response.status}`);
+    return response.json();
+  },
+
+  clearSourceCache(source) {
+    if (source === "capitol") {
+      this.congressionalCache = null;
+      this.congressionalCacheTime = 0;
+    }
+    if (source === "committees") this.committeeCache = null;
   },
 
   async fetchFuturesData() {
@@ -472,6 +709,52 @@ const Network = {
     if (stocks.length < 100) throw new Error(`Only ${stocks.length} equities returned.`);
     sentinel.log(`[MAP] Live scanner returned ${stocks.length} equities.`, "SUCCESS");
     return stocks;
+  },
+
+  async fetchOpenInsiderData() {
+    sentinel.log(`[INSIDERS] Loading the latest SEC Form 4 snapshot...`, "INFO");
+    const separator = TARGETS.insiders.includes("?") ? "&" : "?";
+    const res = await fetch(`${TARGETS.insiders}${separator}v=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(`OpenInsider snapshot HTTP ${res.status}`);
+    const json = await res.json();
+    if (!json?.source?.fetchedAt || !Array.isArray(json.sections) || json.sections.length < 5) {
+      throw new Error("OpenInsider snapshot is incomplete.");
+    }
+    const rowCount = json.sections.reduce((total, section) => total + (Array.isArray(section.rows) ? section.rows.length : 0), 0);
+    if (rowCount < 5) throw new Error("OpenInsider snapshot contains no current filings.");
+    sentinel.log(`[INSIDERS] Loaded ${rowCount} filings across ${json.sections.length} lists.`, "SUCCESS");
+    return json;
+  },
+
+  async fetchCongressionalData() {
+    if (this.congressionalCache && Date.now() - this.congressionalCacheTime < 600000) return this.congressionalCache;
+    sentinel.log(`[CONGRESS] Loading every 90-day Capitol Trades page...`, "INFO");
+    const res = await fetch(`${TARGETS.congressional}?v=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Capitol Trades snapshot HTTP ${res.status}`);
+    const json = await res.json();
+    if (!json?.source?.fetchedAt || !Array.isArray(json.trades) || json.trades.length < 100) {
+      throw new Error("Capitol Trades snapshot is incomplete.");
+    }
+    this.congressionalCache = json;
+    this.congressionalCacheTime = Date.now();
+    sentinel.log(`[CONGRESS] Loaded ${json.trades.length} trades from ${json.source.pagesFetched} pages.`, "SUCCESS");
+    return json;
+  },
+
+  async fetchCommitteeData({ force = false } = {}) {
+    if (!force && this.committeeCache) return this.committeeCache;
+    const res = await fetch(`${TARGETS.committees}?v=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Committee snapshot HTTP ${res.status}`);
+    const current = await res.json();
+    if (!Array.isArray(current?.members) || current.members.length < 50) throw new Error("Committee membership snapshot is incomplete.");
+    this.committeeCache = current;
+    sentinel.log(`[COMMITTEES] Loaded ${current.source.assignmentCount} assignments for ${current.source.memberCount} members.`, "SUCCESS");
+    return current;
+  },
+
+  normalizeWikiName(value) {
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/\b(jr|sr|ii|iii|iv)\.?\b/gi, "").replace(/[^a-z0-9]+/gi, " ").trim().toLowerCase();
   }
 };
 
@@ -814,7 +1097,13 @@ class ChartEngine {
 // ============================================================================
 // APP CONTROLLER
 // ============================================================================
-const State = { rawJSON: null, uiEngines:[], refreshInFlight: false };
+const State = {
+  rawJSON: null,
+  uiEngines: [],
+  refreshInFlight: false,
+  liveSourcePromises: new Map(),
+  liveJobMessages: new Map()
+};
 
 const sentinel = {
   init() {
@@ -822,9 +1111,9 @@ const sentinel = {
     this.log("Engine online. Connecting to live market feeds.", "INFO");
     if(window.innerWidth < 800) document.getElementById('mobileMenu').style.display = 'block';
     this.resizeObserver = new ResizeObserver(() => { State.uiEngines.forEach(engine => engine.resize()); });
-    this.executePipeline({ silent: true });
+    this.executePipeline({ silent: true }).then(() => this.restoreOrRefreshLiveSources());
     this.autoRefreshTimer = window.setInterval(() => {
-      if (!document.hidden) this.executePipeline({ silent: true });
+      if (!document.hidden && !State.refreshInFlight && State.liveSourcePromises.size === 0) this.executePipeline({ silent: true });
     }, 60000);
   },
 
@@ -835,6 +1124,12 @@ const sentinel = {
       State.uiEngines.forEach(engine => { if(engine.draw) engine.draw(); });
     });
     document.getElementById('proxyToggle').addEventListener('click', e => e.target.classList.toggle('on'));
+    document.getElementById('politicianModal').addEventListener('click', event => {
+      if (event.target.id === 'politicianModal') this.closePoliticianSummary();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') this.closePoliticianSummary();
+    });
   },
 
   log(msg, level="INFO") {
@@ -881,6 +1176,153 @@ const sentinel = {
     if (state) dot.classList.add(state);
   },
 
+  updateLiveJobUI(source, job) {
+    const row = document.querySelector(`[data-live-job="${source}"]`);
+    if (!row) return;
+    const status = job.status || "waiting";
+    row.classList.remove("running", "completed", "failed");
+    if (["running", "completed", "failed"].includes(status)) row.classList.add(status);
+    const current = Number(job.current) || 0;
+    const total = Number(job.total) || 0;
+    const percent = status === "completed" ? 100 : Math.max(0, Math.min(100, Number(job.percent) || 0));
+    const stage = String(job.stage || status).replace(/[-_]+/g, " ").toUpperCase();
+    row.querySelector('[data-job-bar]').style.width = `${percent}%`;
+    row.querySelector('[data-job-status]').textContent = status === "running"
+      ? `${stage}${total ? ` ${current}/${total}` : ""} · ${percent}%`
+      : status === "completed" ? "LIVE · 100%" : status === "failed" ? "FAILED" : "WAITING";
+    row.querySelector('[data-job-message]').textContent = job.message || "Waiting to collect live data.";
+
+    const messageKey = `${status}:${job.message || ""}`;
+    if (job.message && State.liveJobMessages.get(source) !== messageKey) {
+      State.liveJobMessages.set(source, messageKey);
+      const level = status === "failed" ? "ERROR" : status === "completed" ? "SUCCESS" : "INFO";
+      this.log(`[${source.toUpperCase()}] ${job.message}`, level);
+    }
+  },
+
+  setLiveSourceButtons(source, active) {
+    document.querySelectorAll(`[data-live-refresh="${source}"]`).forEach(button => {
+      button.dataset.originalText ||= button.textContent;
+      button.disabled = active;
+      button.textContent = active ? "Fetching live…" : button.dataset.originalText;
+    });
+  },
+
+  syncLiveSourceButtons() {
+    ["openinsider", "capitol", "committees"].forEach(source => this.setLiveSourceButtons(source, State.liveSourcePromises.has(source)));
+  },
+
+  sourceFetchedAt(source) {
+    if (source === "openinsider") return State.rawJSON?.openinsider?.source?.fetchedAt;
+    if (source === "capitol") return State.rawJSON?.congressional?.source?.fetchedAt;
+    if (source === "committees") return State.rawJSON?.committees?.source?.fetchedAt;
+    return null;
+  },
+
+  async restoreOrRefreshLiveSources() {
+    let latest;
+    try {
+      latest = (await Network.fetchLatestCollectorJobs()).latest || {};
+    } catch (error) {
+      ["openinsider", "capitol", "committees"].forEach(source => this.updateLiveJobUI(source, {
+        status: "failed",
+        percent: 0,
+        message: "Live collector API unavailable. Run the app with npm start; the last successful cache remains visible."
+      }));
+      this.log(`[COLLECTOR] ${error.message}`, "WARN");
+      return;
+    }
+
+    const pending = [];
+    for (const source of ["openinsider", "capitol", "committees"]) {
+      const job = latest[source];
+      const fetchedAt = Date.parse(this.sourceFetchedAt(source)) || 0;
+      const stale = !fetchedAt || Date.now() - fetchedAt > LIVE_SOURCE_MAX_AGE_MS[source];
+      if (job?.status === "running" || stale) {
+        pending.push(this.refreshLiveSource(source).catch(error => this.log(`[${source.toUpperCase()}] ${error.message}`, "ERROR")));
+        continue;
+      }
+      if (job) {
+        this.updateLiveJobUI(source, job);
+      } else {
+        this.updateLiveJobUI(source, {
+          status: "completed",
+          stage: "cache",
+          percent: 100,
+          message: `Last successful live fetch ${new Date(fetchedAt).toLocaleString()}.`
+        });
+      }
+    }
+    await Promise.allSettled(pending);
+  },
+
+  async runCollectorJob(source) {
+    let job = await Network.startCollectorJob(source);
+    this.updateLiveJobUI(source, job);
+    while (job.status === "running") {
+      await new Promise(resolve => setTimeout(resolve, 400));
+      job = await Network.fetchCollectorJob(job.id);
+      this.updateLiveJobUI(source, job);
+    }
+    if (job.status !== "completed") throw new Error(job.error || job.message || `${source} collection failed.`);
+    return job;
+  },
+
+  async loadRefreshedSource(source, { render = true } = {}) {
+    if (!State.rawJSON) return;
+    Network.clearSourceCache(source);
+    if (source === "openinsider") State.rawJSON.openinsider = await Network.fetchOpenInsiderData();
+    if (source === "capitol") State.rawJSON.congressional = await Network.fetchCongressionalData();
+    if (source === "committees") State.rawJSON.committees = await Network.fetchCommitteeData({ force: true });
+    if (render) this.renderDashboard(State.rawJSON);
+  },
+
+  refreshLiveSource(source, { render = true } = {}) {
+    if (State.liveSourcePromises.has(source)) return State.liveSourcePromises.get(source);
+    this.setLiveSourceButtons(source, true);
+    const task = (async () => {
+      try {
+        const job = await this.runCollectorJob(source);
+        await this.loadRefreshedSource(source, { render });
+        return job;
+      } catch (error) {
+        this.updateLiveJobUI(source, { status: "failed", percent: 0, message: error.message });
+        throw error;
+      } finally {
+        State.liveSourcePromises.delete(source);
+        this.setLiveSourceButtons(source, false);
+      }
+    })();
+    State.liveSourcePromises.set(source, task);
+    return task;
+  },
+
+  async refreshAllLiveSources({ silent = false } = {}) {
+    const btn = document.getElementById('executeBtn');
+    btn.disabled = true;
+    btn.textContent = "Collecting Website Data…";
+    if (!silent) document.getElementById('logsDrawer').classList.remove('collapsed');
+    this.setDataStatus("LIVE WEBSITE COLLECTION IN PROGRESS…", "working");
+    const results = await Promise.allSettled([
+      this.refreshLiveSource("openinsider"),
+      this.refreshLiveSource("capitol"),
+      this.refreshLiveSource("committees")
+    ]);
+    results.forEach((result, index) => {
+      if (result.status === "rejected") this.log(`[COLLECTOR] ${["OpenInsider", "Capitol Trades", "Committees"][index]} failed: ${result.reason.message}`, "ERROR");
+    });
+    const failed = results.filter(result => result.status === "rejected").length;
+    this.setDataStatus(failed ? `LIVE COLLECTION COMPLETE · ${failed} SOURCE${failed === 1 ? "" : "S"} FAILED` : "ALL WEBSITE SOURCES FETCHED LIVE", failed ? "error" : "live");
+    btn.disabled = false;
+    btn.textContent = "Fetch All Live Website Data";
+    return results;
+  },
+
+  async refreshEverything() {
+    await this.executePipeline();
+    await this.refreshAllLiveSources();
+  },
+
   async executePipeline({ silent = false } = {}) {
     if (State.refreshInFlight) return;
     State.refreshInFlight = true;
@@ -898,14 +1340,20 @@ const sentinel = {
       this.setFlow('connect', 'done');
 
       this.setFlow('fetch', 'active');
-      const [futuresResult, cnnResult, mapResult] = await Promise.allSettled([
+      const [futuresResult, cnnResult, mapResult, insiderResult, congressionalResult, committeeResult] = await Promise.allSettled([
         Network.fetchFuturesData(),
         Network.fetchWithProxy(TARGETS.cnn, useProxy, true),
-        Network.fetchMarketMapData()
+        Network.fetchMarketMapData(),
+        Network.fetchOpenInsiderData(),
+        Network.fetchCongressionalData(),
+        Network.fetchCommitteeData()
       ]);
       if (futuresResult.status === "rejected") throw futuresResult.reason;
       if (cnnResult.status === "rejected") this.log(`[CNN] Sentiment feed unavailable: ${cnnResult.reason.message}`, "WARN");
       if (mapResult.status === "rejected") this.log(`[MAP] Equity map unavailable: ${mapResult.reason.message}`, "WARN");
+      if (insiderResult.status === "rejected") this.log(`[INSIDERS] Snapshot unavailable: ${insiderResult.reason.message}`, "WARN");
+      if (congressionalResult.status === "rejected") this.log(`[CONGRESS] Snapshot unavailable: ${congressionalResult.reason.message}`, "WARN");
+      if (committeeResult.status === "rejected") this.log(`[COMMITTEES] Membership list unavailable: ${committeeResult.reason.message}`, "WARN");
 
       this.setFlow('fetch', 'done');
       this.setFlow('parse', 'active');
@@ -919,7 +1367,10 @@ const sentinel = {
         oil_brent: quotes.find(item => item.providerSymbol === "ICEEUR:BRN1!"),
         natural_gas: quotes.find(item => item.providerSymbol === "NYMEX:NG1!"),
         futures_tm: quotes,
-        ...(mapResult.status === "fulfilled" ? { finviz_map: mapResult.value } : {})
+        ...(mapResult.status === "fulfilled" ? { finviz_map: mapResult.value } : {}),
+        ...(insiderResult.status === "fulfilled" ? { openinsider: insiderResult.value } : {}),
+        ...(congressionalResult.status === "fulfilled" ? { congressional: congressionalResult.value } : {}),
+        ...(committeeResult.status === "fulfilled" ? { committees: committeeResult.value } : {})
       };
 
       State.rawJSON = compiledMatrix;
@@ -929,7 +1380,11 @@ const sentinel = {
       this.renderDashboard(compiledMatrix);
       this.setFlow('render', 'done');
       const fetchedTime = new Date(source.fetchedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
-      this.setDataStatus(`${quotes.length} FUTURES · ${this.sourceDelayLabel(source)} · ${fetchedTime}`, "live");
+      const insiderCount = insiderResult.status === "fulfilled" ? insiderResult.value.source.rowCount : 0;
+      const insiderStatus = insiderCount ? ` · ${insiderCount} INSIDER FILINGS` : "";
+      const congressCount = congressionalResult.status === "fulfilled" ? congressionalResult.value.source.rowCount : 0;
+      const congressStatus = congressCount ? ` · ${congressCount} CONGRESS TRADES` : "";
+      this.setDataStatus(`${quotes.length} FUTURES${insiderStatus}${congressStatus} · ${this.sourceDelayLabel(source)} · ${fetchedTime}`, "live");
       this.log(`Live telemetry refreshed at ${fetchedTime}.`, "SUCCESS");
 
     } catch (err) {
@@ -945,6 +1400,272 @@ const sentinel = {
       State.refreshInFlight = false;
       btn.disabled = false;
     }
+  },
+
+  sortRows(rows, key, direction = "asc") {
+    const numericKeys = new Set(["price", "priceValue", "quantityValue", "tradeValue", "estimatedValue", "reportingGap"]);
+    const dateKeys = new Set(["filingDate", "tradeDate", "publishedAt", "tradedAt"]);
+    const valueFor = row => {
+      const value = row[key];
+      if (numericKeys.has(key)) return value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value)) ? Number(value) : null;
+      if (dateKeys.has(key)) {
+        const timestamp = Date.parse(value);
+        return Number.isFinite(timestamp) ? timestamp : null;
+      }
+      if (key === "owned" || key === "ownershipChange") {
+        const normalized = String(value || "").replace(/[^0-9.+-]/g, "");
+        return normalized && Number.isFinite(Number(normalized)) ? Number(normalized) : null;
+      }
+      const text = String(value ?? "").trim();
+      return text ? text.toLocaleLowerCase() : null;
+    };
+    const multiplier = direction === "desc" ? -1 : 1;
+    return [...rows].sort((left, right) => {
+      const a = valueFor(left), b = valueFor(right);
+      if (a === null && b === null) return 0;
+      if (a === null) return 1;
+      if (b === null) return -1;
+      if (typeof a === "number" && typeof b === "number") return (a - b) * multiplier;
+      return String(a).localeCompare(String(b), undefined, { numeric: true, sensitivity: "base" }) * multiplier;
+    });
+  },
+
+  downloadTabularData(filename, format, columns, rows) {
+    const separator = format === "csv" ? "," : "\t";
+    const quote = value => {
+      const text = String(value ?? "");
+      return format === "csv" ? `"${text.replace(/"/g, '""')}"` : text.replace(/[\t\r\n]+/g, " ");
+    };
+    const lines = [columns.map(column => quote(column.label)).join(separator)];
+    rows.forEach(row => lines.push(columns.map(column => quote(typeof column.value === "function" ? column.value(row) : row[column.key])).join(separator)));
+    const extension = format === "csv" ? "csv" : "txt";
+    const mime = format === "csv" ? "text/csv;charset=utf-8" : "text/plain;charset=utf-8";
+    const blob = new Blob([`\uFEFF${lines.join("\r\n")}`], { type: mime });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${filename}.${extension}`;
+    link.click();
+    window.setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+  },
+
+  exportOpenInsider(payload, format) {
+    const rows = payload.sections.flatMap(section => section.rows.map(row => ({ ...row, category: section.title, detailLabel: section.detailLabel, roleLabel: section.roleLabel })));
+    const columns = [
+      { key: "category", label: "Category" }, { key: "filingDate", label: "Filing Date" }, { key: "tradeDate", label: "Trade Date" },
+      { key: "ticker", label: "Ticker" }, { key: "company", label: "Company Name" }, { key: "detail", label: "Insider / Industry" },
+      { key: "role", label: "Title / Insider Count" }, { key: "tradeType", label: "Trade Type" }, { key: "price", label: "Price" },
+      { key: "quantity", label: "Qty" }, { key: "owned", label: "Owned" }, { key: "ownershipChange", label: "Ownership Change" },
+      { key: "value", label: "Value" }, { key: "dayReturn", label: "1d" }, { key: "weekReturn", label: "1w" },
+      { key: "monthReturn", label: "1m" }, { key: "sixMonthReturn", label: "6m" }
+    ];
+    this.downloadTabularData(`openinsider_${new Date().toISOString().slice(0, 10)}`, format, columns, rows);
+  },
+
+  exportCongressionalTrades(rows, format, suffix = "all") {
+    const columns = [
+      ...CONGRESSIONAL_COLUMNS,
+      { key: "party", label: "Party" }, { key: "chamber", label: "Chamber" }, { key: "state", label: "State" },
+      { key: "dateOfBirth", label: "Date of Birth" }, { key: "gender", label: "Gender" }, { key: "sector", label: "Sector" },
+      { key: "issuerCountry", label: "Issuer Country" }, { key: "estimatedValue", label: "Estimated Value" }, { key: "comment", label: "Comment" },
+      { key: "tradeUrl", label: "Capitol Trades URL", value: row => `https://www.capitoltrades.com${row.tradeUrl}` }
+    ];
+    this.downloadTabularData(`capitol_trades_${suffix}_${new Date().toISOString().slice(0, 10)}`, format, columns, rows);
+  },
+
+  titleCase(value) {
+    return String(value || "—").replace(/-/g, " ").replace(/\b\w/g, character => character.toUpperCase());
+  },
+
+  committeeMemberFor(trade, committeeData = State.rawJSON?.committees) {
+    if (!Array.isArray(committeeData?.members)) return null;
+    const normalized = value => Network.normalizeWikiName(value);
+    const names = new Set([
+      normalized(trade.politicianName),
+      normalized(`${trade.firstName || ""} ${trade.lastName || ""}`),
+      normalized(`${trade.nickname || ""} ${trade.lastName || ""}`)
+    ].filter(Boolean));
+    const chamber = String(trade.chamber || "").toLowerCase();
+    const mergeMatches = matches => {
+      if (!matches.length) return null;
+      const preferred = matches.find(member => member.chamber === chamber) || matches[0];
+      const committees = [...new Map(matches.flatMap(member => member.committees || [])
+        .map(committee => [`${committee.name}:${committee.role}`, committee])).values()]
+        .sort((left, right) => left.name.localeCompare(right.name));
+      return { ...preferred, committees };
+    };
+    const direct = committeeData.members.filter(member => (member.chamber === chamber || member.chamber === "joint") && names.has(member.normalizedName));
+    if (direct.length) return mergeMatches(direct);
+    const lastName = normalized(trade.lastName).split(" ").at(-1);
+    const state = String(trade.state || "").toUpperCase();
+    const candidates = committeeData.members.filter(member => {
+      const memberLast = normalized(member.name).split(" ").at(-1);
+      const chamberMatches = member.chamber === chamber || member.chamber === "joint";
+      const stateMatches = !member.state || !state || member.state.toUpperCase() === state;
+      return chamberMatches && stateMatches && memberLast === lastName;
+    });
+    const candidateNames = new Set(candidates.map(member => member.normalizedName));
+    return candidateNames.size === 1 ? mergeMatches(candidates) : null;
+  },
+
+  formatCompactCurrency(value) {
+    const number = Number(value) || 0;
+    return new Intl.NumberFormat(undefined, { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 2 }).format(number);
+  },
+
+  closePoliticianSummary() {
+    const modal = document.getElementById('politicianModal');
+    if (modal) modal.hidden = true;
+  },
+
+  openPoliticianSummary(politicianId, payload, committeeData = State.rawJSON?.committees) {
+    const trades = payload.trades.filter(trade => trade.politicianId === politicianId)
+      .sort((left, right) => right.publishedAt.localeCompare(left.publishedAt));
+    if (!trades.length) return;
+    const politician = trades[0];
+    const buys = trades.filter(trade => trade.type === "buy").length;
+    const sells = trades.filter(trade => trade.type === "sell").length;
+    const volume = trades.reduce((total, trade) => total + (Number(trade.estimatedValue) || 0), 0);
+    const averageDelay = trades.reduce((total, trade) => total + (Number(trade.reportingGap) || 0), 0) / trades.length;
+    const issuerMap = new Map();
+    trades.forEach(trade => {
+      const entry = issuerMap.get(trade.issuerName) || { name: trade.issuerName, count: 0, value: 0 };
+      entry.count += 1; entry.value += Number(trade.estimatedValue) || 0; issuerMap.set(trade.issuerName, entry);
+    });
+    const topIssuers = [...issuerMap.values()].sort((left, right) => right.count - left.count || right.value - left.value).slice(0, 8);
+    const member = this.committeeMemberFor(politician, committeeData);
+    const committeeHTML = member?.committees?.length ? member.committees.map(committee => `
+      <a class="committee-chip" href="${this.escapeHTML(committee.url)}" target="_blank" rel="noopener noreferrer">
+        ${this.escapeHTML(committee.name)} <span class="committee-role">· ${this.escapeHTML(committee.role)}</span>
+      </a>`).join("") : `<span class="neutral">No committee match was found in the current Wikipedia roster snapshot.</span>`;
+    const issuerHTML = topIssuers.map(issuer => `
+      <div class="politician-issuer"><span>${this.escapeHTML(issuer.name)}</span><span>${issuer.count} trades · ${this.formatCompactCurrency(issuer.value)}</span></div>`).join("");
+    const tradeHTML = trades.slice(0, 60).map(trade => {
+      const tone = trade.type === "buy" ? "positive" : trade.type === "sell" ? "negative" : "neutral";
+      return `<a class="summary-trade-row summary-source-link" href="https://www.capitoltrades.com${this.escapeHTML(trade.tradeUrl)}" target="_blank" rel="noopener noreferrer" title="${this.escapeHTML(trade.comment || "No trade comment")}">
+        <span>${this.escapeHTML(trade.tradedDisplay)}</span>
+        <span>${this.escapeHTML(trade.issuerName)}${trade.issuerTicker ? ` · ${this.escapeHTML(trade.issuerTicker)}` : ""}</span>
+        <span class="${tone}">${this.escapeHTML(trade.typeDisplay)}</span>
+        <span>${this.escapeHTML(trade.sizeDisplay)}</span>
+      </a>`;
+    }).join("");
+    const dob = politician.dateOfBirth ? new Date(`${politician.dateOfBirth}T00:00:00`).toLocaleDateString() : "—";
+    const panel = document.getElementById('politicianSummaryPanel');
+    panel.innerHTML = `
+      <div class="politician-summary-header">
+        <div>
+          <div class="politician-summary-name">${this.escapeHTML(politician.politicianName)}</div>
+          <div class="politician-summary-meta">${this.escapeHTML(this.titleCase(politician.party))} · ${this.escapeHTML(this.titleCase(politician.chamber))} · ${this.escapeHTML(String(politician.state || "—").toUpperCase())}</div>
+        </div>
+        <button type="button" data-close-politician>Close</button>
+      </div>
+      <div class="politician-summary-body">
+        <div class="data-toolbar">
+          <a class="summary-source-link" href="https://www.capitoltrades.com${this.escapeHTML(politician.politicianUrl)}" target="_blank" rel="noopener noreferrer">Open Capitol Trades profile ↗</a>
+          <span class="toolbar-spacer"></span>
+          <button class="data-export-button" type="button" data-politician-export="csv">Download CSV</button>
+          <button class="data-export-button" type="button" data-politician-export="txt">Download text</button>
+        </div>
+        <div class="politician-summary-grid">
+          <div class="politician-summary-stat"><label>90-Day Trades</label><strong>${trades.length}</strong></div>
+          <div class="politician-summary-stat"><label>Estimated Volume</label><strong>${this.formatCompactCurrency(volume)}</strong></div>
+          <div class="politician-summary-stat"><label>Buy / Sell</label><strong><span class="positive">${buys}</span> / <span class="negative">${sells}</span></strong></div>
+          <div class="politician-summary-stat"><label>Average Filing Delay</label><strong>${averageDelay.toFixed(1)} days</strong></div>
+        </div>
+        <section class="politician-summary-section"><h3>Politician details</h3>
+          <div class="politician-detail-grid">
+            <div class="politician-detail"><span>Party</span><strong>${this.escapeHTML(this.titleCase(politician.party))}</strong></div>
+            <div class="politician-detail"><span>Chamber</span><strong>${this.escapeHTML(this.titleCase(politician.chamber))}</strong></div>
+            <div class="politician-detail"><span>State</span><strong>${this.escapeHTML(String(politician.state || "—").toUpperCase())}</strong></div>
+            <div class="politician-detail"><span>Date of Birth</span><strong>${this.escapeHTML(dob)}</strong></div>
+            <div class="politician-detail"><span>Gender</span><strong>${this.escapeHTML(this.titleCase(politician.gender))}</strong></div>
+          </div>
+        </section>
+        <section class="politician-summary-section"><h3>Current committee assignments · Wikipedia ${this.escapeHTML(committeeData?.source?.congress ? `${committeeData.source.congress}th Congress` : "snapshot")}</h3><div class="committee-list">${committeeHTML}</div></section>
+        <section class="politician-summary-section"><h3>Most traded issuers</h3><div class="politician-issuer-list">${issuerHTML}</div></section>
+        <section class="politician-summary-section"><h3>Latest disclosed trades${trades.length > 60 ? ` · showing 60 of ${trades.length}` : ""}</h3><div class="summary-trade-list">${tradeHTML}</div></section>
+      </div>`;
+    panel.querySelector('[data-close-politician]').addEventListener('click', () => this.closePoliticianSummary());
+    panel.querySelectorAll('[data-politician-export]').forEach(button => button.addEventListener('click', () => this.exportCongressionalTrades(trades, button.dataset.politicianExport, politician.politicianName.replace(/[^a-z0-9]+/gi, "_").toLowerCase())));
+    document.getElementById('politicianModal').hidden = false;
+    panel.scrollTop = 0;
+  },
+
+  renderInsiderRows(section) {
+    const detailLabel = section.detailLabel || "Insider / Industry";
+    const roleLabel = section.roleLabel || "Title / Insiders";
+    return section.rows.map((item, index) => {
+      const isSale = /sale/i.test(item.tradeType);
+      const isBuy = /purchase|buy/i.test(item.tradeType);
+      const toneClass = isSale ? "negative" : isBuy ? "positive" : "neutral";
+      const hoverFields = [
+        ["Filing Date", item.filingDate],
+        ["Trade Date", item.tradeDate],
+        [detailLabel, item.detail],
+        [roleLabel, item.role],
+        ["Trade Type", item.tradeType],
+        ["Price", item.price],
+        ["Quantity", item.quantity],
+        ["Owned After", item.owned],
+        ["Ownership Δ", item.ownershipChange],
+        ["Total Value", item.value],
+        ["Flags", item.flags],
+        ["1 Day", item.dayReturn],
+        ["1 Week", item.weekReturn],
+        ["1 Month", item.monthReturn],
+        ["6 Months", item.sixMonthReturn]
+      ].filter(([, value]) => String(value ?? "").trim());
+      const hoverGrid = hoverFields.map(([label, value]) => `
+        <div>
+          <div class="insider-hover-label">${this.escapeHTML(label)}</div>
+          <div class="insider-hover-value">${this.escapeHTML(value)}</div>
+        </div>`).join("");
+      return `
+        <div class="insider-row ${index >= section.rows.length - 2 ? "tooltip-up" : ""}" tabindex="0">
+          <div class="insider-security">
+            <div class="insider-ticker">${this.escapeHTML(item.ticker)}</div>
+            <div class="insider-company">${this.escapeHTML(item.company)}</div>
+          </div>
+          <div class="insider-party">
+            <div class="insider-primary">${this.escapeHTML(item.detail)}</div>
+            <div class="insider-meta">${this.escapeHTML(roleLabel)}: ${this.escapeHTML(item.role || "—")}</div>
+          </div>
+          <div class="insider-action">
+            <div class="insider-trade ${toneClass}">${this.escapeHTML(item.tradeType)}</div>
+            <div class="insider-meta">TRADED ${this.escapeHTML(item.tradeDate)}</div>
+          </div>
+          <div class="insider-numbers">
+            <div class="insider-value ${toneClass}">${this.escapeHTML(item.value)}</div>
+            <div class="insider-meta">${this.escapeHTML(item.price)} × ${this.escapeHTML(item.quantity)}</div>
+          </div>
+          <div class="insider-hover-detail" role="tooltip">
+            <div class="insider-hover-title">${this.escapeHTML(item.ticker)} · ${this.escapeHTML(item.company)}</div>
+            <div class="insider-hover-grid">${hoverGrid}</div>
+          </div>
+        </div>`;
+    }).join("");
+  },
+
+  renderCongressionalRows(rows, committeeData) {
+    return rows.map(trade => {
+      const tone = trade.type === "buy" ? "positive" : trade.type === "sell" ? "negative" : "neutral";
+      const member = this.committeeMemberFor(trade, committeeData);
+      const committeeCount = member?.committees?.length || 0;
+      const rowTitle = [trade.comment, committeeCount ? `${committeeCount} committee assignment${committeeCount === 1 ? "" : "s"}` : "No committee match"].filter(Boolean).join(" · ");
+      return `<tr title="${this.escapeHTML(rowTitle)}">
+        <td>
+          <button class="politician-link" type="button" data-politician-id="${this.escapeHTML(trade.politicianId)}">${this.escapeHTML(trade.politicianName)}</button>
+          <div class="trade-cell-meta">${this.escapeHTML(this.titleCase(trade.party))} · ${this.escapeHTML(this.titleCase(trade.chamber))} · ${this.escapeHTML(String(trade.state || "—").toUpperCase())}${committeeCount ? ` · ${committeeCount} committees` : ""}</div>
+        </td>
+        <td><div class="trade-cell-main" title="${this.escapeHTML(trade.issuerName)}">${this.escapeHTML(trade.issuerName)}</div><div class="trade-cell-meta">${this.escapeHTML(trade.issuerTicker || "N/A")}${trade.sector ? ` · ${this.escapeHTML(this.titleCase(trade.sector))}` : ""}</div></td>
+        <td>${this.escapeHTML(trade.publishedDisplay)}</td>
+        <td>${this.escapeHTML(trade.tradedDisplay)}</td>
+        <td>${this.escapeHTML(trade.filedAfterDisplay)}</td>
+        <td>${this.escapeHTML(trade.ownerDisplay)}</td>
+        <td><span class="trade-type-pill ${tone}">${this.escapeHTML(trade.typeDisplay)}</span></td>
+        <td>${this.escapeHTML(trade.sizeDisplay)}</td>
+        <td>${this.escapeHTML(trade.priceDisplay)}</td>
+      </tr>`;
+    }).join("");
   },
 
   renderDashboard(data) {
@@ -979,6 +1700,8 @@ const sentinel = {
       { key: 'natural_gas', title: "Natural Gas", color: "#ff8c00", type: 'quote' },
       { key: 'futures_tm', title: "Futures 1-Day Performance", color: "#fff", type: 'treemap', wide: true, live: true },
       { key: 'futures_quotes', title: "Global Futures Board", color: "#fff", type: 'futures-board', wide: true, live: true },
+      { key: 'openinsider', title: "OpenInsider Activity", color: "#fff", type: 'insider-board', wide: true },
+      { key: 'congressional', title: "Congressional Trading", color: "#fff", type: 'congressional-board', wide: true },
       { key: 'fear_and_greed_historical', title: "Fear & Greed Timeline", color: "#bf5af2", type: 'chart' },
       { key: 'market_momentum_sp500', title: "Market Momentum (S&P 500)", color: "#0a84ff", type: 'chart' },
       { key: 'stock_price_strength', title: "Stock Price Strength (NYSE)", color: "#ffd60a", type: 'chart' },
@@ -991,7 +1714,7 @@ const sentinel = {
       if (!payload) return;
 
       const card = document.createElement('div');
-      card.className = `chart-card ${config.wide ? 'wide' : ''} ${config.type === 'quote' ? 'quote-card' : ''} ${config.type === 'futures-board' ? 'board-card' : ''}`;
+      card.className = `chart-card ${config.wide ? 'wide' : ''} ${config.type === 'quote' ? 'quote-card' : ''} ${['futures-board', 'insider-board', 'congressional-board'].includes(config.type) ? 'board-card' : ''}`;
 
       if (config.type === 'quote') {
         const changeClass = payload.change > 0 ? "positive" : payload.change < 0 ? "negative" : "neutral";
@@ -1046,6 +1769,192 @@ const sentinel = {
         `;
         grid.appendChild(card);
       }
+      else if (config.type === 'insider-board') {
+        const sections = payload.sections.filter(section => Array.isArray(section.rows) && section.rows.length);
+        if (!sections.length) return;
+        const snapshotDate = new Date(payload.source.fetchedAt);
+        const snapshotStamp = Number.isNaN(snapshotDate.getTime())
+          ? "time unavailable"
+          : snapshotDate.toLocaleString([], { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+        const sourceURL = payload.source.url || "http://openinsider.com/";
+        const tabs = sections.map((section, index) => `
+          <button class="insider-tab ${index === 0 ? "active" : ""}" type="button" role="tab"
+            aria-selected="${index === 0}" data-insider-section="${this.escapeHTML(section.id)}">
+            ${this.escapeHTML(section.title)}
+          </button>`).join("");
+        const insiderState = { section: sections[0], sortKey: "filingDate", direction: "desc" };
+        const sortOptions = [
+          ["filingDate", "Filing Date"], ["tradeDate", "Trade Date"], ["ticker", "Ticker"], ["company", "Company"],
+          ["detail", "Insider / Industry"], ["tradeType", "Trade Type"], ["priceValue", "Price"], ["quantityValue", "Quantity"],
+          ["owned", "Owned"], ["ownershipChange", "Ownership Change"], ["tradeValue", "Value"]
+        ].map(([key, label]) => `<option value="${key}" ${key === insiderState.sortKey ? "selected" : ""}>${label}</option>`).join("");
+        const initialSection = { ...sections[0], rows: this.sortRows(sections[0].rows, insiderState.sortKey, insiderState.direction) };
+        card.innerHTML = `
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">${config.title}</div>
+              <div class="chart-rating">LIVE SEC FORM 4 SNAPSHOT · HOVER OR FOCUS ANY ROW FOR EVERY VALUE</div>
+            </div>
+            <div class="chart-value" data-insider-count>${sections[0].rows.length}</div>
+          </div>
+          <div class="insider-board">
+            <div class="insider-tabs" role="tablist" aria-label="OpenInsider lists">${tabs}</div>
+            <div class="data-toolbar">
+              <label style="margin:0">Sort</label>
+              <select data-insider-sort aria-label="Sort OpenInsider rows">${sortOptions}</select>
+              <button type="button" data-insider-direction title="Toggle ascending or descending">Descending ↓</button>
+              <span class="toolbar-spacer"></span>
+              <div class="data-export-group">
+                <button class="data-export-button" type="button" data-live-refresh="openinsider">Fetch live now</button>
+                <button class="data-export-button" type="button" data-insider-export="csv">Download CSV</button>
+                <button class="data-export-button" type="button" data-insider-export="txt">Download text</button>
+              </div>
+            </div>
+            <div class="insider-list" role="tabpanel">${this.renderInsiderRows(initialSection)}</div>
+            <div class="insider-source">
+              <span>Last successful live fetch ${this.escapeHTML(snapshotStamp)} · ${payload.source.rowCount.toLocaleString()} rows</span>
+              <a href="${this.escapeHTML(sourceURL)}" target="_blank" rel="noopener noreferrer">View source at OpenInsider ↗</a>
+            </div>
+          </div>`;
+        grid.appendChild(card);
+        const list = card.querySelector('.insider-list');
+        const count = card.querySelector('[data-insider-count]');
+        const sortSelect = card.querySelector('[data-insider-sort]');
+        const directionButton = card.querySelector('[data-insider-direction]');
+        const renderSection = () => {
+          const sorted = this.sortRows(insiderState.section.rows, insiderState.sortKey, insiderState.direction);
+          list.innerHTML = this.renderInsiderRows({ ...insiderState.section, rows: sorted });
+          count.textContent = sorted.length;
+        };
+        card.querySelectorAll('.insider-tab').forEach(tab => tab.addEventListener('click', () => {
+          const section = sections.find(candidate => candidate.id === tab.dataset.insiderSection);
+          if (!section) return;
+          insiderState.section = section;
+          card.querySelectorAll('.insider-tab').forEach(candidate => {
+            const active = candidate === tab;
+            candidate.classList.toggle('active', active);
+            candidate.setAttribute('aria-selected', String(active));
+          });
+          renderSection();
+        }));
+        sortSelect.addEventListener('change', () => { insiderState.sortKey = sortSelect.value; renderSection(); });
+        directionButton.addEventListener('click', () => {
+          insiderState.direction = insiderState.direction === "asc" ? "desc" : "asc";
+          directionButton.textContent = insiderState.direction === "asc" ? "Ascending ↑" : "Descending ↓";
+          renderSection();
+        });
+        card.querySelectorAll('[data-insider-export]').forEach(button => button.addEventListener('click', () => this.exportOpenInsider(payload, button.dataset.insiderExport)));
+        card.querySelector('[data-live-refresh="openinsider"]').addEventListener('click', () => {
+          this.refreshLiveSource('openinsider').catch(error => this.log(`[OPENINSIDER] ${error.message}`, "ERROR"));
+        });
+      }
+      else if (config.type === 'congressional-board') {
+        const state = { sortKey: "publishedAt", direction: "desc", page: 1, pageSize: 96, query: "" };
+        let committeeData = data.committees || Network.committeeCache;
+        const fetchedDate = new Date(payload.source.fetchedAt);
+        const fetchedStamp = Number.isNaN(fetchedDate.getTime()) ? "time unavailable" : fetchedDate.toLocaleString([], { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+        const headerHTML = CONGRESSIONAL_COLUMNS.map(column => `
+          <th><button class="trade-sort-button ${column.sortKey === state.sortKey ? "active" : ""}" type="button" data-congress-sort="${column.sortKey}">
+            ${this.escapeHTML(column.label)} <span class="trade-sort-arrow">${column.sortKey === state.sortKey ? "↓" : "↕"}</span>
+          </button></th>`).join("");
+        const politicianCount = new Set(payload.trades.map(trade => trade.politicianId)).size;
+        card.innerHTML = `
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">${config.title}</div>
+              <div class="chart-rating">ALL ${this.escapeHTML(payload.source.pagesFetched)} CAPITOL TRADES PAGES · ${this.escapeHTML(payload.source.window)} · BUY + SELL</div>
+            </div>
+            <div class="chart-value">${payload.trades.length.toLocaleString()}</div>
+          </div>
+          <div class="congressional-board">
+            <p class="congressional-info"><em>The Stock Trading on Congressional Knowledge Act requires U.S. Senators and U.S. Representatives to publicly file and disclose any financial transaction within 45 days of its occurrence.</em></p>
+            <div class="congressional-stats">
+              <div class="congressional-stat"><strong>${payload.trades.length.toLocaleString()}</strong> trades</div>
+              <div class="congressional-stat"><strong>${politicianCount}</strong> politicians</div>
+              <div class="congressional-stat"><strong>${this.escapeHTML(payload.source.pagesFetched)}</strong> pages fetched</div>
+              <div class="congressional-stat" data-committee-status><strong>${this.escapeHTML(committeeData?.source?.assignmentCount || 0)}</strong> committee assignments</div>
+            </div>
+            <div class="data-toolbar">
+              <input type="search" data-congress-search placeholder="Filter politician, issuer, ticker, party…" aria-label="Filter congressional trades">
+              <span class="toolbar-spacer"></span>
+              <button type="button" data-live-refresh="capitol" title="Fetch every Capitol Trades results page now">Fetch all pages live</button>
+              <button type="button" data-live-refresh="committees" title="Refresh House and Senate committee rosters now">Refresh committees live</button>
+              <div class="data-export-group">
+                <button class="data-export-button" type="button" data-congress-export="csv">Download CSV</button>
+                <button class="data-export-button" type="button" data-congress-export="txt">Download text</button>
+              </div>
+            </div>
+            <div class="trade-table-scroll">
+              <table class="trade-table">
+                <thead><tr>${headerHTML}</tr></thead>
+                <tbody data-congress-rows></tbody>
+              </table>
+            </div>
+            <div class="trade-pagination">
+              <button type="button" data-page-action="first">First</button>
+              <button type="button" data-page-action="previous">Previous</button>
+              <span class="trade-page-label" data-page-label></span>
+              <button type="button" data-page-action="next">Next</button>
+              <button type="button" data-page-action="last">Last</button>
+            </div>
+            <div class="insider-source">
+              <span>Last successful live fetch ${this.escapeHTML(fetchedStamp)} · ${payload.trades.length.toLocaleString()} rows from ${payload.source.pagesFetched.toLocaleString()} pages</span>
+              <a href="${this.escapeHTML(payload.source.url)}" target="_blank" rel="noopener noreferrer">View filtered source at Capitol Trades ↗</a>
+            </div>
+          </div>`;
+        grid.appendChild(card);
+        const tbody = card.querySelector('[data-congress-rows]');
+        const pageLabel = card.querySelector('[data-page-label]');
+        const search = card.querySelector('[data-congress-search]');
+        const committeeStatus = card.querySelector('[data-committee-status]');
+        let currentRows = [];
+        const filteredAndSorted = () => {
+          const query = state.query.trim().toLocaleLowerCase();
+          const filtered = query ? payload.trades.filter(trade => [trade.politicianName, trade.issuerName, trade.issuerTicker, trade.party, trade.chamber, trade.state, trade.type, trade.ownerDisplay, trade.sector]
+            .some(value => String(value || "").toLocaleLowerCase().includes(query))) : payload.trades;
+          return this.sortRows(filtered, state.sortKey, state.direction);
+        };
+        const renderTable = () => {
+          currentRows = filteredAndSorted();
+          const totalPages = Math.max(1, Math.ceil(currentRows.length / state.pageSize));
+          state.page = Math.min(Math.max(1, state.page), totalPages);
+          const start = (state.page - 1) * state.pageSize;
+          tbody.innerHTML = this.renderCongressionalRows(currentRows.slice(start, start + state.pageSize), committeeData);
+          pageLabel.textContent = `Page ${state.page} of ${totalPages} · ${currentRows.length.toLocaleString()} trades`;
+          card.querySelectorAll('[data-page-action]').forEach(button => {
+            button.disabled = (state.page === 1 && ["first", "previous"].includes(button.dataset.pageAction)) || (state.page === totalPages && ["next", "last"].includes(button.dataset.pageAction));
+          });
+          card.querySelectorAll('[data-congress-sort]').forEach(button => {
+            const active = button.dataset.congressSort === state.sortKey;
+            button.classList.toggle('active', active);
+            button.querySelector('.trade-sort-arrow').textContent = active ? (state.direction === "asc" ? "↑" : "↓") : "↕";
+          });
+          tbody.querySelectorAll('[data-politician-id]').forEach(button => button.addEventListener('click', () => this.openPoliticianSummary(button.dataset.politicianId, payload, committeeData)));
+        };
+        card.querySelectorAll('[data-congress-sort]').forEach(button => button.addEventListener('click', () => {
+          const key = button.dataset.congressSort;
+          if (state.sortKey === key) state.direction = state.direction === "asc" ? "desc" : "asc";
+          else { state.sortKey = key; state.direction = "asc"; }
+          state.page = 1; renderTable();
+        }));
+        search.addEventListener('input', () => { state.query = search.value; state.page = 1; renderTable(); });
+        card.querySelectorAll('[data-page-action]').forEach(button => button.addEventListener('click', () => {
+          const totalPages = Math.max(1, Math.ceil(currentRows.length / state.pageSize));
+          if (button.dataset.pageAction === "first") state.page = 1;
+          if (button.dataset.pageAction === "previous") state.page -= 1;
+          if (button.dataset.pageAction === "next") state.page += 1;
+          if (button.dataset.pageAction === "last") state.page = totalPages;
+          renderTable(); card.querySelector('.trade-table-scroll').scrollTop = 0;
+        }));
+        card.querySelectorAll('[data-congress-export]').forEach(button => button.addEventListener('click', () => this.exportCongressionalTrades(filteredAndSorted(), button.dataset.congressExport, state.query ? "filtered" : "all")));
+        card.querySelector('[data-live-refresh="capitol"]').addEventListener('click', () => {
+          this.refreshLiveSource('capitol').catch(error => this.log(`[CAPITOL] ${error.message}`, "ERROR"));
+        });
+        card.querySelector('[data-live-refresh="committees"]').addEventListener('click', () => {
+          this.refreshLiveSource('committees').catch(error => this.log(`[COMMITTEES] ${error.message}`, "ERROR"));
+        });
+        renderTable();
+      }
       else if (config.type === 'chart') {
         const pts = payload.data || payload;
         if(!Array.isArray(pts) || pts.length === 0) return;
@@ -1077,6 +1986,7 @@ const sentinel = {
         this.resizeObserver.observe(wrapper);
       }
     });
+    this.syncLiveSourceButtons();
   },
 
   exportData() {
