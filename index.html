@@ -38,7 +38,8 @@
     /* ==========================================================================
        2. APPLICATION LAYOUT
        ========================================================================== */
-    header { height: 54px; background: rgba(10,10,10,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-shrink: 0; z-index: 200; user-select: none; }
+    header { min-width: 0; height: 54px; background: rgba(10,10,10,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-shrink: 0; z-index: 200; user-select: none; }
+    header > div { min-width: 0; }
     .brand { font-size: 14px; font-weight: 800; letter-spacing: 0.5px; display: flex; align-items: center; gap: 10px; text-transform: uppercase; }
     .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-muted); box-shadow: none; transition: background 0.3s; }
     .status-dot.live { background: var(--success); box-shadow: 0 0 10px var(--success); }
@@ -94,6 +95,21 @@
     .live-job-row.failed .live-job-bar { background: var(--error); }
     .live-job-message { max-height: 4.2em; margin-top: 6px; overflow: auto; overflow-wrap: anywhere; color: var(--text-muted); font: 8px/1.35 var(--font-mono); white-space: normal; }
     .live-collector-note { margin-top: 10px; overflow-wrap: anywhere; color: var(--text-muted); font: 8px/1.45 var(--font-mono); }
+    .refresh-master { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding: 11px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; }
+    .refresh-master-copy { min-width: 0; flex: 1; }
+    .refresh-master-title { color: var(--text); font-size: 9px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; }
+    .refresh-master-status { margin-top: 4px; overflow-wrap: anywhere; color: var(--text-muted); font: 8px/1.35 var(--font-mono); }
+    .refresh-selector { display: grid; gap: 6px; margin-bottom: 10px; padding: 9px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; }
+    .refresh-selector-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 2px; }
+    .refresh-selector-header span { color: var(--text-muted); font: 800 8px/1 var(--font-mono); letter-spacing: .6px; text-transform: uppercase; }
+    .refresh-selector-actions { display: flex; gap: 4px; }
+    .refresh-selector-actions button { padding: 4px 6px; font-size: 7px; }
+    .refresh-source-option { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; align-items: center; gap: 8px; min-width: 0; margin: 0; padding: 7px 8px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 5px; font-size: 8px; letter-spacing: 0; text-transform: none; }
+    .refresh-source-option input { width: 13px; height: 13px; accent-color: var(--accent); }
+    .refresh-source-copy { min-width: 0; }
+    .refresh-source-name { display: block; overflow: hidden; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
+    .refresh-source-detail { display: block; margin-top: 3px; overflow-wrap: anywhere; color: var(--text-muted); font: 7px/1.25 var(--font-mono); }
+    .refresh-one { min-height: 24px; padding: 4px 7px; font-size: 7px; }
 
     /* ==========================================================================
        3. DASHBOARD & DATA VIZ
@@ -156,6 +172,17 @@
     .quote-price { font: 700 42px/1 var(--font-mono); letter-spacing: -2px; }
     .quote-change { font: 700 16px/1 var(--font-mono); }
     .quote-meta { color: var(--text-muted); font: 10px/1.6 var(--font-mono); text-transform: uppercase; letter-spacing: 0.5px; }
+    .chart-card.energy-strip-card { height: auto; min-height: 154px; }
+    .energy-strip-card .chart-header { margin-bottom: 10px; }
+    .energy-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .energy-quote { position: relative; min-width: 0; padding: 12px 13px; background: var(--bg); border: 1px solid var(--border); border-radius: 7px; cursor: help; transition: border-color var(--transition), transform var(--transition); }
+    .energy-quote:hover, .energy-quote:focus { z-index: 30; border-color: var(--border-focus); transform: translateY(-1px); }
+    .energy-quote:hover .macro-hover, .energy-quote:focus .macro-hover { display: block; }
+    .energy-name { overflow: hidden; color: var(--text-muted); font-size: 8px; font-weight: 800; letter-spacing: .7px; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+    .energy-value-row { display: flex; align-items: baseline; justify-content: space-between; gap: 6px; margin-top: 8px; }
+    .energy-price { min-width: 0; overflow: hidden; color: #ff9f0a; font: 800 24px/1 var(--font-mono); letter-spacing: -1px; text-overflow: ellipsis; white-space: nowrap; }
+    .energy-change { flex-shrink: 0; font: 800 10px/1 var(--font-mono); }
+    .energy-meta { margin-top: 7px; overflow: hidden; color: var(--text-muted); font: 7px/1.3 var(--font-mono); text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
 
     .futures-board { display: flex; flex-direction: column; gap: 18px; }
     .futures-category { border-top: 1px solid var(--border); padding-top: 12px; }
@@ -291,12 +318,73 @@
     .summary-source-link { color: var(--accent); text-decoration: none; }
     .summary-source-link:hover { text-decoration: underline; }
 
+    /* Global rates and macro regime */
+    .macro-card { height: auto; min-height: 640px; overflow: visible; }
+    .macro-card .chart-value { max-width: 45%; overflow-wrap: anywhere; font-size: 16px; text-align: right; }
+    .macro-board { display: grid; gap: 14px; min-width: 0; }
+    .macro-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .macro-toolbar .toolbar-spacer { flex: 1; }
+    .macro-provider-strip { display: flex; flex-wrap: wrap; gap: 6px; }
+    .macro-provider { padding: 5px 7px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 999px; font: 8px/1 var(--font-mono); text-transform: uppercase; }
+    .macro-provider.live { color: var(--success); border-color: color-mix(in srgb, var(--success) 42%, var(--border)); }
+    .macro-provider.stale { color: var(--warning); border-color: color-mix(in srgb, var(--warning) 42%, var(--border)); }
+    .macro-progress { height: 4px; overflow: hidden; background: var(--border); border-radius: 999px; }
+    .macro-progress > span { display: block; width: 0; height: 100%; background: var(--accent); transition: width .25s ease; }
+    .macro-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 10px; }
+    .macro-panel { min-width: 0; padding: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 7px; }
+    .macro-panel h3 { margin-bottom: 11px; color: var(--text-muted); font-size: 9px; letter-spacing: 1px; text-transform: uppercase; }
+    .macro-panel.policy { grid-column: span 12; }
+    .macro-panel.curves { grid-column: span 8; }
+    .macro-panel.stance { grid-column: span 4; }
+    .macro-panel.stress, .macro-panel.fx, .macro-panel.pulse { grid-column: span 4; }
+    .macro-panel.signals { grid-column: span 12; }
+    .macro-policy-grid, .macro-real-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .macro-panel.stance .macro-real-grid { grid-template-columns: 1fr; }
+    .macro-metric { position: relative; min-width: 0; padding: 11px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; cursor: help; transition: border-color var(--transition), transform var(--transition); }
+    .macro-metric:hover, .macro-metric:focus { z-index: 25; border-color: var(--border-focus); transform: translateY(-1px); }
+    .macro-metric-label { overflow: hidden; color: var(--text-muted); font: 8px/1.3 var(--font-mono); letter-spacing: .5px; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+    .macro-metric-value { margin-top: 7px; overflow-wrap: anywhere; font: 800 20px/1 var(--font-mono); }
+    .macro-metric-meta { margin-top: 6px; overflow: hidden; color: var(--text-muted); font: 8px/1.35 var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
+    .macro-hover { position: absolute; left: 8px; right: 8px; bottom: calc(100% + 6px); z-index: 100; display: none; padding: 10px 11px; color: #fff; background: rgba(12,12,14,.98); border: 1px solid rgba(255,255,255,.22); border-radius: 6px; box-shadow: 0 12px 30px rgba(0,0,0,.8); font: 9px/1.5 var(--font-mono); overflow-wrap: anywhere; }
+    .macro-hover strong { display: block; margin-bottom: 5px; font: 800 10px/1.3 var(--font-ui); }
+    .macro-metric:hover .macro-hover, .macro-metric:focus .macro-hover, .macro-curve-row:hover .macro-hover, .macro-curve-row:focus .macro-hover { display: block; }
+    .macro-curve-chart { height: 190px; margin-bottom: 9px; overflow: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; }
+    .macro-curve-chart svg { display: block; width: 100%; height: 100%; }
+    .macro-curve-axis { stroke: var(--border-focus); stroke-width: 1; }
+    .macro-curve-label { fill: var(--text-muted); font: 8px var(--font-mono); }
+    .macro-curve-line { fill: none; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+    .macro-curve-point { stroke: var(--bg); stroke-width: 2; cursor: help; }
+    .macro-curve-legend { display: flex; flex-wrap: wrap; gap: 10px; margin: 7px 0 10px; color: var(--text-muted); font: 8px/1 var(--font-mono); text-transform: uppercase; }
+    .macro-legend-dot { display: inline-block; width: 7px; height: 7px; margin-right: 4px; border-radius: 50%; }
+    .macro-curve-table { display: grid; gap: 5px; }
+    .macro-curve-row { position: relative; display: grid; grid-template-columns: 74px repeat(4, minmax(0, 1fr)); align-items: center; gap: 6px; padding: 8px 9px; background: var(--surface); border: 1px solid var(--border); border-radius: 5px; cursor: help; transition: border-color var(--transition); }
+    .macro-curve-row:hover, .macro-curve-row:focus { z-index: 24; border-color: var(--border-focus); }
+    .macro-curve-region { font: 800 9px/1.2 var(--font-ui); }
+    .macro-curve-cell { min-width: 0; text-align: right; }
+    .macro-curve-cell strong { display: block; font: 800 10px/1.1 var(--font-mono); }
+    .macro-curve-cell span { display: block; margin-top: 3px; color: var(--text-muted); font: 7px/1 var(--font-mono); text-transform: uppercase; }
+    .macro-list { display: grid; gap: 6px; }
+    .macro-list-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; }
+    .macro-list-row .macro-metric { padding: 9px 10px; }
+    .macro-list-row .macro-metric-value { margin-top: 5px; font-size: 15px; }
+    .macro-signal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 7px; }
+    .macro-signal { border-left: 3px solid var(--accent); }
+    .macro-signal.calm { border-left-color: var(--success); }
+    .macro-signal.watch { border-left-color: var(--warning); }
+    .macro-signal.danger { border-left-color: var(--error); }
+    .macro-regime { padding: 10px 12px; color: var(--text); background: linear-gradient(90deg, var(--accent-glow), transparent); border: 1px solid var(--border); border-radius: 6px; font: 800 11px/1.4 var(--font-mono); text-transform: uppercase; }
+    .macro-empty { grid-column: 1 / -1; padding: 24px; color: var(--text-muted); background: var(--bg); border: 1px dashed var(--border); border-radius: 7px; font: 10px/1.6 var(--font-mono); text-align: center; }
+    [data-theme="light"] .macro-hover { color: #fff; background: rgba(20,20,22,.98); }
+
     @media (max-width: 900px) {
       .insider-row { grid-template-columns: minmax(130px, 1fr) minmax(130px, 1fr) auto; }
       .insider-numbers { grid-column: 3; }
       .insider-hover-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .macro-panel.curves, .macro-panel.stance, .macro-panel.stress, .macro-panel.fx, .macro-panel.pulse { grid-column: span 12; }
     }
     @media (max-width: 640px) {
+      header { padding: 0 10px; }
+      header .data-status, header .matrix-export { display: none; }
       .dashboard-grid { grid-template-columns: minmax(0, 1fr); padding: 12px; }
       .insider-row { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; }
       .insider-party { grid-column: 1 / -1; grid-row: 2; }
@@ -313,6 +401,15 @@
       .politician-issuer-list { grid-template-columns: 1fr; }
       .summary-trade-row { grid-template-columns: 78px minmax(0, 1fr) 80px; }
       .summary-trade-row > :last-child { grid-column: 2 / -1; }
+      .macro-policy-grid, .macro-real-grid { grid-template-columns: 1fr; }
+      .macro-curve-row { grid-template-columns: 62px repeat(4, minmax(52px, 1fr)); min-width: 360px; }
+      .macro-curve-table { overflow-x: auto; }
+      .macro-metric-value { font-size: 17px; }
+      .energy-strip { gap: 5px; }
+      .energy-quote { padding: 9px 8px; }
+      .energy-price { font-size: 16px; letter-spacing: -.5px; }
+      .energy-change { font-size: 8px; }
+      .energy-meta { font-size: 6px; }
     }
 
     /* Interactive Canvas Wrapper */
@@ -381,7 +478,7 @@
 
   <div style="display:flex; gap:16px; align-items:center;">
     <div class="data-status" id="dataStatus">LIVE FEED NOT CONNECTED</div>
-    <button onclick="sentinel.exportData()">Export Matrix (JSON)</button>
+    <button class="matrix-export" onclick="sentinel.exportData()">Export Matrix (JSON)</button>
     <div class="switch on" id="themeToggle" title="Toggle UI Theme"></div>
     <button id="mobileMenu" style="display:none; padding:6px 10px;" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
   </div>
@@ -392,7 +489,7 @@
     <div class="sidebar-section">
       <label>Data Acquisition Pipeline</label>
       <div style="font-size:11px; color:var(--text-muted); margin-bottom:16px; line-height:1.6;">
-        Loads the latest dated snapshot immediately. Website collectors run only when you press a refresh button and save successful results in this browser.
+        Loads saved data immediately. Choose exactly which sources to refresh; heavy website collectors remain manual.
       </div>
       
       <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px; background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
@@ -403,7 +500,24 @@
         <div class="switch on" id="proxyToggle"></div>
       </div>
 
-      <button id="executeBtn" class="primary" onclick="sentinel.refreshEverything()">Fetch All Live Website Data</button>
+      <div class="refresh-master">
+        <div class="refresh-master-copy">
+          <div class="refresh-master-title">Automatic refresh</div>
+          <div class="refresh-master-status" id="autoRefreshStatus">Market 60 sec · rates 15 min</div>
+        </div>
+        <div class="switch on" id="autoRefreshToggle" role="switch" aria-checked="true" tabindex="0" title="Turn scheduled refresh on or off"></div>
+      </div>
+
+      <div class="refresh-selector" aria-label="Choose data sources to refresh">
+        <div class="refresh-selector-header"><span>Refresh selection</span><div class="refresh-selector-actions"><button type="button" data-selection-action="all">All</button><button type="button" data-selection-action="none">None</button></div></div>
+        <div class="refresh-source-option"><input type="checkbox" data-refresh-source="market" checked aria-label="Select market feeds"><span class="refresh-source-copy"><span class="refresh-source-name">Market feeds</span><span class="refresh-source-detail">Futures, sentiment and equity map</span></span><button class="refresh-one" type="button" data-refresh-only="market">Run</button></div>
+        <div class="refresh-source-option"><input type="checkbox" data-refresh-source="macro" checked aria-label="Select rates and macro"><span class="refresh-source-copy"><span class="refresh-source-name">Rates &amp; macro</span><span class="refresh-source-detail">US, euro area and Sweden</span></span><button class="refresh-one" type="button" data-refresh-only="macro">Run</button></div>
+        <div class="refresh-source-option"><input type="checkbox" data-refresh-source="openinsider" aria-label="Select corporate insider filings"><span class="refresh-source-copy"><span class="refresh-source-name">Corporate insiders</span><span class="refresh-source-detail">SEC Form 4 / OpenInsider lists</span></span><button class="refresh-one" type="button" data-refresh-only="openinsider">Run</button></div>
+        <div class="refresh-source-option"><input type="checkbox" data-refresh-source="capitol" aria-label="Select recent Congress trades"><span class="refresh-source-copy"><span class="refresh-source-name">Recent Congress trades</span><span class="refresh-source-detail">90-day buy and sell disclosures only</span></span><button class="refresh-one" type="button" data-refresh-only="capitol">Run</button></div>
+        <div class="refresh-source-option"><input type="checkbox" data-refresh-source="committees" aria-label="Select committee rosters"><span class="refresh-source-copy"><span class="refresh-source-name">Committee rosters</span><span class="refresh-source-detail">House and Senate membership only</span></span><button class="refresh-one" type="button" data-refresh-only="committees">Run</button></div>
+      </div>
+
+      <button id="executeBtn" class="primary" onclick="sentinel.refreshSelectedSources()">Refresh Selected Sources</button>
 
       <div class="live-jobs-panel" id="liveJobsPanel" aria-label="Live website collection progress">
         <div class="live-job-row" data-live-job="openinsider">
@@ -420,6 +534,11 @@
           <div class="live-job-heading"><span>Committees</span><span class="live-job-status" data-job-status>Waiting</span></div>
           <div class="live-job-track"><div class="live-job-bar" data-job-bar></div></div>
           <div class="live-job-message" data-job-message>Ready to refresh House and Senate rosters.</div>
+        </div>
+        <div class="live-job-row" data-live-job="macro">
+          <div class="live-job-heading"><span>Rates &amp; Macro</span><span class="live-job-status" data-job-status>Waiting</span></div>
+          <div class="live-job-track"><div class="live-job-bar" data-job-bar></div></div>
+          <div class="live-job-message" data-job-message>Official rates and macro feeds refresh independently in this browser.</div>
         </div>
       </div>
       <div class="live-collector-note">Browser collection is the default and needs no npm process. The local collector API remains an optional fallback. Failed requests preserve the latest successful snapshot.</div>
@@ -446,6 +565,7 @@
         <span style="color:var(--accent)">> Futures Performance Heatmap</span><br>
         <span style="color:var(--warning)">> SEC Form 4 Insider Activity</span><br>
         <span style="color:#bf5af2">> Congressional Trades & Committees</span><br>
+        <span style="color:var(--accent)">> US / EU / Sweden Rates & Macro</span><br>
         <span style="color:var(--success)">> Top 500 Market Map</span>
       </div>
     </div>
@@ -476,6 +596,7 @@
 </div>
 
 <script src="./browser-collectors.js"></script>
+<script src="./macro-collectors.js"></script>
 <script>
 /**
  * MARKET SENTINEL v5.0 - LIVE MARKET TELEMETRY
@@ -1101,14 +1222,18 @@ class ChartEngine {
 // ============================================================================
 const State = {
   rawJSON: null,
+  macroData: null,
   uiEngines: [],
   refreshInFlight: false,
+  autoRefreshEnabled: true,
+  refreshSelection: new Set(["market", "macro"]),
   liveSourcePromises: new Map(),
   liveJobMessages: new Map()
 };
 
 const sentinel = {
   init() {
+    this.loadRefreshPreferences();
     this.bindDOM();
     this.log("Engine online. Connecting to live market feeds.", "INFO");
     if(window.innerWidth < 800) document.getElementById('mobileMenu').style.display = 'block';
@@ -1116,9 +1241,44 @@ const sentinel = {
     this.bootstrapWebsiteSnapshots()
       .catch(error => this.log(`[SNAPSHOTS] ${error.message}`, "WARN"))
       .finally(() => this.executePipeline({ silent: true }).then(() => this.restoreOrRefreshLiveSources()));
+    this.initializeMacroData();
     this.autoRefreshTimer = window.setInterval(() => {
-      if (!document.hidden && !State.refreshInFlight && State.liveSourcePromises.size === 0) this.executePipeline({ silent: true });
+      if (State.autoRefreshEnabled && !document.hidden && !State.refreshInFlight && State.liveSourcePromises.size === 0) this.executePipeline({ silent: true });
     }, 60000);
+    this.macroRefreshTimer = window.setInterval(() => {
+      if (State.autoRefreshEnabled && !document.hidden && !State.liveSourcePromises.has("macro")) this.refreshMacroData({ silent: true }).catch(() => {});
+    }, 15 * 60 * 1000);
+  },
+
+  loadRefreshPreferences() {
+    try {
+      State.autoRefreshEnabled = localStorage.getItem("sentinel-auto-refresh") !== "off";
+      const savedSelection = JSON.parse(localStorage.getItem("sentinel-refresh-selection") || "null");
+      if (Array.isArray(savedSelection)) State.refreshSelection = new Set(savedSelection.filter(source => ["market", "macro", "openinsider", "capitol", "committees"].includes(source)));
+    } catch {}
+    document.querySelectorAll('[data-refresh-source]').forEach(input => { input.checked = State.refreshSelection.has(input.dataset.refreshSource); });
+    this.updateAutoRefreshUI();
+  },
+
+  updateAutoRefreshUI() {
+    const toggle = document.getElementById('autoRefreshToggle');
+    const status = document.getElementById('autoRefreshStatus');
+    if (!toggle || !status) return;
+    toggle.classList.toggle('on', State.autoRefreshEnabled);
+    toggle.setAttribute('aria-checked', String(State.autoRefreshEnabled));
+    status.textContent = State.autoRefreshEnabled ? "On · market 60 sec · rates 15 min" : "Off · manual refresh only";
+  },
+
+  setAutoRefresh(enabled) {
+    State.autoRefreshEnabled = Boolean(enabled);
+    try { localStorage.setItem("sentinel-auto-refresh", State.autoRefreshEnabled ? "on" : "off"); } catch {}
+    this.updateAutoRefreshUI();
+    this.log(`Automatic refresh ${State.autoRefreshEnabled ? "enabled" : "disabled"}.`, "INFO");
+  },
+
+  persistRefreshSelection() {
+    State.refreshSelection = new Set([...document.querySelectorAll('[data-refresh-source]:checked')].map(input => input.dataset.refreshSource));
+    try { localStorage.setItem("sentinel-refresh-selection", JSON.stringify([...State.refreshSelection])); } catch {}
   },
 
   bindDOM() {
@@ -1128,6 +1288,22 @@ const sentinel = {
       State.uiEngines.forEach(engine => { if(engine.draw) engine.draw(); });
     });
     document.getElementById('proxyToggle').addEventListener('click', e => e.target.classList.toggle('on'));
+    const autoToggle = document.getElementById('autoRefreshToggle');
+    autoToggle.addEventListener('click', () => this.setAutoRefresh(!State.autoRefreshEnabled));
+    autoToggle.addEventListener('keydown', event => {
+      if (!["Enter", " "].includes(event.key)) return;
+      event.preventDefault();
+      this.setAutoRefresh(!State.autoRefreshEnabled);
+    });
+    document.querySelectorAll('[data-refresh-source]').forEach(input => input.addEventListener('change', () => this.persistRefreshSelection()));
+    document.querySelectorAll('[data-selection-action]').forEach(button => button.addEventListener('click', () => {
+      const checked = button.dataset.selectionAction === "all";
+      document.querySelectorAll('[data-refresh-source]').forEach(input => { input.checked = checked; });
+      this.persistRefreshSelection();
+    }));
+    document.querySelectorAll('[data-refresh-only]').forEach(button => button.addEventListener('click', () => {
+      this.refreshOneSource(button.dataset.refreshOnly).catch(error => this.log(`[REFRESH] ${error.message}`, "ERROR"));
+    }));
     document.getElementById('politicianModal').addEventListener('click', event => {
       if (event.target.id === 'politicianModal') this.closePoliticianSummary();
     });
@@ -1211,10 +1387,10 @@ const sentinel = {
   },
 
   setLiveSourceButtons(source, active) {
-    document.querySelectorAll(`[data-live-refresh="${source}"]`).forEach(button => {
+    document.querySelectorAll(`[data-live-refresh="${source}"], [data-refresh-only="${source}"]`).forEach(button => {
       button.dataset.originalText ||= button.textContent;
       button.disabled = active;
-      button.textContent = active ? "Fetching live…" : button.dataset.originalText;
+      button.textContent = active ? (button.classList.contains("refresh-one") ? "…" : "Fetching live…") : button.dataset.originalText;
     });
     if (source === "openinsider") {
       document.querySelectorAll('[data-insider-refresh]').forEach(button => { button.disabled = active; });
@@ -1222,7 +1398,8 @@ const sentinel = {
   },
 
   syncLiveSourceButtons() {
-    ["openinsider", "capitol", "committees"].forEach(source => {
+    this.setLiveSourceButtons("market", State.refreshInFlight);
+    ["openinsider", "capitol", "committees", "macro"].forEach(source => {
       const active = [...State.liveSourcePromises.keys()].some(key => key === source || key.startsWith(`${source}:`));
       this.setLiveSourceButtons(source, active);
     });
@@ -1232,7 +1409,70 @@ const sentinel = {
     if (source === "openinsider") return State.rawJSON?.openinsider?.source?.fetchedAt;
     if (source === "capitol") return State.rawJSON?.congressional?.source?.fetchedAt;
     if (source === "committees") return State.rawJSON?.committees?.source?.fetchedAt;
+    if (source === "macro") return State.macroData?.source?.fetchedAt;
     return null;
+  },
+
+  async initializeMacroData() {
+    try {
+      const saved = globalThis.SentinelBrowser?.store ? await globalThis.SentinelBrowser.store.get("macro") : null;
+      if (saved?.source?.fetchedAt && Array.isArray(saved.policy) && saved.curves) {
+        State.macroData = saved;
+        if (State.rawJSON) {
+          State.rawJSON.macro = saved;
+          this.renderDashboard(State.rawJSON);
+        }
+        const age = Date.now() - Date.parse(saved.source.fetchedAt);
+        this.updateLiveJobUI("macro", {
+          status: "cached", stage: "browser cache", percent: 100,
+          message: `Saved rates matrix dated ${new Date(saved.source.fetchedAt).toLocaleString()}.`
+        });
+        if (age < 15 * 60 * 1000) return;
+      }
+    } catch (error) {
+      this.log(`[MACRO CACHE] ${error.message}`, "WARN");
+    }
+    if (!State.autoRefreshEnabled) {
+      if (!State.macroData) this.updateLiveJobUI("macro", { status: "waiting", stage: "manual", percent: 0, message: "Automatic refresh is off. Use Run or Refresh rates & macro when wanted." });
+      return;
+    }
+    this.refreshMacroData({ silent: true }).catch(error => this.log(`[MACRO] ${error.message}`, "WARN"));
+  },
+
+  refreshMacroData({ silent = false } = {}) {
+    if (State.liveSourcePromises.has("macro")) return State.liveSourcePromises.get("macro");
+    if (!globalThis.SentinelMacro) return Promise.reject(new Error("The rates collector module did not load."));
+    this.setLiveSourceButtons("macro", true);
+    if (!silent) document.getElementById('logsDrawer').classList.remove('collapsed');
+    const task = (async () => {
+      try {
+        const payload = await globalThis.SentinelMacro.collect(State.macroData, (...args) => this.browserProgress("macro", null, ...args));
+        State.macroData = payload;
+        if (State.rawJSON) {
+          State.rawJSON.macro = payload;
+          this.renderDashboard(State.rawJSON);
+        }
+        const failed = payload.source.failures?.length || 0;
+        this.updateLiveJobUI("macro", {
+          status: "completed", stage: "saved", percent: 100,
+          message: failed
+            ? `Live rates updated; ${failed} route${failed === 1 ? " kept its" : "s kept their"} last successful browser value${failed === 1 ? "" : "s"}.`
+            : "Every rates and macro route updated live and was saved in this browser."
+        });
+        return payload;
+      } catch (error) {
+        const message = State.macroData
+          ? `Live rates refresh failed; the saved matrix remains visible. ${error.message}`
+          : `Live rates refresh failed. ${error.message}`;
+        this.updateLiveJobUI("macro", { status: "failed", stage: "failed", percent: 0, message });
+        throw new Error(message);
+      } finally {
+        State.liveSourcePromises.delete("macro");
+        this.setLiveSourceButtons("macro", false);
+      }
+    })();
+    State.liveSourcePromises.set("macro", task);
+    return task;
   },
 
   async bootstrapWebsiteSnapshots() {
@@ -1328,6 +1568,12 @@ const sentinel = {
     const job = { status: "running", stage, current, total, percent, message };
     this.updateLiveJobUI(source, job);
     if (sectionId) this.updateInsiderSectionJob(sectionId, job);
+    if (source === "macro") {
+      const bar = document.querySelector('[data-macro-bar]');
+      const status = document.querySelector('[data-macro-status]');
+      if (bar) bar.style.width = `${percent}%`;
+      if (status) status.textContent = message;
+    }
   },
 
   async runBrowserCollector(source, { sectionId } = {}) {
@@ -1388,30 +1634,55 @@ const sentinel = {
     return task;
   },
 
-  async refreshAllLiveSources({ silent = false } = {}) {
-    const btn = document.getElementById('executeBtn');
-    btn.disabled = true;
-    btn.textContent = "Collecting Website Data…";
+  async refreshAllLiveSources({ silent = false, sources = ["openinsider", "capitol", "committees", "macro"] } = {}) {
+    const selected = [...new Set(sources)].filter(source => ["openinsider", "capitol", "committees", "macro"].includes(source));
+    if (!selected.length) return [];
     if (!silent) document.getElementById('logsDrawer').classList.remove('collapsed');
-    this.setDataStatus("LIVE WEBSITE COLLECTION IN PROGRESS…", "working");
-    const results = await Promise.allSettled([
-      this.refreshLiveSource("openinsider"),
-      this.refreshLiveSource("capitol"),
-      this.refreshLiveSource("committees")
-    ]);
+    this.setDataStatus(`REFRESHING ${selected.length} SELECTED SOURCE${selected.length === 1 ? "" : "S"}…`, "working");
+    const tasks = selected.map(source => source === "macro" ? this.refreshMacroData({ silent }) : this.refreshLiveSource(source));
+    const results = await Promise.allSettled(tasks);
+    const labels = { openinsider: "OpenInsider", capitol: "Congress trades", committees: "Committees", macro: "Rates & Macro" };
     results.forEach((result, index) => {
-      if (result.status === "rejected") this.log(`[COLLECTOR] ${["OpenInsider", "Capitol Trades", "Committees"][index]} failed: ${result.reason.message}`, "ERROR");
+      if (result.status === "rejected") this.log(`[COLLECTOR] ${labels[selected[index]]} failed: ${result.reason.message}`, "ERROR");
     });
     const failed = results.filter(result => result.status === "rejected").length;
-    this.setDataStatus(failed ? `LIVE COLLECTION COMPLETE · ${failed} SOURCE${failed === 1 ? "" : "S"} FAILED` : "ALL WEBSITE SOURCES FETCHED LIVE", failed ? "error" : "live");
-    btn.disabled = false;
-    btn.textContent = "Fetch All Live Website Data";
+    this.setDataStatus(failed ? `SELECTED REFRESH COMPLETE · ${failed} SOURCE${failed === 1 ? "" : "S"} FAILED` : "SELECTED SOURCES FETCHED LIVE", failed ? "error" : "live");
     return results;
   },
 
+  async refreshOneSource(source) {
+    if (source === "market") return this.executePipeline();
+    return this.refreshAllLiveSources({ sources: [source] });
+  },
+
+  async refreshSelectedSources(overrideSources = null) {
+    const selected = overrideSources || [...State.refreshSelection];
+    if (!selected.length) {
+      this.log("No refresh sources selected. Choose one or use a section's Run button.", "WARN");
+      return [];
+    }
+    const btn = document.getElementById('executeBtn');
+    btn.disabled = true;
+    btn.textContent = `Refreshing ${selected.length} source${selected.length === 1 ? "" : "s"}…`;
+    this.log(`Refreshing selected sources: ${selected.join(", ")}.`, "INFO");
+    try {
+      const results = [];
+      if (selected.includes("market")) {
+        results.push(await this.executePipeline());
+        btn.disabled = true;
+        btn.textContent = `Refreshing ${selected.length} source${selected.length === 1 ? "" : "s"}…`;
+      }
+      const websiteSources = selected.filter(source => source !== "market");
+      if (websiteSources.length) results.push(...await this.refreshAllLiveSources({ sources: websiteSources }));
+      return results;
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Refresh Selected Sources";
+    }
+  },
+
   async refreshEverything() {
-    await this.executePipeline();
-    await this.refreshAllLiveSources();
+    return this.refreshSelectedSources(["market", "macro", "openinsider", "capitol", "committees"]);
   },
 
   async executePipeline({ silent = false } = {}) {
@@ -1422,6 +1693,7 @@ const sentinel = {
     const btn = document.getElementById('executeBtn');
 
     btn.disabled = true;
+    this.setLiveSourceButtons("market", true);
     this.setDataStatus("REFRESHING LIVE FEEDS…", "working");
     if (!silent) document.getElementById('logsDrawer').classList.remove('collapsed');
     ['connect', 'fetch', 'parse', 'render'].forEach(s => this.setFlow(s, ''));
@@ -1432,26 +1704,21 @@ const sentinel = {
       this.setFlow('connect', 'done');
 
       this.setFlow('fetch', 'active');
-      const [futuresResult, cnnResult, mapResult, insiderResult, congressionalResult, committeeResult] = await Promise.allSettled([
+      const [futuresResult, cnnResult, mapResult] = await Promise.allSettled([
         Network.fetchFuturesData(),
         Network.fetchWithProxy(TARGETS.cnn, useProxy, true),
-        Network.fetchMarketMapData(),
-        Network.fetchOpenInsiderData(),
-        Network.fetchCongressionalData(),
-        Network.fetchCommitteeData()
+        Network.fetchMarketMapData()
       ]);
       if (futuresResult.status === "rejected") this.log(`[FUTURES] Live scanner unavailable: ${futuresResult.reason.message}`, "WARN");
       if (cnnResult.status === "rejected") this.log(`[CNN] Sentiment feed unavailable: ${cnnResult.reason.message}`, "WARN");
       if (mapResult.status === "rejected") this.log(`[MAP] Equity map unavailable: ${mapResult.reason.message}`, "WARN");
-      if (insiderResult.status === "rejected") this.log(`[INSIDERS] Snapshot unavailable: ${insiderResult.reason.message}`, "WARN");
-      if (congressionalResult.status === "rejected") this.log(`[CONGRESS] Snapshot unavailable: ${congressionalResult.reason.message}`, "WARN");
-      if (committeeResult.status === "rejected") this.log(`[COMMITTEES] Membership list unavailable: ${committeeResult.reason.message}`, "WARN");
 
       this.setFlow('fetch', 'done');
       this.setFlow('parse', 'active');
 
       const { quotes = [], source = null } = futuresResult.status === "fulfilled" ? futuresResult.value : {};
       const compiledMatrix = {
+        ...(previousMatrix || {}),
         ...(cnnResult.status === "fulfilled" ? cnnResult.value : {}),
         ...(source ? {
           futures_source: source,
@@ -1462,9 +1729,7 @@ const sentinel = {
           futures_tm: quotes
         } : {}),
         ...(mapResult.status === "fulfilled" ? { finviz_map: mapResult.value } : {}),
-        ...(insiderResult.status === "fulfilled" ? { openinsider: insiderResult.value } : {}),
-        ...(congressionalResult.status === "fulfilled" ? { congressional: congressionalResult.value } : {}),
-        ...(committeeResult.status === "fulfilled" ? { committees: committeeResult.value } : {})
+        ...(State.macroData ? { macro: State.macroData } : {})
       };
 
       State.rawJSON = compiledMatrix;
@@ -1474,9 +1739,9 @@ const sentinel = {
       this.renderDashboard(compiledMatrix);
       this.setFlow('render', 'done');
       const fetchedTime = source ? new Date(source.fetchedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : null;
-      const insiderCount = insiderResult.status === "fulfilled" ? insiderResult.value.source.rowCount : 0;
+      const insiderCount = Number(compiledMatrix.openinsider?.source?.rowCount) || 0;
       const insiderStatus = insiderCount ? ` · ${insiderCount} INSIDER FILINGS` : "";
-      const congressCount = congressionalResult.status === "fulfilled" ? congressionalResult.value.trades.length : 0;
+      const congressCount = Array.isArray(compiledMatrix.congressional?.trades) ? compiledMatrix.congressional.trades.length : 0;
       const congressStatus = congressCount ? ` · ${congressCount} CONGRESS TRADES` : "";
       if (source) {
         this.setDataStatus(`${quotes.length} FUTURES${insiderStatus}${congressStatus} · ${this.sourceDelayLabel(source)} · ${fetchedTime}`, "live");
@@ -1503,6 +1768,7 @@ const sentinel = {
     } finally {
       State.refreshInFlight = false;
       btn.disabled = false;
+      this.setLiveSourceButtons("market", false);
     }
   },
 
@@ -1772,6 +2038,207 @@ const sentinel = {
     }).join("");
   },
 
+  formatMacroValue(value, digits = 2, suffix = "%") {
+    if (value === null || value === undefined || value === "") return "—";
+    const number = Number(value);
+    return Number.isFinite(number) ? `${number.toFixed(digits)}${suffix}` : "—";
+  },
+
+  formatMacroDate(value) {
+    const date = new Date(String(value || ""));
+    return Number.isNaN(date.getTime()) ? "date unavailable" : date.toLocaleDateString([], { year: "numeric", month: "short", day: "numeric" });
+  },
+
+  macroMetric({ label, value, meta = "", detail = "", tone = "", extraClass = "" }) {
+    const detailHTML = String(detail || "No additional values supplied.").split("\n").map(line => this.escapeHTML(line)).join("<br>");
+    return `<div class="macro-metric ${this.escapeHTML(extraClass)}" tabindex="0">
+      <div class="macro-metric-label">${this.escapeHTML(label)}</div>
+      <div class="macro-metric-value ${this.escapeHTML(tone)}">${this.escapeHTML(value)}</div>
+      ${meta ? `<div class="macro-metric-meta">${this.escapeHTML(meta)}</div>` : ""}
+      <div class="macro-hover" role="tooltip"><strong>${this.escapeHTML(label)}</strong>${detailHTML}</div>
+    </div>`;
+  },
+
+  renderMacroCurveSVG(curves) {
+    const width = 760, height = 190, pad = { left: 42, right: 22, top: 17, bottom: 28 };
+    const colors = { US: "#0a84ff", EU: "#bf5af2", SE: "#ffd60a" };
+    const list = Object.values(curves || {}).filter(curve => Array.isArray(curve.points) && curve.points.length);
+    const values = list.flatMap(curve => curve.points.map(point => Number(point.value))).filter(Number.isFinite);
+    if (!values.length) return "";
+    const rawMin = Math.min(...values), rawMax = Math.max(...values), padding = Math.max(.2, (rawMax - rawMin) * .15);
+    const min = rawMin - padding, max = rawMax + padding;
+    const x = years => pad.left + (Math.log1p(Number(years)) / Math.log(31)) * (width - pad.left - pad.right);
+    const y = value => pad.top + ((max - Number(value)) / (max - min || 1)) * (height - pad.top - pad.bottom);
+    const yTicks = [min, (min + max) / 2, max].map(value => `<g><line class="macro-curve-axis" x1="${pad.left}" x2="${width - pad.right}" y1="${y(value)}" y2="${y(value)}" opacity=".4"/><text class="macro-curve-label" x="${pad.left - 7}" y="${y(value) + 3}" text-anchor="end">${value.toFixed(1)}%</text></g>`).join("");
+    const xTicks = [[1, "1Y"], [2, "2Y"], [5, "5Y"], [10, "10Y"], [30, "30Y"]].map(([years, label]) => `<text class="macro-curve-label" x="${x(years)}" y="${height - 9}" text-anchor="middle">${label}</text>`).join("");
+    const series = list.map(curve => {
+      const color = colors[curve.region] || "#ffffff";
+      const ordered = [...curve.points].sort((a, b) => a.years - b.years);
+      const polyline = ordered.map(point => `${x(point.years).toFixed(1)},${y(point.value).toFixed(1)}`).join(" ");
+      const points = ordered.map(point => `<circle class="macro-curve-point" cx="${x(point.years).toFixed(1)}" cy="${y(point.value).toFixed(1)}" r="4" fill="${color}"><title>${this.escapeHTML(`${curve.regionName} ${point.term}: ${point.value.toFixed(3)}% · ${this.formatMacroDate(point.date)}`)}</title></circle>`).join("");
+      return `<polyline class="macro-curve-line" stroke="${color}" points="${polyline}"/>${points}`;
+    }).join("");
+    return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="US, euro area, and Swedish government yield curves">${yTicks}${xTicks}${series}</svg>`;
+  },
+
+  renderMacroCurveRows(curves) {
+    return Object.values(curves || {}).map(curve => {
+      const point = term => curve.points.find(item => item.term === term);
+      const preferred = [point("2Y"), point("5Y"), point("10Y")];
+      const cells = preferred.map((item, index) => `<div class="macro-curve-cell"><strong>${item ? this.formatMacroValue(item.value, 2) : "—"}</strong><span>${["2Y", "5Y", "10Y"][index]}</span></div>`).join("");
+      const slope = curve.slope10y2y === null || curve.slope10y2y === undefined ? null : Number(curve.slope10y2y);
+      const slopeText = Number.isFinite(slope) ? `${slope >= 0 ? "+" : ""}${slope.toFixed(0)} bp` : "—";
+      const details = curve.points.map(item => {
+        const changes = item.changes || {};
+        const change = key => Number.isFinite(Number(changes[key])) ? `${Number(changes[key]) >= 0 ? "+" : ""}${Number(changes[key]).toFixed(1)} bp` : "n/a";
+        return `${item.term}: ${item.value.toFixed(3)}% · 1D ${change("day")} · 1W ${change("week")} · 1M ${change("month")}`;
+      }).join("\n");
+      return `<div class="macro-curve-row" tabindex="0">
+        <div class="macro-curve-region">${this.escapeHTML(curve.regionName)}</div>${cells}
+        <div class="macro-curve-cell"><strong>${this.escapeHTML(slopeText)}</strong><span>10Y-2Y</span></div>
+        <div class="macro-hover" role="tooltip"><strong>${this.escapeHTML(curve.regionName)} yield curve · ${this.escapeHTML(this.formatMacroDate(curve.date))}</strong>${details.split("\n").map(line => this.escapeHTML(line)).join("<br>")}<br>Source: ${this.escapeHTML(curve.source?.label || "Official provider")}</div>
+      </div>`;
+    }).join("");
+  },
+
+  exportMacroData(payload, format) {
+    const rows = [];
+    payload.policy?.forEach(item => rows.push({ category: "Policy rate", region: item.regionName, indicator: item.benchmark, value: item.rate, unit: "%", date: item.date, source: item.source?.label }));
+    Object.values(payload.curves || {}).forEach(curve => curve.points.forEach(item => rows.push({ category: "Yield curve", region: curve.regionName, indicator: item.term, value: item.value, unit: "%", date: item.date, source: curve.source?.label })));
+    payload.funding?.forEach(item => rows.push({ category: "Funding", region: "United States", indicator: item.label, value: item.rate, unit: "%", date: item.date, source: item.source?.label }));
+    payload.fx?.forEach(item => rows.push({ category: "FX", region: "Sweden", indicator: item.pair, value: item.value, unit: "SEK", date: item.date, source: item.source?.label }));
+    payload.inflation?.forEach(item => rows.push({ category: "Inflation", region: item.regionName, indicator: "Annual inflation", value: item.value, unit: "%", date: item.date, source: item.source?.label }));
+    payload.labour?.forEach(item => rows.push({ category: "Labour", region: item.regionName, indicator: "Unemployment", value: item.value, unit: "%", date: item.date, source: item.source?.label }));
+    payload.realPolicy?.forEach(item => rows.push({ category: "Derived", region: item.regionName, indicator: "Real policy rate", value: item.value, unit: "%", date: item.date, source: "Sentinel calculation" }));
+    this.downloadTabularData(`sentinel_rates_macro_${new Date().toISOString().slice(0, 10)}`, format, [
+      { key: "category", label: "Category" }, { key: "region", label: "Region" }, { key: "indicator", label: "Indicator" },
+      { key: "value", label: "Value" }, { key: "unit", label: "Unit" }, { key: "date", label: "Observation Date" }, { key: "source", label: "Source" }
+    ], rows);
+  },
+
+  renderEnergyStrip(grid, data, sourceMeta) {
+    const items = [
+      { key: "oil_wti", title: "Crude Oil WTI", color: "#ff9f0a" },
+      { key: "oil_brent", title: "Crude Oil Brent", color: "#ff9f0a" },
+      { key: "natural_gas", title: "Natural Gas", color: "#ffd60a" }
+    ].map(definition => ({ ...definition, payload: data[definition.key] })).filter(item => item.payload);
+    if (!items.length) return;
+    const quotes = items.map(item => {
+      const change = Number(item.payload.change);
+      const changeClass = change > 0 ? "positive" : change < 0 ? "negative" : "neutral";
+      const changeText = `${change > 0 ? "+" : ""}${Number.isFinite(change) ? change.toFixed(2) : "—"}%`;
+      const detail = [
+        `Price: ${this.formatMarketNumber(item.payload.price)}`,
+        `1-day change: ${changeText}`,
+        `Symbol: ${item.payload.symbol || item.payload.providerSymbol || "—"}`,
+        `Volume: ${this.formatMarketNumber(item.payload.volume)}`,
+        `Update mode: ${item.payload.updateMode || "unknown"}`,
+        sourceMeta
+      ].filter(Boolean).map(line => this.escapeHTML(line)).join("<br>");
+      return `<div class="energy-quote" tabindex="0">
+        <div class="energy-name">${this.escapeHTML(item.title)}</div>
+        <div class="energy-value-row"><div class="energy-price" style="color:${item.color}">${this.formatMarketNumber(item.payload.price)}</div><div class="energy-change ${changeClass}">${changeText}</div></div>
+        <div class="energy-meta">${this.escapeHTML(item.payload.symbol || item.payload.providerSymbol || "—")} · 1 day</div>
+        <div class="macro-hover" role="tooltip"><strong>${this.escapeHTML(item.title)}</strong>${detail}</div>
+      </div>`;
+    }).join("");
+    const card = document.createElement('div');
+    card.className = 'chart-card wide energy-strip-card';
+    card.innerHTML = `<div class="chart-header"><div><div class="chart-title">Energy Benchmarks</div><div class="chart-rating">WTI · BRENT · NATURAL GAS · HOVER OR FOCUS FOR FULL VALUES</div></div></div><div class="energy-strip">${quotes}</div>`;
+    grid.appendChild(card);
+  },
+
+  renderMacroDashboard(grid, payload) {
+    const card = document.createElement('div');
+    card.className = 'chart-card wide board-card macro-card';
+    if (!payload) {
+      card.innerHTML = `<div class="chart-header"><div><div class="chart-title">Global Rates & Macro Regime</div><div class="chart-rating">BROWSER-FIRST OFFICIAL DATA · NO LOCAL SERVER REQUIRED</div></div></div>
+        <div class="macro-empty">Connecting to U.S. Treasury, Federal Reserve, ECB, Eurostat, and Sveriges Riksbank feeds. Existing dashboard datasets remain independent while this loads.</div>`;
+      grid.appendChild(card);
+      return;
+    }
+    const fetched = new Date(payload.source?.fetchedAt);
+    const fetchedLabel = Number.isNaN(fetched.getTime()) ? "time unavailable" : fetched.toLocaleString([], { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+    const providerLabels = {
+      treasury: "US Treasury", nyFed: "NY Fed", ecbPolicy: "ECB policy", ecbCurve: "ECB curve",
+      riksPolicy: "Riksbank policy", riksCurve: "Sweden curve", riksFX: "Riksbank FX",
+      euroInflation: "Eurostat HICP", euroLabour: "Eurostat labour", usInflation: "US CPI"
+    };
+    const providerStrip = Object.entries(payload.providers || {}).map(([key, status]) => `<span class="macro-provider ${this.escapeHTML(status)}">${this.escapeHTML(providerLabels[key] || key)} · ${this.escapeHTML(status)}</span>`).join("");
+    const policyHTML = (payload.policy || []).map(item => {
+      const secondary = (item.secondary || []).map(value => `${value.label}: ${this.formatMacroValue(value.value, 2)}`).join(" · ");
+      return this.macroMetric({
+        label: `${item.regionName} · ${item.benchmark}`, value: this.formatMacroValue(item.rate, 2),
+        meta: [item.target, secondary].filter(Boolean).join(" · "),
+        detail: `Observation: ${this.formatMacroDate(item.date)}\n${secondary || "No secondary policy values supplied."}\nSource: ${item.source?.label || "Official provider"}`,
+        tone: item.stale ? "neutral" : ""
+      });
+    }).join("");
+    const realHTML = (payload.realPolicy || []).map(item => this.macroMetric({
+      label: `${item.regionName} real policy`, value: this.formatMacroValue(item.value, 2),
+      meta: `${this.formatMacroValue(item.policy, 2)} policy − ${this.formatMacroValue(item.inflation, 2)} inflation`,
+      detail: `Nominal policy rate: ${this.formatMacroValue(item.policy, 2)}\nAnnual inflation: ${this.formatMacroValue(item.inflation, 2)}\nCalculated observation: ${this.formatMacroDate(item.date)}`,
+      tone: item.value > 1 ? "negative" : item.value < 0 ? "positive" : "neutral"
+    })).join("");
+    const fundingMap = Object.fromEntries((payload.funding || []).map(item => [item.label, item]));
+    const fundingRows = ["EFFR", "SOFR", "OBFR", "TGCR", "BGCR"].map(label => fundingMap[label]).filter(Boolean).map(item => this.macroMetric({
+      label: item.label, value: this.formatMacroValue(item.rate, 2), meta: item.volume !== null ? `$${Number(item.volume).toLocaleString()}bn volume` : "",
+      detail: `1st-99th percentile: ${this.formatMacroValue(item.percentile1, 2)} to ${this.formatMacroValue(item.percentile99, 2)}\nVolume: ${item.volume === null ? "n/a" : `$${Number(item.volume).toLocaleString()}bn`}\nObservation: ${this.formatMacroDate(item.date)}\nSource: ${item.source?.label || "NY Fed"}`
+    })).join("");
+    const fxHTML = (payload.fx || []).map(item => this.macroMetric({
+      label: item.pair, value: Number(item.value).toFixed(4), meta: this.formatMacroDate(item.date),
+      detail: `${item.pair}: ${Number(item.value).toFixed(5)}\nIndicative rate only; not for transactional use.\nSource: ${item.source?.label || "Sveriges Riksbank"}`
+    })).join("");
+    const pulseHTML = ["US", "EU", "SE"].map(region => {
+      const inflation = payload.inflation?.find(item => item.region === region);
+      const labour = payload.labour?.find(item => item.region === region);
+      if (!inflation && !labour) return "";
+      const name = inflation?.regionName || labour?.regionName || region;
+      return this.macroMetric({
+        label: `${name} macro pulse`, value: inflation ? this.formatMacroValue(inflation.value, 1) : "—",
+        meta: `inflation · unemployment ${labour ? this.formatMacroValue(labour.value, 1) : "—"}`,
+        detail: `Annual inflation: ${inflation ? this.formatMacroValue(inflation.value, 2) : "n/a"} (${this.formatMacroDate(inflation?.date)})\nUnemployment: ${labour ? this.formatMacroValue(labour.value, 2) : "n/a"} (${this.formatMacroDate(labour?.date)})\nSources: ${[inflation?.source?.label, labour?.source?.label].filter(Boolean).join(" / ")}`
+      });
+    }).join("");
+    const signalHTML = (payload.signals || []).map(item => this.macroMetric({
+      label: item.label, value: item.value, meta: item.state, detail: item.detail, extraClass: `macro-signal ${item.tone || ""}`
+    })).join("");
+    const curveLegend = Object.values(payload.curves || {}).map(curve => {
+      const color = { US: "#0a84ff", EU: "#bf5af2", SE: "#ffd60a" }[curve.region] || "#fff";
+      return `<span><i class="macro-legend-dot" style="background:${color}"></i>${this.escapeHTML(curve.regionName)}</span>`;
+    }).join("");
+    const sourceLinks = Object.values(globalThis.SentinelMacro?.sources || {}).map(source => `<a href="${this.escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer">${this.escapeHTML(source.label)} ↗</a>`).join(" · ");
+    card.innerHTML = `
+      <div class="chart-header">
+        <div><div class="chart-title">Global Rates & Macro Regime</div><div class="chart-rating">US · EURO AREA · SWEDEN · OFFICIAL BROWSER FEEDS · UPDATED ${this.escapeHTML(fetchedLabel)}</div></div>
+        <div class="chart-value">${this.escapeHTML(payload.regime || "Mixed")}</div>
+      </div>
+      <div class="macro-board">
+        <div class="macro-toolbar">
+          <button class="data-export-button" type="button" data-live-refresh="macro">Refresh rates & macro</button>
+          <button class="data-export-button" type="button" data-macro-export="csv">Download CSV</button>
+          <button class="data-export-button" type="button" data-macro-export="txt">Download text</button>
+          <span class="toolbar-spacer"></span><span class="chart-rating" data-macro-status>${payload.source?.failures?.length ? `${payload.source.failures.length} routes using saved values` : "All routes live"}</span>
+        </div>
+        <div class="macro-progress" aria-hidden="true"><span data-macro-bar style="width:100%"></span></div>
+        <div class="macro-provider-strip">${providerStrip}</div>
+        <div class="macro-regime">Current composite: ${this.escapeHTML(payload.regime || "Mixed / neutral macro regime")}</div>
+        <div class="macro-grid">
+          <section class="macro-panel policy"><h3>Monetary policy comparison</h3><div class="macro-policy-grid">${policyHTML || "No policy observations available."}</div></section>
+          <section class="macro-panel curves"><h3>Government yield curves & change matrix</h3><div class="macro-curve-chart">${this.renderMacroCurveSVG(payload.curves)}</div><div class="macro-curve-legend">${curveLegend}</div><div class="macro-curve-table">${this.renderMacroCurveRows(payload.curves)}</div></section>
+          <section class="macro-panel stance"><h3>Inflation-adjusted policy stance</h3><div class="macro-real-grid">${realHTML || "No matched inflation observations."}</div></section>
+          <section class="macro-panel stress"><h3>US funding & credit stress</h3><div class="macro-list">${fundingRows || "No funding observations."}</div></section>
+          <section class="macro-panel fx"><h3>SEK foreign exchange monitor</h3><div class="macro-list">${fxHTML || "No FX observations."}</div></section>
+          <section class="macro-panel pulse"><h3>Inflation & labour pulse</h3><div class="macro-list">${pulseHTML || "No macro observations."}</div></section>
+          <section class="macro-panel signals"><h3>Derived regime signals</h3><div class="macro-signal-grid">${signalHTML || "Signals need more live inputs."}</div></section>
+        </div>
+        <div class="insider-source"><span>${this.escapeHTML(String(payload.source?.successfulProviders || 0))}/${this.escapeHTML(String(payload.source?.providerCount || 0))} routes updated · hover or focus every box for source dates and underlying values</span><span>${sourceLinks}</span></div>
+      </div>`;
+    grid.appendChild(card);
+    card.querySelector('[data-live-refresh="macro"]').addEventListener('click', () => this.refreshMacroData().catch(error => this.log(`[MACRO] ${error.message}`, "ERROR")));
+    card.querySelectorAll('[data-macro-export]').forEach(button => button.addEventListener('click', () => this.exportMacroData(payload, button.dataset.macroExport)));
+  },
+
   renderDashboard(data) {
     const grid = document.getElementById('dashboardGrid');
     State.uiEngines.forEach(eng => this.resizeObserver.unobserve(eng.container));
@@ -1798,23 +2265,26 @@ const sentinel = {
     const source = data.futures_source;
     const sourceStamp = source ? new Date(source.fetchedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "";
     const sourceMeta = source ? `${source.provider} · ${this.sourceDelayLabel(source)} · fetched ${sourceStamp}` : "";
+    this.renderEnergyStrip(grid, data, sourceMeta);
     const configs =[
-      { key: 'oil_wti', title: "Crude Oil WTI", color: "#ff8c00", type: 'quote' },
-      { key: 'oil_brent', title: "Crude Oil Brent", color: "#ff8c00", type: 'quote' },
-      { key: 'natural_gas', title: "Natural Gas", color: "#ff8c00", type: 'quote' },
-      { key: 'futures_tm', title: "Futures 1-Day Performance", color: "#fff", type: 'treemap', wide: true, live: true },
-      { key: 'futures_quotes', title: "Global Futures Board", color: "#fff", type: 'futures-board', wide: true, live: true },
-      { key: 'openinsider', title: "SEC Form 4 / OpenInsider Activity", color: "#fff", type: 'insider-board', wide: true },
-      { key: 'congressional', title: "Congressional Trading", color: "#fff", type: 'congressional-board', wide: true },
       { key: 'fear_and_greed_historical', title: "Fear & Greed Timeline", color: "#bf5af2", type: 'chart' },
       { key: 'market_momentum_sp500', title: "Market Momentum (S&P 500)", color: "#0a84ff", type: 'chart' },
       { key: 'stock_price_strength', title: "Stock Price Strength (NYSE)", color: "#ffd60a", type: 'chart' },
       { key: 'market_volatility_vix', title: "Market Volatility (VIX)", color: "#ff453a", type: 'chart' },
-      { key: 'finviz_map', title: "Top 500 Market Heatmap", color: "#fff", type: 'treemap', wide: true }
+      { key: 'futures_tm', title: "Futures 1-Day Performance", color: "#fff", type: 'treemap', wide: true, live: true },
+      { key: 'finviz_map', title: "Top 500 Market Heatmap", color: "#fff", type: 'treemap', wide: true },
+      { key: 'macro', title: "Global Rates & Macro Regime", type: 'macro', wide: true },
+      { key: 'futures_quotes', title: "Global Futures Board", color: "#fff", type: 'futures-board', wide: true, live: true },
+      { key: 'openinsider', title: "SEC Form 4 / OpenInsider Activity", color: "#fff", type: 'insider-board', wide: true },
+      { key: 'congressional', title: "Congressional Trading", color: "#fff", type: 'congressional-board', wide: true }
     ];
 
     configs.forEach(config => {
-      const payload = data[config.key];
+      const payload = config.type === 'macro' ? (data.macro || State.macroData) : data[config.key];
+      if (config.type === 'macro') {
+        this.renderMacroDashboard(grid, payload);
+        return;
+      }
       if (!payload) return;
 
       const card = document.createElement('div');

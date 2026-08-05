@@ -15,8 +15,11 @@ const browser = await chromium.launch({
 try {
   const page = await browser.newPage();
   await page.goto(baseURL, { waitUntil: "domcontentloaded" });
-  await page.waitForFunction(() => document.querySelectorAll("[data-live-job] [data-job-status]").length === 3
-    && [...document.querySelectorAll("[data-live-job] [data-job-status]")].every(node => node.textContent === "SAVED"), null, { timeout: 20000 });
+  await page.waitForFunction(() => {
+    const legacy = [...document.querySelectorAll('[data-live-job]:not([data-live-job="macro"]) [data-job-status]')];
+    return document.querySelectorAll("[data-live-job] [data-job-status]").length === 4
+      && legacy.length === 3 && legacy.every(node => node.textContent === "SAVED");
+  }, null, { timeout: 20000 });
   const result = await page.evaluate(async () => {
     const insiderProgress = [];
     const congressProgress = [];

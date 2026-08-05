@@ -8,7 +8,9 @@ Publish the repository through GitHub Pages or any HTTPS static host and open `i
 
 - Dated bundled snapshots render immediately and remain visible if a live feed fails.
 - Successful browser refreshes are saved in IndexedDB and restored on the next visit.
-- Website datasets are refreshed only when the user presses a refresh button.
+- Heavy website datasets are refreshed only when the user presses a refresh button. The lightweight rates matrix refreshes on first load, every 15 minutes while visible, and on demand.
+- Scheduled market and rates refreshes can be turned off from the sidebar; that preference is remembered in the browser.
+- The sidebar lets users select any combination of market feeds, rates, corporate insiders, recent Congress trades, and committee rosters, or run any one source directly.
 - Each OpenInsider-style category has an independent refresh button, progress indicator, and status.
 - Congressional trades and Wikipedia committee rosters have separate manual refresh controls.
 - The sidebar and dashboard retain independent scrolling, including after network errors.
@@ -22,6 +24,14 @@ Opening the file through a `file://` URL is not recommended because browsers com
 - SEC Form 4 activity: Xoomar's open-CORS, no-key SEC feed. The browser derives cluster buys, latest buys, penny-stock buys, sales of at least $100,000, and latest trading lists from current filings.
 - Congressional trades: CapitolExposed's open-CORS API. The collector walks every 100-row page until it crosses the 90-day transaction-date boundary, then loads member records for party, chamber, and state.
 - Committee assignments: Wikipedia's MediaWiki API. A manual refresh reads the House and Senate indexes and every current committee roster while showing progress.
+- U.S. rates: official U.S. Treasury daily yield-curve XML plus the New York Fed's EFFR, SOFR, OBFR, TGCR, and BGCR reference-rate API.
+- Euro-area rates and macro: ECB policy-rate and modelled government yield-curve series, with Eurostat HICP and unemployment data.
+- Swedish rates and FX: Sveriges Riksbank policy-rate, government-bond, and SEK exchange-rate series. Riksbank values are fetched through a browser CORS route when direct cross-origin access is unavailable.
+- U.S. inflation and labour: CPI from FRED at the Federal Reserve Bank of St. Louis, with seasonally adjusted monthly unemployment from Eurostat's comparable international table. Each route is optional and preserves its last successful browser value if it times out.
+
+The rates board compares monetary-policy settings, government curves, 1-day/1-week/1-month basis-point changes, real policy rates, funding stress, SEK FX, inflation, unemployment, and derived regime signals. Every value box exposes source dates and underlying values on hover or keyboard focus, and the full matrix can be exported as text or CSV.
+
+Dashboard order is sentiment first, a compact one-row WTI/Brent/natural-gas strip, market timelines and heatmaps, then the rates, futures, insider, and congressional boards.
 
 The congressional table keeps all buy and sell disclosures in the 90-day window, sortable columns, pagination, text/CSV exports, source links, and politician summary views. Committee membership is matched into those summaries.
 
