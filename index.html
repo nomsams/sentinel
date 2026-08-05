@@ -49,9 +49,9 @@
     
     .workspace { display: flex; flex: 1; overflow: hidden; position: relative; }
     
-    .sidebar { width: 320px; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; z-index: 100; flex-shrink: 0; transition: transform var(--transition); }
-    .sidebar-section { padding: 20px; border-bottom: 1px solid var(--border); }
-    .sidebar-section:last-child { border-bottom: none; overflow-y: auto; flex: 1; }
+    .sidebar { width: 320px; min-height: 0; overflow-x: hidden; overflow-y: auto; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; z-index: 100; flex-shrink: 0; transition: transform var(--transition); }
+    .sidebar-section { min-width: 0; padding: 20px; border-bottom: 1px solid var(--border); }
+    .sidebar-section:last-child { border-bottom: none; }
     @media (max-width: 800px) {
       .sidebar { position: absolute; left: 0; top: 0; bottom: 0; transform: translateX(-100%); width: 100%; max-width: 320px; box-shadow: var(--shadow); }
       .sidebar.open { transform: translateX(0); }
@@ -81,9 +81,9 @@
     .flow-step.fail::before { background: var(--error); box-shadow: 0 0 8px var(--error); }
 
     .live-jobs-panel { display: grid; gap: 8px; margin-top: 12px; }
-    .live-job-row { padding: 9px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; }
-    .live-job-heading { display: flex; justify-content: space-between; gap: 10px; color: var(--text); font: 800 9px/1.2 var(--font-mono); text-transform: uppercase; }
-    .live-job-status { color: var(--text-muted); }
+    .live-job-row { min-width: 0; overflow: hidden; padding: 9px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; }
+    .live-job-heading { min-width: 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 10px; color: var(--text); font: 800 9px/1.2 var(--font-mono); text-transform: uppercase; }
+    .live-job-status { max-width: 100%; overflow-wrap: anywhere; color: var(--text-muted); text-align: right; }
     .live-job-row.running .live-job-status { color: var(--warning); }
     .live-job-row.completed .live-job-status { color: var(--success); }
     .live-job-row.failed .live-job-status { color: var(--error); }
@@ -92,8 +92,8 @@
     .live-job-row.running .live-job-bar { background: var(--warning); }
     .live-job-row.completed .live-job-bar { background: var(--success); }
     .live-job-row.failed .live-job-bar { background: var(--error); }
-    .live-job-message { margin-top: 6px; overflow: hidden; color: var(--text-muted); font: 8px/1.35 var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
-    .live-collector-note { margin-top: 10px; color: var(--text-muted); font: 8px/1.45 var(--font-mono); }
+    .live-job-message { max-height: 4.2em; margin-top: 6px; overflow: auto; overflow-wrap: anywhere; color: var(--text-muted); font: 8px/1.35 var(--font-mono); white-space: normal; }
+    .live-collector-note { margin-top: 10px; overflow-wrap: anywhere; color: var(--text-muted); font: 8px/1.45 var(--font-mono); }
 
     /* ==========================================================================
        3. DASHBOARD & DATA VIZ
@@ -176,6 +176,13 @@
     .insider-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
     .insider-tab { padding: 7px 10px; font-size: 9px; border-radius: 6px; }
     .insider-tab.active { color: #fff; background: var(--accent); border-color: var(--accent); box-shadow: 0 3px 12px var(--accent-glow); }
+    .insider-tab-group { min-width: 0; display: grid; grid-template-columns: minmax(0, auto) 26px; align-items: stretch; gap: 3px; }
+    .insider-tab-refresh { min-width: 26px; padding: 5px; font-size: 12px; text-transform: none; }
+    .insider-tab-refresh.running { color: var(--warning); border-color: var(--warning); }
+    .insider-tab-refresh.failed { color: var(--error); border-color: var(--error); }
+    .insider-tab-refresh.completed { color: var(--success); border-color: var(--success); }
+    .insider-section-progress { grid-column: 1 / -1; height: 2px; overflow: hidden; background: var(--border); border-radius: 999px; }
+    .insider-section-progress > span { display: block; width: 0; height: 100%; background: var(--accent); transition: width .2s ease; }
     .insider-list { display: grid; gap: 7px; }
     .insider-row {
       position: relative; z-index: 1; display: grid;
@@ -385,7 +392,7 @@
     <div class="sidebar-section">
       <label>Data Acquisition Pipeline</label>
       <div style="font-size:11px; color:var(--text-muted); margin-bottom:16px; line-height:1.6;">
-        Starts the website collectors from this app, writes a fresh cache only after a complete run, and shows every live job below.
+        Loads the latest dated snapshot immediately. Website collectors run only when you press a refresh button and save successful results in this browser.
       </div>
       
       <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px; background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
@@ -415,10 +422,10 @@
           <div class="live-job-message" data-job-message>Ready to refresh House and Senate rosters.</div>
         </div>
       </div>
-      <div class="live-collector-note">Cached JSON is the last successful run only. Each fetch above replaces it after the live collector finishes.</div>
+      <div class="live-collector-note">Browser collection is the default and needs no npm process. The local collector API remains an optional fallback. Failed requests preserve the latest successful snapshot.</div>
       
       <div class="flow-path" id="flowPath">
-        <div class="flow-step" id="step-connect">1. Node Handshake</div>
+        <div class="flow-step" id="step-connect">1. Browser Handshake</div>
         <div class="flow-step" id="step-fetch">2. Payload Extraction</div>
         <div class="flow-step" id="step-parse">3. Matrix Decryption</div>
         <div class="flow-step" id="step-render">4. Visual Engine Mapping</div>
@@ -468,6 +475,7 @@
   <div class="politician-summary-panel" id="politicianSummaryPanel"></div>
 </div>
 
+<script src="./browser-collectors.js"></script>
 <script>
 /**
  * MARKET SENTINEL v5.0 - LIVE MARKET TELEMETRY
@@ -501,12 +509,6 @@ const CONGRESSIONAL_COLUMNS = [
   { key: "sizeDisplay", label: "Size", sortKey: "estimatedValue" },
   { key: "priceDisplay", label: "Price", sortKey: "price" }
 ];
-
-const LIVE_SOURCE_MAX_AGE_MS = {
-  openinsider: 30 * 60 * 1000,
-  capitol: 6 * 60 * 60 * 1000,
-  committees: 24 * 60 * 60 * 1000
-};
 
 const FUTURES_CONTRACTS =[
   { symbol: "CBOT_MINI:YM1!", name: "DJIA", category: "Indices" },
@@ -590,7 +592,7 @@ const Network = {
       cache: "no-store"
     });
     if (!response.ok) {
-      if (response.status === 404) throw new Error("The live collector API is unavailable. Start this app with npm start instead of opening index.html directly.");
+      if (response.status === 404) throw new Error("The optional local collector API is not running.");
       throw new Error(`Live collector HTTP ${response.status}`);
     }
     return response.json();
@@ -1111,7 +1113,9 @@ const sentinel = {
     this.log("Engine online. Connecting to live market feeds.", "INFO");
     if(window.innerWidth < 800) document.getElementById('mobileMenu').style.display = 'block';
     this.resizeObserver = new ResizeObserver(() => { State.uiEngines.forEach(engine => engine.resize()); });
-    this.executePipeline({ silent: true }).then(() => this.restoreOrRefreshLiveSources());
+    this.bootstrapWebsiteSnapshots()
+      .catch(error => this.log(`[SNAPSHOTS] ${error.message}`, "WARN"))
+      .finally(() => this.executePipeline({ silent: true }).then(() => this.restoreOrRefreshLiveSources()));
     this.autoRefreshTimer = window.setInterval(() => {
       if (!document.hidden && !State.refreshInFlight && State.liveSourcePromises.size === 0) this.executePipeline({ silent: true });
     }, 60000);
@@ -1154,6 +1158,11 @@ const sentinel = {
     return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   },
 
+  sourceHref(value, base = "https://www.capitoltrades.com/") {
+    try { return new URL(String(value || ""), base).href; }
+    catch { return base; }
+  },
+
   formatMarketNumber(value) {
     const number = Number(value);
     if (!Number.isFinite(number)) return "—";
@@ -1182,6 +1191,7 @@ const sentinel = {
     const status = job.status || "waiting";
     row.classList.remove("running", "completed", "failed");
     if (["running", "completed", "failed"].includes(status)) row.classList.add(status);
+    if (status === "cached") row.classList.add("completed");
     const current = Number(job.current) || 0;
     const total = Number(job.total) || 0;
     const percent = status === "completed" ? 100 : Math.max(0, Math.min(100, Number(job.percent) || 0));
@@ -1189,7 +1199,7 @@ const sentinel = {
     row.querySelector('[data-job-bar]').style.width = `${percent}%`;
     row.querySelector('[data-job-status]').textContent = status === "running"
       ? `${stage}${total ? ` ${current}/${total}` : ""} · ${percent}%`
-      : status === "completed" ? "LIVE · 100%" : status === "failed" ? "FAILED" : "WAITING";
+      : status === "completed" ? "LIVE · 100%" : status === "cached" ? "SAVED" : status === "failed" ? "FAILED" : "WAITING";
     row.querySelector('[data-job-message]').textContent = job.message || "Waiting to collect live data.";
 
     const messageKey = `${status}:${job.message || ""}`;
@@ -1206,10 +1216,16 @@ const sentinel = {
       button.disabled = active;
       button.textContent = active ? "Fetching live…" : button.dataset.originalText;
     });
+    if (source === "openinsider") {
+      document.querySelectorAll('[data-insider-refresh]').forEach(button => { button.disabled = active; });
+    }
   },
 
   syncLiveSourceButtons() {
-    ["openinsider", "capitol", "committees"].forEach(source => this.setLiveSourceButtons(source, State.liveSourcePromises.has(source)));
+    ["openinsider", "capitol", "committees"].forEach(source => {
+      const active = [...State.liveSourcePromises.keys()].some(key => key === source || key.startsWith(`${source}:`));
+      this.setLiveSourceButtons(source, active);
+    });
   },
 
   sourceFetchedAt(source) {
@@ -1219,41 +1235,57 @@ const sentinel = {
     return null;
   },
 
-  async restoreOrRefreshLiveSources() {
-    let latest;
-    try {
-      latest = (await Network.fetchLatestCollectorJobs()).latest || {};
-    } catch (error) {
-      ["openinsider", "capitol", "committees"].forEach(source => this.updateLiveJobUI(source, {
-        status: "failed",
-        percent: 0,
-        message: "Live collector API unavailable. Run the app with npm start; the last successful cache remains visible."
-      }));
-      this.log(`[COLLECTOR] ${error.message}`, "WARN");
-      return;
-    }
+  async bootstrapWebsiteSnapshots() {
+    const [insider, congress, committees] = await Promise.allSettled([
+      Network.fetchOpenInsiderData(), Network.fetchCongressionalData(), Network.fetchCommitteeData()
+    ]);
+    const snapshot = {
+      ...(insider.status === "fulfilled" ? { openinsider: insider.value } : {}),
+      ...(congress.status === "fulfilled" ? { congressional: congress.value } : {}),
+      ...(committees.status === "fulfilled" ? { committees: committees.value } : {})
+    };
+    if (!Object.keys(snapshot).length) throw new Error("No bundled website snapshot could be loaded.");
+    State.rawJSON = { ...(State.rawJSON || {}), ...snapshot };
+    this.renderDashboard(State.rawJSON);
+    await this.restoreOrRefreshLiveSources();
+  },
 
-    const pending = [];
-    for (const source of ["openinsider", "capitol", "committees"]) {
-      const job = latest[source];
-      const fetchedAt = Date.parse(this.sourceFetchedAt(source)) || 0;
-      const stale = !fetchedAt || Date.now() - fetchedAt > LIVE_SOURCE_MAX_AGE_MS[source];
-      if (job?.status === "running" || stale) {
-        pending.push(this.refreshLiveSource(source).catch(error => this.log(`[${source.toUpperCase()}] ${error.message}`, "ERROR")));
-        continue;
-      }
-      if (job) {
-        this.updateLiveJobUI(source, job);
-      } else {
-        this.updateLiveJobUI(source, {
-          status: "completed",
-          stage: "cache",
-          percent: 100,
-          message: `Last successful live fetch ${new Date(fetchedAt).toLocaleString()}.`
-        });
-      }
+  formatSnapshotStatus(source) {
+    const fetchedAt = Date.parse(this.sourceFetchedAt(source));
+    if (!fetchedAt) return "Bundled snapshot loaded. Refresh manually whenever you want newer data.";
+    return `Snapshot dated ${new Date(fetchedAt).toLocaleString()}. Refresh manually to replace it.`;
+  },
+
+  async restoreBrowserCaches() {
+    if (!globalThis.SentinelBrowser?.store || !State.rawJSON) return;
+    const keys = ["openinsider", "capitol", "committees"];
+    const results = await Promise.allSettled(keys.map(key => globalThis.SentinelBrowser.store.get(key)));
+    let changed = false;
+    results.forEach((result, index) => {
+      if (result.status !== "fulfilled" || !result.value) return;
+      const source = keys[index];
+      const saved = result.value;
+      const savedAt = Date.parse(saved?.source?.fetchedAt) || 0;
+      const currentAt = Date.parse(this.sourceFetchedAt(source)) || 0;
+      if (savedAt <= currentAt) return;
+      if (source === "openinsider" && Array.isArray(saved.sections)) State.rawJSON.openinsider = saved;
+      if (source === "capitol" && Array.isArray(saved.trades)) State.rawJSON.congressional = saved;
+      if (source === "committees" && Array.isArray(saved.members)) State.rawJSON.committees = saved;
+      changed = true;
+    });
+    if (changed) this.renderDashboard(State.rawJSON);
+  },
+
+  async restoreOrRefreshLiveSources() {
+    try {
+      await this.restoreBrowserCaches();
+    } catch (error) {
+      this.log(`[BROWSER CACHE] ${error.message}`, "WARN");
     }
-    await Promise.allSettled(pending);
+    ["openinsider", "capitol", "committees"].forEach(source => this.updateLiveJobUI(source, {
+      status: "cached", stage: "snapshot", percent: 100, message: this.formatSnapshotStatus(source)
+    }));
+    this.log("Website datasets are ready from dated snapshots. Website collection is manual.", "SUCCESS");
   },
 
   async runCollectorJob(source) {
@@ -1277,23 +1309,82 @@ const sentinel = {
     if (render) this.renderDashboard(State.rawJSON);
   },
 
-  refreshLiveSource(source, { render = true } = {}) {
-    if (State.liveSourcePromises.has(source)) return State.liveSourcePromises.get(source);
+  updateInsiderSectionJob(sectionId, job) {
+    const group = document.querySelector(`[data-insider-job="${sectionId}"]`);
+    if (!group) return;
+    const status = job.status || "waiting";
+    const button = group.querySelector('[data-insider-refresh]');
+    const bar = group.querySelector('[data-insider-section-bar]');
+    button.classList.remove("running", "completed", "failed");
+    if (["running", "completed", "failed"].includes(status)) button.classList.add(status);
+    button.disabled = status === "running";
+    button.textContent = status === "running" ? "…" : status === "completed" ? "✓" : status === "failed" ? "!" : "↻";
+    button.title = job.message || "Refresh only this OpenInsider list";
+    bar.style.width = `${status === "completed" ? 100 : Math.max(0, Math.min(100, Number(job.percent) || 0))}%`;
+  },
+
+  browserProgress(source, sectionId, stage, current, total, message) {
+    const percent = total ? Math.round((current / total) * 100) : 10;
+    const job = { status: "running", stage, current, total, percent, message };
+    this.updateLiveJobUI(source, job);
+    if (sectionId) this.updateInsiderSectionJob(sectionId, job);
+  },
+
+  async runBrowserCollector(source, { sectionId } = {}) {
+    if (!globalThis.SentinelBrowser) throw new Error("The browser collector module did not load.");
+    const progress = (...args) => this.browserProgress(source, sectionId, ...args);
+    if (source === "openinsider") return globalThis.SentinelBrowser.collectOpenInsider(State.rawJSON?.openinsider, sectionId, progress);
+    if (source === "capitol") return globalThis.SentinelBrowser.collectCongress(progress);
+    if (source === "committees") return globalThis.SentinelBrowser.collectCommittees(progress);
+    throw new Error(`Unknown live source: ${source}`);
+  },
+
+  applyCollectedPayload(source, payload, { render = true } = {}) {
+    if (!State.rawJSON) return;
+    if (source === "openinsider") State.rawJSON.openinsider = payload;
+    if (source === "capitol") State.rawJSON.congressional = payload;
+    if (source === "committees") State.rawJSON.committees = payload;
+    if (render) this.renderDashboard(State.rawJSON);
+  },
+
+  refreshLiveSource(source, { render = true, sectionId = null } = {}) {
+    const promiseKey = sectionId ? `${source}:${sectionId}` : source;
+    if (State.liveSourcePromises.has(promiseKey)) return State.liveSourcePromises.get(promiseKey);
     this.setLiveSourceButtons(source, true);
     const task = (async () => {
       try {
-        const job = await this.runCollectorJob(source);
-        await this.loadRefreshedSource(source, { render });
-        return job;
-      } catch (error) {
-        this.updateLiveJobUI(source, { status: "failed", percent: 0, message: error.message });
-        throw error;
+        let browserError;
+        try {
+          const payload = await this.runBrowserCollector(source, { sectionId });
+          this.applyCollectedPayload(source, payload, { render });
+          const message = payload.source.storageWarning
+            ? `${sectionId ? "List" : "Dataset"} fetched for this tab; persistent browser storage is unavailable (${payload.source.storageWarning}).`
+            : `${sectionId ? "List" : "Dataset"} fetched and saved by the browser at ${new Date(payload.source.fetchedAt).toLocaleTimeString()}.`;
+          const job = { status: "completed", stage: "saved", percent: 100, message };
+          this.updateLiveJobUI(source, job);
+          if (sectionId) this.updateInsiderSectionJob(sectionId, job);
+          return job;
+        } catch (error) {
+          browserError = error;
+          this.log(`[${source.toUpperCase()}] Browser route failed: ${error.message}. Trying the optional local collector API…`, "WARN");
+        }
+        try {
+          const job = await this.runCollectorJob(source);
+          await this.loadRefreshedSource(source, { render });
+          if (sectionId) this.updateInsiderSectionJob(sectionId, { ...job, message: "Updated through the optional local collector." });
+          return job;
+        } catch (serverError) {
+          const message = `Live refresh failed; the dated snapshot is unchanged. Browser: ${browserError.message} Local API: ${serverError.message}`;
+          this.updateLiveJobUI(source, { status: "failed", percent: 0, message });
+          if (sectionId) this.updateInsiderSectionJob(sectionId, { status: "failed", percent: 0, message });
+          throw new Error(message);
+        }
       } finally {
-        State.liveSourcePromises.delete(source);
+        State.liveSourcePromises.delete(promiseKey);
         this.setLiveSourceButtons(source, false);
       }
     })();
-    State.liveSourcePromises.set(source, task);
+    State.liveSourcePromises.set(promiseKey, task);
     return task;
   },
 
@@ -1325,6 +1416,7 @@ const sentinel = {
 
   async executePipeline({ silent = false } = {}) {
     if (State.refreshInFlight) return;
+    const previousMatrix = State.rawJSON;
     State.refreshInFlight = true;
     const useProxy = document.getElementById('proxyToggle').classList.contains('on');
     const btn = document.getElementById('executeBtn');
@@ -1348,7 +1440,7 @@ const sentinel = {
         Network.fetchCongressionalData(),
         Network.fetchCommitteeData()
       ]);
-      if (futuresResult.status === "rejected") throw futuresResult.reason;
+      if (futuresResult.status === "rejected") this.log(`[FUTURES] Live scanner unavailable: ${futuresResult.reason.message}`, "WARN");
       if (cnnResult.status === "rejected") this.log(`[CNN] Sentiment feed unavailable: ${cnnResult.reason.message}`, "WARN");
       if (mapResult.status === "rejected") this.log(`[MAP] Equity map unavailable: ${mapResult.reason.message}`, "WARN");
       if (insiderResult.status === "rejected") this.log(`[INSIDERS] Snapshot unavailable: ${insiderResult.reason.message}`, "WARN");
@@ -1358,15 +1450,17 @@ const sentinel = {
       this.setFlow('fetch', 'done');
       this.setFlow('parse', 'active');
 
-      const { quotes, source } = futuresResult.value;
+      const { quotes = [], source = null } = futuresResult.status === "fulfilled" ? futuresResult.value : {};
       const compiledMatrix = {
         ...(cnnResult.status === "fulfilled" ? cnnResult.value : {}),
-        futures_source: source,
-        futures_quotes: quotes,
-        oil_wti: quotes.find(item => item.providerSymbol === "NYMEX:CL1!"),
-        oil_brent: quotes.find(item => item.providerSymbol === "ICEEUR:BRN1!"),
-        natural_gas: quotes.find(item => item.providerSymbol === "NYMEX:NG1!"),
-        futures_tm: quotes,
+        ...(source ? {
+          futures_source: source,
+          futures_quotes: quotes,
+          oil_wti: quotes.find(item => item.providerSymbol === "NYMEX:CL1!"),
+          oil_brent: quotes.find(item => item.providerSymbol === "ICEEUR:BRN1!"),
+          natural_gas: quotes.find(item => item.providerSymbol === "NYMEX:NG1!"),
+          futures_tm: quotes
+        } : {}),
         ...(mapResult.status === "fulfilled" ? { finviz_map: mapResult.value } : {}),
         ...(insiderResult.status === "fulfilled" ? { openinsider: insiderResult.value } : {}),
         ...(congressionalResult.status === "fulfilled" ? { congressional: congressionalResult.value } : {}),
@@ -1379,22 +1473,32 @@ const sentinel = {
       this.setFlow('render', 'active');
       this.renderDashboard(compiledMatrix);
       this.setFlow('render', 'done');
-      const fetchedTime = new Date(source.fetchedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      const fetchedTime = source ? new Date(source.fetchedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : null;
       const insiderCount = insiderResult.status === "fulfilled" ? insiderResult.value.source.rowCount : 0;
       const insiderStatus = insiderCount ? ` · ${insiderCount} INSIDER FILINGS` : "";
-      const congressCount = congressionalResult.status === "fulfilled" ? congressionalResult.value.source.rowCount : 0;
+      const congressCount = congressionalResult.status === "fulfilled" ? congressionalResult.value.trades.length : 0;
       const congressStatus = congressCount ? ` · ${congressCount} CONGRESS TRADES` : "";
-      this.setDataStatus(`${quotes.length} FUTURES${insiderStatus}${congressStatus} · ${this.sourceDelayLabel(source)} · ${fetchedTime}`, "live");
-      this.log(`Live telemetry refreshed at ${fetchedTime}.`, "SUCCESS");
+      if (source) {
+        this.setDataStatus(`${quotes.length} FUTURES${insiderStatus}${congressStatus} · ${this.sourceDelayLabel(source)} · ${fetchedTime}`, "live");
+        this.log(`Live telemetry refreshed at ${fetchedTime}.`, "SUCCESS");
+      } else {
+        this.setDataStatus(`DATED WEBSITE SNAPSHOTS READY${insiderStatus}${congressStatus} · LIVE MARKET FEED UNAVAILABLE`, "error");
+        this.log("Dated website snapshots remain available while the live market scanner is unreachable.", "WARN");
+      }
 
     } catch (err) {
       this.setFlow('fetch', 'fail');
-      State.rawJSON = null;
-      document.getElementById('dashboardGrid').innerHTML = `
-        <div style="color:var(--error); font-size:12px; grid-column:1/-1; padding:40px 20px; font-family:var(--font-mono); text-align:center; border:1px dashed var(--error); border-radius:var(--radius);">
-          [ LIVE_FEED_UNAVAILABLE ]<br><br>${this.escapeHTML(err.message)}
-        </div>`;
-      this.setDataStatus("LIVE FEED ERROR", "error");
+      if (previousMatrix) {
+        State.rawJSON = previousMatrix;
+        this.setDataStatus("LIVE FEED ERROR · DATED SNAPSHOTS REMAIN AVAILABLE", "error");
+      } else {
+        State.rawJSON = null;
+        document.getElementById('dashboardGrid').innerHTML = `
+          <div style="color:var(--error); font-size:12px; grid-column:1/-1; padding:40px 20px; font-family:var(--font-mono); text-align:center; border:1px dashed var(--error); border-radius:var(--radius); overflow-wrap:anywhere;">
+            [ LIVE_FEED_UNAVAILABLE ]<br><br>${this.escapeHTML(err.message)}
+          </div>`;
+        this.setDataStatus("LIVE FEED ERROR", "error");
+      }
       this.log(`CRITICAL FAILURE: ${err.message}`, "ERROR");
     } finally {
       State.refreshInFlight = false;
@@ -1467,7 +1571,7 @@ const sentinel = {
       { key: "party", label: "Party" }, { key: "chamber", label: "Chamber" }, { key: "state", label: "State" },
       { key: "dateOfBirth", label: "Date of Birth" }, { key: "gender", label: "Gender" }, { key: "sector", label: "Sector" },
       { key: "issuerCountry", label: "Issuer Country" }, { key: "estimatedValue", label: "Estimated Value" }, { key: "comment", label: "Comment" },
-      { key: "tradeUrl", label: "Capitol Trades URL", value: row => `https://www.capitoltrades.com${row.tradeUrl}` }
+      { key: "tradeUrl", label: "Source URL", value: row => this.sourceHref(row.tradeUrl) }
     ];
     this.downloadTabularData(`capitol_trades_${suffix}_${new Date().toISOString().slice(0, 10)}`, format, columns, rows);
   },
@@ -1541,7 +1645,7 @@ const sentinel = {
       <div class="politician-issuer"><span>${this.escapeHTML(issuer.name)}</span><span>${issuer.count} trades · ${this.formatCompactCurrency(issuer.value)}</span></div>`).join("");
     const tradeHTML = trades.slice(0, 60).map(trade => {
       const tone = trade.type === "buy" ? "positive" : trade.type === "sell" ? "negative" : "neutral";
-      return `<a class="summary-trade-row summary-source-link" href="https://www.capitoltrades.com${this.escapeHTML(trade.tradeUrl)}" target="_blank" rel="noopener noreferrer" title="${this.escapeHTML(trade.comment || "No trade comment")}">
+      return `<a class="summary-trade-row summary-source-link" href="${this.escapeHTML(this.sourceHref(trade.tradeUrl, payload.source.url))}" target="_blank" rel="noopener noreferrer" title="${this.escapeHTML(trade.comment || "Open source disclosure")}">
         <span>${this.escapeHTML(trade.tradedDisplay)}</span>
         <span>${this.escapeHTML(trade.issuerName)}${trade.issuerTicker ? ` · ${this.escapeHTML(trade.issuerTicker)}` : ""}</span>
         <span class="${tone}">${this.escapeHTML(trade.typeDisplay)}</span>
@@ -1560,7 +1664,7 @@ const sentinel = {
       </div>
       <div class="politician-summary-body">
         <div class="data-toolbar">
-          <a class="summary-source-link" href="https://www.capitoltrades.com${this.escapeHTML(politician.politicianUrl)}" target="_blank" rel="noopener noreferrer">Open Capitol Trades profile ↗</a>
+          <a class="summary-source-link" href="${this.escapeHTML(this.sourceHref(politician.politicianUrl, payload.source.url))}" target="_blank" rel="noopener noreferrer">Open politician data source ↗</a>
           <span class="toolbar-spacer"></span>
           <button class="data-export-button" type="button" data-politician-export="csv">Download CSV</button>
           <button class="data-export-button" type="button" data-politician-export="txt">Download text</button>
@@ -1700,7 +1804,7 @@ const sentinel = {
       { key: 'natural_gas', title: "Natural Gas", color: "#ff8c00", type: 'quote' },
       { key: 'futures_tm', title: "Futures 1-Day Performance", color: "#fff", type: 'treemap', wide: true, live: true },
       { key: 'futures_quotes', title: "Global Futures Board", color: "#fff", type: 'futures-board', wide: true, live: true },
-      { key: 'openinsider', title: "OpenInsider Activity", color: "#fff", type: 'insider-board', wide: true },
+      { key: 'openinsider', title: "SEC Form 4 / OpenInsider Activity", color: "#fff", type: 'insider-board', wide: true },
       { key: 'congressional', title: "Congressional Trading", color: "#fff", type: 'congressional-board', wide: true },
       { key: 'fear_and_greed_historical', title: "Fear & Greed Timeline", color: "#bf5af2", type: 'chart' },
       { key: 'market_momentum_sp500', title: "Market Momentum (S&P 500)", color: "#0a84ff", type: 'chart' },
@@ -1777,11 +1881,16 @@ const sentinel = {
           ? "time unavailable"
           : snapshotDate.toLocaleString([], { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
         const sourceURL = payload.source.url || "http://openinsider.com/";
+        const insiderProvider = payload.source.provider || "OpenInsider";
         const tabs = sections.map((section, index) => `
-          <button class="insider-tab ${index === 0 ? "active" : ""}" type="button" role="tab"
-            aria-selected="${index === 0}" data-insider-section="${this.escapeHTML(section.id)}">
-            ${this.escapeHTML(section.title)}
-          </button>`).join("");
+          <div class="insider-tab-group" data-insider-job="${this.escapeHTML(section.id)}">
+            <button class="insider-tab ${index === 0 ? "active" : ""}" type="button" role="tab"
+              aria-selected="${index === 0}" data-insider-section="${this.escapeHTML(section.id)}">
+              ${this.escapeHTML(section.title)}
+            </button>
+            <button class="insider-tab-refresh" type="button" data-insider-refresh="${this.escapeHTML(section.id)}" title="Refresh only ${this.escapeHTML(section.title)}">↻</button>
+            <div class="insider-section-progress" aria-hidden="true"><span data-insider-section-bar></span></div>
+          </div>`).join("");
         const insiderState = { section: sections[0], sortKey: "filingDate", direction: "desc" };
         const sortOptions = [
           ["filingDate", "Filing Date"], ["tradeDate", "Trade Date"], ["ticker", "Ticker"], ["company", "Company"],
@@ -1812,8 +1921,8 @@ const sentinel = {
             </div>
             <div class="insider-list" role="tabpanel">${this.renderInsiderRows(initialSection)}</div>
             <div class="insider-source">
-              <span>Last successful live fetch ${this.escapeHTML(snapshotStamp)} · ${payload.source.rowCount.toLocaleString()} rows</span>
-              <a href="${this.escapeHTML(sourceURL)}" target="_blank" rel="noopener noreferrer">View source at OpenInsider ↗</a>
+              <span>Snapshot ${this.escapeHTML(snapshotStamp)} · ${payload.source.rowCount.toLocaleString()} rows · ${this.escapeHTML(insiderProvider)}</span>
+              <a href="${this.escapeHTML(sourceURL)}" target="_blank" rel="noopener noreferrer">View SEC Form 4 data source ↗</a>
             </div>
           </div>`;
         grid.appendChild(card);
@@ -1837,6 +1946,11 @@ const sentinel = {
           });
           renderSection();
         }));
+        card.querySelectorAll('[data-insider-refresh]').forEach(button => button.addEventListener('click', () => {
+          const sectionId = button.dataset.insiderRefresh;
+          this.updateInsiderSectionJob(sectionId, { status: "running", percent: 2, message: `Starting ${sectionId} browser refresh…` });
+          this.refreshLiveSource('openinsider', { sectionId }).catch(error => this.log(`[OPENINSIDER] ${error.message}`, "ERROR"));
+        }));
         sortSelect.addEventListener('change', () => { insiderState.sortKey = sortSelect.value; renderSection(); });
         directionButton.addEventListener('click', () => {
           insiderState.direction = insiderState.direction === "asc" ? "desc" : "asc";
@@ -1853,6 +1967,9 @@ const sentinel = {
         let committeeData = data.committees || Network.committeeCache;
         const fetchedDate = new Date(payload.source.fetchedAt);
         const fetchedStamp = Number.isNaN(fetchedDate.getTime()) ? "time unavailable" : fetchedDate.toLocaleString([], { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+        const committeeDate = new Date(committeeData?.source?.fetchedAt);
+        const committeeStamp = Number.isNaN(committeeDate.getTime()) ? "undated" : committeeDate.toLocaleDateString([], { year: "numeric", month: "short", day: "numeric" });
+        const congressProvider = payload.source.provider || "Congressional disclosure feed";
         const headerHTML = CONGRESSIONAL_COLUMNS.map(column => `
           <th><button class="trade-sort-button ${column.sortKey === state.sortKey ? "active" : ""}" type="button" data-congress-sort="${column.sortKey}">
             ${this.escapeHTML(column.label)} <span class="trade-sort-arrow">${column.sortKey === state.sortKey ? "↓" : "↕"}</span>
@@ -1862,7 +1979,7 @@ const sentinel = {
           <div class="chart-header">
             <div>
               <div class="chart-title">${config.title}</div>
-              <div class="chart-rating">ALL ${this.escapeHTML(payload.source.pagesFetched)} CAPITOL TRADES PAGES · ${this.escapeHTML(payload.source.window)} · BUY + SELL</div>
+              <div class="chart-rating">${this.escapeHTML(congressProvider)} · ${this.escapeHTML(payload.source.window)} · BUY + SELL</div>
             </div>
             <div class="chart-value">${payload.trades.length.toLocaleString()}</div>
           </div>
@@ -1877,8 +1994,8 @@ const sentinel = {
             <div class="data-toolbar">
               <input type="search" data-congress-search placeholder="Filter politician, issuer, ticker, party…" aria-label="Filter congressional trades">
               <span class="toolbar-spacer"></span>
-              <button type="button" data-live-refresh="capitol" title="Fetch every Capitol Trades results page now">Fetch all pages live</button>
-              <button type="button" data-live-refresh="committees" title="Refresh House and Senate committee rosters now">Refresh committees live</button>
+              <button type="button" data-live-refresh="capitol" title="Fetch the complete 90-day browser feed now">Refresh 90-day trades</button>
+              <button type="button" data-live-refresh="committees" title="Saved ${this.escapeHTML(committeeStamp)}. Refresh House and Senate committee rosters only when requested.">Refresh committees · ${this.escapeHTML(committeeStamp)}</button>
               <div class="data-export-group">
                 <button class="data-export-button" type="button" data-congress-export="csv">Download CSV</button>
                 <button class="data-export-button" type="button" data-congress-export="txt">Download text</button>
@@ -1898,8 +2015,8 @@ const sentinel = {
               <button type="button" data-page-action="last">Last</button>
             </div>
             <div class="insider-source">
-              <span>Last successful live fetch ${this.escapeHTML(fetchedStamp)} · ${payload.trades.length.toLocaleString()} rows from ${payload.source.pagesFetched.toLocaleString()} pages</span>
-              <a href="${this.escapeHTML(payload.source.url)}" target="_blank" rel="noopener noreferrer">View filtered source at Capitol Trades ↗</a>
+              <span>Snapshot ${this.escapeHTML(fetchedStamp)} · ${payload.trades.length.toLocaleString()} rows · ${this.escapeHTML(congressProvider)}</span>
+              <a href="${this.escapeHTML(payload.source.url)}" target="_blank" rel="noopener noreferrer">View congressional data source ↗</a>
             </div>
           </div>`;
         grid.appendChild(card);
