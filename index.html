@@ -184,6 +184,56 @@
     .energy-change { flex-shrink: 0; font: 800 10px/1 var(--font-mono); }
     .energy-meta { margin-top: 7px; overflow: hidden; color: var(--text-muted); font: 7px/1.3 var(--font-mono); text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
 
+    /* Compact interpretation guides and cross-market transmission map */
+    .chart-card.has-guide:not(.wide) { height: 380px; }
+    .chart-card.has-guide.wide:not(.board-card):not(.energy-strip-card) { height: 540px; }
+    .section-guide {
+      flex-shrink: 0; margin: -3px 0 12px; overflow: hidden;
+      background: linear-gradient(105deg, color-mix(in srgb, var(--accent) 8%, var(--bg)), var(--bg) 68%);
+      border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--border)); border-radius: 7px;
+    }
+    .section-guide summary { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 9px; min-height: 34px; padding: 7px 9px; cursor: pointer; list-style: none; }
+    .section-guide summary::-webkit-details-marker { display: none; }
+    .guide-badge { padding: 4px 6px; color: var(--accent); background: var(--accent-glow); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 999px; font: 800 7px/1 var(--font-mono); letter-spacing: .6px; text-transform: uppercase; }
+    .guide-summary { min-width: 0; overflow: hidden; color: var(--text-muted); font: 9px/1.35 var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
+    .guide-summary strong { color: var(--text); }
+    .guide-actions { display: inline-flex; align-items: center; gap: 8px; }
+    .guide-source { padding: 4px 6px; color: var(--accent); background: var(--bg); border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--border)); border-radius: 4px; font: 800 7px/1 var(--font-mono); text-decoration: none; text-transform: uppercase; white-space: nowrap; }
+    .guide-source:hover, .guide-source:focus { color: #fff; background: var(--accent); border-color: var(--accent); outline: none; }
+    .guide-toggle { color: var(--text-muted); font: 700 7px/1 var(--font-mono); text-transform: uppercase; }
+    .guide-toggle::before { content: "Explain +"; }
+    .section-guide[open] .guide-toggle::before { content: "Close −"; }
+    .guide-body { display: grid; gap: 9px; padding: 10px; border-top: 1px solid var(--border); }
+    .guide-points { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 6px 14px; }
+    .guide-point { position: relative; padding-left: 13px; color: var(--text-muted); font: 9px/1.45 var(--font-ui); }
+    .guide-point::before { content: ""; position: absolute; top: .55em; left: 0; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 7px var(--accent-glow); }
+    .correlation-flow { display: flex; align-items: center; gap: 5px; min-width: 0; overflow-x: auto; padding-bottom: 2px; }
+    .correlation-node { flex: 1 0 112px; padding: 7px 8px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 5px; font: 800 8px/1.3 var(--font-mono); text-align: center; }
+    .correlation-arrow { flex: 0 0 auto; color: var(--accent); font: 900 12px/1 var(--font-mono); }
+    .guide-caveat { color: var(--text-muted); font: 7px/1.4 var(--font-mono); }
+
+    .transmission-card { height: auto !important; min-height: 0 !important; overflow: visible; }
+    .transmission-card .chart-header { margin-bottom: 12px; }
+    .transmission-indicators { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; margin-bottom: 10px; }
+    .transmission-indicator { min-width: 0; padding: 9px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; }
+    .transmission-indicator span { display: block; overflow: hidden; color: var(--text-muted); font: 7px/1.2 var(--font-mono); letter-spacing: .6px; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+    .transmission-indicator strong { display: block; margin-top: 5px; overflow-wrap: anywhere; font: 800 11px/1.2 var(--font-mono); }
+    .transmission-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .transmission-chain { min-width: 0; padding: 11px; background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 7px; }
+    .transmission-chain.energy { border-left-color: #ff9f0a; }
+    .transmission-chain.rates { border-left-color: #0a84ff; }
+    .transmission-chain.bonds { border-left-color: #bf5af2; }
+    .transmission-chain.fx { border-left-color: #ffd60a; }
+    .transmission-chain-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 9px; }
+    .transmission-chain-title { font-size: 9px; font-weight: 850; letter-spacing: .6px; text-transform: uppercase; }
+    .transmission-chain-effect { padding: 4px 6px; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font: 7px/1 var(--font-mono); text-transform: uppercase; }
+    .transmission-chain .correlation-node { min-width: 0; flex: 1 1 0; padding: 7px 6px; font-size: 7px; white-space: normal; }
+    .transmission-note { margin-top: 10px; padding: 9px 11px; color: var(--text-muted); background: color-mix(in srgb, var(--warning) 5%, var(--bg)); border: 1px solid color-mix(in srgb, var(--warning) 20%, var(--border)); border-radius: 6px; font: 8px/1.45 var(--font-mono); }
+
+    .macro-explainer { margin: -3px 0 10px; padding: 8px 9px; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-left: 2px solid var(--accent); border-radius: 5px; font: 8px/1.45 var(--font-ui); }
+    .macro-explainer strong { color: var(--text); }
+    .macro-explainer .mini-chain { display: block; margin-top: 5px; color: var(--accent); font: 700 7px/1.4 var(--font-mono); text-transform: uppercase; }
+
     .futures-board { display: flex; flex-direction: column; gap: 18px; }
     .futures-category { border-top: 1px solid var(--border); padding-top: 12px; }
     .futures-category:first-child { border-top: 0; padding-top: 0; }
@@ -325,7 +375,8 @@
     .macro-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .macro-toolbar .toolbar-spacer { flex: 1; }
     .macro-provider-strip { display: flex; flex-wrap: wrap; gap: 6px; }
-    .macro-provider { padding: 5px 7px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 999px; font: 8px/1 var(--font-mono); text-transform: uppercase; }
+    .macro-provider { padding: 5px 7px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 999px; font: 8px/1 var(--font-mono); text-decoration: none; text-transform: uppercase; }
+    .macro-provider:hover, .macro-provider:focus { background: var(--surface-elevated); border-color: var(--border-focus); outline: none; }
     .macro-provider.live { color: var(--success); border-color: color-mix(in srgb, var(--success) 42%, var(--border)); }
     .macro-provider.stale { color: var(--warning); border-color: color-mix(in srgb, var(--warning) 42%, var(--border)); }
     .macro-progress { height: 4px; overflow: hidden; background: var(--border); border-radius: 999px; }
@@ -337,14 +388,20 @@
     .macro-panel.curves { grid-column: span 8; }
     .macro-panel.stance { grid-column: span 4; }
     .macro-panel.stress, .macro-panel.fx, .macro-panel.pulse { grid-column: span 4; }
+    .macro-panel.credit { grid-column: span 12; }
     .macro-panel.signals { grid-column: span 12; }
     .macro-policy-grid, .macro-real-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .macro-credit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
     .macro-panel.stance .macro-real-grid { grid-template-columns: 1fr; }
     .macro-metric { position: relative; min-width: 0; padding: 11px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; cursor: help; transition: border-color var(--transition), transform var(--transition); }
     .macro-metric:hover, .macro-metric:focus { z-index: 25; border-color: var(--border-focus); transform: translateY(-1px); }
     .macro-metric-label { overflow: hidden; color: var(--text-muted); font: 8px/1.3 var(--font-mono); letter-spacing: .5px; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
     .macro-metric-value { margin-top: 7px; overflow-wrap: anywhere; font: 800 20px/1 var(--font-mono); }
     .macro-metric-meta { margin-top: 6px; overflow: hidden; color: var(--text-muted); font: 8px/1.35 var(--font-mono); text-overflow: ellipsis; white-space: nowrap; }
+    .macro-source-button { position: absolute; top: 7px; right: 7px; z-index: 5; padding: 3px 5px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 4px; font: 800 6px/1 var(--font-mono); letter-spacing: .3px; text-decoration: none; text-transform: uppercase; }
+    .macro-metric:has(.macro-source-button) .macro-metric-label { padding-right: 43px; }
+    .macro-source-button:hover, .macro-source-button:focus { color: #fff; background: var(--accent); border-color: var(--accent); outline: none; }
+    .macro-curve-row > .macro-source-button { top: 5px; right: 5px; }
     .macro-hover { position: absolute; left: 8px; right: 8px; bottom: calc(100% + 6px); z-index: 100; display: none; padding: 10px 11px; color: #fff; background: rgba(12,12,14,.98); border: 1px solid rgba(255,255,255,.22); border-radius: 6px; box-shadow: 0 12px 30px rgba(0,0,0,.8); font: 9px/1.5 var(--font-mono); overflow-wrap: anywhere; }
     .macro-hover strong { display: block; margin-bottom: 5px; font: 800 10px/1.3 var(--font-ui); }
     .macro-metric:hover .macro-hover, .macro-metric:focus .macro-hover, .macro-curve-row:hover .macro-hover, .macro-curve-row:focus .macro-hover { display: block; }
@@ -380,7 +437,8 @@
       .insider-row { grid-template-columns: minmax(130px, 1fr) minmax(130px, 1fr) auto; }
       .insider-numbers { grid-column: 3; }
       .insider-hover-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .macro-panel.curves, .macro-panel.stance, .macro-panel.stress, .macro-panel.fx, .macro-panel.pulse { grid-column: span 12; }
+      .macro-panel.curves, .macro-panel.stance, .macro-panel.stress, .macro-panel.fx, .macro-panel.pulse, .macro-panel.credit { grid-column: span 12; }
+      .transmission-indicators, .transmission-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 640px) {
       header { padding: 0 10px; }
@@ -410,6 +468,15 @@
       .energy-price { font-size: 16px; letter-spacing: -.5px; }
       .energy-change { font-size: 8px; }
       .energy-meta { font-size: 6px; }
+      .chart-card.has-guide:not(.wide) { height: 400px; }
+      .chart-card.has-guide.wide:not(.board-card):not(.energy-strip-card) { height: 560px; }
+      .guide-summary { white-space: normal; }
+      .guide-toggle { display: none; }
+      .guide-points { grid-template-columns: 1fr; }
+      .transmission-indicators, .transmission-grid { grid-template-columns: 1fr; }
+      .transmission-chain .correlation-flow { align-items: stretch; flex-direction: column; overflow: visible; }
+      .transmission-chain .correlation-node { width: 100%; flex: 0 0 auto; }
+      .transmission-chain .correlation-arrow { transform: rotate(90deg); align-self: center; }
     }
 
     /* Interactive Canvas Wrapper */
@@ -606,7 +673,7 @@
 "use strict";
 
 const PROXIES =[
-  "https://corsproxy.io/?",
+  "https://corsproxy.io/?url=",
   "https://api.allorigins.win/raw?url="
 ];
 const TARGETS = {
@@ -683,6 +750,118 @@ const FUTURES_CONTRACTS =[
 ];
 const FUTURES_BY_SYMBOL = new Map(FUTURES_CONTRACTS.map((item, index) => [item.symbol, { ...item, index }]));
 const FUTURES_CATEGORY_ORDER =["Indices", "Energy", "Bonds", "Softs", "Metals", "Meats", "Grains", "Currencies"];
+const SECTION_GUIDES = {
+  energy: {
+    source: "https://www.tradingview.com/markets/futures/quotes-all/",
+    sourceLabel: "TradingView futures",
+    summary: "Energy is both a growth signal and an input cost; persistent moves matter more than one session.",
+    points: [
+      "Rising oil can reflect stronger demand, restricted supply, or both—check other markets before interpreting it.",
+      "Natural gas has a direct link to power, heating and fertilizer costs, so regional effects can differ sharply."
+    ],
+    chain: ["Fuel prices ↑", "Freight + fertilizer ↑", "Food + goods costs ↑", "Inflation pressure ↑"]
+  },
+  fear_and_greed_historical: {
+    source: "https://www.cnn.com/markets/fear-and-greed",
+    sourceLabel: "CNN Markets",
+    summary: "Sentiment shows risk appetite, not fair value; extremes are context rather than automatic trade signals.",
+    points: [
+      "Rising greed often accompanies broad risk-taking, while rising fear often accompanies de-risking and demand for liquidity.",
+      "An extreme can persist, so compare the score with trend, breadth and volatility before drawing a conclusion."
+    ],
+    chain: ["Fear ↑", "Risk appetite ↓", "Selling / hedging ↑", "Volatility often ↑"]
+  },
+  market_momentum_sp500: {
+    source: "https://www.cnn.com/markets/fear-and-greed",
+    sourceLabel: "CNN Markets",
+    summary: "Momentum asks whether the market trend is strengthening or fading across time.",
+    points: [
+      "Sustained positive momentum can reinforce systematic buying and investor confidence.",
+      "Price rising while momentum weakens is a divergence worth monitoring, not proof of an imminent reversal."
+    ],
+    chain: ["Trend improves", "Capital follows winners", "Momentum demand ↑", "Reversal risk builds at extremes"]
+  },
+  stock_price_strength: {
+    source: "https://www.cnn.com/markets/fear-and-greed",
+    sourceLabel: "CNN Markets",
+    summary: "Market breadth tests whether gains are widely shared or carried by only a few securities.",
+    points: [
+      "More new highs than new lows generally confirms healthier participation beneath an index move.",
+      "An index rising with weakening breadth can indicate concentration and greater sensitivity to its largest constituents."
+    ],
+    chain: ["Breadth narrows", "Fewer stocks support index", "Concentration risk ↑", "Index resilience may ↓"]
+  },
+  market_volatility_vix: {
+    source: "https://www.cnn.com/markets/fear-and-greed",
+    sourceLabel: "CNN Markets",
+    summary: "VIX reflects the option market's expected S&P 500 volatility over roughly the next 30 days.",
+    points: [
+      "A rising VIX usually means protection is becoming more expensive and risk appetite is weakening.",
+      "VIX can fall while equities recover, but its level should be read with the term structure and current events."
+    ],
+    chain: ["Uncertainty ↑", "Hedging demand ↑", "Option premiums ↑", "VIX ↑"]
+  },
+  futures_tm: {
+    source: "https://www.tradingview.com/markets/futures/quotes-all/",
+    sourceLabel: "TradingView futures",
+    summary: "The heatmap compares today's futures moves so cross-asset leadership and pressure are visible at a glance.",
+    points: [
+      "A broad commodity rise can flag input-cost pressure; bond futures falling commonly means market yields are rising.",
+      "Synchronized moves across indices, bonds, energy and currencies are generally more informative than one isolated box."
+    ],
+    chain: ["Bond futures ↓", "Bond yields ↑", "Financing / discount rates ↑", "Rate-sensitive assets pressured"]
+  },
+  finviz_map: {
+    source: "https://www.tradingview.com/markets/stocks-usa/market-movers-large-cap/",
+    sourceLabel: "TradingView stocks",
+    summary: "The equity heatmap shows participation, sector leadership and whether index performance is concentrated.",
+    points: [
+      "Many green sectors suggest broad risk appetite; a green index with mostly red boxes suggests narrow leadership.",
+      "Large boxes can dominate index returns, so compare their direction with the rest of the map."
+    ],
+    chain: ["Leadership narrows", "Index depends on fewer firms", "Single-stock influence ↑", "Diversification benefit ↓"]
+  },
+  macro: {
+    source: "https://www.riksbank.se/en-gb/statistics/interest-rates-and-exchange-rates/retrieving-interest-rates-and-exchange-rates-via-api/",
+    sourceLabel: "Official rate APIs",
+    summary: "Rates transmit monetary policy into borrowing, demand, currencies, valuations and eventually inflation.",
+    points: [
+      "Higher rates can indicate tighter policy or stronger nominal growth expectations; the reason for the move matters.",
+      "Policy, inflation and yield curves work with variable lags, so this board is a regime monitor—not a forecast guarantee."
+    ],
+    chain: ["Rates ↑", "Credit cost ↑", "Demand + investment often ↓", "Inflation pressure may cool later"]
+  },
+  futures_quotes: {
+    source: "https://www.tradingview.com/markets/futures/quotes-all/",
+    sourceLabel: "TradingView futures",
+    summary: "The board is a cross-asset pulse: compare direction within and between asset groups, not just the largest mover.",
+    points: [
+      "Equities up with yields stable can be growth-friendly; equities down with USD and volatility up is often more defensive.",
+      "Commodity moves can reflect supply shocks, currency changes or demand—sector context helps distinguish them."
+    ],
+    chain: ["USD ↑", "Dollar-priced goods costlier abroad", "Global demand may soften", "Commodity prices can face pressure"]
+  },
+  openinsider: {
+    source: "http://openinsider.com/",
+    sourceLabel: "OpenInsider",
+    summary: "Insider filings show disclosed transactions by company insiders; clusters and transaction type matter.",
+    points: [
+      "Open-market purchases can carry more information than routine option exercises, grants or tax-related sales.",
+      "A filing is context, not proof of future performance; compare size with prior ownership and compensation patterns."
+    ],
+    chain: ["Insider purchase cluster", "Management conviction may be higher", "Investor attention ↑", "Price impact uncertain"]
+  },
+  congressional: {
+    source: "https://www.capitoltrades.com/trades",
+    sourceLabel: "Capitol Trades",
+    summary: "Congressional disclosures show reported transactions, often as value ranges and with a permitted filing delay.",
+    points: [
+      "Published dates are not trade dates; use the reporting gap and owner field when interpreting the event.",
+      "Committee membership provides context but does not establish that a trade used non-public information."
+    ],
+    chain: ["Trade occurs", "Disclosure filed within rule window", "Public learns later", "Timing signal is delayed"]
+  }
+};
 
 // ============================================================================
 // NETWORK LAYER & PARSERS
@@ -1332,6 +1511,30 @@ const sentinel = {
 
   escapeHTML(value) {
     return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  },
+
+  sectionGuide(key) {
+    const guide = SECTION_GUIDES[key];
+    if (!guide) return "";
+    const points = (guide.points || []).map(point => `<div class="guide-point">${this.escapeHTML(point)}</div>`).join("");
+    const chain = (guide.chain || []).map((node, index) => `${index ? '<span class="correlation-arrow" aria-hidden="true">→</span>' : ""}<span class="correlation-node">${this.escapeHTML(node)}</span>`).join("");
+    const source = guide.source ? `<a class="guide-source" href="${this.escapeHTML(guide.source)}" target="_blank" rel="noopener noreferrer" title="Open ${this.escapeHTML(guide.sourceLabel || "data")} source" onclick="event.stopPropagation()">Source ↗</a>` : "";
+    return `<details class="section-guide">
+      <summary>
+        <span class="guide-badge">How to read</span>
+        <span class="guide-summary"><strong>Why it matters:</strong> ${this.escapeHTML(guide.summary)}</span>
+        <span class="guide-actions">${source}<span class="guide-toggle" aria-hidden="true"></span></span>
+      </summary>
+      <div class="guide-body">
+        <div class="guide-points">${points}</div>
+        ${chain ? `<div class="correlation-flow" aria-label="Typical correlation chain">${chain}</div>` : ""}
+        <div class="guide-caveat">Typical market transmission—not a guaranteed causal path or investment recommendation. Direction, magnitude and timing vary with the underlying shock.</div>
+      </div>
+    </details>`;
+  },
+
+  macroExplainer(summary, chain) {
+    return `<div class="macro-explainer"><strong>Interpretation:</strong> ${this.escapeHTML(summary)}${chain ? `<span class="mini-chain">${this.escapeHTML(chain)}</span>` : ""}</div>`;
   },
 
   sourceHref(value, base = "https://www.capitoltrades.com/") {
@@ -2049,9 +2252,11 @@ const sentinel = {
     return Number.isNaN(date.getTime()) ? "date unavailable" : date.toLocaleDateString([], { year: "numeric", month: "short", day: "numeric" });
   },
 
-  macroMetric({ label, value, meta = "", detail = "", tone = "", extraClass = "" }) {
+  macroMetric({ label, value, meta = "", detail = "", tone = "", extraClass = "", source = null }) {
     const detailHTML = String(detail || "No additional values supplied.").split("\n").map(line => this.escapeHTML(line)).join("<br>");
+    const sourceButton = source?.url ? `<a class="macro-source-button" href="${this.escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer" title="Open ${this.escapeHTML(source.label || "official")} source">Source ↗</a>` : "";
     return `<div class="macro-metric ${this.escapeHTML(extraClass)}" tabindex="0">
+      ${sourceButton}
       <div class="macro-metric-label">${this.escapeHTML(label)}</div>
       <div class="macro-metric-value ${this.escapeHTML(tone)}">${this.escapeHTML(value)}</div>
       ${meta ? `<div class="macro-metric-meta">${this.escapeHTML(meta)}</div>` : ""}
@@ -2084,9 +2289,12 @@ const sentinel = {
   renderMacroCurveRows(curves) {
     return Object.values(curves || {}).map(curve => {
       const point = term => curve.points.find(item => item.term === term);
-      const preferred = [point("2Y"), point("5Y"), point("10Y")];
-      const cells = preferred.map((item, index) => `<div class="macro-curve-cell"><strong>${item ? this.formatMacroValue(item.value, 2) : "—"}</strong><span>${["2Y", "5Y", "10Y"][index]}</span></div>`).join("");
-      const slope = curve.slope10y2y === null || curve.slope10y2y === undefined ? null : Number(curve.slope10y2y);
+      const preferred = [point("2Y") || point("3M"), point("5Y"), point("10Y")];
+      const cells = preferred.map((item, index) => `<div class="macro-curve-cell"><strong>${item ? this.formatMacroValue(item.value, 2) : "—"}</strong><span>${item?.term || ["2Y", "5Y", "10Y"][index]}</span></div>`).join("");
+      const twoYearSlope = curve.slope10y2y === null || curve.slope10y2y === undefined ? null : Number(curve.slope10y2y);
+      const threeMonthSlope = curve.slope10y3m === null || curve.slope10y3m === undefined ? null : Number(curve.slope10y3m);
+      const slope = Number.isFinite(twoYearSlope) ? twoYearSlope : threeMonthSlope;
+      const slopeLabel = Number.isFinite(twoYearSlope) ? "10Y-2Y" : "10Y-3M";
       const slopeText = Number.isFinite(slope) ? `${slope >= 0 ? "+" : ""}${slope.toFixed(0)} bp` : "—";
       const details = curve.points.map(item => {
         const changes = item.changes || {};
@@ -2094,9 +2302,10 @@ const sentinel = {
         return `${item.term}: ${item.value.toFixed(3)}% · 1D ${change("day")} · 1W ${change("week")} · 1M ${change("month")}`;
       }).join("\n");
       return `<div class="macro-curve-row" tabindex="0">
+        ${curve.source?.url ? `<a class="macro-source-button" href="${this.escapeHTML(curve.source.url)}" target="_blank" rel="noopener noreferrer" title="Open ${this.escapeHTML(curve.source.label || "official")} source">Source ↗</a>` : ""}
         <div class="macro-curve-region">${this.escapeHTML(curve.regionName)}</div>${cells}
-        <div class="macro-curve-cell"><strong>${this.escapeHTML(slopeText)}</strong><span>10Y-2Y</span></div>
-        <div class="macro-hover" role="tooltip"><strong>${this.escapeHTML(curve.regionName)} yield curve · ${this.escapeHTML(this.formatMacroDate(curve.date))}</strong>${details.split("\n").map(line => this.escapeHTML(line)).join("<br>")}<br>Source: ${this.escapeHTML(curve.source?.label || "Official provider")}</div>
+        <div class="macro-curve-cell"><strong>${this.escapeHTML(slopeText)}</strong><span>${this.escapeHTML(slopeLabel)}</span></div>
+        <div class="macro-hover" role="tooltip"><strong>${this.escapeHTML(curve.regionName)} yield curve · ${this.escapeHTML(this.formatMacroDate(curve.date))}</strong>${details.split("\n").map(line => this.escapeHTML(line)).join("<br>")}<br>${curve.fallback ? `Coverage: ${this.escapeHTML(curve.coverage || "official fallback")}<br>` : ""}Source: ${this.escapeHTML(curve.source?.label || "Official provider")}</div>
       </div>`;
     }).join("");
   },
@@ -2107,9 +2316,12 @@ const sentinel = {
     Object.values(payload.curves || {}).forEach(curve => curve.points.forEach(item => rows.push({ category: "Yield curve", region: curve.regionName, indicator: item.term, value: item.value, unit: "%", date: item.date, source: curve.source?.label })));
     payload.funding?.forEach(item => rows.push({ category: "Funding", region: "United States", indicator: item.label, value: item.rate, unit: "%", date: item.date, source: item.source?.label }));
     payload.fx?.forEach(item => rows.push({ category: "FX", region: "Sweden", indicator: item.pair, value: item.value, unit: "SEK", date: item.date, source: item.source?.label }));
+    payload.bankRates?.forEach(item => rows.push({ category: "Household borrowing", region: item.regionName, indicator: item.label, value: item.value, unit: "%", date: item.date, source: item.source?.label }));
+    payload.moneyMarket?.forEach(item => rows.push({ category: "Money market", region: item.regionName, indicator: item.label, value: item.value, unit: "%", date: item.date, source: item.source?.label }));
     payload.inflation?.forEach(item => rows.push({ category: "Inflation", region: item.regionName, indicator: "Annual inflation", value: item.value, unit: "%", date: item.date, source: item.source?.label }));
     payload.labour?.forEach(item => rows.push({ category: "Labour", region: item.regionName, indicator: "Unemployment", value: item.value, unit: "%", date: item.date, source: item.source?.label }));
     payload.realPolicy?.forEach(item => rows.push({ category: "Derived", region: item.regionName, indicator: "Real policy rate", value: item.value, unit: "%", date: item.date, source: "Sentinel calculation" }));
+    payload.signals?.forEach(item => rows.push({ category: "Derived signal", region: "Cross-market", indicator: item.label, value: item.value, unit: item.state, date: payload.source?.fetchedAt, source: item.source?.label || "Sentinel calculation" }));
     this.downloadTabularData(`sentinel_rates_macro_${new Date().toISOString().slice(0, 10)}`, format, [
       { key: "category", label: "Category" }, { key: "region", label: "Region" }, { key: "indicator", label: "Indicator" },
       { key: "value", label: "Value" }, { key: "unit", label: "Unit" }, { key: "date", label: "Observation Date" }, { key: "source", label: "Source" }
@@ -2143,16 +2355,64 @@ const sentinel = {
       </div>`;
     }).join("");
     const card = document.createElement('div');
-    card.className = 'chart-card wide energy-strip-card';
-    card.innerHTML = `<div class="chart-header"><div><div class="chart-title">Energy Benchmarks</div><div class="chart-rating">WTI · BRENT · NATURAL GAS · HOVER OR FOCUS FOR FULL VALUES</div></div></div><div class="energy-strip">${quotes}</div>`;
+    card.className = 'chart-card wide energy-strip-card has-guide';
+    card.innerHTML = `<div class="chart-header"><div><div class="chart-title">Energy Benchmarks</div><div class="chart-rating">WTI · BRENT · NATURAL GAS · HOVER OR FOCUS FOR FULL VALUES</div></div></div><div class="energy-strip">${quotes}</div>${this.sectionGuide("energy")}`;
+    grid.appendChild(card);
+  },
+
+  renderTransmissionMap(grid, data) {
+    const energyChanges = [data.oil_wti, data.oil_brent, data.natural_gas].map(item => Number(item?.change)).filter(Number.isFinite);
+    const energyAverage = energyChanges.length ? energyChanges.reduce((sum, value) => sum + value, 0) / energyChanges.length : null;
+    const fearScore = Number(data.fear_and_greed?.score);
+    const vixPoints = data.market_volatility_vix?.data || data.market_volatility_vix || [];
+    const vix = Array.isArray(vixPoints) && vixPoints.length ? Number(vixPoints[vixPoints.length - 1]?.y) : null;
+    const macro = data.macro || State.macroData;
+    const realRates = (macro?.realPolicy || []).map(item => Number(item.value)).filter(Number.isFinite);
+    const realAverage = realRates.length ? realRates.reduce((sum, value) => sum + value, 0) / realRates.length : null;
+    const curveSlopes = Object.values(macro?.curves || {}).map(curve => {
+      const twoYear = curve.points?.find(point => Number(point.years) === 2);
+      const tenYear = curve.points?.find(point => Number(point.years) === 10);
+      return Number(tenYear?.value) - Number(twoYear?.value);
+    }).filter(Number.isFinite);
+    const slopeAverage = curveSlopes.length ? curveSlopes.reduce((sum, value) => sum + value, 0) / curveSlopes.length : null;
+
+    const energyLabel = energyAverage === null ? "Awaiting data" : `${energyAverage > 0.15 ? "Rising" : energyAverage < -0.15 ? "Falling" : "Mixed"} · ${energyAverage > 0 ? "+" : ""}${energyAverage.toFixed(2)}%`;
+    const sentimentLabel = Number.isFinite(fearScore) ? `${fearScore < 40 ? "Fear" : fearScore > 60 ? "Greed" : "Neutral"} · ${Math.round(fearScore)}/100` : "Awaiting data";
+    const volatilityLabel = Number.isFinite(vix) ? `${vix >= 25 ? "Elevated" : vix >= 18 ? "Watch" : "Calm"} · ${vix.toFixed(1)}` : "Awaiting data";
+    const policyLabel = realAverage === null ? "Awaiting macro" : `${realAverage > 1 ? "Restrictive" : realAverage < 0 ? "Accommodative" : "Near neutral"} · ${realAverage.toFixed(1)}% real`;
+    const curveEffect = slopeAverage === null ? "Curve data pending" : slopeAverage < 0 ? `Inverted · ${slopeAverage.toFixed(2)} pp` : `Positive · +${slopeAverage.toFixed(2)} pp`;
+
+    const indicators = [
+      ["Energy impulse", energyLabel], ["Risk appetite", sentimentLabel], ["Volatility", volatilityLabel], ["Real policy stance", policyLabel]
+    ].map(([label, value]) => `<div class="transmission-indicator"><span>${this.escapeHTML(label)}</span><strong>${this.escapeHTML(value)}</strong></div>`).join("");
+    const energyNodes = energyAverage !== null && energyAverage < -.15
+      ? ["Fuel ↓", "Transport + fertilizer relief", "Food + goods pressure ↓", "Disinflationary impulse"]
+      : ["Fuel ↑", "Transport + fertilizer ↑", "Food + goods costs ↑", "Consumer prices ↑"];
+    const chains = [
+      { tone: "energy", title: "Energy → consumer prices", effect: energyAverage !== null && energyAverage > .15 ? "Inflationary impulse" : energyAverage !== null && energyAverage < -.15 ? "Disinflationary impulse" : "Watch persistence", nodes: energyNodes },
+      { tone: "rates", title: "Policy rates → activity", effect: policyLabel, nodes: ["Policy rates ↑", "Loans + mortgages ↑", "Demand + investment ↓", "Inflation may cool with a lag"] },
+      { tone: "bonds", title: "Bond yields → valuations", effect: curveEffect, nodes: ["Bond yields ↑", "Discount rate ↑", "Future cash flows worth less", "Rate-sensitive assets pressured"] },
+      { tone: "fx", title: "Currency → imported inflation", effect: "Especially open economies", nodes: ["Local currency weakens", "Imports cost more", "CPI pressure ↑", "Purchasing power ↓"] }
+    ].map(chain => `<section class="transmission-chain ${chain.tone}">
+      <div class="transmission-chain-header"><div class="transmission-chain-title">${this.escapeHTML(chain.title)}</div><div class="transmission-chain-effect">${this.escapeHTML(chain.effect)}</div></div>
+      <div class="correlation-flow">${chain.nodes.map((node, index) => `${index ? '<span class="correlation-arrow" aria-hidden="true">→</span>' : ""}<span class="correlation-node">${this.escapeHTML(node)}</span>`).join("")}</div>
+    </section>`).join("");
+
+    const card = document.createElement('div');
+    card.className = 'chart-card wide board-card transmission-card';
+    card.innerHTML = `<div class="chart-header"><div><div class="chart-title">Market Transmission & Correlation Map</div><div class="chart-rating">LIVE CONTEXT + COMMON ECONOMIC PATHWAYS</div></div></div>
+      <div class="transmission-indicators">${indicators}</div>
+      <div class="transmission-grid">${chains}</div>
+      <div class="transmission-note"><strong>Read as a chain of pressure, not certainty.</strong> Correlation can weaken or reverse when a move is driven by supply, geopolitics, productivity, fiscal policy or positioning. Persistent, broad moves across several panels carry more information than a single daily change.</div>`;
     grid.appendChild(card);
   },
 
   renderMacroDashboard(grid, payload) {
     const card = document.createElement('div');
-    card.className = 'chart-card wide board-card macro-card';
+    card.className = 'chart-card wide board-card macro-card has-guide';
     if (!payload) {
       card.innerHTML = `<div class="chart-header"><div><div class="chart-title">Global Rates & Macro Regime</div><div class="chart-rating">BROWSER-FIRST OFFICIAL DATA · NO LOCAL SERVER REQUIRED</div></div></div>
+        ${this.sectionGuide("macro")}
         <div class="macro-empty">Connecting to U.S. Treasury, Federal Reserve, ECB, Eurostat, and Sveriges Riksbank feeds. Existing dashboard datasets remain independent while this loads.</div>`;
       grid.appendChild(card);
       return;
@@ -2162,33 +2422,53 @@ const sentinel = {
     const providerLabels = {
       treasury: "US Treasury", nyFed: "NY Fed", ecbPolicy: "ECB policy", ecbCurve: "ECB curve",
       riksPolicy: "Riksbank policy", riksCurve: "Sweden curve", riksFX: "Riksbank FX",
+      bisPolicy: "BIS Sweden policy fallback",
+      ecbFX: "ECB FX fallback", ecbBankRates: "ECB mortgage rates", swedenShort: "Sweden short rate", swedenLong: "Sweden 10Y fallback",
       euroInflation: "Eurostat HICP", euroLabour: "Eurostat labour", usInflation: "US CPI"
     };
-    const providerStrip = Object.entries(payload.providers || {}).map(([key, status]) => `<span class="macro-provider ${this.escapeHTML(status)}">${this.escapeHTML(providerLabels[key] || key)} · ${this.escapeHTML(status)}</span>`).join("");
+    const providerStrip = Object.entries(payload.providers || {}).map(([key, status]) => {
+      const url = payload.source?.urls?.[key];
+      const body = `${this.escapeHTML(providerLabels[key] || key)} · ${this.escapeHTML(status)} ↗`;
+      return url ? `<a class="macro-provider ${this.escapeHTML(status)}" href="${this.escapeHTML(url)}" target="_blank" rel="noopener noreferrer" title="Open the exact provider request">${body}</a>` : `<span class="macro-provider ${this.escapeHTML(status)}">${body}</span>`;
+    }).join("");
+    const hasMacroNumber = value => value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
     const policyHTML = (payload.policy || []).map(item => {
       const secondary = (item.secondary || []).map(value => `${value.label}: ${this.formatMacroValue(value.value, 2)}`).join(" · ");
       return this.macroMetric({
         label: `${item.regionName} · ${item.benchmark}`, value: this.formatMacroValue(item.rate, 2),
         meta: [item.target, secondary].filter(Boolean).join(" · "),
         detail: `Observation: ${this.formatMacroDate(item.date)}\n${secondary || "No secondary policy values supplied."}\nSource: ${item.source?.label || "Official provider"}`,
-        tone: item.stale ? "neutral" : ""
+        tone: item.stale ? "neutral" : "", source: item.source
       });
     }).join("");
     const realHTML = (payload.realPolicy || []).map(item => this.macroMetric({
       label: `${item.regionName} real policy`, value: this.formatMacroValue(item.value, 2),
       meta: `${this.formatMacroValue(item.policy, 2)} policy − ${this.formatMacroValue(item.inflation, 2)} inflation`,
       detail: `Nominal policy rate: ${this.formatMacroValue(item.policy, 2)}\nAnnual inflation: ${this.formatMacroValue(item.inflation, 2)}\nCalculated observation: ${this.formatMacroDate(item.date)}`,
-      tone: item.value > 1 ? "negative" : item.value < 0 ? "positive" : "neutral"
+      tone: item.value > 1 ? "negative" : item.value < 0 ? "positive" : "neutral", source: item.source
     })).join("");
     const fundingMap = Object.fromEntries((payload.funding || []).map(item => [item.label, item]));
     const fundingRows = ["EFFR", "SOFR", "OBFR", "TGCR", "BGCR"].map(label => fundingMap[label]).filter(Boolean).map(item => this.macroMetric({
       label: item.label, value: this.formatMacroValue(item.rate, 2), meta: item.volume !== null ? `$${Number(item.volume).toLocaleString()}bn volume` : "",
-      detail: `1st-99th percentile: ${this.formatMacroValue(item.percentile1, 2)} to ${this.formatMacroValue(item.percentile99, 2)}\nVolume: ${item.volume === null ? "n/a" : `$${Number(item.volume).toLocaleString()}bn`}\nObservation: ${this.formatMacroDate(item.date)}\nSource: ${item.source?.label || "NY Fed"}`
+      detail: `1st-99th percentile: ${this.formatMacroValue(item.percentile1, 2)} to ${this.formatMacroValue(item.percentile99, 2)}\nVolume: ${item.volume === null ? "n/a" : `$${Number(item.volume).toLocaleString()}bn`}\nObservation: ${this.formatMacroDate(item.date)}\nSource: ${item.source?.label || "NY Fed"}`,
+      source: item.source
     })).join("");
     const fxHTML = (payload.fx || []).map(item => this.macroMetric({
-      label: item.pair, value: Number(item.value).toFixed(4), meta: this.formatMacroDate(item.date),
-      detail: `${item.pair}: ${Number(item.value).toFixed(5)}\nIndicative rate only; not for transactional use.\nSource: ${item.source?.label || "Sveriges Riksbank"}`
+      label: item.pair, value: Number(item.value).toFixed(4),
+      meta: hasMacroNumber(item.changes?.month) ? `1M ${Number(item.changes.month) >= 0 ? "+" : ""}${Number(item.changes.month).toFixed(2)}% · ${this.formatMacroDate(item.date)}` : this.formatMacroDate(item.date),
+      detail: `${item.pair}: ${Number(item.value).toFixed(5)}\n1D: ${hasMacroNumber(item.changes?.day) ? `${Number(item.changes.day) >= 0 ? "+" : ""}${Number(item.changes.day).toFixed(2)}%` : "n/a"}\n1W: ${hasMacroNumber(item.changes?.week) ? `${Number(item.changes.week) >= 0 ? "+" : ""}${Number(item.changes.week).toFixed(2)}%` : "n/a"}\n1M: ${hasMacroNumber(item.changes?.month) ? `${Number(item.changes.month) >= 0 ? "+" : ""}${Number(item.changes.month).toFixed(2)}%` : "n/a"}\nIndicative rate only; not for transactional use.\nSource: ${item.source?.label || "Official provider"}`,
+      source: item.source
     })).join("");
+    const bankRateHTML = [...(payload.bankRates || []), ...(payload.moneyMarket || [])].map(item => {
+      const changes = item.changes || {};
+      const changeText = key => hasMacroNumber(changes[key]) ? `${Number(changes[key]) >= 0 ? "+" : ""}${Number(changes[key]).toFixed(0)} bp` : "n/a";
+      return this.macroMetric({
+        label: `${item.regionName} · ${item.label}`, value: this.formatMacroValue(item.value, 2),
+        meta: `1M ${changeText("month")} · ${this.formatMacroDate(item.date)}`,
+        detail: `Latest rate: ${this.formatMacroValue(item.value, 3)}\n1 month: ${changeText("month")}\n3 months: ${changeText("quarter")}\n12 months: ${changeText("year")}\nSource: ${item.source?.label || "Official provider"}`,
+        tone: hasMacroNumber(changes.month) && Number(changes.month) > 10 ? "negative" : hasMacroNumber(changes.month) && Number(changes.month) < -10 ? "positive" : "", source: item.source
+      });
+    }).join("");
     const pulseHTML = ["US", "EU", "SE"].map(region => {
       const inflation = payload.inflation?.find(item => item.region === region);
       const labour = payload.labour?.find(item => item.region === region);
@@ -2197,11 +2477,12 @@ const sentinel = {
       return this.macroMetric({
         label: `${name} macro pulse`, value: inflation ? this.formatMacroValue(inflation.value, 1) : "—",
         meta: `inflation · unemployment ${labour ? this.formatMacroValue(labour.value, 1) : "—"}`,
-        detail: `Annual inflation: ${inflation ? this.formatMacroValue(inflation.value, 2) : "n/a"} (${this.formatMacroDate(inflation?.date)})\nUnemployment: ${labour ? this.formatMacroValue(labour.value, 2) : "n/a"} (${this.formatMacroDate(labour?.date)})\nSources: ${[inflation?.source?.label, labour?.source?.label].filter(Boolean).join(" / ")}`
+        detail: `Annual inflation: ${inflation ? this.formatMacroValue(inflation.value, 2) : "n/a"} (${this.formatMacroDate(inflation?.date)})\nUnemployment: ${labour ? this.formatMacroValue(labour.value, 2) : "n/a"} (${this.formatMacroDate(labour?.date)})\nSources: ${[inflation?.source?.label, labour?.source?.label].filter(Boolean).join(" / ")}`,
+        source: inflation?.source || labour?.source
       });
     }).join("");
     const signalHTML = (payload.signals || []).map(item => this.macroMetric({
-      label: item.label, value: item.value, meta: item.state, detail: item.detail, extraClass: `macro-signal ${item.tone || ""}`
+      label: item.label, value: item.value, meta: item.state, detail: item.detail, extraClass: `macro-signal ${item.tone || ""}`, source: item.source
     })).join("");
     const curveLegend = Object.values(payload.curves || {}).map(curve => {
       const color = { US: "#0a84ff", EU: "#bf5af2", SE: "#ffd60a" }[curve.region] || "#fff";
@@ -2213,6 +2494,7 @@ const sentinel = {
         <div><div class="chart-title">Global Rates & Macro Regime</div><div class="chart-rating">US · EURO AREA · SWEDEN · OFFICIAL BROWSER FEEDS · UPDATED ${this.escapeHTML(fetchedLabel)}</div></div>
         <div class="chart-value">${this.escapeHTML(payload.regime || "Mixed")}</div>
       </div>
+      ${this.sectionGuide("macro")}
       <div class="macro-board">
         <div class="macro-toolbar">
           <button class="data-export-button" type="button" data-live-refresh="macro">Refresh rates & macro</button>
@@ -2224,13 +2506,14 @@ const sentinel = {
         <div class="macro-provider-strip">${providerStrip}</div>
         <div class="macro-regime">Current composite: ${this.escapeHTML(payload.regime || "Mixed / neutral macro regime")}</div>
         <div class="macro-grid">
-          <section class="macro-panel policy"><h3>Monetary policy comparison</h3><div class="macro-policy-grid">${policyHTML || "No policy observations available."}</div></section>
-          <section class="macro-panel curves"><h3>Government yield curves & change matrix</h3><div class="macro-curve-chart">${this.renderMacroCurveSVG(payload.curves)}</div><div class="macro-curve-legend">${curveLegend}</div><div class="macro-curve-table">${this.renderMacroCurveRows(payload.curves)}</div></section>
-          <section class="macro-panel stance"><h3>Inflation-adjusted policy stance</h3><div class="macro-real-grid">${realHTML || "No matched inflation observations."}</div></section>
-          <section class="macro-panel stress"><h3>US funding & credit stress</h3><div class="macro-list">${fundingRows || "No funding observations."}</div></section>
-          <section class="macro-panel fx"><h3>SEK foreign exchange monitor</h3><div class="macro-list">${fxHTML || "No FX observations."}</div></section>
-          <section class="macro-panel pulse"><h3>Inflation & labour pulse</h3><div class="macro-list">${pulseHTML || "No macro observations."}</div></section>
-          <section class="macro-panel signals"><h3>Derived regime signals</h3><div class="macro-signal-grid">${signalHTML || "Signals need more live inputs."}</div></section>
+          <section class="macro-panel policy"><h3>Monetary policy comparison</h3>${this.macroExplainer("Higher policy rates restrain credit and demand; lower rates support them. A hike can also signal inflation concern or economic resilience.", "Rates ↑ → borrowing cost ↑ → demand often ↓ → inflation may cool later")}<div class="macro-policy-grid">${policyHTML || "No policy observations available."}</div></section>
+          <section class="macro-panel curves"><h3>Government yield curves & change matrix</h3>${this.macroExplainer("Short yields are closely tied to expected policy; long yields also reflect growth, inflation and term premium. An inversion has preceded many slowdowns, but timing varies.", "Short yields > long yields → curve inversion → tighter credit signal → slowdown risk ↑")}<div class="macro-curve-chart">${this.renderMacroCurveSVG(payload.curves)}</div><div class="macro-curve-legend">${curveLegend}</div><div class="macro-curve-table">${this.renderMacroCurveRows(payload.curves)}</div></section>
+          <section class="macro-panel stance"><h3>Inflation-adjusted policy stance</h3>${this.macroExplainer("Policy minus inflation is a rough real-rate proxy. More positive readings are generally more restrictive for borrowers and demand.", "Real rate ↑ → financial restraint ↑ → demand pressure ↓")}<div class="macro-real-grid">${realHTML || "No matched inflation observations."}</div></section>
+          <section class="macro-panel credit"><h3>Household borrowing & policy transmission</h3>${this.macroExplainer("Mortgage rates show how policy and wholesale funding reach households. They usually adjust with a lag, while the gap to policy also reflects term, credit, operating and funding costs.", "Policy / market rates ↑ → mortgage resets ↑ → disposable income ↓ → housing demand may cool")}<div class="macro-credit-grid">${bankRateHTML || "Official household borrowing observations are loading."}</div></section>
+          <section class="macro-panel stress"><h3>US funding & credit stress</h3>${this.macroExplainer("Unusual dispersion, rising secured funding rates or weak volumes can indicate tighter short-term liquidity conditions.", "Funding friction ↑ → dealer liquidity ↓ → credit spreads may widen")}<div class="macro-list">${fundingRows || "No funding observations."}</div></section>
+          <section class="macro-panel fx"><h3>SEK foreign exchange monitor</h3>${this.macroExplainer("A weaker krona raises the local price of imports, while a stronger krona can reduce imported inflation but weigh on exporters' translated revenue.", "SEK weakens → imports cost more → CPI pressure ↑ → purchasing power ↓")}<div class="macro-list">${fxHTML || "No FX observations."}</div></section>
+          <section class="macro-panel pulse"><h3>Inflation & labour pulse</h3>${this.macroExplainer("High inflation with low unemployment can keep policy tighter; rising unemployment with softer inflation increases room to ease.", "Labour demand cools → wage pressure may ease → services inflation may cool")}<div class="macro-list">${pulseHTML || "No macro observations."}</div></section>
+          <section class="macro-panel signals"><h3>Derived regime signals</h3>${this.macroExplainer("These combine several observations into monitoring flags. Use the underlying boxes to see what drives each flag.", "Several signals align → regime evidence strengthens; disagreement → uncertainty stays high")}<div class="macro-signal-grid">${signalHTML || "Signals need more live inputs."}</div></section>
         </div>
         <div class="insider-source"><span>${this.escapeHTML(String(payload.source?.successfulProviders || 0))}/${this.escapeHTML(String(payload.source?.providerCount || 0))} routes updated · hover or focus every box for source dates and underlying values</span><span>${sourceLinks}</span></div>
       </div>`;
@@ -2273,6 +2556,7 @@ const sentinel = {
       { key: 'market_volatility_vix', title: "Market Volatility (VIX)", color: "#ff453a", type: 'chart' },
       { key: 'futures_tm', title: "Futures 1-Day Performance", color: "#fff", type: 'treemap', wide: true, live: true },
       { key: 'finviz_map', title: "Top 500 Market Heatmap", color: "#fff", type: 'treemap', wide: true },
+      { key: 'transmission', title: "Market Transmission & Correlation Map", type: 'transmission', wide: true },
       { key: 'macro', title: "Global Rates & Macro Regime", type: 'macro', wide: true },
       { key: 'futures_quotes', title: "Global Futures Board", color: "#fff", type: 'futures-board', wide: true, live: true },
       { key: 'openinsider', title: "SEC Form 4 / OpenInsider Activity", color: "#fff", type: 'insider-board', wide: true },
@@ -2280,6 +2564,10 @@ const sentinel = {
     ];
 
     configs.forEach(config => {
+      if (config.type === 'transmission') {
+        this.renderTransmissionMap(grid, data);
+        return;
+      }
       const payload = config.type === 'macro' ? (data.macro || State.macroData) : data[config.key];
       if (config.type === 'macro') {
         this.renderMacroDashboard(grid, payload);
@@ -2288,7 +2576,7 @@ const sentinel = {
       if (!payload) return;
 
       const card = document.createElement('div');
-      card.className = `chart-card ${config.wide ? 'wide' : ''} ${config.type === 'quote' ? 'quote-card' : ''} ${['futures-board', 'insider-board', 'congressional-board'].includes(config.type) ? 'board-card' : ''}`;
+      card.className = `chart-card ${config.wide ? 'wide' : ''} ${config.type === 'quote' ? 'quote-card' : ''} ${['futures-board', 'insider-board', 'congressional-board'].includes(config.type) ? 'board-card' : ''} ${SECTION_GUIDES[config.key] ? 'has-guide' : ''}`;
 
       if (config.type === 'quote') {
         const changeClass = payload.change > 0 ? "positive" : payload.change < 0 ? "negative" : "neutral";
@@ -2300,6 +2588,7 @@ const sentinel = {
               <div class="chart-rating">${this.escapeHTML(payload.symbol)} · ${this.escapeHTML(payload.category)}</div>
             </div>
           </div>
+          ${this.sectionGuide(config.key)}
           <div class="quote-body">
             <div class="quote-price" style="color:${config.color}">${this.formatMarketNumber(payload.price)}</div>
             <div class="quote-change ${changeClass}">${changeText} · 1 DAY</div>
@@ -2339,6 +2628,7 @@ const sentinel = {
             </div>
             <div class="chart-value">${payload.length}</div>
           </div>
+          ${this.sectionGuide(config.key)}
           <div class="futures-board">${sections}</div>
         `;
         grid.appendChild(card);
@@ -2376,6 +2666,7 @@ const sentinel = {
             </div>
             <div class="chart-value" data-insider-count>${sections[0].rows.length}</div>
           </div>
+          ${this.sectionGuide(config.key)}
           <div class="insider-board">
             <div class="insider-tabs" role="tablist" aria-label="OpenInsider lists">${tabs}</div>
             <div class="data-toolbar">
@@ -2453,6 +2744,7 @@ const sentinel = {
             </div>
             <div class="chart-value">${payload.trades.length.toLocaleString()}</div>
           </div>
+          ${this.sectionGuide(config.key)}
           <div class="congressional-board">
             <p class="congressional-info"><em>The Stock Trading on Congressional Knowledge Act requires U.S. Senators and U.S. Representatives to publicly file and disclose any financial transaction within 45 days of its occurrence.</em></p>
             <div class="congressional-stats">
@@ -2550,6 +2842,7 @@ const sentinel = {
           <div class="chart-header"><div class="chart-title">${config.title}</div>
             <div class="chart-value-block"><div class="chart-value" style="color: ${config.color}">${Number(latest.y).toFixed(2)}</div></div>
           </div>
+          ${this.sectionGuide(config.key)}
           <div class="canvas-wrapper" id="wrap_${config.key}"></div>
         `;
         grid.appendChild(card);
@@ -2565,6 +2858,7 @@ const sentinel = {
               ${config.live ? `<div class="chart-rating">${this.escapeHTML(sourceMeta)}</div>` : ""}
             </div>
           </div>
+          ${this.sectionGuide(config.key)}
           <div class="treemap-wrapper" id="wrap_${config.key}"></div>
         `;
         grid.appendChild(card);

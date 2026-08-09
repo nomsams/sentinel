@@ -26,12 +26,13 @@ Opening the file through a `file://` URL is not recommended because browsers com
 - Committee assignments: Wikipedia's MediaWiki API. A manual refresh reads the House and Senate indexes and every current committee roster while showing progress.
 - U.S. rates: official U.S. Treasury daily yield-curve XML plus the New York Fed's EFFR, SOFR, OBFR, TGCR, and BGCR reference-rate API.
 - Euro-area rates and macro: ECB policy-rate and modelled government yield-curve series, with Eurostat HICP and unemployment data.
-- Swedish rates and FX: Sveriges Riksbank policy-rate, government-bond, and SEK exchange-rate series. Riksbank values are fetched through a browser CORS route when direct cross-origin access is unavailable.
+- Swedish rates and FX: Sveriges Riksbank policy-rate, government-bond, and SEK exchange-rate series. The browser uses the corrected Riksbank proxy route first, with official BIS policy-rate and ECB/Eurostat FX and yield fallbacks so a blocked Riksbank CORS response does not blank the Swedish board.
+- Household transmission: official ECB new-business mortgage rates for Sweden and the euro area, plus Sweden's 3-month money-market rate and mortgage-to-policy transmission signals.
 - U.S. inflation and labour: CPI from FRED at the Federal Reserve Bank of St. Louis, with seasonally adjusted monthly unemployment from Eurostat's comparable international table. Each route is optional and preserves its last successful browser value if it times out.
 
-The rates board compares monetary-policy settings, government curves, 1-day/1-week/1-month basis-point changes, real policy rates, funding stress, SEK FX, inflation, unemployment, and derived regime signals. Every value box exposes source dates and underlying values on hover or keyboard focus, and the full matrix can be exported as text or CSV.
+The rates board compares monetary-policy settings, government curves, 1-day/1-week/1-month changes, household borrowing rates, real policy rates, funding stress, SEK FX, inflation, unemployment, cross-country policy/yield gaps, and derived regime signals. Every value box exposes source dates and underlying values on hover or keyboard focus, includes a direct source button, and the full matrix can be exported as text or CSV.
 
-Dashboard order is sentiment first, a compact one-row WTI/Brent/natural-gas strip, market timelines and heatmaps, then the rates, futures, insider, and congressional boards.
+Dashboard order is sentiment first, a compact one-row WTI/Brent/natural-gas strip, market timelines and heatmaps, then the market-transmission map, rates, futures, insider, and congressional boards. Each major section includes a compact expandable interpretation guide and a direct source link; rates and macro sub-panels also explain the common causal chain behind the displayed indicators. These guides describe typical relationships and explicitly avoid treating correlation as certainty.
 
 The congressional table keeps all buy and sell disclosures in the 90-day window, sortable columns, pagination, text/CSV exports, source links, and politician summary views. Committee membership is matched into those summaries.
 

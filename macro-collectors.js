@@ -20,6 +20,10 @@
       label: "Sveriges Riksbank",
       url: "https://api.riksbank.se/swea/v1/"
     },
+    bis: {
+      label: "Bank for International Settlements",
+      url: "https://stats.bis.org/api/v2/"
+    },
     eurostat: {
       label: "Eurostat",
       url: "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/"
@@ -36,7 +40,7 @@
 
   function proxyCandidates(url, preferProxy = false) {
     const proxied = [
-      `https://corsproxy.io/?${encodeURIComponent(url)}`,
+      `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
       `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
       `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`
     ];
@@ -117,6 +121,24 @@
     return { day: change(previous), week: change(week), month: change(month) };
   }
 
+  function percentageChangesFor(history) {
+    if (!history.length) return { day: null, week: null, month: null };
+    const latest = history[history.length - 1];
+    const latestTime = Date.parse(latest.date);
+    const previous = history.length > 1 ? history[history.length - 2] : null;
+    const week = nearestObservation(history, latestTime - (7 * 86400000));
+    const month = nearestObservation(history, latestTime - (30 * 86400000));
+    const change = comparison => comparison?.value ? ((latest.value / comparison.value) - 1) * 100 : null;
+    return { day: change(previous), week: change(week), month: change(month) };
+  }
+
+  function sequenceChanges(history) {
+    const ordered = history.filter(item => Number.isFinite(item.value)).sort((a, b) => a.date.localeCompare(b.date));
+    const latest = ordered.at(-1);
+    const change = offset => latest && ordered.length > offset ? (latest.value - ordered.at(-(offset + 1)).value) * 100 : null;
+    return { month: change(1), quarter: change(3), year: change(12) };
+  }
+
   function curvePoint(term, years, history) {
     const ordered = history.filter(item => Number.isFinite(item.value)).sort((a, b) => a.date.localeCompare(b.date));
     const latest = ordered.at(-1);
@@ -174,11 +196,12 @@
 
   function buildCurve(region, regionName, source, points) {
     const byTerm = term => points.find(point => point.term === term)?.value;
-    const two = byTerm("2Y"), ten = byTerm("10Y");
+    const threeMonth = byTerm("3M"), two = byTerm("2Y"), ten = byTerm("10Y");
     return {
       region, regionName, source, points,
       date: [...points].sort((a, b) => b.date.localeCompare(a.date))[0]?.date,
-      slope10y2y: two !== undefined && ten !== undefined ? (ten - two) * 100 : null
+      slope10y2y: two !== undefined && ten !== undefined ? (ten - two) * 100 : null,
+      slope10y3m: threeMonth !== undefined && ten !== undefined ? (ten - threeMonth) * 100 : null
     };
   }
 
@@ -218,6 +241,96 @@
     }).filter(Boolean);
     if (!values.length) throw new Error("Riksbank FX series were empty.");
     return values;
+  }
+
+  function parseECBFx(text) {
+    const rows = parseCSV(text).filter(row => row.TIME_PERIOD && row.CURRENCY && finite(row.OBS_VALUE) !== null);
+    const historyFor = currency => rows.filter(row => row.CURRENCY === currency)
+      .map(row => ({ date: row.TIME_PERIOD, value: Number(row.OBS_VALUE) }))
+      .sort((a, b) => a.date.localeCompare(b.date));
+    const sekHistory = historyFor("SEK");
+    if (!sekHistory.length) throw new Error("ECB SEK reference series was empty.");
+    const crosses = [["EUR", "EUR/SEK"], ["USD", "USD/SEK"], ["GBP", "GBP/SEK"], ["NOK", "NOK/SEK"]];
+    return crosses.map(([currency, pair]) => {
+      const foreignByDate = new Map(historyFor(currency).map(item => [item.date, item.value]));
+      const history = sekHistory.map(item => {
+        const denominator = currency === "EUR" ? 1 : foreignByDate.get(item.date);
+        return denominator ? { date: item.date, value: item.value / denominator } : null;
+      }).filter(Boolean);
+      const latest = history.at(-1);
+      return latest ? { pair, value: latest.value, date: latest.date, changes: percentageChangesFor(history), source: SOURCES.ecb, derived: currency !== "EUR" } : null;
+    }).filter(Boolean);
+  }
+
+  function parseBankRates(text) {
+    const rows = parseCSV(text).filter(row => row.TIME_PERIOD && row.REF_AREA && finite(row.OBS_VALUE) !== null);
+    const definitions = [["SE", "Sweden", "SEK"], ["U2", "Euro area", "EUR"]];
+    return definitions.map(([region, regionName, currency]) => {
+      const history = rows.filter(row => row.REF_AREA === region && row.CURRENCY_TRANS === currency)
+        .map(row => ({ date: row.TIME_PERIOD, value: Number(row.OBS_VALUE) }))
+        .sort((a, b) => a.date.localeCompare(b.date));
+      const latest = history.at(-1);
+      return latest ? {
+        region: region === "U2" ? "EU" : region, regionName, label: "New mortgage rate", value: latest.value,
+        date: latest.date, changes: sequenceChanges(history), source: SOURCES.ecb
+      } : null;
+    }).filter(Boolean);
+  }
+
+  function parseBISSwedenPolicy(text) {
+    const rows = parseCSV(text).filter(row => row.TIME_PERIOD && finite(row.OBS_VALUE) !== null)
+      .sort((a, b) => a.TIME_PERIOD.localeCompare(b.TIME_PERIOD));
+    const latest = rows.at(-1);
+    if (!latest) throw new Error("BIS Swedish policy-rate series was empty.");
+    return {
+      region: "SE", regionName: "Sweden", benchmark: "Policy rate", rate: Number(latest.OBS_VALUE), date: latest.TIME_PERIOD,
+      secondary: [], fallback: true, source: SOURCES.bis
+    };
+  }
+
+  function jsonStatHistory(dataset, selectors = {}) {
+    const ids = dataset?.id || [], sizes = dataset?.size || [];
+    const timePosition = ids.indexOf("time");
+    if (timePosition < 0) return [];
+    const positions = ids.map(() => 0);
+    for (const [dimension, code] of Object.entries(selectors)) {
+      const dimensionPosition = ids.indexOf(dimension);
+      const selectedIndex = dataset.dimension?.[dimension]?.category?.index?.[code];
+      if (dimensionPosition < 0 || selectedIndex === undefined) return [];
+      positions[dimensionPosition] = selectedIndex;
+    }
+    const valueAt = currentPositions => {
+      let flatIndex = 0, stride = 1;
+      for (let index = ids.length - 1; index >= 0; index -= 1) {
+        flatIndex += currentPositions[index] * stride;
+        stride *= sizes[index];
+      }
+      return dataset.value?.[flatIndex] ?? dataset.value?.[String(flatIndex)] ?? null;
+    };
+    return Object.entries(dataset.dimension?.time?.category?.index || {}).map(([date, timeIndex]) => {
+      const currentPositions = [...positions];
+      currentPositions[timePosition] = timeIndex;
+      const value = finite(valueAt(currentPositions));
+      return value === null ? null : { date, value };
+    }).filter(Boolean).sort((a, b) => a.date.localeCompare(b.date));
+  }
+
+  function parseSwedenOfficialCurve(shortDataset, longDataset) {
+    const shortHistory = jsonStatHistory(shortDataset, { geo: "SE", int_rt: "IRT_M3" });
+    const longHistory = jsonStatHistory(longDataset, { geo: "SE", int_rt: "MCBY" });
+    const points = [curvePoint("3M", 0.25, shortHistory), curvePoint("10Y", 10, longHistory)].filter(Boolean);
+    if (points.length < 2) throw new Error("Official Swedish fallback curve was incomplete.");
+    const curve = buildCurve("SE", "Sweden", SOURCES.eurostat, points);
+    curve.fallback = true;
+    curve.coverage = "3M money-market rate + 10Y convergence yield";
+    return curve;
+  }
+
+  function parseSwedenMoneyMarket(dataset) {
+    const history = jsonStatHistory(dataset, { geo: "SE", int_rt: "IRT_M3" });
+    const latest = history.at(-1);
+    if (!latest) throw new Error("Swedish 3-month money-market rate was empty.");
+    return { region: "SE", regionName: "Sweden", label: "3M money-market rate", value: latest.value, date: latest.date, changes: sequenceChanges(history), source: SOURCES.eurostat };
   }
 
   function jsonStatLatest(dataset, geoCode) {
@@ -294,23 +407,85 @@
   function deriveSignals(payload) {
     const signals = [];
     Object.values(payload.curves || {}).forEach(curve => {
-      const slope = finite(curve.slope10y2y);
+      const twoYearSlope = finite(curve.slope10y2y);
+      const threeMonthSlope = finite(curve.slope10y3m);
+      const slope = twoYearSlope !== null ? twoYearSlope : threeMonthSlope;
       if (slope === null) return;
+      const slopeLabel = twoYearSlope !== null ? "10Y-2Y" : "10Y-3M";
       const state = slope < 0 ? "Inverted" : slope < 25 ? "Flat" : slope > 100 ? "Steep" : "Positive";
       const tone = slope < 0 ? "danger" : slope < 25 ? "watch" : "calm";
-      signals.push({ label: `${curve.region} 10Y-2Y`, value: `${slope >= 0 ? "+" : ""}${slope.toFixed(0)} bp`, state, tone, detail: `${curve.regionName} curve slope based on the latest 10-year and 2-year observations.` });
+      signals.push({
+        label: `${curve.region} ${slopeLabel}`, value: `${slope >= 0 ? "+" : ""}${slope.toFixed(0)} bp`, state, tone,
+        detail: `${curve.regionName} curve slope based on the latest ${slopeLabel.replace("-", " minus ")} observations.${curve.fallback ? ` Fallback coverage: ${curve.coverage}.` : ""}`,
+        source: curve.source
+      });
     });
     (payload.realPolicy || []).forEach(item => {
       const state = item.value > 1 ? "Restrictive" : item.value > 0 ? "Mildly restrictive" : "Accommodative";
-      signals.push({ label: `${item.region} real policy`, value: `${item.value >= 0 ? "+" : ""}${item.value.toFixed(2)}%`, state, tone: item.value > 1 ? "danger" : item.value > 0 ? "watch" : "calm", detail: `${item.policy.toFixed(2)}% policy rate minus ${item.inflation.toFixed(2)}% annual inflation.` });
+      signals.push({ label: `${item.region} real policy`, value: `${item.value >= 0 ? "+" : ""}${item.value.toFixed(2)}%`, state, tone: item.value > 1 ? "danger" : item.value > 0 ? "watch" : "calm", detail: `${item.policy.toFixed(2)}% policy rate minus ${item.inflation.toFixed(2)}% annual inflation.`, source: item.source });
     });
     const funding = Object.fromEntries((payload.funding || []).map(item => [item.label, item.rate]));
     if (Number.isFinite(funding.SOFR) && Number.isFinite(funding.EFFR)) {
       const spread = (funding.SOFR - funding.EFFR) * 100;
-      signals.push({ label: "SOFR-EFFR", value: `${spread >= 0 ? "+" : ""}${spread.toFixed(1)} bp`, state: Math.abs(spread) > 10 ? "Stress" : Math.abs(spread) > 5 ? "Watch" : "Normal", tone: Math.abs(spread) > 10 ? "danger" : Math.abs(spread) > 5 ? "watch" : "calm", detail: "Secured overnight funding minus the effective federal funds rate." });
+      signals.push({ label: "SOFR-EFFR", value: `${spread >= 0 ? "+" : ""}${spread.toFixed(1)} bp`, state: Math.abs(spread) > 10 ? "Stress" : Math.abs(spread) > 5 ? "Watch" : "Normal", tone: Math.abs(spread) > 10 ? "danger" : Math.abs(spread) > 5 ? "watch" : "calm", detail: "Secured overnight funding minus the effective federal funds rate.", source: SOURCES.nyFed });
+    }
+
+    const policyByRegion = Object.fromEntries((payload.policy || []).map(item => [item.region, item]));
+    [["US", "SE"], ["EU", "SE"]].forEach(([left, right]) => {
+      const first = policyByRegion[left], second = policyByRegion[right];
+      if (finite(first?.rate) === null || finite(second?.rate) === null) return;
+      const spread = (first.rate - second.rate) * 100;
+      signals.push({
+        label: `${left}-${right} policy gap`, value: `${spread >= 0 ? "+" : ""}${spread.toFixed(0)} bp`,
+        state: Math.abs(spread) >= 150 ? "Wide divergence" : Math.abs(spread) >= 50 ? "Divergent" : "Aligned",
+        tone: Math.abs(spread) >= 150 ? "danger" : Math.abs(spread) >= 50 ? "watch" : "calm",
+        detail: `${first.regionName} policy rate minus ${second.regionName} policy rate. Large gaps can affect currencies, cross-border funding and capital flows.`,
+        source: first.source
+      });
+    });
+
+    const tenYearFor = region => payload.curves?.[region]?.points?.find(point => point.term === "10Y");
+    [["US", "SE"], ["EU", "SE"]].forEach(([left, right]) => {
+      const first = tenYearFor(left), second = tenYearFor(right);
+      if (finite(first?.value) === null || finite(second?.value) === null) return;
+      const spread = (first.value - second.value) * 100;
+      signals.push({
+        label: `${left}-${right} 10Y gap`, value: `${spread >= 0 ? "+" : ""}${spread.toFixed(0)} bp`, state: Math.abs(spread) >= 150 ? "Wide" : Math.abs(spread) >= 50 ? "Meaningful" : "Narrow",
+        tone: Math.abs(spread) >= 150 ? "danger" : Math.abs(spread) >= 50 ? "watch" : "calm",
+        detail: `${left} 10-year government yield minus ${right} 10-year yield. The gap can influence hedged returns, currencies and relative financing costs.`,
+        source: payload.curves?.[left]?.source
+      });
+    });
+
+    const swedenMortgage = payload.bankRates?.find(item => item.region === "SE");
+    const swedenPolicy = policyByRegion.SE;
+    if (finite(swedenMortgage?.value) !== null && finite(swedenPolicy?.rate) !== null) {
+      const spread = (swedenMortgage.value - swedenPolicy.rate) * 100;
+      signals.push({
+        label: "SE mortgage-policy", value: `${spread >= 0 ? "+" : ""}${spread.toFixed(0)} bp`, state: spread > 200 ? "Wide transmission" : spread > 75 ? "Normal premium" : "Compressed",
+        tone: spread > 200 ? "danger" : spread < 50 ? "watch" : "calm",
+        detail: `New Swedish mortgage rate minus the Riksbank policy rate. This is a simple transmission spread, not a lender margin.`,
+        source: swedenMortgage.source
+      });
+    }
+
+    const eurSek = payload.fx?.find(item => item.pair === "EUR/SEK");
+    const sekMonth = finite(eurSek?.changes?.month);
+    if (sekMonth !== null) {
+      const magnitude = Math.abs(sekMonth);
+      signals.push({
+        label: "SEK 1M vs EUR", value: `${sekMonth >= 0 ? "+" : ""}${sekMonth.toFixed(2)}%`,
+        state: sekMonth > 0 ? "SEK weaker" : sekMonth < 0 ? "SEK stronger" : "Unchanged",
+        tone: magnitude > 3 ? "danger" : magnitude > 1 ? "watch" : "calm",
+        detail: "One-month change in EUR/SEK. A positive move means more kronor per euro and therefore a weaker SEK.",
+        source: eurSek.source
+      });
     }
     const realAverage = payload.realPolicy?.length ? payload.realPolicy.reduce((sum, item) => sum + item.value, 0) / payload.realPolicy.length : null;
-    const inverted = Object.values(payload.curves || {}).filter(curve => finite(curve.slope10y2y) !== null && curve.slope10y2y < 0).length;
+    const inverted = Object.values(payload.curves || {}).filter(curve => {
+      const slope = finite(curve.slope10y2y) ?? finite(curve.slope10y3m);
+      return slope !== null && slope < 0;
+    }).length;
     payload.regime = inverted >= 2 ? "Cross-market curve inversion" : realAverage !== null && realAverage > 1 ? "Restrictive global stance" : realAverage !== null && realAverage < 0 ? "Accommodative global stance" : "Mixed / neutral macro regime";
     return signals;
   }
@@ -329,6 +504,11 @@
       riksPolicy: `${SOURCES.riksbank.url}Observations/Latest/ByGroup/2`,
       riksCurve: `${SOURCES.riksbank.url}Observations/Latest/ByGroup/7`,
       riksFX: `${SOURCES.riksbank.url}Observations/Latest/ByGroup/130`,
+      bisPolicy: `${SOURCES.bis.url}data/dataflow/BIS/WS_CBPOL/1.0/M.SE?startPeriod=${year - 1}-01&format=csv`,
+      ecbFX: `${SOURCES.ecb.url}data/EXR/D.USD+GBP+NOK+SEK.EUR.SP00.A?startPeriod=${startDate}&format=csvdata`,
+      ecbBankRates: `${SOURCES.ecb.url}data/MIR/M.SE+U2.B.A2C.A.R.A.2250.SEK+EUR.N?startPeriod=${year - 1}-01&format=csvdata`,
+      swedenShort: `${SOURCES.eurostat.url}irt_st_m?geo=SE&sinceTimePeriod=${eurostatStart}`,
+      swedenLong: `${SOURCES.eurostat.url}irt_lt_mcby_m?geo=SE&sinceTimePeriod=${eurostatStart}`,
       euroInflation: `${SOURCES.eurostat.url}prc_hicp_manr?coicop=CP00&sinceTimePeriod=${eurostatStart}`,
       euroLabour: `${SOURCES.eurostat.url}une_rt_m?s_adj=SA&age=TOTAL&sex=T&unit=PC_ACT&sinceTimePeriod=${eurostatStart}`,
       usInflation: `${SOURCES.fred.url}?id=CPIAUCSL&cosd=${fredStart}`,
@@ -341,6 +521,11 @@
       ["riksPolicy", () => fetchThroughBrowser(urls.riksPolicy, "json", { preferProxy: true }).then(parseRiksbankPolicy)],
       ["riksCurve", () => fetchThroughBrowser(urls.riksCurve, "json", { preferProxy: true }).then(parseRiksbankCurve)],
       ["riksFX", () => fetchThroughBrowser(urls.riksFX, "json", { preferProxy: true }).then(parseRiksbankFX)],
+      ["bisPolicy", () => fetchThroughBrowser(urls.bisPolicy, "text").then(parseBISSwedenPolicy)],
+      ["ecbFX", () => fetchThroughBrowser(urls.ecbFX, "text").then(parseECBFx)],
+      ["ecbBankRates", () => fetchThroughBrowser(urls.ecbBankRates, "text").then(parseBankRates)],
+      ["swedenShort", () => fetchThroughBrowser(urls.swedenShort)],
+      ["swedenLong", () => fetchThroughBrowser(urls.swedenLong)],
       ["euroInflation", () => fetchThroughBrowser(urls.euroInflation)],
       ["euroLabour", () => fetchThroughBrowser(urls.euroLabour)],
       ["usInflation", () => fetchThroughBrowser(urls.usInflation, "text").then(parseFred).then(annualInflation)]
@@ -361,11 +546,15 @@
     });
     if (!Object.keys(values).length && !previous) throw new Error("Every rates and macro provider was unavailable.");
 
-    const freshPolicy = [values.nyFed?.policy, values.ecbPolicy, values.riksPolicy].filter(Boolean);
+    const freshPolicy = [values.nyFed?.policy, values.ecbPolicy, values.riksPolicy || values.bisPolicy].filter(Boolean);
     const curves = { ...(previous?.curves || {}) };
     if (values.treasury) curves.US = values.treasury;
     if (values.ecbCurve) curves.EU = values.ecbCurve;
     if (values.riksCurve) curves.SE = values.riksCurve;
+    else if (values.swedenShort && values.swedenLong) {
+      try { curves.SE = parseSwedenOfficialCurve(values.swedenShort, values.swedenLong); }
+      catch (error) { failures.push({ key: "swedenCurveFallback", message: error.message }); }
+    }
     const inflation = [];
     if (values.usInflation) inflation.push({ region: "US", regionName: "United States", ...values.usInflation, source: SOURCES.fred });
     const euInflation = values.euroInflation && (jsonStatLatest(values.euroInflation, "EA21") || jsonStatLatest(values.euroInflation, "EA20"));
@@ -382,6 +571,19 @@
     const policy = mergeByKey(freshPolicy, previous?.policy, "region");
     const mergedInflation = mergeByKey(inflation, previous?.inflation, "region");
     const mergedLabour = mergeByKey(labour, previous?.labour, "region");
+    const bankRates = mergeByKey(values.ecbBankRates || [], previous?.bankRates, "region");
+    let moneyMarket = previous?.moneyMarket || [];
+    if (values.swedenShort) {
+      try { moneyMarket = [parseSwedenMoneyMarket(values.swedenShort)]; }
+      catch (error) { failures.push({ key: "swedenShortParse", message: error.message }); }
+    }
+    let fx = values.ecbFX || previous?.fx || [];
+    if (values.riksFX) {
+      fx = values.riksFX.map(item => {
+        const ecbMatch = values.ecbFX?.find(candidate => candidate.pair === item.pair);
+        return ecbMatch ? { ...item, changes: ecbMatch.changes } : item;
+      });
+    }
     const realPolicy = policy.map(item => {
       const price = mergedInflation.find(candidate => candidate.region === item.region);
       return price && finite(item.rate) !== null && finite(price.value) !== null ? {
@@ -396,7 +598,7 @@
       },
       policy, curves,
       funding: values.nyFed?.funding || previous?.funding || [],
-      fx: values.riksFX || previous?.fx || [],
+      fx, bankRates, moneyMarket,
       inflation: mergedInflation, labour: mergedLabour, realPolicy,
       providers: Object.fromEntries(definitions.map(([key]) => [key, failures.some(item => item.key === key) ? "stale" : "live"]))
     };
