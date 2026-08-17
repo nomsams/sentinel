@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-08-17T16:55:14.343Z",
-    "lastModified": "Mon, 17 Aug 2026 16:54:03 GMT",
+    "fetchedAt": "2026-08-17T17:23:36.433Z",
+    "lastModified": "Mon, 17 Aug 2026 17:23:02 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -927,6 +927,28 @@
       "roleLabel": "Title",
       "rows": [
         {
+          "flags": "",
+          "filingDate": "2026-08-17 12:57:47",
+          "tradeDate": "2026-08-17",
+          "ticker": "LCNB",
+          "company": "Lcnb Corp",
+          "detail": "Haines Robert C II",
+          "role": "Pres",
+          "tradeType": "P - Purchase",
+          "price": "$19.75",
+          "quantity": "+500",
+          "owned": "26,728",
+          "ownershipChange": "+2%",
+          "value": "+$9,875",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 19.75,
+          "quantityValue": 500,
+          "tradeValue": 9875
+        },
+        {
           "flags": "D",
           "filingDate": "2026-08-17 12:19:35",
           "tradeDate": "2026-08-14",
@@ -1123,28 +1145,6 @@
           "priceValue": 160.66,
           "quantityValue": -2000,
           "tradeValue": -321320
-        },
-        {
-          "flags": "",
-          "filingDate": "2026-08-17 11:49:47",
-          "tradeDate": "2026-08-13",
-          "ticker": "MLAB",
-          "company": "Mesa Laboratories Inc /Co/",
-          "detail": "Kadia Siddhartha",
-          "role": "Pres, CEO",
-          "tradeType": "P - Purchase",
-          "price": "$112.80",
-          "quantity": "+7,093",
-          "owned": "7,093",
-          "ownershipChange": "New",
-          "value": "+$800,090",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 112.8,
-          "quantityValue": 7093,
-          "tradeValue": 800090
         }
       ]
     }
