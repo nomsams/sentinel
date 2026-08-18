@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-08-18T10:38:14.178Z",
-    "lastModified": "Tue, 18 Aug 2026 10:38:02 GMT",
+    "fetchedAt": "2026-08-18T11:22:39.073Z",
+    "lastModified": "Tue, 18 Aug 2026 11:21:02 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -927,6 +927,28 @@
       "roleLabel": "Title",
       "rows": [
         {
+          "flags": "D",
+          "filingDate": "2026-08-18 06:40:42",
+          "tradeDate": "2026-08-17",
+          "ticker": "WB",
+          "company": "Weibo Corp",
+          "detail": "Du Hong",
+          "role": "Dir",
+          "tradeType": "F - Tax",
+          "price": "$7.67",
+          "quantity": "-3,105",
+          "owned": "107,870",
+          "ownershipChange": "-3%",
+          "value": "-$23,803",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 7.67,
+          "quantityValue": -3105,
+          "tradeValue": -23803
+        },
+        {
           "flags": "",
           "filingDate": "2026-08-18 06:19:43",
           "tradeDate": "2026-08-14",
@@ -1123,28 +1145,6 @@
           "priceValue": 12.76,
           "quantityValue": -13000,
           "tradeValue": -165924
-        },
-        {
-          "flags": "D",
-          "filingDate": "2026-08-17 21:53:35",
-          "tradeDate": "2026-08-14",
-          "ticker": "MAX",
-          "company": "Mediaalpha, Inc.",
-          "detail": "Yeh Kuanling Amy",
-          "role": "CTO",
-          "tradeType": "S - Sale+OE",
-          "price": "$13.55",
-          "quantity": "-12,000",
-          "owned": "552,091",
-          "ownershipChange": "-2%",
-          "value": "-$162,617",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 13.55,
-          "quantityValue": -12000,
-          "tradeValue": -162617
         }
       ]
     }
