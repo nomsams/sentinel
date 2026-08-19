@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-08-19T10:54:27.506Z",
-    "lastModified": "Wed, 19 Aug 2026 10:54:02 GMT",
+    "fetchedAt": "2026-08-19T11:21:33.615Z",
+    "lastModified": "Wed, 19 Aug 2026 11:21:04 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -928,6 +928,28 @@
       "rows": [
         {
           "flags": "",
+          "filingDate": "2026-08-19 07:14:24",
+          "tradeDate": "2026-08-17",
+          "ticker": "POWW",
+          "company": "Outdoor Holding Co",
+          "detail": "Urvan Steven F.",
+          "role": "CEO, 10%",
+          "tradeType": "F - Tax",
+          "price": "$2.24",
+          "quantity": "-4,448",
+          "owned": "17,368,918",
+          "ownershipChange": "0%",
+          "value": "-$9,964",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 2.24,
+          "quantityValue": -4448,
+          "tradeValue": -9964
+        },
+        {
+          "flags": "",
           "filingDate": "2026-08-19 06:49:04",
           "tradeDate": "2026-08-17",
           "ticker": "POWW",
@@ -1123,28 +1145,6 @@
           "priceValue": 41.1,
           "quantityValue": 365000,
           "tradeValue": 15001500
-        },
-        {
-          "flags": "",
-          "filingDate": "2026-08-19 06:08:08",
-          "tradeDate": "2026-08-17",
-          "ticker": "SE",
-          "company": "Sea Ltd",
-          "detail": "Zhao Feng",
-          "role": "Pres of Garena",
-          "tradeType": "S - Sale",
-          "price": "$120.16",
-          "quantity": "-2,000",
-          "owned": "1,830,128",
-          "ownershipChange": "0%",
-          "value": "-$240,320",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 120.16,
-          "quantityValue": -2000,
-          "tradeValue": -240320
         }
       ]
     }
