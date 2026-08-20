@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-08-20T10:57:17.019Z",
-    "lastModified": "Thu, 20 Aug 2026 10:56:02 GMT",
+    "fetchedAt": "2026-08-20T11:29:17.826Z",
+    "lastModified": "Thu, 20 Aug 2026 11:28:14 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -928,6 +928,28 @@
       "rows": [
         {
           "flags": "",
+          "filingDate": "2026-08-20 06:57:01",
+          "tradeDate": "2026-08-18",
+          "ticker": "IHT",
+          "company": "Innsuites Hospitality Trust",
+          "detail": "Wirth James F",
+          "role": "Pres, CEO, 10%",
+          "tradeType": "J - Other Purchase",
+          "price": "$3,000,000.00",
+          "quantity": "+1,829,268",
+          "owned": "8,080,564",
+          "ownershipChange": "+29%",
+          "value": "+$2,147,483,647",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 3000000,
+          "quantityValue": 1829268,
+          "tradeValue": 2147483647
+        },
+        {
+          "flags": "",
           "filingDate": "2026-08-20 06:55:14",
           "tradeDate": "2026-08-19",
           "ticker": "FLUT",
@@ -1123,28 +1145,6 @@
           "priceValue": 222.22,
           "quantityValue": -26644,
           "tradeValue": -5920937
-        },
-        {
-          "flags": "D",
-          "filingDate": "2026-08-19 21:04:56",
-          "tradeDate": "2026-08-17",
-          "ticker": "HTFL",
-          "company": "Heartflow, Inc.",
-          "detail": "Rogers Campbell",
-          "role": "Chief Medical Officer",
-          "tradeType": "M - OptEx",
-          "price": "$19.00",
-          "quantity": "+9,219",
-          "owned": "231,999",
-          "ownershipChange": "+4%",
-          "value": "+$175,161",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 19,
-          "quantityValue": 9219,
-          "tradeValue": 175161
         }
       ]
     }
