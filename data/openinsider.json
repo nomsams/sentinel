@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-08-20T10:26:27.430Z",
-    "lastModified": "Thu, 20 Aug 2026 10:26:05 GMT",
+    "fetchedAt": "2026-08-20T10:57:17.019Z",
+    "lastModified": "Thu, 20 Aug 2026 10:56:02 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -700,6 +700,28 @@
       "rows": [
         {
           "flags": "",
+          "filingDate": "2026-08-20 06:55:14",
+          "tradeDate": "2026-08-19",
+          "ticker": "FLUT",
+          "company": "Flutter Entertainment Plc",
+          "detail": "Jackson Jeremy Peter",
+          "role": "CEO",
+          "tradeType": "S - Sale",
+          "price": "$93.32",
+          "quantity": "-2,112",
+          "owned": "72,214",
+          "ownershipChange": "-3%",
+          "value": "-$197,085",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 93.32,
+          "quantityValue": -2112,
+          "tradeValue": -197085
+        },
+        {
+          "flags": "",
           "filingDate": "2026-08-20 06:03:42",
           "tradeDate": "2026-08-19",
           "ticker": "PHI",
@@ -895,28 +917,6 @@
           "priceValue": 63.8,
           "quantityValue": -15700,
           "tradeValue": -1001660
-        },
-        {
-          "flags": "DM",
-          "filingDate": "2026-08-19 20:44:18",
-          "tradeDate": "2026-08-18",
-          "ticker": "PINS",
-          "company": "Pinterest, Inc.",
-          "detail": "Silbermann Benjamin",
-          "role": "Dir, 10%",
-          "tradeType": "S - Sale+OE",
-          "price": "$23.26",
-          "quantity": "-93,750",
-          "owned": "13,996",
-          "ownershipChange": "-87%",
-          "value": "-$2,180,466",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 23.26,
-          "quantityValue": -93750,
-          "tradeValue": -2180466
         }
       ]
     },
@@ -926,6 +926,28 @@
       "detailLabel": "Insider Name",
       "roleLabel": "Title",
       "rows": [
+        {
+          "flags": "",
+          "filingDate": "2026-08-20 06:55:14",
+          "tradeDate": "2026-08-19",
+          "ticker": "FLUT",
+          "company": "Flutter Entertainment Plc",
+          "detail": "Jackson Jeremy Peter",
+          "role": "CEO",
+          "tradeType": "S - Sale",
+          "price": "$93.32",
+          "quantity": "-2,112",
+          "owned": "72,214",
+          "ownershipChange": "-3%",
+          "value": "-$197,085",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 93.32,
+          "quantityValue": -2112,
+          "tradeValue": -197085
+        },
         {
           "flags": "",
           "filingDate": "2026-08-20 06:03:42",
@@ -1123,28 +1145,6 @@
           "priceValue": 19,
           "quantityValue": 9219,
           "tradeValue": 175161
-        },
-        {
-          "flags": "D",
-          "filingDate": "2026-08-19 21:04:56",
-          "tradeDate": "2026-08-17",
-          "ticker": "HTFL",
-          "company": "Heartflow, Inc.",
-          "detail": "Rogers Campbell",
-          "role": "Chief Medical Officer",
-          "tradeType": "S - Sale+OE",
-          "price": "$41.23",
-          "quantity": "-9,219",
-          "owned": "231,999",
-          "ownershipChange": "-4%",
-          "value": "-$380,099",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 41.23,
-          "quantityValue": -9219,
-          "tradeValue": -380099
         }
       ]
     }
