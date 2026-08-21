@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-08-21T19:23:41.898Z",
-    "lastModified": "Fri, 21 Aug 2026 19:23:30 GMT",
+    "fetchedAt": "2026-08-21T19:47:28.317Z",
+    "lastModified": "Fri, 21 Aug 2026 19:47:23 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
