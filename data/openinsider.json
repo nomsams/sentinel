@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-08-24T11:24:24.694Z",
-    "lastModified": "Mon, 24 Aug 2026 11:24:03 GMT",
+    "fetchedAt": "2026-08-24T11:53:33.541Z",
+    "lastModified": "Mon, 24 Aug 2026 11:53:09 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -927,6 +927,28 @@
       "roleLabel": "Title",
       "rows": [
         {
+          "flags": "D",
+          "filingDate": "2026-08-24 07:47:40",
+          "tradeDate": "2026-08-21",
+          "ticker": "GDEV",
+          "company": "Gdev Inc.",
+          "detail": "Reingold Anton",
+          "role": "See Remarks",
+          "tradeType": "F - Tax",
+          "price": "$11.24",
+          "quantity": "-3,863",
+          "owned": "383,518",
+          "ownershipChange": "-1%",
+          "value": "-$43,420",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 11.24,
+          "quantityValue": -3863,
+          "tradeValue": -43420
+        },
+        {
           "flags": "",
           "filingDate": "2026-08-24 07:20:07",
           "tradeDate": "2026-08-20",
@@ -1123,28 +1145,6 @@
           "priceValue": 47.33,
           "quantityValue": -4500,
           "tradeValue": -212985
-        },
-        {
-          "flags": "D",
-          "filingDate": "2026-08-21 21:30:20",
-          "tradeDate": "2026-08-20",
-          "ticker": "ACMR",
-          "company": "Acm Research, Inc.",
-          "detail": "McKechnie Mark",
-          "role": "See remarks",
-          "tradeType": "M - OptEx",
-          "price": "$16.95",
-          "quantity": "+55,199",
-          "owned": "900",
-          "ownershipChange": "-102%",
-          "value": "+$935,829",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 16.95,
-          "quantityValue": 55199,
-          "tradeValue": 935829
         }
       ]
     }
