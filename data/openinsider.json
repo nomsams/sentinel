@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-08-25T16:33:11.517Z",
-    "lastModified": "Tue, 25 Aug 2026 16:33:02 GMT",
+    "fetchedAt": "2026-08-25T17:28:30.450Z",
+    "lastModified": "Tue, 25 Aug 2026 17:28:04 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -243,6 +243,28 @@
       "roleLabel": "Title",
       "rows": [
         {
+          "flags": "",
+          "filingDate": "2026-08-25 13:26:39",
+          "tradeDate": "2026-08-24",
+          "ticker": "RBA",
+          "company": "Rb Global Inc.",
+          "detail": "Harford Chloe",
+          "role": "Dir",
+          "tradeType": "P - Purchase",
+          "price": "$83.74",
+          "quantity": "+1,200",
+          "owned": "1,200",
+          "ownershipChange": "New",
+          "value": "+$100,488",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 83.74,
+          "quantityValue": 1200,
+          "tradeValue": 100488
+        },
+        {
           "flags": "M",
           "filingDate": "2026-08-25 11:55:47",
           "tradeDate": "2026-08-21",
@@ -439,28 +461,6 @@
           "priceValue": 2.75,
           "quantityValue": 15700,
           "tradeValue": 43175
-        },
-        {
-          "flags": "",
-          "filingDate": "2026-08-25 07:06:46",
-          "tradeDate": "2026-08-25",
-          "ticker": "BORR",
-          "company": "Borr Drilling Ltd",
-          "detail": "Troim Tor Olav",
-          "role": "Dir",
-          "tradeType": "P - Purchase",
-          "price": "$4.37",
-          "quantity": "+200,000",
-          "owned": "29,467,808",
-          "ownershipChange": "+1%",
-          "value": "+$874,620",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 4.37,
-          "quantityValue": 200000,
-          "tradeValue": 874620
         }
       ]
     },
@@ -928,6 +928,28 @@
       "rows": [
         {
           "flags": "",
+          "filingDate": "2026-08-25 13:26:39",
+          "tradeDate": "2026-08-24",
+          "ticker": "RBA",
+          "company": "Rb Global Inc.",
+          "detail": "Harford Chloe",
+          "role": "Dir",
+          "tradeType": "P - Purchase",
+          "price": "$83.74",
+          "quantity": "+1,200",
+          "owned": "1,200",
+          "ownershipChange": "New",
+          "value": "+$100,488",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 83.74,
+          "quantityValue": 1200,
+          "tradeValue": 100488
+        },
+        {
+          "flags": "",
           "filingDate": "2026-08-25 12:31:14",
           "tradeDate": "2026-08-24",
           "ticker": "GEF",
@@ -1123,28 +1145,6 @@
           "priceValue": 7.5,
           "quantityValue": 260,
           "tradeValue": 1949
-        },
-        {
-          "flags": "",
-          "filingDate": "2026-08-25 11:42:31",
-          "tradeDate": "2026-08-24",
-          "ticker": "LEG",
-          "company": "Leggett & Platt Inc",
-          "detail": "Campbell Maryelizabeth R",
-          "role": "Dir",
-          "tradeType": "A - Grant",
-          "price": "$7.50",
-          "quantity": "+217",
-          "owned": "64,136",
-          "ownershipChange": "0%",
-          "value": "+$1,631",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 7.5,
-          "quantityValue": 217,
-          "tradeValue": 1631
         }
       ]
     }
