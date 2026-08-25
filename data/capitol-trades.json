@@ -2,16 +2,16 @@
   "source": {
     "provider": "Capitol Trades",
     "url": "https://www.capitoltrades.com/trades?txType=buy&txType=sell&pageSize=96&page=1&txDate=90d",
-    "fetchedAt": "2026-08-24T19:02:44.486Z",
+    "fetchedAt": "2026-08-25T01:55:13.782Z",
     "window": "90 days",
     "transactionTypes": [
       "buy",
       "sell"
     ],
     "pageSize": 96,
-    "pagesFetched": 21,
-    "reportedCount": 1957,
-    "rowCount": 1957,
+    "pagesFetched": 20,
+    "reportedCount": 1905,
+    "rowCount": 1905,
     "updateIntervalHours": 6
   },
   "columns": [
@@ -72,7 +72,7 @@
       "issuerCountry": null,
       "sector": null,
       "publishedAt": "2026-08-24T13:00:28Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-07-27",
       "tradedDisplay": "27 Jul 2026",
       "reportingGap": 25,
@@ -111,7 +111,7 @@
       "issuerCountry": "us",
       "sector": "information-technology",
       "publishedAt": "2026-08-24T13:00:28Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-07-24",
       "tradedDisplay": "24 Jul 2026",
       "reportingGap": 28,
@@ -150,7 +150,7 @@
       "issuerCountry": "us",
       "sector": "information-technology",
       "publishedAt": "2026-08-24T13:00:28Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-07-24",
       "tradedDisplay": "24 Jul 2026",
       "reportingGap": 28,
@@ -189,7 +189,7 @@
       "issuerCountry": "us",
       "sector": "industrials",
       "publishedAt": "2026-08-24T13:00:28Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-07-28",
       "tradedDisplay": "28 Jul 2026",
       "reportingGap": 24,
@@ -228,7 +228,7 @@
       "issuerCountry": "us",
       "sector": "industrials",
       "publishedAt": "2026-08-24T13:00:28Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-07-28",
       "tradedDisplay": "28 Jul 2026",
       "reportingGap": 24,
@@ -267,7 +267,7 @@
       "issuerCountry": "us",
       "sector": "industrials",
       "publishedAt": "2026-08-24T13:00:28Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-07-24",
       "tradedDisplay": "24 Jul 2026",
       "reportingGap": 28,
@@ -306,7 +306,7 @@
       "issuerCountry": "us",
       "sector": "industrials",
       "publishedAt": "2026-08-24T13:00:28Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-07-24",
       "tradedDisplay": "24 Jul 2026",
       "reportingGap": 28,
@@ -345,7 +345,7 @@
       "issuerCountry": null,
       "sector": null,
       "publishedAt": "2026-08-24T13:00:26Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-08-07",
       "tradedDisplay": "7 Aug 2026",
       "reportingGap": 14,
@@ -384,7 +384,7 @@
       "issuerCountry": null,
       "sector": null,
       "publishedAt": "2026-08-24T13:00:26Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-08-06",
       "tradedDisplay": "6 Aug 2026",
       "reportingGap": 15,
@@ -423,7 +423,7 @@
       "issuerCountry": null,
       "sector": null,
       "publishedAt": "2026-08-24T13:00:26Z",
-      "publishedDisplay": "13:00 Today",
+      "publishedDisplay": "13:00 Yesterday",
       "tradedAt": "2026-08-06",
       "tradedDisplay": "6 Aug 2026",
       "reportingGap": 15,
@@ -60621,1137 +60621,6 @@
       "sourcePage": 17
     },
     {
-      "id": "10000065241",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2333803,
-      "issuerName": "DEPARTMENT OF STATE PENNSYLVANIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2035-04-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2333803",
-      "tradeUrl": "/trades/10000065241",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065240",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 446117,
-      "issuerName": "WASHINGTON KING COUNTY",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2032-01-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/446117",
-      "tradeUrl": "/trades/10000065240",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065239",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335333,
-      "issuerName": "SCHOOL DISTRICT OF NEW GLARUS",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "250K–500K",
-      "estimatedValue": 375000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2028-04-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335333",
-      "tradeUrl": "/trades/10000065239",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065238",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 434012,
-      "issuerName": "PENNSYLVANIA TURNPIKE COMMISSION",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2029-12-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/434012",
-      "tradeUrl": "/trades/10000065238",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065237",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 434996,
-      "issuerName": "STATE OF WASHINGTON",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2033-12-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/434996",
-      "tradeUrl": "/trades/10000065237",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065236",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335336,
-      "issuerName": "PENNSYLVANIA INFRASTRUCTURE INVESTMENT AUTHORITY",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2027-01-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335336",
-      "tradeUrl": "/trades/10000065236",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065235",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 446117,
-      "issuerName": "WASHINGTON KING COUNTY",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2030-12-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/446117",
-      "tradeUrl": "/trades/10000065235",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065234",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335336,
-      "issuerName": "PENNSYLVANIA INFRASTRUCTURE INVESTMENT AUTHORITY",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2028-01-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335336",
-      "tradeUrl": "/trades/10000065234",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065233",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2288456,
-      "issuerName": "PARKLAND SCHOOL DISTRICT",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2033-02-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2288456",
-      "tradeUrl": "/trades/10000065233",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065232",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 434967,
-      "issuerName": "STATE OF MARYLAND",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "250K–500K",
-      "estimatedValue": 375000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2027-08-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/434967",
-      "tradeUrl": "/trades/10000065232",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065231",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 434974,
-      "issuerName": "STATE OF NEVADA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2031-05-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/434974",
-      "tradeUrl": "/trades/10000065231",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065230",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335424,
-      "issuerName": "COUNTY OF NORTHAMPTON PENNSYLVANIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "--Rate/Coupon: 5% Matures: 2034-11-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335424",
-      "tradeUrl": "/trades/10000065230",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065229",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2333803,
-      "issuerName": "DEPARTMENT OF STATE PENNSYLVANIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2034-04-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2333803",
-      "tradeUrl": "/trades/10000065229",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065228",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335286,
-      "issuerName": "MONTGOMERY COUNTY INDUSTRIAL DEVELOPMENT",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2028-12-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335286",
-      "tradeUrl": "/trades/10000065228",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065227",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335392,
-      "issuerName": "ALLEGHENY COUNTY HIGHER EDUCATION BUILDING AUTHORITY",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2032-02-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335392",
-      "tradeUrl": "/trades/10000065227",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065226",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335391,
-      "issuerName": "CHESTER COUNTY SCHOOL DISTRICTS",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2027-03-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335391",
-      "tradeUrl": "/trades/10000065226",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065225",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 429642,
-      "issuerName": "ALVIN INDEPENDENT SCHOOL DISTRICT",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2035-02-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/429642",
-      "tradeUrl": "/trades/10000065225",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065224",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 434996,
-      "issuerName": "STATE OF WASHINGTON",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2033-02-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/434996",
-      "tradeUrl": "/trades/10000065224",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065223",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2333803,
-      "issuerName": "DEPARTMENT OF STATE PENNSYLVANIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2033-08-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2333803",
-      "tradeUrl": "/trades/10000065223",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065222",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 434012,
-      "issuerName": "PENNSYLVANIA TURNPIKE COMMISSION",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5.25% Matures: 2030-07-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/434012",
-      "tradeUrl": "/trades/10000065222",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065221",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2333803,
-      "issuerName": "DEPARTMENT OF STATE PENNSYLVANIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "500K–1M",
-      "estimatedValue": 750000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2027-08-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2333803",
-      "tradeUrl": "/trades/10000065221",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065220",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 434051,
-      "issuerName": "PHILADELPHIA AUTHORITY FOR INDUSTRIAL DEVELOPMENT",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2031-12-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/434051",
-      "tradeUrl": "/trades/10000065220",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065219",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 430997,
-      "issuerName": "CORPUS CHRISTI INDEPENDENT SCHOOL DISTRICT",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2029-07-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/430997",
-      "tradeUrl": "/trades/10000065219",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065218",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2149018,
-      "issuerName": "PENNSYLVANIA STATE SYSTEM OF HIGHER EDUCATION",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 4% Matures: 2031-06-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2149018",
-      "tradeUrl": "/trades/10000065218",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065217",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335424,
-      "issuerName": "COUNTY OF NORTHAMPTON PENNSYLVANIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2034-11-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335424",
-      "tradeUrl": "/trades/10000065217",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065216",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 435514,
-      "issuerName": "UNIVERSITY OF PITTSBURGH",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2032-04-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/435514",
-      "tradeUrl": "/trades/10000065216",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065215",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2333803,
-      "issuerName": "DEPARTMENT OF STATE PENNSYLVANIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2034-04-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2333803",
-      "tradeUrl": "/trades/10000065215",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065214",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335393,
-      "issuerName": "SCHOOL DISTRICT OF SPRINGFIELD TOWNSHIP PENNSYLVANIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2030-11-15",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335393",
-      "tradeUrl": "/trades/10000065214",
-      "sourcePage": 17
-    },
-    {
-      "id": "10000065213",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 434012,
-      "issuerName": "PENNSYLVANIA TURNPIKE COMMISSION",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-27T04:15:22Z",
-      "publishedDisplay": "27 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "250K–500K",
-      "estimatedValue": 375000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2027-12-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/434012",
-      "tradeUrl": "/trades/10000065213",
-      "sourcePage": 17
-    },
-    {
       "id": "10000065212",
       "politicianId": "M001243",
       "politicianName": "Dave McCormick",
@@ -62217,45 +61086,6 @@
       "politicianUrl": "/politicians/P000197",
       "issuerUrl": "/issuers/432464",
       "tradeUrl": "/trades/20003800682",
-      "sourcePage": 17
-    },
-    {
-      "id": "20003800669",
-      "politicianId": "P000608",
-      "politicianName": "Scott Peters",
-      "firstName": "Scott",
-      "lastName": "Peters",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1958-06-17",
-      "gender": "male",
-      "issuerId": 435544,
-      "issuerName": "US TREASURY BILLS",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-22T13:00:26Z",
-      "publishedDisplay": "22 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 24,
-      "filedAfterDisplay": "24 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": null,
-      "politicianUrl": "/politicians/P000608",
-      "issuerUrl": "/issuers/435544",
-      "tradeUrl": "/trades/20003800669",
       "sourcePage": 17
     },
     {
@@ -63387,7 +62217,7 @@
       "politicianUrl": "/politicians/B001236",
       "issuerUrl": "/issuers/2335351",
       "tradeUrl": "/trades/10000065167",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "10000065165",
@@ -63426,7 +62256,7 @@
       "politicianUrl": "/politicians/B001236",
       "issuerUrl": "/issuers/2335434",
       "tradeUrl": "/trades/10000065165",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "10000065163",
@@ -63816,7 +62646,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/432951",
       "tradeUrl": "/trades/20003800620",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800619",
@@ -63855,7 +62685,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/432930",
       "tradeUrl": "/trades/20003800619",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800618",
@@ -63894,7 +62724,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429914",
       "tradeUrl": "/trades/20003800618",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800617",
@@ -63933,7 +62763,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429725",
       "tradeUrl": "/trades/20003800617",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800616",
@@ -63972,7 +62802,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429674",
       "tradeUrl": "/trades/20003800616",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800615",
@@ -64011,7 +62841,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429648",
       "tradeUrl": "/trades/20003800615",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800614",
@@ -64050,7 +62880,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429622",
       "tradeUrl": "/trades/20003800614",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800610",
@@ -64089,7 +62919,7 @@
       "politicianUrl": "/politicians/K000376",
       "issuerUrl": "/issuers/2335187",
       "tradeUrl": "/trades/20003800610",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003799857",
@@ -64128,7 +62958,7 @@
       "politicianUrl": "/politicians/M001239",
       "issuerUrl": "/issuers/431610",
       "tradeUrl": "/trades/20003799857",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003799856",
@@ -64167,46 +62997,7 @@
       "politicianUrl": "/politicians/M001239",
       "issuerUrl": "/issuers/431222",
       "tradeUrl": "/trades/20003799856",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003800607",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 2335249,
-      "issuerName": "NORTHERN TRUST INTERMEDI ETF",
-      "issuerTicker": "TAXI:US",
-      "issuerState": "il",
-      "issuerCountry": "us",
-      "sector": null,
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": 51.095,
-      "priceDisplay": "$51.10",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/2335249",
-      "tradeUrl": "/trades/20003800607",
-      "sourcePage": 20
+      "sourcePage": 17
     },
     {
       "id": "20003800596",
@@ -64326,84 +63117,6 @@
       "sourcePage": 20
     },
     {
-      "id": "20003800580",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 433382,
-      "issuerName": "Microsoft Corp",
-      "issuerTicker": "MSFT:US",
-      "issuerState": "wa",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 416.03,
-      "priceDisplay": "$416.03",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/433382",
-      "tradeUrl": "/trades/20003800580",
-      "sourcePage": 20
-    },
-    {
-      "id": "20003800575",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 429648,
-      "issuerName": "Amazon.com Inc",
-      "issuerTicker": "AMZN:US",
-      "issuerState": "wa",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 265.29,
-      "priceDisplay": "$265.29",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/429648",
-      "tradeUrl": "/trades/20003800575",
-      "sourcePage": 20
-    },
-    {
       "id": "20003800569",
       "politicianId": "M001157",
       "politicianName": "Michael McCaul",
@@ -64479,123 +63192,6 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/430019",
       "tradeUrl": "/trades/20003800564",
-      "sourcePage": 20
-    },
-    {
-      "id": "20003800545",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 2335249,
-      "issuerName": "NORTHERN TRUST INTERMEDI ETF",
-      "issuerTicker": "TAXI:US",
-      "issuerState": "il",
-      "issuerCountry": "us",
-      "sector": null,
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 51.095,
-      "priceDisplay": "$51.10",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/2335249",
-      "tradeUrl": "/trades/20003800545",
-      "sourcePage": 20
-    },
-    {
-      "id": "20003800544",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 2335363,
-      "issuerName": "NORTHERN TAX-ADVANTAGED ULTRA-SHORT FIXED INCOME FUND",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/2335363",
-      "tradeUrl": "/trades/20003800544",
-      "sourcePage": 20
-    },
-    {
-      "id": "20003800541",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 434883,
-      "issuerName": "S&P Global Inc",
-      "issuerTicker": "SPGI:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 412.48,
-      "priceDisplay": "$412.48",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/434883",
-      "tradeUrl": "/trades/20003800541",
       "sourcePage": 20
     },
     {
@@ -64677,123 +63273,6 @@
       "sourcePage": 20
     },
     {
-      "id": "20003800526",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 432872,
-      "issuerName": "Keysight Technologies Inc",
-      "issuerTicker": "KEYS:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 355.74,
-      "priceDisplay": "$355.74",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/432872",
-      "tradeUrl": "/trades/20003800526",
-      "sourcePage": 20
-    },
-    {
-      "id": "20003800525",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 2334500,
-      "issuerName": "MAYS ALLOCATE LP",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/2334500",
-      "tradeUrl": "/trades/20003800525",
-      "sourcePage": 20
-    },
-    {
-      "id": "20003800524",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 431509,
-      "issuerName": "Entegris Inc",
-      "issuerTicker": "ENTG:US",
-      "issuerState": "ma",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 142.12,
-      "priceDisplay": "$142.12",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/431509",
-      "tradeUrl": "/trades/20003800524",
-      "sourcePage": 20
-    },
-    {
       "id": "20003800507",
       "politicianId": "M001157",
       "politicianName": "Michael McCaul",
@@ -64830,45 +63309,6 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/431610",
       "tradeUrl": "/trades/20003800507",
-      "sourcePage": 20
-    },
-    {
-      "id": "20003800505",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 429594,
-      "issuerName": "Allegheny Technologies Inc",
-      "issuerTicker": "ATI:US",
-      "issuerState": "tx",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 168.76,
-      "priceDisplay": "$168.76",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/429594",
-      "tradeUrl": "/trades/20003800505",
       "sourcePage": 20
     },
     {
@@ -65106,45 +63546,6 @@
       "sourcePage": 20
     },
     {
-      "id": "20003800491",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 429731,
-      "issuerName": "Amphenol Corp",
-      "issuerTicker": "APH:US",
-      "issuerState": "ct",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 139.56,
-      "priceDisplay": "$139.56",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/429731",
-      "tradeUrl": "/trades/20003800491",
-      "sourcePage": 20
-    },
-    {
       "id": "20003800487",
       "politicianId": "M001157",
       "politicianName": "Michael McCaul",
@@ -65262,45 +63663,6 @@
       "sourcePage": 20
     },
     {
-      "id": "20003800480",
-      "politicianId": "M001157",
-      "politicianName": "Michael McCaul",
-      "firstName": "Michael",
-      "lastName": "McCaul",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tx",
-      "dateOfBirth": "1962-01-14",
-      "gender": "male",
-      "issuerId": 2335432,
-      "issuerName": "TOWN OF NEW CANAAN CONNECTICUT",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": null,
-      "politicianUrl": "/politicians/M001157",
-      "issuerUrl": "/issuers/2335432",
-      "tradeUrl": "/trades/20003800480",
-      "sourcePage": 20
-    },
-    {
       "id": "20003800479",
       "politicianId": "M001157",
       "politicianName": "Michael McCaul",
@@ -65376,7 +63738,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/2334352",
       "tradeUrl": "/trades/20003800478",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800477",
@@ -65415,7 +63777,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/435725",
       "tradeUrl": "/trades/20003800477",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800445",
@@ -65454,7 +63816,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433381",
       "tradeUrl": "/trades/20003800445",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800444",
@@ -65493,7 +63855,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432293",
       "tradeUrl": "/trades/20003800444",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800443",
@@ -65532,7 +63894,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429442",
       "tradeUrl": "/trades/20003800443",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800442",
@@ -65571,7 +63933,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430570",
       "tradeUrl": "/trades/20003800442",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800441",
@@ -65610,7 +63972,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430305",
       "tradeUrl": "/trades/20003800441",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800440",
@@ -65649,7 +64011,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430368",
       "tradeUrl": "/trades/20003800440",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800439",
@@ -65688,7 +64050,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434591",
       "tradeUrl": "/trades/20003800439",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800438",
@@ -65727,7 +64089,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433279",
       "tradeUrl": "/trades/20003800438",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800437",
@@ -65766,7 +64128,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433254",
       "tradeUrl": "/trades/20003800437",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800436",
@@ -65805,7 +64167,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432490",
       "tradeUrl": "/trades/20003800436",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800435",
@@ -65844,7 +64206,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430172",
       "tradeUrl": "/trades/20003800435",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800434",
@@ -65883,7 +64245,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434883",
       "tradeUrl": "/trades/20003800434",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800433",
@@ -65922,7 +64284,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432491",
       "tradeUrl": "/trades/20003800433",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800432",
@@ -65961,7 +64323,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003800432",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800430",
@@ -66000,7 +64362,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434371",
       "tradeUrl": "/trades/20003800430",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800429",
@@ -66039,7 +64401,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431645",
       "tradeUrl": "/trades/20003800429",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800428",
@@ -66078,7 +64440,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434517",
       "tradeUrl": "/trades/20003800428",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800427",
@@ -66117,7 +64479,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429469",
       "tradeUrl": "/trades/20003800427",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800426",
@@ -66156,7 +64518,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433227",
       "tradeUrl": "/trades/20003800426",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800425",
@@ -66195,7 +64557,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429848",
       "tradeUrl": "/trades/20003800425",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800424",
@@ -66234,7 +64596,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430911",
       "tradeUrl": "/trades/20003800424",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800423",
@@ -66273,7 +64635,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435473",
       "tradeUrl": "/trades/20003800423",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800422",
@@ -66312,7 +64674,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434446",
       "tradeUrl": "/trades/20003800422",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800420",
@@ -66351,7 +64713,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435040",
       "tradeUrl": "/trades/20003800420",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800419",
@@ -66390,7 +64752,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432471",
       "tradeUrl": "/trades/20003800419",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800418",
@@ -66429,7 +64791,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430182",
       "tradeUrl": "/trades/20003800418",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800417",
@@ -66468,7 +64830,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430999",
       "tradeUrl": "/trades/20003800417",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800416",
@@ -66507,7 +64869,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431433",
       "tradeUrl": "/trades/20003800416",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800415",
@@ -66546,7 +64908,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433121",
       "tradeUrl": "/trades/20003800415",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800414",
@@ -66585,7 +64947,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431610",
       "tradeUrl": "/trades/20003800414",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800413",
@@ -66624,7 +64986,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433981",
       "tradeUrl": "/trades/20003800413",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800412",
@@ -66663,7 +65025,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429929",
       "tradeUrl": "/trades/20003800412",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800411",
@@ -66702,7 +65064,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433686",
       "tradeUrl": "/trades/20003800411",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800410",
@@ -66741,7 +65103,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433586",
       "tradeUrl": "/trades/20003800410",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003800409",
@@ -69120,7 +67482,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434118",
       "tradeUrl": "/trades/20003800344",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800343",
@@ -69159,7 +67521,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429932",
       "tradeUrl": "/trades/20003800343",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800342",
@@ -69198,7 +67560,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435281",
       "tradeUrl": "/trades/20003800342",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800341",
@@ -69237,7 +67599,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433878",
       "tradeUrl": "/trades/20003800341",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800340",
@@ -69276,7 +67638,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429505",
       "tradeUrl": "/trades/20003800340",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800339",
@@ -69315,7 +67677,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432464",
       "tradeUrl": "/trades/20003800339",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800338",
@@ -69354,7 +67716,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2331057",
       "tradeUrl": "/trades/20003800338",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800337",
@@ -69393,7 +67755,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430865",
       "tradeUrl": "/trades/20003800337",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800336",
@@ -69432,7 +67794,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432367",
       "tradeUrl": "/trades/20003800336",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800335",
@@ -69471,7 +67833,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433658",
       "tradeUrl": "/trades/20003800335",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800334",
@@ -69510,7 +67872,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435099",
       "tradeUrl": "/trades/20003800334",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800333",
@@ -69549,7 +67911,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435532",
       "tradeUrl": "/trades/20003800333",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800332",
@@ -69588,7 +67950,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432338",
       "tradeUrl": "/trades/20003800332",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800331",
@@ -69627,7 +67989,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431181",
       "tradeUrl": "/trades/20003800331",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800330",
@@ -69666,7 +68028,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433819",
       "tradeUrl": "/trades/20003800330",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800329",
@@ -69705,7 +68067,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433229",
       "tradeUrl": "/trades/20003800329",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800328",
@@ -69744,7 +68106,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431303",
       "tradeUrl": "/trades/20003800328",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800327",
@@ -69783,7 +68145,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429988",
       "tradeUrl": "/trades/20003800327",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800326",
@@ -69822,7 +68184,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433952",
       "tradeUrl": "/trades/20003800326",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800325",
@@ -69861,7 +68223,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431135",
       "tradeUrl": "/trades/20003800325",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800324",
@@ -69900,7 +68262,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434459",
       "tradeUrl": "/trades/20003800324",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800323",
@@ -69939,7 +68301,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435913",
       "tradeUrl": "/trades/20003800323",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800322",
@@ -69978,7 +68340,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433469",
       "tradeUrl": "/trades/20003800322",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800321",
@@ -70017,7 +68379,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431405",
       "tradeUrl": "/trades/20003800321",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800320",
@@ -70056,7 +68418,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434194",
       "tradeUrl": "/trades/20003800320",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800319",
@@ -70095,7 +68457,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334991",
       "tradeUrl": "/trades/20003800319",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800318",
@@ -70134,7 +68496,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435443",
       "tradeUrl": "/trades/20003800318",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800317",
@@ -70173,7 +68535,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432480",
       "tradeUrl": "/trades/20003800317",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800316",
@@ -70212,7 +68574,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433865",
       "tradeUrl": "/trades/20003800316",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800315",
@@ -70251,7 +68613,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435673",
       "tradeUrl": "/trades/20003800315",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800314",
@@ -70290,7 +68652,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435958",
       "tradeUrl": "/trades/20003800314",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800313",
@@ -70329,7 +68691,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431224",
       "tradeUrl": "/trades/20003800313",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800312",
@@ -70368,7 +68730,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431998",
       "tradeUrl": "/trades/20003800312",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800311",
@@ -70407,7 +68769,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430240",
       "tradeUrl": "/trades/20003800311",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800310",
@@ -70446,7 +68808,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431819",
       "tradeUrl": "/trades/20003800310",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800309",
@@ -70485,7 +68847,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435472",
       "tradeUrl": "/trades/20003800309",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003800308",
@@ -72864,7 +71226,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435682",
       "tradeUrl": "/trades/20003800244",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800243",
@@ -72903,7 +71265,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432468",
       "tradeUrl": "/trades/20003800243",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800242",
@@ -72942,7 +71304,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431323",
       "tradeUrl": "/trades/20003800242",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800241",
@@ -72981,7 +71343,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434678",
       "tradeUrl": "/trades/20003800241",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800240",
@@ -73020,7 +71382,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434248",
       "tradeUrl": "/trades/20003800240",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800239",
@@ -73059,7 +71421,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433493",
       "tradeUrl": "/trades/20003800239",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800238",
@@ -73098,7 +71460,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435428",
       "tradeUrl": "/trades/20003800238",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800236",
@@ -73137,7 +71499,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430041",
       "tradeUrl": "/trades/20003800236",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800235",
@@ -73176,7 +71538,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334768",
       "tradeUrl": "/trades/20003800235",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800234",
@@ -73215,7 +71577,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432432",
       "tradeUrl": "/trades/20003800234",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800233",
@@ -73254,7 +71616,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434439",
       "tradeUrl": "/trades/20003800233",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800232",
@@ -73293,7 +71655,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429717",
       "tradeUrl": "/trades/20003800232",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800231",
@@ -73332,7 +71694,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435244",
       "tradeUrl": "/trades/20003800231",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800230",
@@ -73371,7 +71733,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435211",
       "tradeUrl": "/trades/20003800230",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800197",
@@ -73410,46 +71772,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429957",
       "tradeUrl": "/trades/20003800197",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003800177",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429957,
-      "issuerName": "Axalta Coating Systems Ltd",
-      "issuerTicker": "AXTA:US",
-      "issuerState": "pa",
-      "issuerCountry": "us",
-      "sector": "materials",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 14,
-      "filedAfterDisplay": "14 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 30.01,
-      "priceDisplay": "$30.01",
-      "comment": "Ritu Ahuja Declaration of Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/429957",
-      "tradeUrl": "/trades/20003800177",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800168",
@@ -73488,46 +71811,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433381",
       "tradeUrl": "/trades/20003800168",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003800165",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433381,
-      "issuerName": "Micron Technology Inc",
-      "issuerTicker": "MU:US",
-      "issuerState": "id",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 14,
-      "filedAfterDisplay": "14 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 895.88,
-      "priceDisplay": "$895.88",
-      "comment": "Ritu Ahuja Declaration of Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433381",
-      "tradeUrl": "/trades/20003800165",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003800132",
@@ -73566,124 +71850,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434004",
       "tradeUrl": "/trades/20003800132",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003800072",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429570,
-      "issuerName": "Albertsons Cos Inc",
-      "issuerTicker": "ACI:US",
-      "issuerState": "id",
-      "issuerCountry": "us",
-      "sector": "consumer-staples",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 14,
-      "filedAfterDisplay": "14 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 15.73,
-      "priceDisplay": "$15.73",
-      "comment": "Ritu Ahuja Declaration of Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/429570",
-      "tradeUrl": "/trades/20003800072",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003800024",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433568,
-      "issuerName": "NCR Corp",
-      "issuerTicker": "NCR:US",
-      "issuerState": "ga",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 14,
-      "filedAfterDisplay": "14 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 6.61,
-      "priceDisplay": "$6.61",
-      "comment": "Ritu Ahuja Declaration of Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433568",
-      "tradeUrl": "/trades/20003800024",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003799878",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433381,
-      "issuerName": "Micron Technology Inc",
-      "issuerTicker": "MU:US",
-      "issuerState": "id",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 14,
-      "filedAfterDisplay": "14 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 895.88,
-      "priceDisplay": "$895.88",
-      "comment": "Ahuja Grandchildren's Education Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433381",
-      "tradeUrl": "/trades/20003799878",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003799877",
@@ -73722,46 +71889,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429957",
       "tradeUrl": "/trades/20003799877",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003799874",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429957,
-      "issuerName": "Axalta Coating Systems Ltd",
-      "issuerTicker": "AXTA:US",
-      "issuerState": "pa",
-      "issuerCountry": "us",
-      "sector": "materials",
-      "publishedAt": "2026-06-11T13:02:38Z",
-      "publishedDisplay": "11 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 14,
-      "filedAfterDisplay": "14 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 30.01,
-      "priceDisplay": "$30.01",
-      "comment": "Ahuja Grandchildren's Education Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/429957",
-      "tradeUrl": "/trades/20003799874",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003799855",
@@ -74427,84 +72555,6 @@
       "sourcePage": 20
     },
     {
-      "id": "10000065112",
-      "politicianId": "B001277",
-      "politicianName": "Richard Blumenthal",
-      "firstName": "Richard",
-      "lastName": "Blumenthal",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "senate",
-      "state": "ct",
-      "dateOfBirth": "1946-02-13",
-      "gender": "male",
-      "issuerId": 2334612,
-      "issuerName": "RADCLIFF BR I LLC",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-09T22:15:31Z",
-      "publishedDisplay": "9 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 13,
-      "filedAfterDisplay": "13 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": null,
-      "politicianUrl": "/politicians/B001277",
-      "issuerUrl": "/issuers/2334612",
-      "tradeUrl": "/trades/10000065112",
-      "sourcePage": 20
-    },
-    {
-      "id": "10000065111",
-      "politicianId": "B001277",
-      "politicianName": "Richard Blumenthal",
-      "firstName": "Richard",
-      "lastName": "Blumenthal",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "senate",
-      "state": "ct",
-      "dateOfBirth": "1946-02-13",
-      "gender": "male",
-      "issuerId": 2335428,
-      "issuerName": "DECIBEL PARTNERS III LP",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-06-09T22:15:31Z",
-      "publishedDisplay": "9 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 13,
-      "filedAfterDisplay": "13 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": null,
-      "politicianUrl": "/politicians/B001277",
-      "issuerUrl": "/issuers/2335428",
-      "tradeUrl": "/trades/10000065111",
-      "sourcePage": 20
-    },
-    {
       "id": "10000065103",
       "politicianId": "B001277",
       "politicianName": "Richard Blumenthal",
@@ -74970,7 +73020,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/435958",
       "tradeUrl": "/trades/20003799835",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799832",
@@ -75009,7 +73059,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/430056",
       "tradeUrl": "/trades/20003799832",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799815",
@@ -75048,7 +73098,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/430978",
       "tradeUrl": "/trades/20003799815",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799812",
@@ -75087,7 +73137,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/435216",
       "tradeUrl": "/trades/20003799812",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799811",
@@ -75126,7 +73176,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/435211",
       "tradeUrl": "/trades/20003799811",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799810",
@@ -75165,7 +73215,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/435166",
       "tradeUrl": "/trades/20003799810",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799805",
@@ -75204,7 +73254,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/434767",
       "tradeUrl": "/trades/20003799805",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799796",
@@ -75243,7 +73293,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/2334684",
       "tradeUrl": "/trades/20003799796",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799790",
@@ -75282,7 +73332,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433633",
       "tradeUrl": "/trades/20003799790",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799779",
@@ -75321,7 +73371,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433034",
       "tradeUrl": "/trades/20003799779",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799777",
@@ -75360,7 +73410,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/2332114",
       "tradeUrl": "/trades/20003799777",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799776",
@@ -75399,7 +73449,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/432212",
       "tradeUrl": "/trades/20003799776",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799766",
@@ -75438,7 +73488,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/2335330",
       "tradeUrl": "/trades/20003799766",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799761",
@@ -75477,7 +73527,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/431330",
       "tradeUrl": "/trades/20003799761",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799751",
@@ -75516,7 +73566,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/430553",
       "tradeUrl": "/trades/20003799751",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799745",
@@ -75555,7 +73605,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/430182",
       "tradeUrl": "/trades/20003799745",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799740",
@@ -75594,7 +73644,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/429934",
       "tradeUrl": "/trades/20003799740",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799739",
@@ -75633,7 +73683,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/2333981",
       "tradeUrl": "/trades/20003799739",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799727",
@@ -75672,7 +73722,7 @@
       "politicianUrl": "/politicians/M001236",
       "issuerUrl": "/issuers/429914",
       "tradeUrl": "/trades/20003799727",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799725",
@@ -75711,46 +73761,7 @@
       "politicianUrl": "/politicians/L000566",
       "issuerUrl": "/issuers/431625",
       "tradeUrl": "/trades/20003799725",
-      "sourcePage": 21
-    },
-    {
-      "id": "20003799724",
-      "politicianId": "D000624",
-      "politicianName": "Debbie Dingell",
-      "firstName": "Deborah",
-      "lastName": "Dingell",
-      "nickname": "Debbie",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "mi",
-      "dateOfBirth": "1953-11-23",
-      "gender": "female",
-      "issuerId": 431635,
-      "issuerName": "Federal National Mortgage Association",
-      "issuerTicker": "FNMA:US",
-      "issuerState": "dc",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-06-08T13:05:02Z",
-      "publishedDisplay": "8 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 10,
-      "filedAfterDisplay": "10 days",
-      "owner": "not-disclosed",
-      "ownerDisplay": "Undisclosed",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Subholding Of: Morgan Stanley Smith Barney LLC Brokerage Account Description: Corporate Bond; Maturity Date - 05/01/2056; Coupon Rate - 5.50% Fixed.",
-      "politicianUrl": "/politicians/D000624",
-      "issuerUrl": "/issuers/431635",
-      "tradeUrl": "/trades/20003799724",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799723",
@@ -75789,7 +73800,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2334942",
       "tradeUrl": "/trades/20003799723",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799722",
@@ -75828,7 +73839,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2334942",
       "tradeUrl": "/trades/20003799722",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799716",
@@ -75867,46 +73878,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435338",
       "tradeUrl": "/trades/20003799716",
-      "sourcePage": 21
-    },
-    {
-      "id": "20003799715",
-      "politicianId": "M001232",
-      "politicianName": "April McClain Delaney",
-      "firstName": "April",
-      "lastName": "McClain Delaney",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "house",
-      "state": "md",
-      "dateOfBirth": "1964-05-28",
-      "gender": "female",
-      "issuerId": 435338,
-      "issuerName": "Tractor Supply Co",
-      "issuerTicker": "TSCO:US",
-      "issuerState": "tn",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-06-08T13:05:02Z",
-      "publishedDisplay": "8 Jun 2026",
-      "tradedAt": "2026-05-26",
-      "tradedDisplay": "26 May 2026",
-      "reportingGap": 10,
-      "filedAfterDisplay": "10 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 29.8,
-      "priceDisplay": "$29.80",
-      "comment": null,
-      "politicianUrl": "/politicians/M001232",
-      "issuerUrl": "/issuers/435338",
-      "tradeUrl": "/trades/20003799715",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799713",
@@ -75945,7 +73917,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435338",
       "tradeUrl": "/trades/20003799713",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799698",
@@ -75984,7 +73956,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/433232",
       "tradeUrl": "/trades/20003799698",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799696",
@@ -76023,7 +73995,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/432327",
       "tradeUrl": "/trades/20003799696",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799694",
@@ -76062,7 +74034,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/432327",
       "tradeUrl": "/trades/20003799694",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799685",
@@ -76101,7 +74073,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/431456",
       "tradeUrl": "/trades/20003799685",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799679",
@@ -76140,7 +74112,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003799679",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003799678",
@@ -76179,7 +74151,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003799678",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "10000065076",
@@ -76218,7 +74190,7 @@
       "politicianUrl": "/politicians/B001299",
       "issuerUrl": "/issuers/433999",
       "tradeUrl": "/trades/10000065076",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003798396",
@@ -76257,7 +74229,7 @@
       "politicianUrl": "/politicians/W000798",
       "issuerUrl": "/issuers/2335426",
       "tradeUrl": "/trades/20003798396",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003798367",
@@ -76296,7 +74268,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/429442",
       "tradeUrl": "/trades/20003798367",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003798356",
@@ -76335,7 +74307,7 @@
       "politicianUrl": "/politicians/M001245",
       "issuerUrl": "/issuers/434094",
       "tradeUrl": "/trades/20003798356",
-      "sourcePage": 21
+      "sourcePage": 20
     },
     {
       "id": "20003798355",
@@ -76374,7 +74346,7 @@
       "politicianUrl": "/politicians/M001245",
       "issuerUrl": "/issuers/434094",
       "tradeUrl": "/trades/20003798355",
-      "sourcePage": 21
+      "sourcePage": 20
     }
   ]
 }
