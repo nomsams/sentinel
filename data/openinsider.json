@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-09-07T06:24:50.471Z",
-    "lastModified": "Sat, 05 Sep 2026 02:01:03 GMT",
+    "fetchedAt": "2026-09-07T12:53:44.623Z",
+    "lastModified": "Mon, 07 Sep 2026 12:53:22 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -147,28 +147,6 @@
           "tradeValue": 2638163
         },
         {
-          "flags": "2",
-          "filingDate": "2026-09-02 16:26:25",
-          "tradeDate": "2026-06-09",
-          "ticker": "TTI",
-          "company": "Tetra Technologies Inc",
-          "detail": "Crude Petroleum & Natural Gas",
-          "role": "2",
-          "tradeType": "P - Purchase",
-          "price": "$8.81",
-          "quantity": "+32,000",
-          "owned": "268,198",
-          "ownershipChange": "+14%",
-          "value": "+$281,898",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 8.81,
-          "quantityValue": 32000,
-          "tradeValue": 281898
-        },
-        {
           "flags": "4",
           "filingDate": "2026-09-02 14:28:53",
           "tradeDate": "2026-09-01",
@@ -233,6 +211,28 @@
           "priceValue": 4.88,
           "quantityValue": 57370,
           "tradeValue": 279965
+        },
+        {
+          "flags": "2",
+          "filingDate": "2026-09-01 16:05:07",
+          "tradeDate": "2026-08-27",
+          "ticker": "AIIR",
+          "company": "Air Global Plc",
+          "detail": "Tobacco Products",
+          "role": "2",
+          "tradeType": "P - Purchase",
+          "price": "$7.62",
+          "quantity": "+10,450",
+          "owned": "1,342,396",
+          "ownershipChange": "+1%",
+          "value": "+$79,607",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 7.62,
+          "quantityValue": 10450,
+          "tradeValue": 79607
         }
       ]
     },
