@@ -2,7 +2,7 @@
   "source": {
     "provider": "Capitol Trades",
     "url": "https://www.capitoltrades.com/trades?txType=buy&txType=sell&pageSize=96&page=1&txDate=90d",
-    "fetchedAt": "2026-09-15T11:49:55.750Z",
+    "fetchedAt": "2026-09-15T17:03:45.430Z",
     "window": "90 days",
     "transactionTypes": [
       "buy",
@@ -10,8 +10,8 @@
     ],
     "pageSize": 96,
     "pagesFetched": 19,
-    "reportedCount": 1739,
-    "rowCount": 1739,
+    "reportedCount": 1747,
+    "rowCount": 1747,
     "updateIntervalHours": 6
   },
   "columns": [
@@ -53,6 +53,318 @@
     }
   ],
   "trades": [
+    {
+      "id": "20003802773",
+      "politicianId": "G000583",
+      "politicianName": "Josh Gottheimer",
+      "firstName": "Joshua",
+      "lastName": "Gottheimer",
+      "nickname": "Josh",
+      "party": "democrat",
+      "chamber": "house",
+      "state": "nj",
+      "dateOfBirth": "1975-03-08",
+      "gender": "male",
+      "issuerId": 434376,
+      "issuerName": "Restaurant Brands International Inc",
+      "issuerTicker": "QSR:US",
+      "issuerState": "fl",
+      "issuerCountry": "us",
+      "sector": "consumer-discretionary",
+      "publishedAt": "2026-09-15T13:05:22Z",
+      "publishedDisplay": "13:05 Today",
+      "tradedAt": "2026-08-06",
+      "tradedDisplay": "6 Aug 2026",
+      "reportingGap": 39,
+      "filedAfterDisplay": "39 days",
+      "owner": "joint",
+      "ownerDisplay": "Joint",
+      "type": "buy",
+      "typeExtended": null,
+      "typeDisplay": "buy*",
+      "sizeDisplay": "1K–15K",
+      "estimatedValue": 8000,
+      "price": 72.92,
+      "priceDisplay": "$72.92",
+      "comment": "Subholding Of: Morgan Stanley - Select UMA Account # 1",
+      "politicianUrl": "/politicians/G000583",
+      "issuerUrl": "/issuers/434376",
+      "tradeUrl": "/trades/20003802773",
+      "sourcePage": 1
+    },
+    {
+      "id": "20003802772",
+      "politicianId": "G000583",
+      "politicianName": "Josh Gottheimer",
+      "firstName": "Joshua",
+      "lastName": "Gottheimer",
+      "nickname": "Josh",
+      "party": "democrat",
+      "chamber": "house",
+      "state": "nj",
+      "dateOfBirth": "1975-03-08",
+      "gender": "male",
+      "issuerId": 434371,
+      "issuerName": "Republic Services Inc",
+      "issuerTicker": "RSG:US",
+      "issuerState": "az",
+      "issuerCountry": "us",
+      "sector": "industrials",
+      "publishedAt": "2026-09-15T13:05:22Z",
+      "publishedDisplay": "13:05 Today",
+      "tradedAt": "2026-08-06",
+      "tradedDisplay": "6 Aug 2026",
+      "reportingGap": 39,
+      "filedAfterDisplay": "39 days",
+      "owner": "joint",
+      "ownerDisplay": "Joint",
+      "type": "buy",
+      "typeExtended": null,
+      "typeDisplay": "buy*",
+      "sizeDisplay": "1K–15K",
+      "estimatedValue": 8000,
+      "price": 209.59,
+      "priceDisplay": "$209.59",
+      "comment": "Subholding Of: Morgan Stanley - Select UMA Account # 1",
+      "politicianUrl": "/politicians/G000583",
+      "issuerUrl": "/issuers/434371",
+      "tradeUrl": "/trades/20003802772",
+      "sourcePage": 1
+    },
+    {
+      "id": "20003802771",
+      "politicianId": "G000583",
+      "politicianName": "Josh Gottheimer",
+      "firstName": "Joshua",
+      "lastName": "Gottheimer",
+      "nickname": "Josh",
+      "party": "democrat",
+      "chamber": "house",
+      "state": "nj",
+      "dateOfBirth": "1975-03-08",
+      "gender": "male",
+      "issuerId": 433382,
+      "issuerName": "Microsoft Corp",
+      "issuerTicker": "MSFT:US",
+      "issuerState": "wa",
+      "issuerCountry": "us",
+      "sector": "information-technology",
+      "publishedAt": "2026-09-15T13:05:22Z",
+      "publishedDisplay": "13:05 Today",
+      "tradedAt": "2026-08-14",
+      "tradedDisplay": "14 Aug 2026",
+      "reportingGap": 31,
+      "filedAfterDisplay": "31 days",
+      "owner": "joint",
+      "ownerDisplay": "Joint",
+      "type": "sell",
+      "typeExtended": null,
+      "typeDisplay": "sell*",
+      "sizeDisplay": "500K–1M",
+      "estimatedValue": 750000,
+      "price": null,
+      "priceDisplay": "N/A",
+      "comment": "Subholding Of: Morgan Stanley - Portfolio Management Active Assets Account Description: Call options; Strike price $335; Expires 12/18/2026",
+      "politicianUrl": "/politicians/G000583",
+      "issuerUrl": "/issuers/433382",
+      "tradeUrl": "/trades/20003802771",
+      "sourcePage": 1
+    },
+    {
+      "id": "20003802770",
+      "politicianId": "G000583",
+      "politicianName": "Josh Gottheimer",
+      "firstName": "Joshua",
+      "lastName": "Gottheimer",
+      "nickname": "Josh",
+      "party": "democrat",
+      "chamber": "house",
+      "state": "nj",
+      "dateOfBirth": "1975-03-08",
+      "gender": "male",
+      "issuerId": 433382,
+      "issuerName": "Microsoft Corp",
+      "issuerTicker": "MSFT:US",
+      "issuerState": "wa",
+      "issuerCountry": "us",
+      "sector": "information-technology",
+      "publishedAt": "2026-09-15T13:05:22Z",
+      "publishedDisplay": "13:05 Today",
+      "tradedAt": "2026-08-14",
+      "tradedDisplay": "14 Aug 2026",
+      "reportingGap": 31,
+      "filedAfterDisplay": "31 days",
+      "owner": "joint",
+      "ownerDisplay": "Joint",
+      "type": "sell",
+      "typeExtended": null,
+      "typeDisplay": "sell*",
+      "sizeDisplay": "250K–500K",
+      "estimatedValue": 375000,
+      "price": null,
+      "priceDisplay": "N/A",
+      "comment": "Subholding Of: Morgan Stanley - Portfolio Management Active Assets Account Description: Call options; Strike price $340; Expires 12/18/2026",
+      "politicianUrl": "/politicians/G000583",
+      "issuerUrl": "/issuers/433382",
+      "tradeUrl": "/trades/20003802770",
+      "sourcePage": 1
+    },
+    {
+      "id": "20003802769",
+      "politicianId": "G000583",
+      "politicianName": "Josh Gottheimer",
+      "firstName": "Joshua",
+      "lastName": "Gottheimer",
+      "nickname": "Josh",
+      "party": "democrat",
+      "chamber": "house",
+      "state": "nj",
+      "dateOfBirth": "1975-03-08",
+      "gender": "male",
+      "issuerId": 433382,
+      "issuerName": "Microsoft Corp",
+      "issuerTicker": "MSFT:US",
+      "issuerState": "wa",
+      "issuerCountry": "us",
+      "sector": "information-technology",
+      "publishedAt": "2026-09-15T13:05:22Z",
+      "publishedDisplay": "13:05 Today",
+      "tradedAt": "2026-08-14",
+      "tradedDisplay": "14 Aug 2026",
+      "reportingGap": 31,
+      "filedAfterDisplay": "31 days",
+      "owner": "joint",
+      "ownerDisplay": "Joint",
+      "type": "buy",
+      "typeExtended": null,
+      "typeDisplay": "buy*",
+      "sizeDisplay": "500K–1M",
+      "estimatedValue": 750000,
+      "price": null,
+      "priceDisplay": "N/A",
+      "comment": "Subholding Of: Morgan Stanley - Portfolio Management Active Assets Account Description: Call options; Strike price $330; Expires 10/16/2026",
+      "politicianUrl": "/politicians/G000583",
+      "issuerUrl": "/issuers/433382",
+      "tradeUrl": "/trades/20003802769",
+      "sourcePage": 1
+    },
+    {
+      "id": "20003802768",
+      "politicianId": "G000583",
+      "politicianName": "Josh Gottheimer",
+      "firstName": "Joshua",
+      "lastName": "Gottheimer",
+      "nickname": "Josh",
+      "party": "democrat",
+      "chamber": "house",
+      "state": "nj",
+      "dateOfBirth": "1975-03-08",
+      "gender": "male",
+      "issuerId": 433382,
+      "issuerName": "Microsoft Corp",
+      "issuerTicker": "MSFT:US",
+      "issuerState": "wa",
+      "issuerCountry": "us",
+      "sector": "information-technology",
+      "publishedAt": "2026-09-15T13:05:22Z",
+      "publishedDisplay": "13:05 Today",
+      "tradedAt": "2026-08-14",
+      "tradedDisplay": "14 Aug 2026",
+      "reportingGap": 31,
+      "filedAfterDisplay": "31 days",
+      "owner": "joint",
+      "ownerDisplay": "Joint",
+      "type": "buy",
+      "typeExtended": null,
+      "typeDisplay": "buy*",
+      "sizeDisplay": "250K–500K",
+      "estimatedValue": 375000,
+      "price": null,
+      "priceDisplay": "N/A",
+      "comment": "Subholding Of: Morgan Stanley - Portfolio Management Active Assets Account Description: Call options; Strike price $340; Expires 10/16/2026",
+      "politicianUrl": "/politicians/G000583",
+      "issuerUrl": "/issuers/433382",
+      "tradeUrl": "/trades/20003802768",
+      "sourcePage": 1
+    },
+    {
+      "id": "20003802767",
+      "politicianId": "G000583",
+      "politicianName": "Josh Gottheimer",
+      "firstName": "Joshua",
+      "lastName": "Gottheimer",
+      "nickname": "Josh",
+      "party": "democrat",
+      "chamber": "house",
+      "state": "nj",
+      "dateOfBirth": "1975-03-08",
+      "gender": "male",
+      "issuerId": 429793,
+      "issuerName": "Applied Materials Inc",
+      "issuerTicker": "AMAT:US",
+      "issuerState": "ca",
+      "issuerCountry": "us",
+      "sector": "information-technology",
+      "publishedAt": "2026-09-15T13:05:22Z",
+      "publishedDisplay": "13:05 Today",
+      "tradedAt": "2026-08-06",
+      "tradedDisplay": "6 Aug 2026",
+      "reportingGap": 39,
+      "filedAfterDisplay": "39 days",
+      "owner": "joint",
+      "ownerDisplay": "Joint",
+      "type": "buy",
+      "typeExtended": null,
+      "typeDisplay": "buy*",
+      "sizeDisplay": "1K–15K",
+      "estimatedValue": 8000,
+      "price": 527.48,
+      "priceDisplay": "$527.48",
+      "comment": "Subholding Of: Morgan Stanley - Select UMA Account # 1",
+      "politicianUrl": "/politicians/G000583",
+      "issuerUrl": "/issuers/429793",
+      "tradeUrl": "/trades/20003802767",
+      "sourcePage": 1
+    },
+    {
+      "id": "20003802766",
+      "politicianId": "D000617",
+      "politicianName": "Suzan DelBene",
+      "firstName": "Suzan",
+      "lastName": "DelBene",
+      "nickname": null,
+      "party": "democrat",
+      "chamber": "house",
+      "state": "wa",
+      "dateOfBirth": "1962-02-17",
+      "gender": "female",
+      "issuerId": 433633,
+      "issuerName": "NEW YORK CITY TRANSITIONAL FINANCE AUTHORITY",
+      "issuerTicker": "N/A",
+      "issuerState": null,
+      "issuerCountry": null,
+      "sector": null,
+      "publishedAt": "2026-09-15T13:05:21Z",
+      "publishedDisplay": "13:05 Today",
+      "tradedAt": "2026-08-20",
+      "tradedDisplay": "20 Aug 2026",
+      "reportingGap": 25,
+      "filedAfterDisplay": "25 days",
+      "owner": "joint",
+      "ownerDisplay": "Joint",
+      "type": "buy",
+      "typeExtended": null,
+      "typeDisplay": "buy",
+      "sizeDisplay": "15K–50K",
+      "estimatedValue": 32500,
+      "price": null,
+      "priceDisplay": "N/A",
+      "comment": null,
+      "politicianUrl": "/politicians/D000617",
+      "issuerUrl": "/issuers/433633",
+      "tradeUrl": "/trades/20003802766",
+      "sourcePage": 1
+    },
     {
       "id": "20003802763",
       "politicianId": "K000398",
@@ -6174,7 +6486,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430810",
       "tradeUrl": "/trades/20003802617",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003802616",
@@ -6213,7 +6525,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003802616",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003802615",
@@ -6252,7 +6564,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003802615",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003802614",
@@ -6291,7 +6603,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003802614",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003802613",
@@ -6330,7 +6642,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003802613",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003802612",
@@ -6369,7 +6681,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003802612",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003802611",
@@ -6408,7 +6720,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430299",
       "tradeUrl": "/trades/20003802611",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003802610",
@@ -6447,7 +6759,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430299",
       "tradeUrl": "/trades/20003802610",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003802609",
@@ -7305,7 +7617,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/433382",
       "tradeUrl": "/trades/20003802352",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003802351",
@@ -7344,7 +7656,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/431687",
       "tradeUrl": "/trades/20003802351",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003802350",
@@ -7383,7 +7695,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/430239",
       "tradeUrl": "/trades/20003802350",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003802349",
@@ -7422,7 +7734,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/430239",
       "tradeUrl": "/trades/20003802349",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003802348",
@@ -7461,7 +7773,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429725",
       "tradeUrl": "/trades/20003802348",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003802347",
@@ -7500,7 +7812,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429725",
       "tradeUrl": "/trades/20003802347",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003802346",
@@ -7539,7 +7851,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429674",
       "tradeUrl": "/trades/20003802346",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003802345",
@@ -7578,7 +7890,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429674",
       "tradeUrl": "/trades/20003802345",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003802605",
@@ -9684,7 +9996,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434275",
       "tradeUrl": "/trades/20003802552",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003802551",
@@ -9723,7 +10035,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433446",
       "tradeUrl": "/trades/20003802551",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003802550",
@@ -9762,7 +10074,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430570",
       "tradeUrl": "/trades/20003802550",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003802549",
@@ -9801,7 +10113,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334768",
       "tradeUrl": "/trades/20003802549",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003802548",
@@ -9840,7 +10152,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432491",
       "tradeUrl": "/trades/20003802548",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003802547",
@@ -9879,7 +10191,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435281",
       "tradeUrl": "/trades/20003802547",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003802546",
@@ -9918,7 +10230,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435211",
       "tradeUrl": "/trades/20003802546",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003802545",
@@ -9957,7 +10269,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434019",
       "tradeUrl": "/trades/20003802545",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003802544",
@@ -13428,7 +13740,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430491",
       "tradeUrl": "/trades/20003802456",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003802455",
@@ -13467,7 +13779,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433130",
       "tradeUrl": "/trades/20003802455",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003802454",
@@ -13506,7 +13818,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432993",
       "tradeUrl": "/trades/20003802454",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003802453",
@@ -13545,7 +13857,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430279",
       "tradeUrl": "/trades/20003802453",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003802452",
@@ -13584,7 +13896,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432491",
       "tradeUrl": "/trades/20003802452",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003802451",
@@ -13623,7 +13935,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003802451",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003802450",
@@ -13662,7 +13974,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003802450",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003802449",
@@ -13701,7 +14013,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003802449",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003802448",
@@ -17991,7 +18303,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433770",
       "tradeUrl": "/trades/20003802322",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003802320",
@@ -18030,7 +18342,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433544",
       "tradeUrl": "/trades/20003802320",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003802319",
@@ -18069,7 +18381,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433399",
       "tradeUrl": "/trades/20003802319",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003802318",
@@ -18108,7 +18420,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433382",
       "tradeUrl": "/trades/20003802318",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003802317",
@@ -18147,7 +18459,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433331",
       "tradeUrl": "/trades/20003802317",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003802316",
@@ -18186,7 +18498,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433236",
       "tradeUrl": "/trades/20003802316",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003802315",
@@ -18225,7 +18537,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433153",
       "tradeUrl": "/trades/20003802315",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003802314",
@@ -18264,7 +18576,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433134",
       "tradeUrl": "/trades/20003802314",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003802313",
@@ -24387,7 +24699,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334898",
       "tradeUrl": "/trades/10000066759",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "10000066758",
@@ -24426,7 +24738,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2335532",
       "tradeUrl": "/trades/10000066758",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "10000066757",
@@ -24465,7 +24777,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2335532",
       "tradeUrl": "/trades/10000066757",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "10000066756",
@@ -24504,7 +24816,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2335532",
       "tradeUrl": "/trades/10000066756",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "10000066755",
@@ -24543,7 +24855,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334916",
       "tradeUrl": "/trades/10000066755",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "10000066754",
@@ -24582,7 +24894,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334916",
       "tradeUrl": "/trades/10000066754",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "10000066753",
@@ -24621,7 +24933,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2335532",
       "tradeUrl": "/trades/10000066753",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "10000066752",
@@ -24660,7 +24972,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2335535",
       "tradeUrl": "/trades/10000066752",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "10000066751",
@@ -27390,7 +27702,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432035",
       "tradeUrl": "/trades/10000066686",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "10000066685",
@@ -27429,7 +27741,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432035",
       "tradeUrl": "/trades/10000066685",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "10000066684",
@@ -27468,7 +27780,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432035",
       "tradeUrl": "/trades/10000066684",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "10000066683",
@@ -27507,7 +27819,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432035",
       "tradeUrl": "/trades/10000066683",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "10000066682",
@@ -27546,7 +27858,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432035",
       "tradeUrl": "/trades/10000066682",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "10000066681",
@@ -27585,7 +27897,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432035",
       "tradeUrl": "/trades/10000066681",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "10000066680",
@@ -27624,7 +27936,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432035",
       "tradeUrl": "/trades/10000066680",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "10000066679",
@@ -27663,7 +27975,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432035",
       "tradeUrl": "/trades/10000066679",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "10000066678",
@@ -29730,7 +30042,7 @@
       "politicianUrl": "/politicians/D000617",
       "issuerUrl": "/issuers/434996",
       "tradeUrl": "/trades/20003802219",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "20003802218",
@@ -29769,7 +30081,7 @@
       "politicianUrl": "/politicians/D000617",
       "issuerUrl": "/issuers/2335187",
       "tradeUrl": "/trades/20003802218",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "20003802217",
@@ -29808,7 +30120,7 @@
       "politicianUrl": "/politicians/D000617",
       "issuerUrl": "/issuers/2335520",
       "tradeUrl": "/trades/20003802217",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "20003802216",
@@ -29847,7 +30159,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/434191",
       "tradeUrl": "/trades/20003802216",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "20003802215",
@@ -29886,7 +30198,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/433382",
       "tradeUrl": "/trades/20003802215",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "20003802214",
@@ -29925,7 +30237,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/432456",
       "tradeUrl": "/trades/20003802214",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "20003802213",
@@ -29964,7 +30276,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429622",
       "tradeUrl": "/trades/20003802213",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "20003802212",
@@ -30003,7 +30315,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429622",
       "tradeUrl": "/trades/20003802212",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "20003802211",
@@ -36282,7 +36594,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431405",
       "tradeUrl": "/trades/20003802041",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003802040",
@@ -36321,7 +36633,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434019",
       "tradeUrl": "/trades/20003802040",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003802039",
@@ -36360,7 +36672,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431002",
       "tradeUrl": "/trades/20003802039",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003802038",
@@ -36399,7 +36711,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431928",
       "tradeUrl": "/trades/20003802038",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003802037",
@@ -36438,7 +36750,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430865",
       "tradeUrl": "/trades/20003802037",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003802036",
@@ -36477,7 +36789,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2335008",
       "tradeUrl": "/trades/20003802036",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003802035",
@@ -36516,7 +36828,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434004",
       "tradeUrl": "/trades/20003802035",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003802034",
@@ -36555,7 +36867,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430328",
       "tradeUrl": "/trades/20003802034",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003802033",
@@ -40026,7 +40338,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434591",
       "tradeUrl": "/trades/20003801945",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003801944",
@@ -40065,7 +40377,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432930",
       "tradeUrl": "/trades/20003801944",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003801943",
@@ -40104,7 +40416,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435735",
       "tradeUrl": "/trades/20003801943",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003801942",
@@ -40143,7 +40455,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435295",
       "tradeUrl": "/trades/20003801942",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003801941",
@@ -40182,7 +40494,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433493",
       "tradeUrl": "/trades/20003801941",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003801940",
@@ -40221,7 +40533,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430865",
       "tradeUrl": "/trades/20003801940",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003801939",
@@ -40260,7 +40572,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431124",
       "tradeUrl": "/trades/20003801939",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003801938",
@@ -40299,7 +40611,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435338",
       "tradeUrl": "/trades/20003801938",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003801937",
@@ -43770,7 +44082,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003801849",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "20003801848",
@@ -43809,7 +44121,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003801848",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "20003801847",
@@ -43848,7 +44160,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003801847",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "20003801846",
@@ -43887,7 +44199,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003801846",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "20003801845",
@@ -43926,7 +44238,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003801845",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "20003801844",
@@ -43965,7 +44277,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003801844",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "20003801843",
@@ -44004,7 +44316,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432782",
       "tradeUrl": "/trades/20003801843",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "20003801842",
@@ -44043,7 +44355,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430166",
       "tradeUrl": "/trades/20003801842",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "20003801841",
@@ -44901,7 +45213,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335514",
       "tradeUrl": "/trades/20003801817",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003801816",
@@ -44940,7 +45252,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/2335513",
       "tradeUrl": "/trades/20003801816",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003801815",
@@ -44979,7 +45291,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/433927",
       "tradeUrl": "/trades/20003801815",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003801814",
@@ -45018,7 +45330,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/433654",
       "tradeUrl": "/trades/20003801814",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003801813",
@@ -45057,7 +45369,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/433456",
       "tradeUrl": "/trades/20003801813",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003801812",
@@ -45096,7 +45408,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/432480",
       "tradeUrl": "/trades/20003801812",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003801811",
@@ -45135,7 +45447,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/432480",
       "tradeUrl": "/trades/20003801811",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003801810",
@@ -45174,7 +45486,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/2334412",
       "tradeUrl": "/trades/20003801810",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003801809",
@@ -48411,7 +48723,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801627",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003801626",
@@ -48450,7 +48762,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801626",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003801625",
@@ -48489,7 +48801,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801625",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003801624",
@@ -48528,7 +48840,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801624",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003801623",
@@ -48567,7 +48879,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801623",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003801622",
@@ -48606,7 +48918,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801622",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003801621",
@@ -48645,7 +48957,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801621",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003801620",
@@ -48684,7 +48996,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801620",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003801619",
@@ -52662,7 +52974,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334898",
       "tradeUrl": "/trades/10000065321",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "10000065320",
@@ -52701,7 +53013,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334898",
       "tradeUrl": "/trades/10000065320",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "10000065319",
@@ -52740,7 +53052,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2335120",
       "tradeUrl": "/trades/10000065319",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "10000065314",
@@ -52779,7 +53091,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334916",
       "tradeUrl": "/trades/10000065314",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "10000065313",
@@ -52818,7 +53130,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334898",
       "tradeUrl": "/trades/10000065313",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "10000065312",
@@ -52857,7 +53169,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334898",
       "tradeUrl": "/trades/10000065312",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "10000065308",
@@ -52896,7 +53208,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334898",
       "tradeUrl": "/trades/10000065308",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "10000065307",
@@ -52935,7 +53247,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334898",
       "tradeUrl": "/trades/10000065307",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "10000065303",
@@ -57771,7 +58083,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/2335377",
       "tradeUrl": "/trades/20003801378",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003801366",
@@ -57810,7 +58122,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/435958",
       "tradeUrl": "/trades/20003801366",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003801363",
@@ -57849,7 +58161,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/433254",
       "tradeUrl": "/trades/20003801363",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003801359",
@@ -57888,7 +58200,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/2334500",
       "tradeUrl": "/trades/20003801359",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003801358",
@@ -57927,7 +58239,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/434883",
       "tradeUrl": "/trades/20003801358",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003801357",
@@ -57966,7 +58278,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/433003",
       "tradeUrl": "/trades/20003801357",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003801356",
@@ -58005,7 +58317,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/434883",
       "tradeUrl": "/trades/20003801356",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003801353",
@@ -58044,7 +58356,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/431222",
       "tradeUrl": "/trades/20003801353",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003801352",
@@ -59487,7 +59799,7 @@
       "politicianUrl": "/politicians/W000802",
       "issuerUrl": "/issuers/433381",
       "tradeUrl": "/trades/10000065275",
-      "sourcePage": 16
+      "sourcePage": 17
     },
     {
       "id": "10000065274",
@@ -62802,7 +63114,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434373",
       "tradeUrl": "/trades/20003801168",
-      "sourcePage": 17
+      "sourcePage": 18
     },
     {
       "id": "20003801167",
@@ -62841,7 +63153,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430834",
       "tradeUrl": "/trades/20003801167",
-      "sourcePage": 17
+      "sourcePage": 18
     },
     {
       "id": "20003801166",
@@ -62880,7 +63192,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433464",
       "tradeUrl": "/trades/20003801166",
-      "sourcePage": 17
+      "sourcePage": 18
     },
     {
       "id": "20003801165",
@@ -62919,7 +63231,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435403",
       "tradeUrl": "/trades/20003801165",
-      "sourcePage": 17
+      "sourcePage": 18
     },
     {
       "id": "20003801164",
@@ -62958,7 +63270,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430568",
       "tradeUrl": "/trades/20003801164",
-      "sourcePage": 17
+      "sourcePage": 18
     },
     {
       "id": "20003801163",
@@ -62997,7 +63309,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432367",
       "tradeUrl": "/trades/20003801163",
-      "sourcePage": 17
+      "sourcePage": 18
     },
     {
       "id": "20003801162",
@@ -63036,7 +63348,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431124",
       "tradeUrl": "/trades/20003801162",
-      "sourcePage": 17
+      "sourcePage": 18
     },
     {
       "id": "20003801161",
@@ -63075,7 +63387,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435281",
       "tradeUrl": "/trades/20003801161",
-      "sourcePage": 17
+      "sourcePage": 18
     },
     {
       "id": "20003801160",
@@ -66546,7 +66858,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003800996",
-      "sourcePage": 16
+      "sourcePage": 17
     },
     {
       "id": "20003800842",
@@ -66585,7 +66897,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434004",
       "tradeUrl": "/trades/20003800842",
-      "sourcePage": 16
+      "sourcePage": 17
     },
     {
       "id": "20003800841",
@@ -66624,7 +66936,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433902",
       "tradeUrl": "/trades/20003800841",
-      "sourcePage": 16
+      "sourcePage": 17
     },
     {
       "id": "20003800840",
@@ -66663,7 +66975,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003800840",
-      "sourcePage": 16
+      "sourcePage": 17
     },
     {
       "id": "20003800839",
@@ -66702,7 +67014,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430978",
       "tradeUrl": "/trades/20003800839",
-      "sourcePage": 16
+      "sourcePage": 17
     },
     {
       "id": "20003800819",
@@ -66741,7 +67053,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433043",
       "tradeUrl": "/trades/20003800819",
-      "sourcePage": 16
+      "sourcePage": 17
     },
     {
       "id": "20003800812",
@@ -66780,7 +67092,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429991",
       "tradeUrl": "/trades/20003800812",
-      "sourcePage": 16
+      "sourcePage": 17
     },
     {
       "id": "20003800800",
@@ -67287,7 +67599,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/434648",
       "tradeUrl": "/trades/20003800747",
-      "sourcePage": 18
+      "sourcePage": 19
     },
     {
       "id": "20003800746",
@@ -67326,7 +67638,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/434317",
       "tradeUrl": "/trades/20003800746",
-      "sourcePage": 18
+      "sourcePage": 19
     },
     {
       "id": "20003800741",
@@ -67365,7 +67677,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433379",
       "tradeUrl": "/trades/20003800741",
-      "sourcePage": 18
+      "sourcePage": 19
     },
     {
       "id": "20003800736",
@@ -67404,7 +67716,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433111",
       "tradeUrl": "/trades/20003800736",
-      "sourcePage": 18
+      "sourcePage": 19
     },
     {
       "id": "20003800732",
@@ -67443,7 +67755,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/432212",
       "tradeUrl": "/trades/20003800732",
-      "sourcePage": 18
+      "sourcePage": 19
     },
     {
       "id": "20003800724",
@@ -67482,7 +67794,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/2335090",
       "tradeUrl": "/trades/20003800724",
-      "sourcePage": 18
+      "sourcePage": 19
     },
     {
       "id": "20003800723",
@@ -67521,7 +67833,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/2334875",
       "tradeUrl": "/trades/20003800723",
-      "sourcePage": 18
+      "sourcePage": 19
     },
     {
       "id": "20003800718",
@@ -67560,7 +67872,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/2335451",
       "tradeUrl": "/trades/20003800718",
-      "sourcePage": 18
+      "sourcePage": 19
     },
     {
       "id": "20003800717",
