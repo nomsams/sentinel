@@ -5,11 +5,11 @@
       "https://en.wikipedia.org/wiki/List_of_United_States_House_of_Representatives_committees",
       "https://en.wikipedia.org/wiki/List_of_United_States_Senate_committees"
     ],
-    "fetchedAt": "2026-09-18T09:13:35.915Z",
+    "fetchedAt": "2026-09-19T09:00:10.343Z",
     "congress": 119,
     "committeeCount": 46,
-    "memberCount": 622,
-    "assignmentCount": 1379,
+    "memberCount": 620,
+    "assignmentCount": 1381,
     "updateIntervalHours": 24
   },
   "members": [
@@ -499,7 +499,7 @@
       "normalizedName": "andy barr",
       "chamber": "house",
       "state": "KY",
-      "memberUrl": "https://en.wikipedia.org/wiki/Andy_Barr",
+      "memberUrl": "https://en.wikipedia.org/wiki/Andy_Barr_(American_politician)",
       "committees": [
         {
           "name": "Financial Services",
@@ -1164,7 +1164,7 @@
       "normalizedName": "bill foster",
       "chamber": "house",
       "state": "IL",
-      "memberUrl": "https://en.wikipedia.org/wiki/Bill_Foster_(politician)",
+      "memberUrl": "https://en.wikipedia.org/wiki/Bill_Foster_(Illinois_politician)",
       "committees": [
         {
           "name": "Financial Services",
@@ -1231,7 +1231,7 @@
         {
           "name": "Financial Services",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
-          "role": "Member"
+          "role": "Vice Chair"
         },
         {
           "name": "Foreign Affairs",
@@ -1635,7 +1635,7 @@
       "name": "Brittany Pettersen",
       "normalizedName": "brittany pettersen",
       "chamber": "house",
-      "state": null,
+      "state": "CO",
       "memberUrl": "https://en.wikipedia.org/wiki/Brittany_Pettersen",
       "committees": [
         {
@@ -2330,7 +2330,7 @@
       "name": "Cleo Fields",
       "normalizedName": "cleo fields",
       "chamber": "house",
-      "state": null,
+      "state": "LA",
       "memberUrl": "https://en.wikipedia.org/wiki/Cleo_Fields",
       "committees": [
         {
@@ -3577,7 +3577,7 @@
       "name": "Emanuel Cleaver",
       "normalizedName": "emanuel cleaver",
       "chamber": "house",
-      "state": null,
+      "state": "MO",
       "memberUrl": "https://en.wikipedia.org/wiki/Emanuel_Cleaver",
       "committees": [
         {
@@ -3769,6 +3769,20 @@
       ]
     },
     {
+      "name": "Everton Blair",
+      "normalizedName": "everton blair",
+      "chamber": "house",
+      "state": "GA",
+      "memberUrl": "https://en.wikipedia.org/wiki/Everton_Blair",
+      "committees": [
+        {
+          "name": "Financial Services",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Ex officio",
       "normalizedName": "ex officio",
       "chamber": "house",
@@ -3858,7 +3872,7 @@
         {
           "name": "Financial Services",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
-          "role": "Member"
+          "role": "Chair"
         },
         {
           "name": "Intelligence (Permanent Select)",
@@ -4813,7 +4827,7 @@
       "name": "Janelle Bynum",
       "normalizedName": "janelle bynum",
       "chamber": "house",
-      "state": null,
+      "state": "OR",
       "memberUrl": "https://en.wikipedia.org/wiki/Janelle_Bynum",
       "committees": [
         {
@@ -6047,6 +6061,11 @@
           "name": "Agriculture",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Agriculture",
           "role": "Member"
+        },
+        {
+          "name": "Financial Services",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
+          "role": "Member"
         }
       ]
     },
@@ -6094,20 +6113,6 @@
         {
           "name": "Intelligence (Select)",
           "url": "https://en.wikipedia.org/wiki/United_States_Senate_Select_Committee_on_Intelligence",
-          "role": "Member"
-        }
-      ]
-    },
-    {
-      "name": "John W. Rose",
-      "normalizedName": "john w rose",
-      "chamber": "house",
-      "state": null,
-      "memberUrl": "https://en.wikipedia.org/wiki/John_Rose_(Tennessee_politician)",
-      "committees": [
-        {
-          "name": "Financial Services",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
           "role": "Member"
         }
       ]
@@ -6374,7 +6379,7 @@
       "name": "Joyce Beatty",
       "normalizedName": "joyce beatty",
       "chamber": "house",
-      "state": null,
+      "state": "OH",
       "memberUrl": "https://en.wikipedia.org/wiki/Joyce_Beatty",
       "committees": [
         {
@@ -6407,7 +6412,7 @@
       "name": "Juan Vargas",
       "normalizedName": "juan vargas",
       "chamber": "house",
-      "state": null,
+      "state": "CA",
       "memberUrl": "https://en.wikipedia.org/wiki/Juan_Vargas",
       "committees": [
         {
@@ -8081,13 +8086,13 @@
       "name": "Maxine Waters",
       "normalizedName": "maxine waters",
       "chamber": "house",
-      "state": null,
+      "state": "CA",
       "memberUrl": "https://en.wikipedia.org/wiki/Maxine_Waters",
       "committees": [
         {
           "name": "Financial Services",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
-          "role": "Member"
+          "role": "Ranking Member"
         }
       ]
     },
@@ -8458,7 +8463,7 @@
       "name": "Mike Flood",
       "normalizedName": "mike flood",
       "chamber": "house",
-      "state": null,
+      "state": "NE",
       "memberUrl": "https://en.wikipedia.org/wiki/Mike_Flood_(politician)",
       "committees": [
         {
@@ -9062,7 +9067,7 @@
       "name": "Nikema Williams",
       "normalizedName": "nikema williams",
       "chamber": "house",
-      "state": null,
+      "state": "GA",
       "memberUrl": "https://en.wikipedia.org/wiki/Nikema_Williams",
       "committees": [
         {
@@ -9111,26 +9116,17 @@
       ]
     },
     {
-      "name": "Nydia M. Velázquez",
-      "normalizedName": "nydia m velazquez",
-      "chamber": "house",
-      "state": null,
-      "memberUrl": "https://en.wikipedia.org/wiki/Nydia_Vel%C3%A1zquez",
-      "committees": [
-        {
-          "name": "Financial Services",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
-          "role": "Member"
-        }
-      ]
-    },
-    {
       "name": "Nydia Velázquez",
       "normalizedName": "nydia velazquez",
       "chamber": "house",
       "state": "NY",
       "memberUrl": "https://en.wikipedia.org/wiki/Nydia_Vel%C3%A1zquez",
       "committees": [
+        {
+          "name": "Financial Services",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
+          "role": "Member"
+        },
         {
           "name": "Natural Resources",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Natural_Resources",
@@ -10486,7 +10482,7 @@
       "name": "Sam Liccardo",
       "normalizedName": "sam liccardo",
       "chamber": "house",
-      "state": null,
+      "state": "CA",
       "memberUrl": "https://en.wikipedia.org/wiki/Sam_Liccardo",
       "committees": [
         {
@@ -10623,8 +10619,8 @@
       "name": "Scott L. Fitzgerald",
       "normalizedName": "scott l fitzgerald",
       "chamber": "house",
-      "state": null,
-      "memberUrl": "https://en.wikipedia.org/wiki/Scott_Fitzgerald_(politician)",
+      "state": "WI",
+      "memberUrl": "https://en.wikipedia.org/wiki/Scott_L._Fitzgerald",
       "committees": [
         {
           "name": "Financial Services",
@@ -10690,13 +10686,13 @@
       "name": "Sean Casten",
       "normalizedName": "sean casten",
       "chamber": "house",
-      "state": null,
+      "state": "IL",
       "memberUrl": "https://en.wikipedia.org/wiki/Sean_Casten",
       "committees": [
         {
           "name": "Financial Services",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
-          "role": "Member"
+          "role": "Vice Ranking Member"
         }
       ]
     },
@@ -10997,26 +10993,17 @@
       ]
     },
     {
-      "name": "Stephen F. Lynch",
-      "normalizedName": "stephen f lynch",
-      "chamber": "house",
-      "state": null,
-      "memberUrl": "https://en.wikipedia.org/wiki/Stephen_Lynch_(politician)",
-      "committees": [
-        {
-          "name": "Financial Services",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
-          "role": "Member"
-        }
-      ]
-    },
-    {
       "name": "Stephen Lynch",
       "normalizedName": "stephen lynch",
       "chamber": "house",
       "state": "MA",
       "memberUrl": "https://en.wikipedia.org/wiki/Stephen_Lynch_(politician)",
       "committees": [
+        {
+          "name": "Financial Services",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
+          "role": "Member"
+        },
         {
           "name": "Oversight and Government Reform",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Oversight_and_Reform",
@@ -11098,6 +11085,11 @@
       "state": "NV",
       "memberUrl": "https://en.wikipedia.org/wiki/Steven_Horsford",
       "committees": [
+        {
+          "name": "Financial Services",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
+          "role": "Member"
+        },
         {
           "name": "Ways and Means",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Ways_and_Means",
@@ -11868,7 +11860,7 @@
       "name": "Tom Emmer",
       "normalizedName": "tom emmer",
       "chamber": "house",
-      "state": null,
+      "state": "MN",
       "memberUrl": "https://en.wikipedia.org/wiki/Tom_Emmer",
       "committees": [
         {
@@ -12234,7 +12226,7 @@
       "name": "Vicente Gonzalez",
       "normalizedName": "vicente gonzalez",
       "chamber": "house",
-      "state": null,
+      "state": "TX",
       "memberUrl": "https://en.wikipedia.org/wiki/Vicente_Gonzalez_(American_politician)",
       "committees": [
         {
@@ -12373,7 +12365,7 @@
       "normalizedName": "william timmons",
       "chamber": "house",
       "state": "SC",
-      "memberUrl": "https://en.wikipedia.org/wiki/William_Timmons",
+      "memberUrl": "https://en.wikipedia.org/wiki/William_Timmons_(politician)",
       "committees": [
         {
           "name": "Financial Services",
