@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-09-21T05:15:35.695Z",
-    "lastModified": "Sat, 19 Sep 2026 02:01:05 GMT",
+    "fetchedAt": "2026-09-21T10:57:34.247Z",
+    "lastModified": "Mon, 21 Sep 2026 10:57:16 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -59,7 +59,7 @@
           "tradeValue": 284880
         },
         {
-          "flags": "11 DM",
+          "flags": "9 DM",
           "filingDate": "2026-09-18 17:29:38",
           "tradeDate": "2026-08-31",
           "ticker": "LILA",
@@ -67,18 +67,18 @@
           "detail": "Cable & Other Pay Television Services",
           "role": "5",
           "tradeType": "P - Purchase",
-          "price": "$11.90",
-          "quantity": "+4,041,594",
-          "owned": "31,470,935",
-          "ownershipChange": "+15%",
-          "value": "+$48,099,863",
+          "price": "$14.53",
+          "quantity": "+1,373,863",
+          "owned": "8,412,174",
+          "ownershipChange": "+20%",
+          "value": "+$19,966,904",
           "dayReturn": "",
           "weekReturn": "",
           "monthReturn": "",
           "sixMonthReturn": "",
-          "priceValue": 11.9,
-          "quantityValue": 4041594,
-          "tradeValue": 48099863
+          "priceValue": 14.53,
+          "quantityValue": 1373863,
+          "tradeValue": 19966904
         },
         {
           "flags": "2",
@@ -699,6 +699,28 @@
       "roleLabel": "Title",
       "rows": [
         {
+          "flags": "M",
+          "filingDate": "2026-09-21 06:05:22",
+          "tradeDate": "2026-09-17",
+          "ticker": "SE",
+          "company": "Sea Ltd",
+          "detail": "Chen Jingye",
+          "role": "CPO, Shopee",
+          "tradeType": "S - Sale",
+          "price": "$101.52",
+          "quantity": "-60,000",
+          "owned": "9,186,574",
+          "ownershipChange": "-1%",
+          "value": "-$6,090,904",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 101.52,
+          "quantityValue": -60000,
+          "tradeValue": -6090904
+        },
+        {
           "flags": "",
           "filingDate": "2026-09-18 21:15:12",
           "tradeDate": "2026-09-17",
@@ -895,28 +917,6 @@
           "priceValue": 28.06,
           "quantityValue": -115406,
           "tradeValue": -3238004
-        },
-        {
-          "flags": "A",
-          "filingDate": "2026-09-18 19:51:40",
-          "tradeDate": "2026-09-09",
-          "ticker": "BBNX",
-          "company": "Beta Bionics, Inc.",
-          "detail": "Hopman Mark",
-          "role": "Chief Commercial Officer",
-          "tradeType": "S - Sale",
-          "price": "$18.46",
-          "quantity": "-35,994",
-          "owned": "88,033",
-          "ownershipChange": "-29%",
-          "value": "-$664,550",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 18.46,
-          "quantityValue": -35994,
-          "tradeValue": -664550
         }
       ]
     },
@@ -926,6 +926,28 @@
       "detailLabel": "Insider Name",
       "roleLabel": "Title",
       "rows": [
+        {
+          "flags": "M",
+          "filingDate": "2026-09-21 06:05:22",
+          "tradeDate": "2026-09-17",
+          "ticker": "SE",
+          "company": "Sea Ltd",
+          "detail": "Chen Jingye",
+          "role": "CPO, Shopee",
+          "tradeType": "S - Sale",
+          "price": "$101.52",
+          "quantity": "-60,000",
+          "owned": "9,186,574",
+          "ownershipChange": "-1%",
+          "value": "-$6,090,904",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 101.52,
+          "quantityValue": -60000,
+          "tradeValue": -6090904
+        },
         {
           "flags": "D",
           "filingDate": "2026-09-18 21:55:06",
@@ -1123,28 +1145,6 @@
           "priceValue": 20.28,
           "quantityValue": -1827,
           "tradeValue": -37052
-        },
-        {
-          "flags": "DM",
-          "filingDate": "2026-09-18 21:00:03",
-          "tradeDate": "2026-08-24",
-          "ticker": "FLY",
-          "company": "Firefly Aerospace Inc.",
-          "detail": "Ma Darren",
-          "role": "CFO",
-          "tradeType": "F - Tax",
-          "price": "$20.32",
-          "quantity": "-18,565",
-          "owned": "329,897",
-          "ownershipChange": "-5%",
-          "value": "-$377,220",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 20.32,
-          "quantityValue": -18565,
-          "tradeValue": -377220
         }
       ]
     }
