@@ -2,7 +2,7 @@
   "source": {
     "provider": "Capitol Trades",
     "url": "https://www.capitoltrades.com/trades?txType=buy&txType=sell&pageSize=96&page=1&txDate=90d",
-    "fetchedAt": "2026-09-30T12:40:56.536Z",
+    "fetchedAt": "2026-09-30T22:19:47.616Z",
     "window": "90 days",
     "transactionTypes": [
       "buy",
@@ -10,8 +10,8 @@
     ],
     "pageSize": 96,
     "pagesFetched": 16,
-    "reportedCount": 1512,
-    "rowCount": 1512,
+    "reportedCount": 1513,
+    "rowCount": 1513,
     "updateIntervalHours": 6
   },
   "columns": [
@@ -53,6 +53,45 @@
     }
   ],
   "trades": [
+    {
+      "id": "10000066900",
+      "politicianId": "J000312",
+      "politicianName": "James Justice II",
+      "firstName": "James",
+      "lastName": "Justice II",
+      "nickname": null,
+      "party": "republican",
+      "chamber": "senate",
+      "state": "wv",
+      "dateOfBirth": "1951-04-27",
+      "gender": "male",
+      "issuerId": 2335555,
+      "issuerName": "GREENBRIER HOTEL LLC",
+      "issuerTicker": "N/A",
+      "issuerState": null,
+      "issuerCountry": null,
+      "sector": null,
+      "publishedAt": "2026-09-28T20:02:45Z",
+      "publishedDisplay": "28 Sept 2026",
+      "tradedAt": "2026-08-14",
+      "tradedDisplay": "14 Aug 2026",
+      "reportingGap": 45,
+      "filedAfterDisplay": "45 days",
+      "owner": "self",
+      "ownerDisplay": "Self",
+      "type": "sell",
+      "typeExtended": null,
+      "typeDisplay": "sell*",
+      "sizeDisplay": "25M–50M",
+      "estimatedValue": 50000000,
+      "price": null,
+      "priceDisplay": "N/A",
+      "comment": "Company: Greenbrier Hotel Corporation and Affiliates  (White Sulphur Springs, WV) Description: Hospitality",
+      "politicianUrl": "/politicians/J000312",
+      "issuerUrl": "/issuers/2335555",
+      "tradeUrl": "/trades/10000066900",
+      "sourcePage": 1
+    },
     {
       "id": "10000066899",
       "politicianId": "B001277",
@@ -2859,7 +2898,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/433229",
       "tradeUrl": "/trades/20003802890",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003802889",
@@ -7539,7 +7578,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/433382",
       "tradeUrl": "/trades/20003802770",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003802769",
@@ -13974,7 +14013,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003802613",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003802612",
@@ -15105,7 +15144,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429725",
       "tradeUrl": "/trades/20003802348",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003802347",
@@ -17484,7 +17523,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432491",
       "tradeUrl": "/trades/20003802548",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "20003802547",
@@ -21228,7 +21267,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432491",
       "tradeUrl": "/trades/20003802452",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003802451",
@@ -25791,7 +25830,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433331",
       "tradeUrl": "/trades/20003802317",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "20003802316",
@@ -32187,7 +32226,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2334916",
       "tradeUrl": "/trades/10000066755",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "10000066754",
@@ -35190,7 +35229,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432035",
       "tradeUrl": "/trades/10000066682",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "10000066681",
@@ -37647,7 +37686,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429622",
       "tradeUrl": "/trades/20003802212",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003802211",
@@ -43614,7 +43653,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430328",
       "tradeUrl": "/trades/20003802043",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003802042",
@@ -47358,7 +47397,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003801946",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003801945",
@@ -51102,7 +51141,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003801849",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003801848",
@@ -51999,7 +52038,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335516",
       "tradeUrl": "/trades/20003801822",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "20003801821",
@@ -54105,7 +54144,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435344",
       "tradeUrl": "/trades/20003801651",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003801650",
