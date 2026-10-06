@@ -2,16 +2,16 @@
   "source": {
     "provider": "Capitol Trades",
     "url": "https://www.capitoltrades.com/trades?txType=buy&txType=sell&pageSize=96&page=1&txDate=90d",
-    "fetchedAt": "2026-10-05T14:47:42.092Z",
+    "fetchedAt": "2026-10-06T00:06:23.067Z",
     "window": "90 days",
     "transactionTypes": [
       "buy",
       "sell"
     ],
     "pageSize": 96,
-    "pagesFetched": 16,
-    "reportedCount": 1515,
-    "rowCount": 1515,
+    "pagesFetched": 15,
+    "reportedCount": 1427,
+    "rowCount": 1427,
     "updateIntervalHours": 6
   },
   "columns": [
@@ -72,7 +72,7 @@
       "issuerCountry": "us",
       "sector": "financials",
       "publishedAt": "2026-10-05T13:05:11Z",
-      "publishedDisplay": "13:05 Today",
+      "publishedDisplay": "13:05 Yesterday",
       "tradedAt": "2026-09-03",
       "tradedDisplay": "3 Sept 2026",
       "reportingGap": 29,
@@ -111,7 +111,7 @@
       "issuerCountry": "us",
       "sector": "information-technology",
       "publishedAt": "2026-10-05T13:05:11Z",
-      "publishedDisplay": "13:05 Today",
+      "publishedDisplay": "13:05 Yesterday",
       "tradedAt": "2026-09-28",
       "tradedDisplay": "28 Sept 2026",
       "reportingGap": 4,
@@ -150,7 +150,7 @@
       "issuerCountry": "us",
       "sector": "financials",
       "publishedAt": "2026-10-05T13:05:11Z",
-      "publishedDisplay": "13:05 Today",
+      "publishedDisplay": "13:05 Yesterday",
       "tradedAt": "2026-09-03",
       "tradedDisplay": "3 Sept 2026",
       "reportingGap": 29,
@@ -189,7 +189,7 @@
       "issuerCountry": null,
       "sector": null,
       "publishedAt": "2026-10-05T13:05:05Z",
-      "publishedDisplay": "13:05 Today",
+      "publishedDisplay": "13:05 Yesterday",
       "tradedAt": "2026-09-08",
       "tradedDisplay": "8 Sept 2026",
       "reportingGap": 24,
@@ -38937,84 +38937,6 @@
       "sourcePage": 11
     },
     {
-      "id": "20003802204",
-      "politicianId": "K000398",
-      "politicianName": "Thomas Kean Jr",
-      "firstName": "Thomas",
-      "lastName": "Kean Jr",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "nj",
-      "dateOfBirth": "1968-09-05",
-      "gender": "male",
-      "issuerId": 2335463,
-      "issuerName": "ESAB CORP",
-      "issuerTicker": "N/A",
-      "issuerState": "md",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-19T13:05:11Z",
-      "publishedDisplay": "19 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 42,
-      "filedAfterDisplay": "42 days",
-      "owner": "not-disclosed",
-      "ownerDisplay": "Undisclosed",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Subholding Of: Kean Family Partnership",
-      "politicianUrl": "/politicians/K000398",
-      "issuerUrl": "/issuers/2335463",
-      "tradeUrl": "/trades/20003802204",
-      "sourcePage": 11
-    },
-    {
-      "id": "20003802203",
-      "politicianId": "K000398",
-      "politicianName": "Thomas Kean Jr",
-      "firstName": "Thomas",
-      "lastName": "Kean Jr",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "nj",
-      "dateOfBirth": "1968-09-05",
-      "gender": "male",
-      "issuerId": 431536,
-      "issuerName": "EQT Corp",
-      "issuerTicker": "EQT:US",
-      "issuerState": "pa",
-      "issuerCountry": "us",
-      "sector": "energy",
-      "publishedAt": "2026-08-19T13:05:11Z",
-      "publishedDisplay": "19 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 42,
-      "filedAfterDisplay": "42 days",
-      "owner": "not-disclosed",
-      "ownerDisplay": "Undisclosed",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 51.76,
-      "priceDisplay": "$51.76",
-      "comment": "Subholding Of: Kean Family Partnership",
-      "politicianUrl": "/politicians/K000398",
-      "issuerUrl": "/issuers/431536",
-      "tradeUrl": "/trades/20003802203",
-      "sourcePage": 11
-    },
-    {
       "id": "20003802202",
       "politicianId": "K000398",
       "politicianName": "Thomas Kean Jr",
@@ -41121,45 +41043,6 @@
       "sourcePage": 11
     },
     {
-      "id": "10000066601",
-      "politicianId": "W000805",
-      "politicianName": "Mark Warner",
-      "firstName": "Mark",
-      "lastName": "Warner",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "senate",
-      "state": "va",
-      "dateOfBirth": "1954-12-15",
-      "gender": "male",
-      "issuerId": 2334406,
-      "issuerName": "CITY OF MANASSAS VIRGINIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-08-14T18:15:45Z",
-      "publishedDisplay": "14 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 38,
-      "filedAfterDisplay": "38 days",
-      "owner": "self",
-      "ownerDisplay": "Self",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 4.0% Matures: 2032-01-01",
-      "politicianUrl": "/politicians/W000805",
-      "issuerUrl": "/issuers/2334406",
-      "tradeUrl": "/trades/10000066601",
-      "sourcePage": 11
-    },
-    {
       "id": "20003802138",
       "politicianId": "F000459",
       "politicianName": "Chuck Fleischmann",
@@ -41430,7 +41313,7 @@
       "politicianUrl": "/politicians/F000459",
       "issuerUrl": "/issuers/434213",
       "tradeUrl": "/trades/20003802132",
-      "sourcePage": 12
+      "sourcePage": 11
     },
     {
       "id": "20003802131",
@@ -41469,7 +41352,7 @@
       "politicianUrl": "/politicians/F000459",
       "issuerUrl": "/issuers/432574",
       "tradeUrl": "/trades/20003802131",
-      "sourcePage": 12
+      "sourcePage": 11
     },
     {
       "id": "20003802130",
@@ -41508,7 +41391,7 @@
       "politicianUrl": "/politicians/F000459",
       "issuerUrl": "/issuers/432553",
       "tradeUrl": "/trades/20003802130",
-      "sourcePage": 12
+      "sourcePage": 11
     },
     {
       "id": "20003802129",
@@ -41703,7 +41586,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2333995",
       "tradeUrl": "/trades/20003802114",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802113",
@@ -41742,7 +41625,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433769",
       "tradeUrl": "/trades/20003802113",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802112",
@@ -41781,7 +41664,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430423",
       "tradeUrl": "/trades/20003802112",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802111",
@@ -41820,7 +41703,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429505",
       "tradeUrl": "/trades/20003802111",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802110",
@@ -41859,7 +41742,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433714",
       "tradeUrl": "/trades/20003802110",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802109",
@@ -41898,7 +41781,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433236",
       "tradeUrl": "/trades/20003802109",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802108",
@@ -41937,7 +41820,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2335077",
       "tradeUrl": "/trades/20003802108",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802106",
@@ -41976,7 +41859,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434983",
       "tradeUrl": "/trades/20003802106",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802105",
@@ -42015,7 +41898,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433448",
       "tradeUrl": "/trades/20003802105",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802104",
@@ -42054,7 +41937,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430622",
       "tradeUrl": "/trades/20003802104",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802103",
@@ -42093,7 +41976,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/579351",
       "tradeUrl": "/trades/20003802103",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802102",
@@ -42132,7 +42015,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433703",
       "tradeUrl": "/trades/20003802102",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802101",
@@ -42171,7 +42054,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/579351",
       "tradeUrl": "/trades/20003802101",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802099",
@@ -42210,7 +42093,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433854",
       "tradeUrl": "/trades/20003802099",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802098",
@@ -42249,7 +42132,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430622",
       "tradeUrl": "/trades/20003802098",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802097",
@@ -42288,7 +42171,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429441",
       "tradeUrl": "/trades/20003802097",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802096",
@@ -42327,7 +42210,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430366",
       "tradeUrl": "/trades/20003802096",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802095",
@@ -42366,7 +42249,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434359",
       "tradeUrl": "/trades/20003802095",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802094",
@@ -42405,7 +42288,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435052",
       "tradeUrl": "/trades/20003802094",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802093",
@@ -42444,7 +42327,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434785",
       "tradeUrl": "/trades/20003802093",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802092",
@@ -42483,7 +42366,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430431",
       "tradeUrl": "/trades/20003802092",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802090",
@@ -42522,7 +42405,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430431",
       "tradeUrl": "/trades/20003802090",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802089",
@@ -42561,7 +42444,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430431",
       "tradeUrl": "/trades/20003802089",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802088",
@@ -42600,7 +42483,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435052",
       "tradeUrl": "/trades/20003802088",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802087",
@@ -42639,7 +42522,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435436",
       "tradeUrl": "/trades/20003802087",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802086",
@@ -42678,7 +42561,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430854",
       "tradeUrl": "/trades/20003802086",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802085",
@@ -42717,7 +42600,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434410",
       "tradeUrl": "/trades/20003802085",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802084",
@@ -42756,7 +42639,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2333795",
       "tradeUrl": "/trades/20003802084",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802083",
@@ -42795,7 +42678,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432633",
       "tradeUrl": "/trades/20003802083",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802082",
@@ -42834,7 +42717,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429958",
       "tradeUrl": "/trades/20003802082",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802081",
@@ -42873,7 +42756,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433425",
       "tradeUrl": "/trades/20003802081",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802080",
@@ -42912,7 +42795,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430166",
       "tradeUrl": "/trades/20003802080",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802078",
@@ -42951,7 +42834,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433479",
       "tradeUrl": "/trades/20003802078",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802077",
@@ -42990,7 +42873,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2335008",
       "tradeUrl": "/trades/20003802077",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802076",
@@ -43029,7 +42912,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430328",
       "tradeUrl": "/trades/20003802076",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802075",
@@ -43068,7 +42951,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429569",
       "tradeUrl": "/trades/20003802075",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802074",
@@ -43107,7 +42990,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429782",
       "tradeUrl": "/trades/20003802074",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802073",
@@ -43146,7 +43029,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430873",
       "tradeUrl": "/trades/20003802073",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802072",
@@ -43185,7 +43068,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431626",
       "tradeUrl": "/trades/20003802072",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802071",
@@ -43224,7 +43107,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431372",
       "tradeUrl": "/trades/20003802071",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802070",
@@ -43263,7 +43146,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435687",
       "tradeUrl": "/trades/20003802070",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802069",
@@ -43302,7 +43185,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431462",
       "tradeUrl": "/trades/20003802069",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802068",
@@ -43341,7 +43224,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432471",
       "tradeUrl": "/trades/20003802068",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802067",
@@ -43380,7 +43263,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430554",
       "tradeUrl": "/trades/20003802067",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802066",
@@ -43419,7 +43302,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432373",
       "tradeUrl": "/trades/20003802066",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802065",
@@ -43458,7 +43341,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435339",
       "tradeUrl": "/trades/20003802065",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802064",
@@ -43497,7 +43380,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434439",
       "tradeUrl": "/trades/20003802064",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802063",
@@ -43536,7 +43419,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433130",
       "tradeUrl": "/trades/20003802063",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802062",
@@ -43575,7 +43458,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435682",
       "tradeUrl": "/trades/20003802062",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802061",
@@ -43614,7 +43497,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430328",
       "tradeUrl": "/trades/20003802061",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802060",
@@ -43653,7 +43536,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433738",
       "tradeUrl": "/trades/20003802060",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802059",
@@ -43692,7 +43575,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2335462",
       "tradeUrl": "/trades/20003802059",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802058",
@@ -43731,7 +43614,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432298",
       "tradeUrl": "/trades/20003802058",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802057",
@@ -43770,7 +43653,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/436024",
       "tradeUrl": "/trades/20003802057",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802056",
@@ -43809,7 +43692,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432491",
       "tradeUrl": "/trades/20003802056",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802055",
@@ -43848,7 +43731,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429725",
       "tradeUrl": "/trades/20003802055",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802054",
@@ -43887,7 +43770,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430328",
       "tradeUrl": "/trades/20003802054",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802053",
@@ -43926,7 +43809,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434004",
       "tradeUrl": "/trades/20003802053",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802052",
@@ -43965,7 +43848,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429765",
       "tradeUrl": "/trades/20003802052",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802051",
@@ -44004,46 +43887,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2335008",
       "tradeUrl": "/trades/20003802051",
-      "sourcePage": 14
-    },
-    {
-      "id": "20003802050",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 2335008,
-      "issuerName": "TENABLE HOLDINGS INC",
-      "issuerTicker": "TENB:US",
-      "issuerState": "md",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 40.62,
-      "priceDisplay": "$40.62",
-      "comment": "Ritu Ahuja Declaration of Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/2335008",
-      "tradeUrl": "/trades/20003802050",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802049",
@@ -44082,7 +43926,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433381",
       "tradeUrl": "/trades/20003802049",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802048",
@@ -44121,7 +43965,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431124",
       "tradeUrl": "/trades/20003802048",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802047",
@@ -44160,7 +44004,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/436020",
       "tradeUrl": "/trades/20003802047",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802046",
@@ -44199,7 +44043,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432993",
       "tradeUrl": "/trades/20003802046",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802044",
@@ -44238,7 +44082,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429708",
       "tradeUrl": "/trades/20003802044",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802043",
@@ -44277,7 +44121,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430328",
       "tradeUrl": "/trades/20003802043",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802042",
@@ -44316,7 +44160,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430491",
       "tradeUrl": "/trades/20003802042",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802041",
@@ -44355,7 +44199,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431405",
       "tradeUrl": "/trades/20003802041",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802040",
@@ -44394,7 +44238,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434019",
       "tradeUrl": "/trades/20003802040",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802039",
@@ -44433,7 +44277,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431002",
       "tradeUrl": "/trades/20003802039",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802038",
@@ -44472,7 +44316,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431928",
       "tradeUrl": "/trades/20003802038",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802037",
@@ -44511,7 +44355,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430865",
       "tradeUrl": "/trades/20003802037",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802035",
@@ -44550,7 +44394,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434004",
       "tradeUrl": "/trades/20003802035",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802034",
@@ -44589,7 +44433,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430328",
       "tradeUrl": "/trades/20003802034",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003802033",
@@ -45096,7 +44940,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003802019",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802018",
@@ -45135,7 +44979,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003802018",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802017",
@@ -45174,7 +45018,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429495",
       "tradeUrl": "/trades/20003802017",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802016",
@@ -45213,7 +45057,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431926",
       "tradeUrl": "/trades/20003802016",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802015",
@@ -45252,7 +45096,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334019",
       "tradeUrl": "/trades/20003802015",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802014",
@@ -45291,7 +45135,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003802014",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802013",
@@ -45330,7 +45174,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434562",
       "tradeUrl": "/trades/20003802013",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802012",
@@ -45369,7 +45213,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430852",
       "tradeUrl": "/trades/20003802012",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802011",
@@ -45408,7 +45252,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003802011",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802010",
@@ -45447,7 +45291,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431835",
       "tradeUrl": "/trades/20003802010",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802009",
@@ -45486,7 +45330,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003802009",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802008",
@@ -45525,7 +45369,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432490",
       "tradeUrl": "/trades/20003802008",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802007",
@@ -45564,7 +45408,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433878",
       "tradeUrl": "/trades/20003802007",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802006",
@@ -45603,7 +45447,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430400",
       "tradeUrl": "/trades/20003802006",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802005",
@@ -45642,7 +45486,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433478",
       "tradeUrl": "/trades/20003802005",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802004",
@@ -45681,7 +45525,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429934",
       "tradeUrl": "/trades/20003802004",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802003",
@@ -45720,7 +45564,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334687",
       "tradeUrl": "/trades/20003802003",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802002",
@@ -45759,7 +45603,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003802002",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802001",
@@ -45798,7 +45642,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432717",
       "tradeUrl": "/trades/20003802001",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003802000",
@@ -45837,7 +45681,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433440",
       "tradeUrl": "/trades/20003802000",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801999",
@@ -45876,7 +45720,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003801999",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801998",
@@ -45915,7 +45759,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003801998",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801997",
@@ -45954,7 +45798,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433981",
       "tradeUrl": "/trades/20003801997",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801996",
@@ -45993,7 +45837,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434241",
       "tradeUrl": "/trades/20003801996",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801995",
@@ -46032,7 +45876,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433323",
       "tradeUrl": "/trades/20003801995",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801994",
@@ -46071,7 +45915,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431316",
       "tradeUrl": "/trades/20003801994",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801993",
@@ -46110,7 +45954,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432988",
       "tradeUrl": "/trades/20003801993",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801992",
@@ -46149,7 +45993,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003801992",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801991",
@@ -46188,7 +46032,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003801991",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801990",
@@ -46227,7 +46071,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003801990",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801989",
@@ -46266,7 +46110,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430962",
       "tradeUrl": "/trades/20003801989",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801988",
@@ -46305,7 +46149,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430568",
       "tradeUrl": "/trades/20003801988",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801987",
@@ -46344,7 +46188,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2331336",
       "tradeUrl": "/trades/20003801987",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801986",
@@ -46383,7 +46227,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003801986",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801984",
@@ -46422,7 +46266,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429725",
       "tradeUrl": "/trades/20003801984",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801983",
@@ -46461,7 +46305,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432199",
       "tradeUrl": "/trades/20003801983",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801982",
@@ -46500,7 +46344,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430239",
       "tradeUrl": "/trades/20003801982",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801981",
@@ -46539,7 +46383,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435735",
       "tradeUrl": "/trades/20003801981",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801980",
@@ -46578,7 +46422,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429822",
       "tradeUrl": "/trades/20003801980",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801979",
@@ -46617,7 +46461,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003801979",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801978",
@@ -46656,7 +46500,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433379",
       "tradeUrl": "/trades/20003801978",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801977",
@@ -46695,7 +46539,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433283",
       "tradeUrl": "/trades/20003801977",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801976",
@@ -46734,7 +46578,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003801976",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801974",
@@ -46773,7 +46617,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433048",
       "tradeUrl": "/trades/20003801974",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801973",
@@ -46812,7 +46656,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430117",
       "tradeUrl": "/trades/20003801973",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801972",
@@ -46851,7 +46695,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430182",
       "tradeUrl": "/trades/20003801972",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801971",
@@ -46890,7 +46734,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435137",
       "tradeUrl": "/trades/20003801971",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801970",
@@ -46929,7 +46773,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431303",
       "tradeUrl": "/trades/20003801970",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801969",
@@ -46968,7 +46812,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433236",
       "tradeUrl": "/trades/20003801969",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801968",
@@ -47007,7 +46851,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429914",
       "tradeUrl": "/trades/20003801968",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801967",
@@ -47046,7 +46890,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003801967",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801966",
@@ -47085,7 +46929,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433658",
       "tradeUrl": "/trades/20003801966",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801965",
@@ -47124,7 +46968,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003801965",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801964",
@@ -47163,7 +47007,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431315",
       "tradeUrl": "/trades/20003801964",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801963",
@@ -47202,7 +47046,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432480",
       "tradeUrl": "/trades/20003801963",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801961",
@@ -47241,7 +47085,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432782",
       "tradeUrl": "/trades/20003801961",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801960",
@@ -47280,7 +47124,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003801960",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801959",
@@ -47319,7 +47163,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003801959",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801958",
@@ -47358,7 +47202,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434191",
       "tradeUrl": "/trades/20003801958",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801957",
@@ -47397,7 +47241,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431282",
       "tradeUrl": "/trades/20003801957",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801956",
@@ -47436,7 +47280,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430834",
       "tradeUrl": "/trades/20003801956",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801955",
@@ -47475,7 +47319,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435211",
       "tradeUrl": "/trades/20003801955",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801954",
@@ -47514,7 +47358,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434517",
       "tradeUrl": "/trades/20003801954",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801953",
@@ -47553,7 +47397,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435219",
       "tradeUrl": "/trades/20003801953",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801952",
@@ -47592,7 +47436,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429550",
       "tradeUrl": "/trades/20003801952",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801951",
@@ -47631,7 +47475,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430911",
       "tradeUrl": "/trades/20003801951",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801950",
@@ -47670,7 +47514,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433650",
       "tradeUrl": "/trades/20003801950",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801949",
@@ -47709,7 +47553,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432293",
       "tradeUrl": "/trades/20003801949",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801948",
@@ -47748,7 +47592,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431977",
       "tradeUrl": "/trades/20003801948",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801947",
@@ -47787,7 +47631,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435112",
       "tradeUrl": "/trades/20003801947",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801946",
@@ -47826,7 +47670,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003801946",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801945",
@@ -47865,7 +47709,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434591",
       "tradeUrl": "/trades/20003801945",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801944",
@@ -47904,7 +47748,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432930",
       "tradeUrl": "/trades/20003801944",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801943",
@@ -47943,7 +47787,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435735",
       "tradeUrl": "/trades/20003801943",
-      "sourcePage": 13
+      "sourcePage": 12
     },
     {
       "id": "20003801942",
@@ -47982,3165 +47826,6 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435295",
       "tradeUrl": "/trades/20003801942",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801941",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433493,
-      "issuerName": "MSCI Inc",
-      "issuerTicker": "MSCI:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 608.09,
-      "priceDisplay": "$608.09",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433493",
-      "tradeUrl": "/trades/20003801941",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801940",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430865,
-      "issuerName": "Cognizant Technology Solutions Corp",
-      "issuerTicker": "CTSH:US",
-      "issuerState": "nj",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 43.94,
-      "priceDisplay": "$43.94",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430865",
-      "tradeUrl": "/trades/20003801940",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801939",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431124,
-      "issuerName": "Crown Castle International Corp",
-      "issuerTicker": "CCI:US",
-      "issuerState": "tx",
-      "issuerCountry": "us",
-      "sector": "real-estate",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 77.22,
-      "priceDisplay": "$77.22",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431124",
-      "tradeUrl": "/trades/20003801939",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801938",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435338,
-      "issuerName": "Tractor Supply Co",
-      "issuerTicker": "TSCO:US",
-      "issuerState": "tn",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 30.43,
-      "priceDisplay": "$30.43",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435338",
-      "tradeUrl": "/trades/20003801938",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801937",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433854,
-      "issuerName": "ON Semiconductor Corp",
-      "issuerTicker": "ON:US",
-      "issuerState": "az",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 91.1,
-      "priceDisplay": "$91.10",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433854",
-      "tradeUrl": "/trades/20003801937",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801936",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431114,
-      "issuerName": "CRH PLC",
-      "issuerTicker": "CRH:US",
-      "issuerState": null,
-      "issuerCountry": "ie",
-      "sector": "materials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431114",
-      "tradeUrl": "/trades/20003801936",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801935",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433379,
-      "issuerName": "Microchip Technology Inc",
-      "issuerTicker": "MCHP:US",
-      "issuerState": "az",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 84.15,
-      "priceDisplay": "$84.15",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433379",
-      "tradeUrl": "/trades/20003801935",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801934",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430980,
-      "issuerName": "Copart Inc",
-      "issuerTicker": "CPRT:US",
-      "issuerState": "tx",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 29.27,
-      "priceDisplay": "$29.27",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430980",
-      "tradeUrl": "/trades/20003801934",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801933",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434439,
-      "issuerName": "ROLLINS Inc",
-      "issuerTicker": "ROL:US",
-      "issuerState": "ga",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 43.62,
-      "priceDisplay": "$43.62",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434439",
-      "tradeUrl": "/trades/20003801933",
-      "sourcePage": 13
-    },
-    {
-      "id": "20003801932",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430491,
-      "issuerName": "Charter Communications Inc",
-      "issuerTicker": "CHTR:US",
-      "issuerState": "ct",
-      "issuerCountry": "us",
-      "sector": "communication-services",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 138.02,
-      "priceDisplay": "$138.02",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430491",
-      "tradeUrl": "/trades/20003801932",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801931",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 436010,
-      "issuerName": "YUM BRANDS Inc",
-      "issuerTicker": "YUM:US",
-      "issuerState": "ky",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 167.49,
-      "priceDisplay": "$167.49",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/436010",
-      "tradeUrl": "/trades/20003801931",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801930",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432993,
-      "issuerName": "Lennar Corp",
-      "issuerTicker": "LEN:US",
-      "issuerState": "fl",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 86.74,
-      "priceDisplay": "$86.74",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432993",
-      "tradeUrl": "/trades/20003801930",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801929",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435009,
-      "issuerName": "Steel Dynamics Inc",
-      "issuerTicker": "STLD:US",
-      "issuerState": "in",
-      "issuerCountry": "us",
-      "sector": "materials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 229.62,
-      "priceDisplay": "$229.62",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435009",
-      "tradeUrl": "/trades/20003801929",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801928",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431977,
-      "issuerName": "Gilead Sciences Inc",
-      "issuerTicker": "GILD:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 136.36,
-      "priceDisplay": "$136.36",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431977",
-      "tradeUrl": "/trades/20003801928",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801927",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432327,
-      "issuerName": "Hubbell Inc",
-      "issuerTicker": "HUBB:US",
-      "issuerState": "ct",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 478.89,
-      "priceDisplay": "$478.89",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432327",
-      "tradeUrl": "/trades/20003801927",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801926",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431645,
-      "issuerName": "FedEx Corp",
-      "issuerTicker": "FDX:US",
-      "issuerState": "tn",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 312.88,
-      "priceDisplay": "$312.88",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431645",
-      "tradeUrl": "/trades/20003801926",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801925",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435428,
-      "issuerName": "Tyler Technologies Inc",
-      "issuerTicker": "TYL:US",
-      "issuerState": "tx",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 321.45,
-      "priceDisplay": "$321.45",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435428",
-      "tradeUrl": "/trades/20003801925",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801924",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429495,
-      "issuerName": "Adobe Inc",
-      "issuerTicker": "ADBE:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 221.54,
-      "priceDisplay": "$221.54",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/429495",
-      "tradeUrl": "/trades/20003801924",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801923",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429782,
-      "issuerName": "Apollo Global Management Inc",
-      "issuerTicker": "APO:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 119.33,
-      "priceDisplay": "$119.33",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/429782",
-      "tradeUrl": "/trades/20003801923",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801922",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433892,
-      "issuerName": "Otis Worldwide Corp",
-      "issuerTicker": "OTIS:US",
-      "issuerState": "ct",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 73.43,
-      "priceDisplay": "$73.43",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433892",
-      "tradeUrl": "/trades/20003801922",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801921",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435765,
-      "issuerName": "Westinghouse Air Brake Technologies Corp",
-      "issuerTicker": "WAB:US",
-      "issuerState": "pa",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 259.19,
-      "priceDisplay": "$259.19",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435765",
-      "tradeUrl": "/trades/20003801921",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801920",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430182,
-      "issuerName": "Boston Scientific Corp",
-      "issuerTicker": "BSX:US",
-      "issuerState": "ma",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 45.3,
-      "priceDisplay": "$45.30",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430182",
-      "tradeUrl": "/trades/20003801920",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801919",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433773,
-      "issuerName": "NXP Semiconductors NV",
-      "issuerTicker": "NXPI:US",
-      "issuerState": null,
-      "issuerCountry": "nl",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 273.15,
-      "priceDisplay": "$273.15",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433773",
-      "tradeUrl": "/trades/20003801919",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801918",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432930,
-      "issuerName": "The Kroger Co",
-      "issuerTicker": "KR:US",
-      "issuerState": "oh",
-      "issuerCountry": "us",
-      "sector": "consumer-staples",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 58.54,
-      "priceDisplay": "$58.54",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432930",
-      "tradeUrl": "/trades/20003801918",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801917",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433446,
-      "issuerName": "MongoDB Inc",
-      "issuerTicker": "MDB:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 361.32,
-      "priceDisplay": "$361.32",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433446",
-      "tradeUrl": "/trades/20003801917",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801916",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433708,
-      "issuerName": "Northern Trust Corp",
-      "issuerTicker": "NTRS:US",
-      "issuerState": "il",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 181.39,
-      "priceDisplay": "$181.39",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433708",
-      "tradeUrl": "/trades/20003801916",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801915",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429469,
-      "issuerName": "Accenture PLC",
-      "issuerTicker": "ACN:US",
-      "issuerState": null,
-      "issuerCountry": "ie",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 142.14,
-      "priceDisplay": "$142.14",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/429469",
-      "tradeUrl": "/trades/20003801915",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801914",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432381,
-      "issuerName": "Illinois Tool Works Inc",
-      "issuerTicker": "ITW:US",
-      "issuerState": "il",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 271.09,
-      "priceDisplay": "$271.09",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432381",
-      "tradeUrl": "/trades/20003801914",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801913",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429929,
-      "issuerName": "AUTODESK Inc",
-      "issuerTicker": "ADSK:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 212.38,
-      "priceDisplay": "$212.38",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/429929",
-      "tradeUrl": "/trades/20003801913",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801912",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429914,
-      "issuerName": "AT&T Inc",
-      "issuerTicker": "T:US",
-      "issuerState": "tx",
-      "issuerCountry": "us",
-      "sector": "communication-services",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 21.09,
-      "priceDisplay": "$21.09",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/429914",
-      "tradeUrl": "/trades/20003801912",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801911",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430117,
-      "issuerName": "Blackrock Inc",
-      "issuerTicker": "BLK:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 1009.43,
-      "priceDisplay": "$1,009.43",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430117",
-      "tradeUrl": "/trades/20003801911",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801910",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435281,
-      "issuerName": "The TJX Companies Inc",
-      "issuerTicker": "TJX:US",
-      "issuerState": "ma",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 154.11,
-      "priceDisplay": "$154.11",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435281",
-      "tradeUrl": "/trades/20003801910",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801909",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434517,
-      "issuerName": "salesforce.com Inc",
-      "issuerTicker": "CRM:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 169.52,
-      "priceDisplay": "$169.52",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434517",
-      "tradeUrl": "/trades/20003801909",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801908",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434019,
-      "issuerName": "PepsiCo Inc",
-      "issuerTicker": "PEP:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "consumer-staples",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 144.98,
-      "priceDisplay": "$144.98",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434019",
-      "tradeUrl": "/trades/20003801908",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801907",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433379,
-      "issuerName": "Microchip Technology Inc",
-      "issuerTicker": "MCHP:US",
-      "issuerState": "az",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "50K–100K",
-      "estimatedValue": 75000,
-      "price": 84.15,
-      "priceDisplay": "$84.15",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433379",
-      "tradeUrl": "/trades/20003801907",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801906",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432490,
-      "issuerName": "Intuit Inc",
-      "issuerTicker": "INTU:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 281.17,
-      "priceDisplay": "$281.17",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432490",
-      "tradeUrl": "/trades/20003801906",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801905",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430410,
-      "issuerName": "Carvana Co",
-      "issuerTicker": "CVNA:US",
-      "issuerState": "az",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 67.49,
-      "priceDisplay": "$67.49",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430410",
-      "tradeUrl": "/trades/20003801905",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801904",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434348,
-      "issuerName": "Regeneron Pharmaceuticals Inc",
-      "issuerTicker": "REGN:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 676.23,
-      "priceDisplay": "$676.23",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434348",
-      "tradeUrl": "/trades/20003801904",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801903",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431610,
-      "issuerName": "Meta Platforms Inc",
-      "issuerTicker": "META:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "communication-services",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 615.58,
-      "priceDisplay": "$615.58",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431610",
-      "tradeUrl": "/trades/20003801903",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801902",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431456,
-      "issuerName": "EMCOR Group Inc",
-      "issuerTicker": "EME:US",
-      "issuerState": "ct",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 768.38,
-      "priceDisplay": "$768.38",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431456",
-      "tradeUrl": "/trades/20003801902",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801901",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431395,
-      "issuerName": "Eaton Corp PLC",
-      "issuerTicker": "ETN:US",
-      "issuerState": null,
-      "issuerCountry": "ie",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 395.68,
-      "priceDisplay": "$395.68",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431395",
-      "tradeUrl": "/trades/20003801901",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801900",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435166,
-      "issuerName": "TE Connectivity Ltd",
-      "issuerTicker": "TEL:US",
-      "issuerState": null,
-      "issuerCountry": "ie",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 197.84,
-      "priceDisplay": "$197.84",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435166",
-      "tradeUrl": "/trades/20003801900",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801899",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430279,
-      "issuerName": "Builders FirstSource Inc",
-      "issuerTicker": "BLDR:US",
-      "issuerState": "tx",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 78.42,
-      "priceDisplay": "$78.42",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430279",
-      "tradeUrl": "/trades/20003801899",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801898",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431833,
-      "issuerName": "Fortinet Inc",
-      "issuerTicker": "FTNT:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 158.67,
-      "priceDisplay": "$158.67",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431833",
-      "tradeUrl": "/trades/20003801898",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801897",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432778,
-      "issuerName": "Johnson Controls International PLC",
-      "issuerTicker": "JCI:US",
-      "issuerState": null,
-      "issuerCountry": "ie",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 140.62,
-      "priceDisplay": "$140.62",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432778",
-      "tradeUrl": "/trades/20003801897",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801896",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435994,
-      "issuerName": "Xylem Inc",
-      "issuerTicker": "XYL:US",
-      "issuerState": "dc",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 120.65,
-      "priceDisplay": "$120.65",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435994",
-      "tradeUrl": "/trades/20003801896",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801895",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434737,
-      "issuerName": "Skyworks Solutions Inc",
-      "issuerTicker": "SWKS:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 59.76,
-      "priceDisplay": "$59.76",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434737",
-      "tradeUrl": "/trades/20003801895",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801894",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434459,
-      "issuerName": "Royal Caribbean Group",
-      "issuerTicker": "RCL:US",
-      "issuerState": "fl",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 282.26,
-      "priceDisplay": "$282.26",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434459",
-      "tradeUrl": "/trades/20003801894",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801893",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435886,
-      "issuerName": "Weyerhaeuser Co",
-      "issuerTicker": "WY:US",
-      "issuerState": "wa",
-      "issuerCountry": "us",
-      "sector": "real-estate",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 23.29,
-      "priceDisplay": "$23.29",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435886",
-      "tradeUrl": "/trades/20003801893",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801892",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433478,
-      "issuerName": "The Mosaic Company",
-      "issuerTicker": "MOS:US",
-      "issuerState": "fl",
-      "issuerCountry": "us",
-      "sector": "materials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 21.12,
-      "priceDisplay": "$21.12",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433478",
-      "tradeUrl": "/trades/20003801892",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801891",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 2334178,
-      "issuerName": "GE HEALTHCARE TECHNOLOGI INC",
-      "issuerTicker": "GEHC:US",
-      "issuerState": "il",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 64.89,
-      "priceDisplay": "$64.89",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/2334178",
-      "tradeUrl": "/trades/20003801891",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801890",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 2331057,
-      "issuerName": "Ares Management Corp",
-      "issuerTicker": "ARES:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 120.7,
-      "priceDisplay": "$120.70",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/2331057",
-      "tradeUrl": "/trades/20003801890",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801889",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435958,
-      "issuerName": "Workday Inc",
-      "issuerTicker": "WDAY:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 143.65,
-      "priceDisplay": "$143.65",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435958",
-      "tradeUrl": "/trades/20003801889",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801888",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433658,
-      "issuerName": "Nike Inc",
-      "issuerTicker": "NKE:US",
-      "issuerState": "or",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 43.21,
-      "priceDisplay": "$43.21",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433658",
-      "tradeUrl": "/trades/20003801888",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801887",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433909,
-      "issuerName": "PACCAR Inc",
-      "issuerTicker": "PCAR:US",
-      "issuerState": "wa",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 124.46,
-      "priceDisplay": "$124.46",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433909",
-      "tradeUrl": "/trades/20003801887",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801886",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 1608657,
-      "issuerName": "CBRE Group Inc",
-      "issuerTicker": "CBRE:US",
-      "issuerState": "tx",
-      "issuerCountry": "us",
-      "sector": "real-estate",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 143.73,
-      "priceDisplay": "$143.73",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/1608657",
-      "tradeUrl": "/trades/20003801886",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801885",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431282,
-      "issuerName": "Digital Realty Trust Inc",
-      "issuerTicker": "DLR:US",
-      "issuerState": "tx",
-      "issuerCountry": "us",
-      "sector": "real-estate",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 174.9,
-      "priceDisplay": "$174.90",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431282",
-      "tradeUrl": "/trades/20003801885",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801884",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434241,
-      "issuerName": "PTC Inc",
-      "issuerTicker": "PTC:US",
-      "issuerState": "ma",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 125.04,
-      "priceDisplay": "$125.04",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434241",
-      "tradeUrl": "/trades/20003801884",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801883",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430172,
-      "issuerName": "Booking Holdings Inc",
-      "issuerTicker": "BKNG:US",
-      "issuerState": "ct",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 181.95,
-      "priceDisplay": "$181.95",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430172",
-      "tradeUrl": "/trades/20003801883",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801882",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435443,
-      "issuerName": "Ulta Beauty Inc",
-      "issuerTicker": "ULTA:US",
-      "issuerState": "il",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 453.78,
-      "priceDisplay": "$453.78",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435443",
-      "tradeUrl": "/trades/20003801882",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801881",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434275,
-      "issuerName": "QUALCOMM Inc",
-      "issuerTicker": "QCOM:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 182.97,
-      "priceDisplay": "$182.97",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434275",
-      "tradeUrl": "/trades/20003801881",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801880",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435282,
-      "issuerName": "T-Mobile US Inc",
-      "issuerTicker": "TMUS:US",
-      "issuerState": "wa",
-      "issuerCountry": "us",
-      "sector": "communication-services",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 184.73,
-      "priceDisplay": "$184.73",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435282",
-      "tradeUrl": "/trades/20003801880",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801879",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432480,
-      "issuerName": "International Business Machines Corp",
-      "issuerTicker": "IBM:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 306.13,
-      "priceDisplay": "$306.13",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432480",
-      "tradeUrl": "/trades/20003801879",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801878",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430305,
-      "issuerName": "Cadence Design Systems Inc",
-      "issuerTicker": "CDNS:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 371.06,
-      "priceDisplay": "$371.06",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430305",
-      "tradeUrl": "/trades/20003801878",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801877",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431879,
-      "issuerName": "Freeport-McMoRan Inc",
-      "issuerTicker": "FCX:US",
-      "issuerState": "az",
-      "issuerCountry": "us",
-      "sector": "materials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 59.33,
-      "priceDisplay": "$59.33",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431879",
-      "tradeUrl": "/trades/20003801877",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801876",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435122,
-      "issuerName": "Take-Two Interactive Software Inc",
-      "issuerTicker": "TTWO:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "communication-services",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 257.79,
-      "priceDisplay": "$257.79",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435122",
-      "tradeUrl": "/trades/20003801876",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801875",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 2331336,
-      "issuerName": "Palantir Technologies Inc",
-      "issuerTicker": "PLTR:US",
-      "issuerState": "fl",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 134.37,
-      "priceDisplay": "$134.37",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/2331336",
-      "tradeUrl": "/trades/20003801875",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801874",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 436024,
-      "issuerName": "Zoetis Inc",
-      "issuerTicker": "ZTS:US",
-      "issuerState": "nj",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 76.29,
-      "priceDisplay": "$76.29",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/436024",
-      "tradeUrl": "/trades/20003801874",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801873",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 431835,
-      "issuerName": "Fortive Corp",
-      "issuerTicker": "FTV:US",
-      "issuerState": "wa",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 62.55,
-      "priceDisplay": "$62.55",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/431835",
-      "tradeUrl": "/trades/20003801873",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801872",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432432,
-      "issuerName": "Ingersoll Rand Inc",
-      "issuerTicker": "IR:US",
-      "issuerState": "nc",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 78.71,
-      "priceDisplay": "$78.71",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432432",
-      "tradeUrl": "/trades/20003801872",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801871",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430911,
-      "issuerName": "Comcast Corp",
-      "issuerTicker": "CMCSA:US",
-      "issuerState": "pa",
-      "issuerCountry": "us",
-      "sector": "communication-services",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 23.41,
-      "priceDisplay": "$23.41",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430911",
-      "tradeUrl": "/trades/20003801871",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801870",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434041,
-      "issuerName": "Pfizer Inc",
-      "issuerTicker": "PFE:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 24.07,
-      "priceDisplay": "$24.07",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434041",
-      "tradeUrl": "/trades/20003801870",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801869",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433121,
-      "issuerName": "Lowe's Cos Inc",
-      "issuerTicker": "LOW:US",
-      "issuerState": "nc",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 220.9,
-      "priceDisplay": "$220.90",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433121",
-      "tradeUrl": "/trades/20003801869",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801868",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432490,
-      "issuerName": "Intuit Inc",
-      "issuerTicker": "INTU:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 281.17,
-      "priceDisplay": "$281.17",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432490",
-      "tradeUrl": "/trades/20003801868",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801867",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 432471,
-      "issuerName": "Intercontinental Exchange Inc",
-      "issuerTicker": "ICE:US",
-      "issuerState": "ga",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 136.45,
-      "priceDisplay": "$136.45",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/432471",
-      "tradeUrl": "/trades/20003801867",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801866",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434658,
-      "issuerName": "ServiceNow Inc",
-      "issuerTicker": "NOW:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 110.73,
-      "priceDisplay": "$110.73",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/434658",
-      "tradeUrl": "/trades/20003801866",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801865",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435777,
-      "issuerName": "Walmart Inc",
-      "issuerTicker": "WMT:US",
-      "issuerState": "ar",
-      "issuerCountry": "us",
-      "sector": "consumer-staples",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 111.54,
-      "priceDisplay": "$111.54",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435777",
-      "tradeUrl": "/trades/20003801865",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801864",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433236,
-      "issuerName": "Marvell Technology Inc",
-      "issuerTicker": "MRVL:US",
-      "issuerState": "de",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 230.7,
-      "priceDisplay": "$230.70",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433236",
-      "tradeUrl": "/trades/20003801864",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801863",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435219,
-      "issuerName": "Texas Instruments Inc",
-      "issuerTicker": "TXN:US",
-      "issuerState": "tx",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 293.3,
-      "priceDisplay": "$293.30",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435219",
-      "tradeUrl": "/trades/20003801863",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801862",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429988,
-      "issuerName": "Bank of America Corp",
-      "issuerTicker": "BAC:US",
-      "issuerState": "nc",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 59.86,
-      "priceDisplay": "$59.86",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/429988",
-      "tradeUrl": "/trades/20003801862",
-      "sourcePage": 12
-    },
-    {
-      "id": "20003801861",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 2264488,
-      "issuerName": "Berkshire Hathaway Inc",
-      "issuerTicker": "BRK/B:US",
-      "issuerState": "ne",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 31,
-      "filedAfterDisplay": "31 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 504,
-      "priceDisplay": "$504.00",
-      "comment": "2020 Trust FBO Khanna Children",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/2264488",
-      "tradeUrl": "/trades/20003801861",
       "sourcePage": 12
     },
     {
@@ -51687,7 +48372,7 @@
       "politicianUrl": "/politicians/K000376",
       "issuerUrl": "/issuers/431303",
       "tradeUrl": "/trades/20003801840",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003801839",
@@ -51726,7 +48411,7 @@
       "politicianUrl": "/politicians/K000376",
       "issuerUrl": "/issuers/434019",
       "tradeUrl": "/trades/20003801839",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003801836",
@@ -51765,7 +48450,7 @@
       "politicianUrl": "/politicians/K000376",
       "issuerUrl": "/issuers/429442",
       "tradeUrl": "/trades/20003801836",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003801835",
@@ -51804,7 +48489,7 @@
       "politicianUrl": "/politicians/D000617",
       "issuerUrl": "/issuers/431831",
       "tradeUrl": "/trades/20003801835",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003801834",
@@ -51843,7 +48528,7 @@
       "politicianUrl": "/politicians/M001239",
       "issuerUrl": "/issuers/433927",
       "tradeUrl": "/trades/20003801834",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003801833",
@@ -51882,7 +48567,7 @@
       "politicianUrl": "/politicians/M001239",
       "issuerUrl": "/issuers/430117",
       "tradeUrl": "/trades/20003801833",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003801832",
@@ -51921,7 +48606,7 @@
       "politicianUrl": "/politicians/M001239",
       "issuerUrl": "/issuers/430117",
       "tradeUrl": "/trades/20003801832",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003801831",
@@ -51960,7 +48645,7 @@
       "politicianUrl": "/politicians/M001239",
       "issuerUrl": "/issuers/429793",
       "tradeUrl": "/trades/20003801831",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003801829",
@@ -51999,7 +48684,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335519",
       "tradeUrl": "/trades/20003801829",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801827",
@@ -52038,7 +48723,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/430720",
       "tradeUrl": "/trades/20003801827",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801826",
@@ -52077,7 +48762,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/433444",
       "tradeUrl": "/trades/20003801826",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801825",
@@ -52116,7 +48801,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335518",
       "tradeUrl": "/trades/20003801825",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801824",
@@ -52155,7 +48840,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335517",
       "tradeUrl": "/trades/20003801824",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801823",
@@ -52194,7 +48879,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2334504",
       "tradeUrl": "/trades/20003801823",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801822",
@@ -52233,7 +48918,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335516",
       "tradeUrl": "/trades/20003801822",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801821",
@@ -52272,7 +48957,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/432965",
       "tradeUrl": "/trades/20003801821",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801820",
@@ -52311,7 +48996,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335515",
       "tradeUrl": "/trades/20003801820",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801819",
@@ -52350,7 +49035,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/431270",
       "tradeUrl": "/trades/20003801819",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801818",
@@ -52389,7 +49074,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/430911",
       "tradeUrl": "/trades/20003801818",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801817",
@@ -52428,7 +49113,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335514",
       "tradeUrl": "/trades/20003801817",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801816",
@@ -52896,7 +49581,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/429622",
       "tradeUrl": "/trades/20003801805",
-      "sourcePage": 14
+      "sourcePage": 13
     },
     {
       "id": "20003801804",
@@ -52935,46 +49620,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/429622",
       "tradeUrl": "/trades/20003801804",
-      "sourcePage": 14
-    },
-    {
-      "id": "10000066589",
-      "politicianId": "F000479",
-      "politicianName": "John Fetterman",
-      "firstName": "John",
-      "lastName": "Fetterman",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1969-08-15",
-      "gender": "male",
-      "issuerId": 2335153,
-      "issuerName": "VENUS INDEPENDENT SCHOOL DISTRICT",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-08-10T21:15:18Z",
-      "publishedDisplay": "10 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 34,
-      "filedAfterDisplay": "34 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5.25% Matures: 2055-08-15",
-      "politicianUrl": "/politicians/F000479",
-      "issuerUrl": "/issuers/2335153",
-      "tradeUrl": "/trades/10000066589",
-      "sourcePage": 15
+      "sourcePage": 13
     },
     {
       "id": "10000066588",
@@ -53013,7 +49659,7 @@
       "politicianUrl": "/politicians/F000479",
       "issuerUrl": "/issuers/432185",
       "tradeUrl": "/trades/10000066588",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "10000066587",
@@ -53052,7 +49698,7 @@
       "politicianUrl": "/politicians/F000479",
       "issuerUrl": "/issuers/431879",
       "tradeUrl": "/trades/10000066587",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801780",
@@ -53091,7 +49737,7 @@
       "politicianUrl": "/politicians/S000168",
       "issuerUrl": "/issuers/430403",
       "tradeUrl": "/trades/20003801780",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801779",
@@ -53130,7 +49776,7 @@
       "politicianUrl": "/politicians/S000168",
       "issuerUrl": "/issuers/430403",
       "tradeUrl": "/trades/20003801779",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801778",
@@ -53169,7 +49815,7 @@
       "politicianUrl": "/politicians/S000168",
       "issuerUrl": "/issuers/2264488",
       "tradeUrl": "/trades/20003801778",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801777",
@@ -53208,7 +49854,7 @@
       "politicianUrl": "/politicians/S000168",
       "issuerUrl": "/issuers/2264488",
       "tradeUrl": "/trades/20003801777",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801754",
@@ -53247,7 +49893,7 @@
       "politicianUrl": "/politicians/R000619",
       "issuerUrl": "/issuers/431124",
       "tradeUrl": "/trades/20003801754",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801744",
@@ -53286,7 +49932,7 @@
       "politicianUrl": "/politicians/M001245",
       "issuerUrl": "/issuers/434094",
       "tradeUrl": "/trades/20003801744",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801796",
@@ -53325,7 +49971,7 @@
       "politicianUrl": "/politicians/H001086",
       "issuerUrl": "/issuers/2335187",
       "tradeUrl": "/trades/20003801796",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801795",
@@ -53364,7 +50010,7 @@
       "politicianUrl": "/politicians/H001086",
       "issuerUrl": "/issuers/431489",
       "tradeUrl": "/trades/20003801795",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801794",
@@ -53403,7 +50049,7 @@
       "politicianUrl": "/politicians/H001086",
       "issuerUrl": "/issuers/431489",
       "tradeUrl": "/trades/20003801794",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801793",
@@ -53442,7 +50088,7 @@
       "politicianUrl": "/politicians/H001086",
       "issuerUrl": "/issuers/431030",
       "tradeUrl": "/trades/20003801793",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801792",
@@ -53481,46 +50127,7 @@
       "politicianUrl": "/politicians/H001086",
       "issuerUrl": "/issuers/431030",
       "tradeUrl": "/trades/20003801792",
-      "sourcePage": 15
-    },
-    {
-      "id": "20003801791",
-      "politicianId": "H001086",
-      "politicianName": "Diana Harshbarger",
-      "firstName": "Diana",
-      "lastName": "Harshbarger",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "tn",
-      "dateOfBirth": "1960-01-01",
-      "gender": "female",
-      "issuerId": 431030,
-      "issuerName": "COUNTY OF HARRIS TEXAS",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-08-10T13:05:02Z",
-      "publishedDisplay": "10 Aug 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 27,
-      "filedAfterDisplay": "27 days",
-      "owner": "not-disclosed",
-      "ownerDisplay": "Undisclosed",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": null,
-      "politicianUrl": "/politicians/H001086",
-      "issuerUrl": "/issuers/431030",
-      "tradeUrl": "/trades/20003801791",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "10000066585",
@@ -53559,7 +50166,7 @@
       "politicianUrl": "/politicians/P000595",
       "issuerUrl": "/issuers/434327",
       "tradeUrl": "/trades/10000066585",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801743",
@@ -53598,7 +50205,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/433382",
       "tradeUrl": "/trades/20003801743",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801742",
@@ -53637,7 +50244,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/433382",
       "tradeUrl": "/trades/20003801742",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801741",
@@ -53676,7 +50283,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/433212",
       "tradeUrl": "/trades/20003801741",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801740",
@@ -53715,7 +50322,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/433212",
       "tradeUrl": "/trades/20003801740",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801739",
@@ -53754,7 +50361,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/432930",
       "tradeUrl": "/trades/20003801739",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801738",
@@ -53793,7 +50400,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/432930",
       "tradeUrl": "/trades/20003801738",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801737",
@@ -53832,7 +50439,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/431687",
       "tradeUrl": "/trades/20003801737",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801736",
@@ -53871,7 +50478,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/431687",
       "tradeUrl": "/trades/20003801736",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801735",
@@ -53910,7 +50517,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/430239",
       "tradeUrl": "/trades/20003801735",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801734",
@@ -53949,7 +50556,7 @@
       "politicianUrl": "/politicians/T000490",
       "issuerUrl": "/issuers/429622",
       "tradeUrl": "/trades/20003801734",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801733",
@@ -53988,7 +50595,7 @@
       "politicianUrl": "/politicians/M001136",
       "issuerUrl": "/issuers/2335353",
       "tradeUrl": "/trades/20003801733",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "10000066407",
@@ -54027,7 +50634,7 @@
       "politicianUrl": "/politicians/C001047",
       "issuerUrl": "/issuers/430568",
       "tradeUrl": "/trades/10000066407",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "10000066406",
@@ -54066,7 +50673,7 @@
       "politicianUrl": "/politicians/C001047",
       "issuerUrl": "/issuers/430852",
       "tradeUrl": "/trades/10000066406",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "10000066405",
@@ -54105,7 +50712,7 @@
       "politicianUrl": "/politicians/C001047",
       "issuerUrl": "/issuers/432464",
       "tradeUrl": "/trades/10000066405",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "10000066404",
@@ -54144,7 +50751,7 @@
       "politicianUrl": "/politicians/C001047",
       "issuerUrl": "/issuers/429789",
       "tradeUrl": "/trades/10000066404",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "10000066403",
@@ -54183,7 +50790,7 @@
       "politicianUrl": "/politicians/C001047",
       "issuerUrl": "/issuers/433382",
       "tradeUrl": "/trades/10000066403",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801654",
@@ -54222,7 +50829,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435765",
       "tradeUrl": "/trades/20003801654",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801653",
@@ -54261,7 +50868,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435765",
       "tradeUrl": "/trades/20003801653",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801652",
@@ -54300,7 +50907,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2334942",
       "tradeUrl": "/trades/20003801652",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801651",
@@ -54339,7 +50946,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435344",
       "tradeUrl": "/trades/20003801651",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801650",
@@ -54378,7 +50985,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435338",
       "tradeUrl": "/trades/20003801650",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801649",
@@ -54417,7 +51024,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435013",
       "tradeUrl": "/trades/20003801649",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801648",
@@ -54456,7 +51063,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435013",
       "tradeUrl": "/trades/20003801648",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801647",
@@ -54495,7 +51102,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435013",
       "tradeUrl": "/trades/20003801647",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801646",
@@ -54885,7 +51492,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/433232",
       "tradeUrl": "/trades/20003801635",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801634",
@@ -54924,7 +51531,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/433219",
       "tradeUrl": "/trades/20003801634",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801633",
@@ -54963,7 +51570,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/433219",
       "tradeUrl": "/trades/20003801633",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801632",
@@ -55002,7 +51609,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/433219",
       "tradeUrl": "/trades/20003801632",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801631",
@@ -55041,7 +51648,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/433219",
       "tradeUrl": "/trades/20003801631",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801630",
@@ -55080,7 +51687,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/433066",
       "tradeUrl": "/trades/20003801630",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801629",
@@ -55119,7 +51726,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/433066",
       "tradeUrl": "/trades/20003801629",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801628",
@@ -55158,7 +51765,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801628",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801627",
@@ -55197,7 +51804,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801627",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801626",
@@ -55236,7 +51843,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801626",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801625",
@@ -55275,7 +51882,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801625",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801624",
@@ -55314,7 +51921,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801624",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801623",
@@ -55353,7 +51960,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801623",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801622",
@@ -55392,7 +51999,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801622",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801621",
@@ -55431,7 +52038,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801621",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801620",
@@ -55470,7 +52077,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2335511",
       "tradeUrl": "/trades/20003801620",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801619",
@@ -55509,7 +52116,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/1604614",
       "tradeUrl": "/trades/20003801619",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801618",
@@ -55548,7 +52155,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/1604614",
       "tradeUrl": "/trades/20003801618",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801617",
@@ -55587,7 +52194,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/1604614",
       "tradeUrl": "/trades/20003801617",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801616",
@@ -55626,7 +52233,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/1604614",
       "tradeUrl": "/trades/20003801616",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801615",
@@ -55665,7 +52272,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/1604614",
       "tradeUrl": "/trades/20003801615",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801614",
@@ -55704,7 +52311,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/1604614",
       "tradeUrl": "/trades/20003801614",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801613",
@@ -55743,7 +52350,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/432327",
       "tradeUrl": "/trades/20003801613",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801612",
@@ -55782,7 +52389,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/431509",
       "tradeUrl": "/trades/20003801612",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801611",
@@ -55821,7 +52428,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/431509",
       "tradeUrl": "/trades/20003801611",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801610",
@@ -55860,7 +52467,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/431783",
       "tradeUrl": "/trades/20003801610",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801609",
@@ -55899,7 +52506,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/431783",
       "tradeUrl": "/trades/20003801609",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801608",
@@ -55938,7 +52545,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/431783",
       "tradeUrl": "/trades/20003801608",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801607",
@@ -55977,7 +52584,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/431783",
       "tradeUrl": "/trades/20003801607",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801606",
@@ -56016,7 +52623,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/431783",
       "tradeUrl": "/trades/20003801606",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801605",
@@ -56055,7 +52662,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/431783",
       "tradeUrl": "/trades/20003801605",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801604",
@@ -56094,7 +52701,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430810",
       "tradeUrl": "/trades/20003801604",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801603",
@@ -56133,7 +52740,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430810",
       "tradeUrl": "/trades/20003801603",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801602",
@@ -56172,7 +52779,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430810",
       "tradeUrl": "/trades/20003801602",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801601",
@@ -56211,7 +52818,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003801601",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801600",
@@ -56250,7 +52857,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003801600",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801599",
@@ -56289,7 +52896,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003801599",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801598",
@@ -56328,7 +52935,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003801598",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801597",
@@ -56367,7 +52974,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003801597",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801596",
@@ -56406,7 +53013,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430541",
       "tradeUrl": "/trades/20003801596",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801595",
@@ -56445,7 +53052,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430299",
       "tradeUrl": "/trades/20003801595",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801594",
@@ -56484,7 +53091,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430299",
       "tradeUrl": "/trades/20003801594",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "20003801593",
@@ -56523,7 +53130,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/430299",
       "tradeUrl": "/trades/20003801593",
-      "sourcePage": 15
+      "sourcePage": 14
     },
     {
       "id": "10000066402",
@@ -56562,7 +53169,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/2334268",
       "tradeUrl": "/trades/10000066402",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066401",
@@ -56601,7 +53208,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/2334268",
       "tradeUrl": "/trades/10000066401",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066400",
@@ -56640,7 +53247,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/2334268",
       "tradeUrl": "/trades/10000066400",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066399",
@@ -56679,7 +53286,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/2334268",
       "tradeUrl": "/trades/10000066399",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066398",
@@ -56718,7 +53325,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/432183",
       "tradeUrl": "/trades/10000066398",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066397",
@@ -56757,7 +53364,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/432183",
       "tradeUrl": "/trades/10000066397",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066396",
@@ -56796,7 +53403,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/446117",
       "tradeUrl": "/trades/10000066396",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066395",
@@ -56835,7 +53442,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/430325",
       "tradeUrl": "/trades/10000066395",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066394",
@@ -56874,7 +53481,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/2334564",
       "tradeUrl": "/trades/10000066394",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066393",
@@ -56913,7 +53520,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/433612",
       "tradeUrl": "/trades/10000066393",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066392",
@@ -56952,7 +53559,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/579351",
       "tradeUrl": "/trades/10000066392",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066391",
@@ -56991,7 +53598,7 @@
       "politicianUrl": "/politicians/S001217",
       "issuerUrl": "/issuers/433348",
       "tradeUrl": "/trades/10000066391",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066390",
@@ -57030,7 +53637,7 @@
       "politicianUrl": "/politicians/W000802",
       "issuerUrl": "/issuers/433121",
       "tradeUrl": "/trades/10000066390",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801592",
@@ -57069,7 +53676,7 @@
       "politicianUrl": "/politicians/B001292",
       "issuerUrl": "/issuers/2335510",
       "tradeUrl": "/trades/20003801592",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801589",
@@ -57108,7 +53715,7 @@
       "politicianUrl": "/politicians/F000110",
       "issuerUrl": "/issuers/435119",
       "tradeUrl": "/trades/20003801589",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066381",
@@ -57147,7 +53754,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432120",
       "tradeUrl": "/trades/10000066381",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066380",
@@ -57186,7 +53793,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432120",
       "tradeUrl": "/trades/10000066380",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066379",
@@ -57225,7 +53832,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/2334571",
       "tradeUrl": "/trades/10000066379",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066378",
@@ -57264,7 +53871,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/2335509",
       "tradeUrl": "/trades/10000066378",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066377",
@@ -57303,7 +53910,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/2334940",
       "tradeUrl": "/trades/10000066377",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "10000066376",
@@ -57342,7 +53949,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432120",
       "tradeUrl": "/trades/10000066376",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801588",
@@ -57381,7 +53988,7 @@
       "politicianUrl": "/politicians/S001172",
       "issuerUrl": "/issuers/2334379",
       "tradeUrl": "/trades/20003801588",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801586",
@@ -57420,7 +54027,7 @@
       "politicianUrl": "/politicians/S000250",
       "issuerUrl": "/issuers/429818",
       "tradeUrl": "/trades/20003801586",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801569",
@@ -57459,7 +54066,7 @@
       "politicianUrl": "/politicians/M001222",
       "issuerUrl": "/issuers/2335368",
       "tradeUrl": "/trades/20003801569",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801568",
@@ -57498,7 +54105,7 @@
       "politicianUrl": "/politicians/L000607",
       "issuerUrl": "/issuers/433770",
       "tradeUrl": "/trades/20003801568",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801567",
@@ -57537,7 +54144,7 @@
       "politicianUrl": "/politicians/L000566",
       "issuerUrl": "/issuers/431625",
       "tradeUrl": "/trades/20003801567",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801566",
@@ -57576,7 +54183,7 @@
       "politicianUrl": "/politicians/D000624",
       "issuerUrl": "/issuers/431632",
       "tradeUrl": "/trades/20003801566",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801565",
@@ -57615,7 +54222,7 @@
       "politicianUrl": "/politicians/H001047",
       "issuerUrl": "/issuers/432293",
       "tradeUrl": "/trades/20003801565",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801564",
@@ -57654,7 +54261,7 @@
       "politicianUrl": "/politicians/H001047",
       "issuerUrl": "/issuers/431608",
       "tradeUrl": "/trades/20003801564",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801563",
@@ -57693,7 +54300,7 @@
       "politicianUrl": "/politicians/H001047",
       "issuerUrl": "/issuers/429988",
       "tradeUrl": "/trades/20003801563",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801560",
@@ -57732,7 +54339,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/435467",
       "tradeUrl": "/trades/20003801560",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801559",
@@ -57771,7 +54378,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/435472",
       "tradeUrl": "/trades/20003801559",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801558",
@@ -57810,7 +54417,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/435432",
       "tradeUrl": "/trades/20003801558",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801557",
@@ -57849,7 +54456,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/435244",
       "tradeUrl": "/trades/20003801557",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801556",
@@ -57888,7 +54495,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/432250",
       "tradeUrl": "/trades/20003801556",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801555",
@@ -57927,7 +54534,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/433927",
       "tradeUrl": "/trades/20003801555",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801554",
@@ -57966,7 +54573,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/433770",
       "tradeUrl": "/trades/20003801554",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801553",
@@ -58005,7 +54612,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/433469",
       "tradeUrl": "/trades/20003801553",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801552",
@@ -58044,7 +54651,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/433381",
       "tradeUrl": "/trades/20003801552",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801551",
@@ -58083,7 +54690,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/433212",
       "tradeUrl": "/trades/20003801551",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801550",
@@ -58122,7 +54729,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/433172",
       "tradeUrl": "/trades/20003801550",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801549",
@@ -58161,7 +54768,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/432490",
       "tradeUrl": "/trades/20003801549",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801548",
@@ -58200,7 +54807,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/432298",
       "tradeUrl": "/trades/20003801548",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801547",
@@ -58239,7 +54846,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/2335462",
       "tradeUrl": "/trades/20003801547",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801546",
@@ -58278,7 +54885,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/431833",
       "tradeUrl": "/trades/20003801546",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801545",
@@ -58317,7 +54924,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/431809",
       "tradeUrl": "/trades/20003801545",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801544",
@@ -58356,7 +54963,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/431707",
       "tradeUrl": "/trades/20003801544",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801543",
@@ -58395,7 +55002,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/431675",
       "tradeUrl": "/trades/20003801543",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801542",
@@ -58434,7 +55041,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/433036",
       "tradeUrl": "/trades/20003801542",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801541",
@@ -58473,7 +55080,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/431367",
       "tradeUrl": "/trades/20003801541",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801540",
@@ -58512,7 +55119,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/431208",
       "tradeUrl": "/trades/20003801540",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801539",
@@ -58551,7 +55158,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/431135",
       "tradeUrl": "/trades/20003801539",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801538",
@@ -58590,7 +55197,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/431003",
       "tradeUrl": "/trades/20003801538",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801537",
@@ -58629,7 +55236,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/429822",
       "tradeUrl": "/trades/20003801537",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801536",
@@ -58668,7 +55275,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/429793",
       "tradeUrl": "/trades/20003801536",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801535",
@@ -58707,7 +55314,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/429731",
       "tradeUrl": "/trades/20003801535",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801534",
@@ -58746,7 +55353,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/429653",
       "tradeUrl": "/trades/20003801534",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801533",
@@ -58785,7 +55392,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/429622",
       "tradeUrl": "/trades/20003801533",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801532",
@@ -58824,7 +55431,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/429505",
       "tradeUrl": "/trades/20003801532",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801531",
@@ -58863,7 +55470,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/429495",
       "tradeUrl": "/trades/20003801531",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801530",
@@ -58902,7 +55509,7 @@
       "politicianUrl": "/politicians/N000189",
       "issuerUrl": "/issuers/429469",
       "tradeUrl": "/trades/20003801530",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801468",
@@ -58941,7 +55548,7 @@
       "politicianUrl": "/politicians/Y000067",
       "issuerUrl": "/issuers/435544",
       "tradeUrl": "/trades/20003801468",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801324",
@@ -58980,7 +55587,7 @@
       "politicianUrl": "/politicians/L000560",
       "issuerUrl": "/issuers/434883",
       "tradeUrl": "/trades/20003801324",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801323",
@@ -59019,7 +55626,7 @@
       "politicianUrl": "/politicians/L000560",
       "issuerUrl": "/issuers/433283",
       "tradeUrl": "/trades/20003801323",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801322",
@@ -59058,7 +55665,7 @@
       "politicianUrl": "/politicians/L000560",
       "issuerUrl": "/issuers/429731",
       "tradeUrl": "/trades/20003801322",
-      "sourcePage": 16
+      "sourcePage": 15
     },
     {
       "id": "20003801321",
@@ -59097,46 +55704,7 @@
       "politicianUrl": "/politicians/L000560",
       "issuerUrl": "/issuers/429442",
       "tradeUrl": "/trades/20003801321",
-      "sourcePage": 16
-    },
-    {
-      "id": "20003801282",
-      "politicianId": "M001239",
-      "politicianName": "John McGuire",
-      "firstName": "John",
-      "lastName": "McGuire",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "va",
-      "dateOfBirth": "1968-08-24",
-      "gender": "male",
-      "issuerId": 430117,
-      "issuerName": "Blackrock Inc",
-      "issuerTicker": "BLK:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-07-09T13:01:48Z",
-      "publishedDisplay": "9 Jul 2026",
-      "tradedAt": "2026-07-07",
-      "tradedDisplay": "7 Jul 2026",
-      "reportingGap": 1,
-      "filedAfterDisplay": "1 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 1009.43,
-      "priceDisplay": "$1,009.43",
-      "comment": "Subholding Of: Merrill Lynch SEP IRA",
-      "politicianUrl": "/politicians/M001239",
-      "issuerUrl": "/issuers/430117",
-      "tradeUrl": "/trades/20003801282",
-      "sourcePage": 16
+      "sourcePage": 15
     }
   ]
 }
