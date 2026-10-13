@@ -2,16 +2,16 @@
   "source": {
     "provider": "Capitol Trades",
     "url": "https://www.capitoltrades.com/trades?txType=buy&txType=sell&pageSize=96&page=1&txDate=90d",
-    "fetchedAt": "2026-10-12T15:34:24.711Z",
+    "fetchedAt": "2026-10-13T00:46:11.135Z",
     "window": "90 days",
     "transactionTypes": [
       "buy",
       "sell"
     ],
     "pageSize": 96,
-    "pagesFetched": 20,
-    "reportedCount": 1843,
-    "rowCount": 1843,
+    "pagesFetched": 19,
+    "reportedCount": 1821,
+    "rowCount": 1821,
     "updateIntervalHours": 6
   },
   "columns": [
@@ -57189,45 +57189,6 @@
       "sourcePage": 16
     },
     {
-      "id": "10000066673",
-      "politicianId": "B001277",
-      "politicianName": "Richard Blumenthal",
-      "firstName": "Richard",
-      "lastName": "Blumenthal",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "senate",
-      "state": "ct",
-      "dateOfBirth": "1946-02-13",
-      "gender": "male",
-      "issuerId": 2335532,
-      "issuerName": "ALPHA TEKNOVA INC",
-      "issuerTicker": "TKNO:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-26T21:15:27Z",
-      "publishedDisplay": "26 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 38,
-      "filedAfterDisplay": "38 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 5.41,
-      "priceDisplay": "$5.41",
-      "comment": "Magnifique",
-      "politicianUrl": "/politicians/B001277",
-      "issuerUrl": "/issuers/2335532",
-      "tradeUrl": "/trades/10000066673",
-      "sourcePage": 16
-    },
-    {
       "id": "10000066670",
       "politicianId": "B001277",
       "politicianName": "Richard Blumenthal",
@@ -57264,45 +57225,6 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2335532",
       "tradeUrl": "/trades/10000066670",
-      "sourcePage": 16
-    },
-    {
-      "id": "10000066669",
-      "politicianId": "B001277",
-      "politicianName": "Richard Blumenthal",
-      "firstName": "Richard",
-      "lastName": "Blumenthal",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "senate",
-      "state": "ct",
-      "dateOfBirth": "1946-02-13",
-      "gender": "male",
-      "issuerId": 2335532,
-      "issuerName": "ALPHA TEKNOVA INC",
-      "issuerTicker": "TKNO:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-26T21:15:27Z",
-      "publishedDisplay": "26 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 38,
-      "filedAfterDisplay": "38 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 5.41,
-      "priceDisplay": "$5.41",
-      "comment": "(S) MarryMae LLC",
-      "politicianUrl": "/politicians/B001277",
-      "issuerUrl": "/issuers/2335532",
-      "tradeUrl": "/trades/10000066669",
       "sourcePage": 16
     },
     {
@@ -57384,45 +57306,6 @@
       "sourcePage": 16
     },
     {
-      "id": "10000066662",
-      "politicianId": "B001277",
-      "politicianName": "Richard Blumenthal",
-      "firstName": "Richard",
-      "lastName": "Blumenthal",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "senate",
-      "state": "ct",
-      "dateOfBirth": "1946-02-13",
-      "gender": "male",
-      "issuerId": 2335532,
-      "issuerName": "ALPHA TEKNOVA INC",
-      "issuerTicker": "TKNO:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-26T21:15:27Z",
-      "publishedDisplay": "26 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 38,
-      "filedAfterDisplay": "38 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 5.41,
-      "priceDisplay": "$5.41",
-      "comment": "(S) Hedge Holdings LLC",
-      "politicianUrl": "/politicians/B001277",
-      "issuerUrl": "/issuers/2335532",
-      "tradeUrl": "/trades/10000066662",
-      "sourcePage": 16
-    },
-    {
       "id": "10000066656",
       "politicianId": "B001277",
       "politicianName": "Richard Blumenthal",
@@ -57501,45 +57384,6 @@
       "sourcePage": 16
     },
     {
-      "id": "10000066654",
-      "politicianId": "B001277",
-      "politicianName": "Richard Blumenthal",
-      "firstName": "Richard",
-      "lastName": "Blumenthal",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "senate",
-      "state": "ct",
-      "dateOfBirth": "1946-02-13",
-      "gender": "male",
-      "issuerId": 2335532,
-      "issuerName": "ALPHA TEKNOVA INC",
-      "issuerTicker": "TKNO:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-26T21:15:27Z",
-      "publishedDisplay": "26 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 38,
-      "filedAfterDisplay": "38 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 5.41,
-      "priceDisplay": "$5.41",
-      "comment": "(S) Peter L Malkin Family 2000 LLC",
-      "politicianUrl": "/politicians/B001277",
-      "issuerUrl": "/issuers/2335532",
-      "tradeUrl": "/trades/10000066654",
-      "sourcePage": 16
-    },
-    {
       "id": "10000066648",
       "politicianId": "B001277",
       "politicianName": "Richard Blumenthal",
@@ -57576,45 +57420,6 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2335532",
       "tradeUrl": "/trades/10000066648",
-      "sourcePage": 16
-    },
-    {
-      "id": "10000066647",
-      "politicianId": "B001277",
-      "politicianName": "Richard Blumenthal",
-      "firstName": "Richard",
-      "lastName": "Blumenthal",
-      "nickname": null,
-      "party": "democrat",
-      "chamber": "senate",
-      "state": "ct",
-      "dateOfBirth": "1946-02-13",
-      "gender": "male",
-      "issuerId": 2335532,
-      "issuerName": "ALPHA TEKNOVA INC",
-      "issuerTicker": "TKNO:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-26T21:15:27Z",
-      "publishedDisplay": "26 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 38,
-      "filedAfterDisplay": "38 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 5.41,
-      "priceDisplay": "$5.41",
-      "comment": "(S) Peter L Malkin Family 9 LLC",
-      "politicianUrl": "/politicians/B001277",
-      "issuerUrl": "/issuers/2335532",
-      "tradeUrl": "/trades/10000066647",
       "sourcePage": 16
     },
     {
@@ -58593,123 +58398,6 @@
       "sourcePage": 16
     },
     {
-      "id": "20003802210",
-      "politicianId": "W000829",
-      "politicianName": "Tony Wied",
-      "firstName": "Anthony",
-      "lastName": "Wied",
-      "nickname": "Tony",
-      "party": "republican",
-      "chamber": "house",
-      "state": "wi",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 434517,
-      "issuerName": "salesforce.com Inc",
-      "issuerTicker": "CRM:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-19T13:05:12Z",
-      "publishedDisplay": "19 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 35,
-      "filedAfterDisplay": "35 days",
-      "owner": "joint",
-      "ownerDisplay": "Joint",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 167.56,
-      "priceDisplay": "$167.56",
-      "comment": null,
-      "politicianUrl": "/politicians/W000829",
-      "issuerUrl": "/issuers/434517",
-      "tradeUrl": "/trades/20003802210",
-      "sourcePage": 16
-    },
-    {
-      "id": "20003802209",
-      "politicianId": "W000829",
-      "politicianName": "Tony Wied",
-      "firstName": "Anthony",
-      "lastName": "Wied",
-      "nickname": "Tony",
-      "party": "republican",
-      "chamber": "house",
-      "state": "wi",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 2333913,
-      "issuerName": "UPSTART HOLDINGS INC",
-      "issuerTicker": "UPST:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-19T13:05:12Z",
-      "publishedDisplay": "19 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 35,
-      "filedAfterDisplay": "35 days",
-      "owner": "joint",
-      "ownerDisplay": "Joint",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 31.72,
-      "priceDisplay": "$31.72",
-      "comment": null,
-      "politicianUrl": "/politicians/W000829",
-      "issuerUrl": "/issuers/2333913",
-      "tradeUrl": "/trades/20003802209",
-      "sourcePage": 16
-    },
-    {
-      "id": "20003802208",
-      "politicianId": "W000829",
-      "politicianName": "Tony Wied",
-      "firstName": "Anthony",
-      "lastName": "Wied",
-      "nickname": "Tony",
-      "party": "republican",
-      "chamber": "house",
-      "state": "wi",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 429495,
-      "issuerName": "Adobe Inc",
-      "issuerTicker": "ADBE:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-19T13:05:12Z",
-      "publishedDisplay": "19 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 35,
-      "filedAfterDisplay": "35 days",
-      "owner": "joint",
-      "ownerDisplay": "Joint",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 220.78,
-      "priceDisplay": "$220.78",
-      "comment": null,
-      "politicianUrl": "/politicians/W000829",
-      "issuerUrl": "/issuers/429495",
-      "tradeUrl": "/trades/20003802208",
-      "sourcePage": 16
-    },
-    {
       "id": "20003802207",
       "politicianId": "W000829",
       "politicianName": "Tony Wied",
@@ -58863,123 +58551,6 @@
       "politicianUrl": "/politicians/C001055",
       "issuerUrl": "/issuers/429789",
       "tradeUrl": "/trades/20003802200",
-      "sourcePage": 16
-    },
-    {
-      "id": "20003802199",
-      "politicianId": "A000372",
-      "politicianName": "Rick Allen",
-      "firstName": "Richard",
-      "lastName": "Allen",
-      "nickname": "Rick",
-      "party": "republican",
-      "chamber": "house",
-      "state": "ga",
-      "dateOfBirth": "1951-11-07",
-      "gender": "male",
-      "issuerId": 430239,
-      "issuerName": "Broadcom Inc",
-      "issuerTicker": "AVGO:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-19T13:05:10Z",
-      "publishedDisplay": "19 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 35,
-      "filedAfterDisplay": "35 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 389.11,
-      "priceDisplay": "$389.11",
-      "comment": "Subholding Of: LIVTR",
-      "politicianUrl": "/politicians/A000372",
-      "issuerUrl": "/issuers/430239",
-      "tradeUrl": "/trades/20003802199",
-      "sourcePage": 16
-    },
-    {
-      "id": "20003802198",
-      "politicianId": "A000372",
-      "politicianName": "Rick Allen",
-      "firstName": "Richard",
-      "lastName": "Allen",
-      "nickname": "Rick",
-      "party": "republican",
-      "chamber": "house",
-      "state": "ga",
-      "dateOfBirth": "1951-11-07",
-      "gender": "male",
-      "issuerId": 429505,
-      "issuerName": "Advanced Micro Devices Inc",
-      "issuerTicker": "AMD:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-19T13:05:10Z",
-      "publishedDisplay": "19 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 35,
-      "filedAfterDisplay": "35 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 548.13,
-      "priceDisplay": "$548.13",
-      "comment": "Subholding Of: LIVTR",
-      "politicianUrl": "/politicians/A000372",
-      "issuerUrl": "/issuers/429505",
-      "tradeUrl": "/trades/20003802198",
-      "sourcePage": 16
-    },
-    {
-      "id": "20003802197",
-      "politicianId": "A000372",
-      "politicianName": "Rick Allen",
-      "firstName": "Richard",
-      "lastName": "Allen",
-      "nickname": "Rick",
-      "party": "republican",
-      "chamber": "house",
-      "state": "ga",
-      "dateOfBirth": "1951-11-07",
-      "gender": "male",
-      "issuerId": 429442,
-      "issuerName": "Abbott Laboratories",
-      "issuerTicker": "ABT:US",
-      "issuerState": "il",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-19T13:05:10Z",
-      "publishedDisplay": "19 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 35,
-      "filedAfterDisplay": "35 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": 88.96,
-      "priceDisplay": "$88.96",
-      "comment": "Subholding Of: LIVTR",
-      "politicianUrl": "/politicians/A000372",
-      "issuerUrl": "/issuers/429442",
-      "tradeUrl": "/trades/20003802197",
       "sourcePage": 16
     },
     {
@@ -60189,7 +59760,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/1571408",
       "tradeUrl": "/trades/20003802169",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802168",
@@ -60228,7 +59799,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/432782",
       "tradeUrl": "/trades/20003802168",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802167",
@@ -60267,7 +59838,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/432471",
       "tradeUrl": "/trades/20003802167",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802166",
@@ -60306,7 +59877,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/432381",
       "tradeUrl": "/trades/20003802166",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802165",
@@ -60345,7 +59916,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/432293",
       "tradeUrl": "/trades/20003802165",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802164",
@@ -60384,7 +59955,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/431462",
       "tradeUrl": "/trades/20003802164",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802163",
@@ -60423,7 +59994,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/431003",
       "tradeUrl": "/trades/20003802163",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802162",
@@ -60462,7 +60033,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/430568",
       "tradeUrl": "/trades/20003802162",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802161",
@@ -60501,7 +60072,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/430117",
       "tradeUrl": "/trades/20003802161",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802160",
@@ -60540,7 +60111,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/2264488",
       "tradeUrl": "/trades/20003802160",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802159",
@@ -60579,7 +60150,7 @@
       "politicianUrl": "/politicians/M001218",
       "issuerUrl": "/issuers/429932",
       "tradeUrl": "/trades/20003802159",
-      "sourcePage": 17
+      "sourcePage": 16
     },
     {
       "id": "20003802158",
@@ -61554,84 +61125,6 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433448",
       "tradeUrl": "/trades/20003802105",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003802103",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 579351,
-      "issuerName": "OHIO WATER DEVELOPMENT AUTHORITY",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 24,
-      "filedAfterDisplay": "24 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "M & R Trust Partnership",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/579351",
-      "tradeUrl": "/trades/20003802103",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003802102",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 433703,
-      "issuerName": "NORTHEAST OHIO REGIONAL SEWER DISTRICT",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 24,
-      "filedAfterDisplay": "24 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "M & R Trust Partnership",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/433703",
-      "tradeUrl": "/trades/20003802102",
       "sourcePage": 18
     },
     {
@@ -63738,7 +63231,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429495",
       "tradeUrl": "/trades/20003802017",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802016",
@@ -63777,7 +63270,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431926",
       "tradeUrl": "/trades/20003802016",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802015",
@@ -63816,7 +63309,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334019",
       "tradeUrl": "/trades/20003802015",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802014",
@@ -63855,7 +63348,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430516",
       "tradeUrl": "/trades/20003802014",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802013",
@@ -63894,7 +63387,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434562",
       "tradeUrl": "/trades/20003802013",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802012",
@@ -63933,46 +63426,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430852",
       "tradeUrl": "/trades/20003802012",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003802011",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 435432,
-      "issuerName": "Uber Technologies Inc",
-      "issuerTicker": "UBER:US",
-      "issuerState": "ca",
-      "issuerCountry": "us",
-      "sector": "industrials",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 24,
-      "filedAfterDisplay": "24 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 72.08,
-      "priceDisplay": "$72.08",
-      "comment": "Ritu Ahuja Declaration of Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/435432",
-      "tradeUrl": "/trades/20003802011",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802010",
@@ -64011,7 +63465,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431835",
       "tradeUrl": "/trades/20003802010",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802008",
@@ -64050,7 +63504,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/432490",
       "tradeUrl": "/trades/20003802008",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802007",
@@ -64089,7 +63543,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433878",
       "tradeUrl": "/trades/20003802007",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802006",
@@ -64128,7 +63582,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430400",
       "tradeUrl": "/trades/20003802006",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802005",
@@ -64167,7 +63621,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433478",
       "tradeUrl": "/trades/20003802005",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802004",
@@ -64206,7 +63660,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/429934",
       "tradeUrl": "/trades/20003802004",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802003",
@@ -64245,7 +63699,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334687",
       "tradeUrl": "/trades/20003802003",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802002",
@@ -64284,7 +63738,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/2334178",
       "tradeUrl": "/trades/20003802002",
-      "sourcePage": 18
+      "sourcePage": 17
     },
     {
       "id": "20003802001",
@@ -64362,45 +63816,6 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433440",
       "tradeUrl": "/trades/20003802000",
-      "sourcePage": 17
-    },
-    {
-      "id": "20003801999",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 2334178,
-      "issuerName": "GE HEALTHCARE TECHNOLOGI INC",
-      "issuerTicker": "GEHC:US",
-      "issuerState": "il",
-      "issuerCountry": "us",
-      "sector": "health-care",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 24,
-      "filedAfterDisplay": "24 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 61.66,
-      "priceDisplay": "$61.66",
-      "comment": "Ritu Ahuja Declaration of Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/2334178",
-      "tradeUrl": "/trades/20003801999",
       "sourcePage": 17
     },
     {
@@ -65376,45 +64791,6 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433658",
       "tradeUrl": "/trades/20003801966",
-      "sourcePage": 17
-    },
-    {
-      "id": "20003801965",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430516,
-      "issuerName": "Chewy Inc",
-      "issuerTicker": "CHWY:US",
-      "issuerState": "fl",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 24,
-      "filedAfterDisplay": "24 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 20.35,
-      "priceDisplay": "$20.35",
-      "comment": "Ritu Ahuja Declaration of Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430516",
-      "tradeUrl": "/trades/20003801965",
       "sourcePage": 17
     },
     {
@@ -66471,45 +65847,6 @@
       "sourcePage": 17
     },
     {
-      "id": "20003801849",
-      "politicianId": "K000389",
-      "politicianName": "Ro Khanna",
-      "firstName": "Rohit",
-      "lastName": "Khanna",
-      "nickname": "Ro",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "ca",
-      "dateOfBirth": "1976-09-13",
-      "gender": "male",
-      "issuerId": 430516,
-      "issuerName": "Chewy Inc",
-      "issuerTicker": "CHWY:US",
-      "issuerState": "fl",
-      "issuerCountry": "us",
-      "sector": "consumer-discretionary",
-      "publishedAt": "2026-08-12T13:05:04Z",
-      "publishedDisplay": "12 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 24,
-      "filedAfterDisplay": "24 days",
-      "owner": "child",
-      "ownerDisplay": "Child",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 20.35,
-      "priceDisplay": "$20.35",
-      "comment": "Ahuja Grandchildren's Education Trust",
-      "politicianUrl": "/politicians/K000389",
-      "issuerUrl": "/issuers/430516",
-      "tradeUrl": "/trades/20003801849",
-      "sourcePage": 17
-    },
-    {
       "id": "20003801846",
       "politicianId": "K000389",
       "politicianName": "Ro Khanna",
@@ -66900,45 +66237,6 @@
       "sourcePage": 18
     },
     {
-      "id": "20003801833",
-      "politicianId": "M001239",
-      "politicianName": "John McGuire",
-      "firstName": "John",
-      "lastName": "McGuire",
-      "nickname": null,
-      "party": "republican",
-      "chamber": "house",
-      "state": "va",
-      "dateOfBirth": "1968-08-24",
-      "gender": "male",
-      "issuerId": 430117,
-      "issuerName": "Blackrock Inc",
-      "issuerTicker": "BLK:US",
-      "issuerState": "ny",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-08-11T13:06:12Z",
-      "publishedDisplay": "11 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 27,
-      "filedAfterDisplay": "27 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 1025.44,
-      "priceDisplay": "$1,025.44",
-      "comment": "Subholding Of: Merrill Lynch SEP IRA",
-      "politicianUrl": "/politicians/M001239",
-      "issuerUrl": "/issuers/430117",
-      "tradeUrl": "/trades/20003801833",
-      "sourcePage": 18
-    },
-    {
       "id": "20003801831",
       "politicianId": "M001239",
       "politicianName": "John McGuire",
@@ -67014,7 +66312,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335519",
       "tradeUrl": "/trades/20003801829",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801827",
@@ -67053,7 +66351,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/430720",
       "tradeUrl": "/trades/20003801827",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801826",
@@ -67092,7 +66390,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/433444",
       "tradeUrl": "/trades/20003801826",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801825",
@@ -67131,7 +66429,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335518",
       "tradeUrl": "/trades/20003801825",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801824",
@@ -67170,7 +66468,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335517",
       "tradeUrl": "/trades/20003801824",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801823",
@@ -67209,7 +66507,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2334504",
       "tradeUrl": "/trades/20003801823",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801822",
@@ -67248,7 +66546,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335516",
       "tradeUrl": "/trades/20003801822",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801821",
@@ -67287,7 +66585,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/432965",
       "tradeUrl": "/trades/20003801821",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801820",
@@ -67326,7 +66624,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335515",
       "tradeUrl": "/trades/20003801820",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801819",
@@ -67365,7 +66663,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/431270",
       "tradeUrl": "/trades/20003801819",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801818",
@@ -67404,7 +66702,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/430911",
       "tradeUrl": "/trades/20003801818",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801817",
@@ -67443,7 +66741,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/2335514",
       "tradeUrl": "/trades/20003801817",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801816",
@@ -67482,7 +66780,7 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/2335513",
       "tradeUrl": "/trades/20003801816",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801815",
@@ -67677,45 +66975,6 @@
       "politicianUrl": "/politicians/G000583",
       "issuerUrl": "/issuers/432480",
       "tradeUrl": "/trades/20003801811",
-      "sourcePage": 18
-    },
-    {
-      "id": "20003801810",
-      "politicianId": "G000583",
-      "politicianName": "Josh Gottheimer",
-      "firstName": "Joshua",
-      "lastName": "Gottheimer",
-      "nickname": "Josh",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "nj",
-      "dateOfBirth": "1975-03-08",
-      "gender": "male",
-      "issuerId": 2334412,
-      "issuerName": "FABRINET",
-      "issuerTicker": "FN:US",
-      "issuerState": null,
-      "issuerCountry": "ky",
-      "sector": "information-technology",
-      "publishedAt": "2026-08-11T13:06:11Z",
-      "publishedDisplay": "11 Aug 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 27,
-      "filedAfterDisplay": "27 days",
-      "owner": "joint",
-      "ownerDisplay": "Joint",
-      "type": "sell",
-      "typeExtended": null,
-      "typeDisplay": "sell*",
-      "sizeDisplay": "1K–15K",
-      "estimatedValue": 8000,
-      "price": 482.78,
-      "priceDisplay": "$482.78",
-      "comment": "Subholding Of: Morgan Stanley - Select UMA Account # 1",
-      "politicianUrl": "/politicians/G000583",
-      "issuerUrl": "/issuers/2334412",
-      "tradeUrl": "/trades/20003801810",
       "sourcePage": 18
     },
     {
@@ -67989,7 +67248,7 @@
       "politicianUrl": "/politicians/F000479",
       "issuerUrl": "/issuers/432185",
       "tradeUrl": "/trades/10000066588",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "10000066587",
@@ -68028,7 +67287,7 @@
       "politicianUrl": "/politicians/F000479",
       "issuerUrl": "/issuers/431879",
       "tradeUrl": "/trades/10000066587",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801780",
@@ -68106,7 +67365,7 @@
       "politicianUrl": "/politicians/S000168",
       "issuerUrl": "/issuers/430403",
       "tradeUrl": "/trades/20003801779",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801778",
@@ -68145,7 +67404,7 @@
       "politicianUrl": "/politicians/S000168",
       "issuerUrl": "/issuers/2264488",
       "tradeUrl": "/trades/20003801778",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801777",
@@ -68184,7 +67443,7 @@
       "politicianUrl": "/politicians/S000168",
       "issuerUrl": "/issuers/2264488",
       "tradeUrl": "/trades/20003801777",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801754",
@@ -68223,7 +67482,7 @@
       "politicianUrl": "/politicians/R000619",
       "issuerUrl": "/issuers/431124",
       "tradeUrl": "/trades/20003801754",
-      "sourcePage": 19
+      "sourcePage": 18
     },
     {
       "id": "20003801744",
@@ -69159,7 +68418,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435765",
       "tradeUrl": "/trades/20003801654",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801653",
@@ -69198,7 +68457,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435765",
       "tradeUrl": "/trades/20003801653",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801652",
@@ -69237,7 +68496,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/2334942",
       "tradeUrl": "/trades/20003801652",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801651",
@@ -69276,7 +68535,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435344",
       "tradeUrl": "/trades/20003801651",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801650",
@@ -69315,7 +68574,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/435338",
       "tradeUrl": "/trades/20003801650",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801649",
@@ -71421,7 +70680,7 @@
       "politicianUrl": "/politicians/W000802",
       "issuerUrl": "/issuers/433121",
       "tradeUrl": "/trades/10000066390",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801592",
@@ -71460,85 +70719,7 @@
       "politicianUrl": "/politicians/B001292",
       "issuerUrl": "/issuers/2335510",
       "tradeUrl": "/trades/20003801592",
-      "sourcePage": 20
-    },
-    {
-      "id": "10000066380",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 432120,
-      "issuerName": "GS FINANCE CORP",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-07-29T10:15:19Z",
-      "publishedDisplay": "29 Jul 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "spouse",
-      "ownerDisplay": "Spouse",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "100K–250K",
-      "estimatedValue": 175000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "GS Managed Structured Note Strategy MSCI EAFE Linked Note",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/432120",
-      "tradeUrl": "/trades/10000066380",
-      "sourcePage": 20
-    },
-    {
-      "id": "10000066378",
-      "politicianId": "M001243",
-      "politicianName": "Dave McCormick",
-      "firstName": "David",
-      "lastName": "McCormick",
-      "nickname": "Dave",
-      "party": "republican",
-      "chamber": "senate",
-      "state": "pa",
-      "dateOfBirth": "1965-08-17",
-      "gender": "male",
-      "issuerId": 2335509,
-      "issuerName": "ALLEGHENY COUNTY OF PENNSYLVANIA",
-      "issuerTicker": "N/A",
-      "issuerState": null,
-      "issuerCountry": null,
-      "sector": null,
-      "publishedAt": "2026-07-29T10:15:19Z",
-      "publishedDisplay": "29 Jul 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 15,
-      "filedAfterDisplay": "15 days",
-      "owner": "self",
-      "ownerDisplay": "Self",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "500K–1M",
-      "estimatedValue": 750000,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Rate/Coupon: 5% Matures: 2054-12-01",
-      "politicianUrl": "/politicians/M001243",
-      "issuerUrl": "/issuers/2335509",
-      "tradeUrl": "/trades/10000066378",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "10000066377",
@@ -71577,7 +70758,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/2334940",
       "tradeUrl": "/trades/10000066377",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "10000066376",
@@ -71616,7 +70797,7 @@
       "politicianUrl": "/politicians/M001243",
       "issuerUrl": "/issuers/432120",
       "tradeUrl": "/trades/10000066376",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801586",
@@ -71655,7 +70836,7 @@
       "politicianUrl": "/politicians/S000250",
       "issuerUrl": "/issuers/429818",
       "tradeUrl": "/trades/20003801586",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801569",
@@ -71694,7 +70875,7 @@
       "politicianUrl": "/politicians/M001222",
       "issuerUrl": "/issuers/2335368",
       "tradeUrl": "/trades/20003801569",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801568",
@@ -71733,7 +70914,7 @@
       "politicianUrl": "/politicians/L000607",
       "issuerUrl": "/issuers/433770",
       "tradeUrl": "/trades/20003801568",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801567",
@@ -71772,46 +70953,7 @@
       "politicianUrl": "/politicians/L000566",
       "issuerUrl": "/issuers/431625",
       "tradeUrl": "/trades/20003801567",
-      "sourcePage": 20
-    },
-    {
-      "id": "20003801566",
-      "politicianId": "D000624",
-      "politicianName": "Debbie Dingell",
-      "firstName": "Deborah",
-      "lastName": "Dingell",
-      "nickname": "Debbie",
-      "party": "democrat",
-      "chamber": "house",
-      "state": "mi",
-      "dateOfBirth": "1953-11-23",
-      "gender": "female",
-      "issuerId": 431632,
-      "issuerName": "Federal Home Loan Mortgage Corp",
-      "issuerTicker": "FMCC:US",
-      "issuerState": "va",
-      "issuerCountry": "us",
-      "sector": "financials",
-      "publishedAt": "2026-07-23T13:05:01Z",
-      "publishedDisplay": "23 Jul 2026",
-      "tradedAt": "2026-07-14",
-      "tradedDisplay": "14 Jul 2026",
-      "reportingGap": 8,
-      "filedAfterDisplay": "8 days",
-      "owner": "not-disclosed",
-      "ownerDisplay": "Undisclosed",
-      "type": "buy",
-      "typeExtended": null,
-      "typeDisplay": "buy*",
-      "sizeDisplay": "15K–50K",
-      "estimatedValue": 32500,
-      "price": null,
-      "priceDisplay": "N/A",
-      "comment": "Subholding Of: Morgan Stanley Smith Barney LLC IRA Description: Mortgage Backed Security; Due Date 06/01/2056; Coupon 5.50% Fixed",
-      "politicianUrl": "/politicians/D000624",
-      "issuerUrl": "/issuers/431632",
-      "tradeUrl": "/trades/20003801566",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801565",
@@ -71850,7 +70992,7 @@
       "politicianUrl": "/politicians/H001047",
       "issuerUrl": "/issuers/432293",
       "tradeUrl": "/trades/20003801565",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801564",
@@ -71889,7 +71031,7 @@
       "politicianUrl": "/politicians/H001047",
       "issuerUrl": "/issuers/431608",
       "tradeUrl": "/trades/20003801564",
-      "sourcePage": 20
+      "sourcePage": 19
     },
     {
       "id": "20003801563",
@@ -71928,7 +71070,7 @@
       "politicianUrl": "/politicians/H001047",
       "issuerUrl": "/issuers/429988",
       "tradeUrl": "/trades/20003801563",
-      "sourcePage": 20
+      "sourcePage": 19
     }
   ]
 }
