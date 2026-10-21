@@ -2,7 +2,7 @@
   "source": {
     "provider": "Capitol Trades",
     "url": "https://www.capitoltrades.com/trades?txType=buy&txType=sell&pageSize=96&page=1&txDate=90d",
-    "fetchedAt": "2026-10-21T17:16:45.351Z",
+    "fetchedAt": "2026-10-21T21:46:33.052Z",
     "window": "90 days",
     "transactionTypes": [
       "buy",
