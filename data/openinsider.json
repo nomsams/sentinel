@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-10-22T07:03:44.718Z",
-    "lastModified": "Thu, 22 Oct 2026 02:01:35 GMT",
+    "fetchedAt": "2026-10-22T13:05:15.540Z",
+    "lastModified": "Thu, 22 Oct 2026 13:05:13 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -14,6 +14,28 @@
       "detailLabel": "Industry",
       "roleLabel": "Ins",
       "rows": [
+        {
+          "flags": "5 M",
+          "filingDate": "2026-10-22 08:14:43",
+          "tradeDate": "2026-10-05",
+          "ticker": "AGMB",
+          "company": "Agomab Therapeutics Nv",
+          "detail": "Biological Products, (No Diagnostic Substances)",
+          "role": "3",
+          "tradeType": "P - Purchase",
+          "price": "$8.70",
+          "quantity": "+46,000",
+          "owned": "91,217",
+          "ownershipChange": "+102%",
+          "value": "+$399,970",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 8.7,
+          "quantityValue": 46000,
+          "tradeValue": 399970
+        },
         {
           "flags": "13 M",
           "filingDate": "2026-10-21 18:21:07",
@@ -211,28 +233,6 @@
           "priceValue": 5.72,
           "quantityValue": 174884,
           "tradeValue": 999999
-        },
-        {
-          "flags": "2 D",
-          "filingDate": "2026-10-13 18:12:28",
-          "tradeDate": "2026-10-13",
-          "ticker": "RTSN",
-          "company": "Retension Pharmaceuticals, Inc.",
-          "detail": "Pharmaceutical Preparations",
-          "role": "2",
-          "tradeType": "P - Purchase",
-          "price": "$12.00",
-          "quantity": "+30,800",
-          "owned": "486,924",
-          "ownershipChange": "+7%",
-          "value": "+$369,600",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 12,
-          "quantityValue": 30800,
-          "tradeValue": 369600
         }
       ]
     },
@@ -242,6 +242,28 @@
       "detailLabel": "Insider Name",
       "roleLabel": "Title",
       "rows": [
+        {
+          "flags": "",
+          "filingDate": "2026-10-22 08:14:43",
+          "tradeDate": "2026-10-21",
+          "ticker": "AGMB",
+          "company": "Agomab Therapeutics Nv",
+          "detail": "Epstein David R",
+          "role": "Dir",
+          "tradeType": "P - Purchase",
+          "price": "$8.88",
+          "quantity": "+10,000",
+          "owned": "25,000",
+          "ownershipChange": "+67%",
+          "value": "+$88,800",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 8.88,
+          "quantityValue": 10000,
+          "tradeValue": 88800
+        },
         {
           "flags": "",
           "filingDate": "2026-10-21 19:24:01",
@@ -439,28 +461,6 @@
           "priceValue": 166.26,
           "quantityValue": 299,
           "tradeValue": 49713
-        },
-        {
-          "flags": "",
-          "filingDate": "2026-10-21 16:11:39",
-          "tradeDate": "2026-10-20",
-          "ticker": "LEO",
-          "company": "Bny Mellon Strategic Municipals, Inc.",
-          "detail": "Saba Capital Management, L.P.",
-          "role": "10%",
-          "tradeType": "P - Purchase",
-          "price": "$5.72",
-          "quantity": "+7,724",
-          "owned": "6,436,358",
-          "ownershipChange": "0%",
-          "value": "+$44,181",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 5.72,
-          "quantityValue": 7724,
-          "tradeValue": 44181
         }
       ]
     },
@@ -928,6 +928,28 @@
       "rows": [
         {
           "flags": "",
+          "filingDate": "2026-10-22 08:14:43",
+          "tradeDate": "2026-10-21",
+          "ticker": "AGMB",
+          "company": "Agomab Therapeutics Nv",
+          "detail": "Epstein David R",
+          "role": "Dir",
+          "tradeType": "P - Purchase",
+          "price": "$8.88",
+          "quantity": "+10,000",
+          "owned": "25,000",
+          "ownershipChange": "+67%",
+          "value": "+$88,800",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 8.88,
+          "quantityValue": 10000,
+          "tradeValue": 88800
+        },
+        {
+          "flags": "",
           "filingDate": "2026-10-21 21:45:10",
           "tradeDate": "2026-10-16",
           "ticker": "ASPI",
@@ -1123,28 +1145,6 @@
           "priceValue": 8.88,
           "quantityValue": 300000,
           "tradeValue": 2664000
-        },
-        {
-          "flags": "D",
-          "filingDate": "2026-10-21 18:59:54",
-          "tradeDate": "2026-10-19",
-          "ticker": "SNOW",
-          "company": "Snowflake Inc.",
-          "detail": "Slootman Frank",
-          "role": "Dir",
-          "tradeType": "S - Sale+OE",
-          "price": "$316.43",
-          "quantity": "-300,000",
-          "owned": "229,053",
-          "ownershipChange": "-57%",
-          "value": "-$94,930,176",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 316.43,
-          "quantityValue": -300000,
-          "tradeValue": -94930176
         }
       ]
     }
