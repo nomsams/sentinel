@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-10-22T01:44:56.935Z",
-    "lastModified": "Thu, 22 Oct 2026 01:44:03 GMT",
+    "fetchedAt": "2026-10-22T07:03:44.718Z",
+    "lastModified": "Thu, 22 Oct 2026 02:01:35 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -928,6 +928,28 @@
       "rows": [
         {
           "flags": "",
+          "filingDate": "2026-10-21 21:45:10",
+          "tradeDate": "2026-10-16",
+          "ticker": "ASPI",
+          "company": "Asp Isotopes Inc.",
+          "detail": "Kiessling Heather",
+          "role": "CFO",
+          "tradeType": "S - Sale",
+          "price": "$2.19",
+          "quantity": "-21,830",
+          "owned": "1,504,422",
+          "ownershipChange": "-1%",
+          "value": "-$47,808",
+          "dayReturn": "",
+          "weekReturn": "",
+          "monthReturn": "",
+          "sixMonthReturn": "",
+          "priceValue": 2.19,
+          "quantityValue": -21830,
+          "tradeValue": -47808
+        },
+        {
+          "flags": "",
           "filingDate": "2026-10-21 21:41:12",
           "tradeDate": "2026-10-19",
           "ticker": "MAX",
@@ -1123,28 +1145,6 @@
           "priceValue": 316.43,
           "quantityValue": -300000,
           "tradeValue": -94930176
-        },
-        {
-          "flags": "DM",
-          "filingDate": "2026-10-21 18:36:06",
-          "tradeDate": "2026-10-19",
-          "ticker": "ADPT",
-          "company": "Adaptive Biotechnologies Corp",
-          "detail": "Rubinstein Julie",
-          "role": "Pres, COO",
-          "tradeType": "M - OptEx",
-          "price": "$12.14",
-          "quantity": "+35,643",
-          "owned": "377,802",
-          "ownershipChange": "+10%",
-          "value": "+$432,706",
-          "dayReturn": "",
-          "weekReturn": "",
-          "monthReturn": "",
-          "sixMonthReturn": "",
-          "priceValue": 12.14,
-          "quantityValue": 35643,
-          "tradeValue": 432706
         }
       ]
     }
