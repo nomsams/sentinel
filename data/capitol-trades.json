@@ -2,7 +2,7 @@
   "source": {
     "provider": "Capitol Trades",
     "url": "https://www.capitoltrades.com/trades?txType=buy&txType=sell&pageSize=96&page=1&txDate=90d",
-    "fetchedAt": "2026-10-23T04:57:30.324Z",
+    "fetchedAt": "2026-10-23T11:44:49.477Z",
     "window": "90 days",
     "transactionTypes": [
       "buy",
@@ -10,8 +10,8 @@
     ],
     "pageSize": 96,
     "pagesFetched": 19,
-    "reportedCount": 1760,
-    "rowCount": 1760,
+    "reportedCount": 1761,
+    "rowCount": 1761,
     "updateIntervalHours": 6
   },
   "columns": [
@@ -53,6 +53,45 @@
     }
   ],
   "trades": [
+    {
+      "id": "10000066925",
+      "politicianId": "A000383",
+      "politicianName": "Alan Armstrong",
+      "firstName": "Alan",
+      "lastName": "Armstrong",
+      "nickname": null,
+      "party": "republican",
+      "chamber": "senate",
+      "state": "ok",
+      "dateOfBirth": "1962-07-11",
+      "gender": "male",
+      "issuerId": 435909,
+      "issuerName": "The Williams Cos Inc",
+      "issuerTicker": "WMB:US",
+      "issuerState": "ok",
+      "issuerCountry": "us",
+      "sector": "energy",
+      "publishedAt": "2026-10-23T04:31:13Z",
+      "publishedDisplay": "04:31 Today",
+      "tradedAt": "2026-09-08",
+      "tradedDisplay": "8 Sept 2026",
+      "reportingGap": 44,
+      "filedAfterDisplay": "44 days",
+      "owner": "joint",
+      "ownerDisplay": "Joint",
+      "type": "sell",
+      "typeExtended": null,
+      "typeDisplay": "sell",
+      "sizeDisplay": "250K–500K",
+      "estimatedValue": 375000,
+      "price": 75.83,
+      "priceDisplay": "$75.83",
+      "comment": null,
+      "politicianUrl": "/politicians/A000383",
+      "issuerUrl": "/issuers/435909",
+      "tradeUrl": "/trades/10000066925",
+      "sourcePage": 1
+    },
     {
       "id": "10000066924",
       "politicianId": "B001236",
@@ -2781,7 +2820,7 @@
       "politicianUrl": "/politicians/M001157",
       "issuerUrl": "/issuers/434554",
       "tradeUrl": "/trades/20003803668",
-      "sourcePage": 1
+      "sourcePage": 2
     },
     {
       "id": "20003803667",
@@ -8436,7 +8475,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/431323",
       "tradeUrl": "/trades/20003803514",
-      "sourcePage": 2
+      "sourcePage": 3
     },
     {
       "id": "20003803513",
@@ -9762,7 +9801,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/433279",
       "tradeUrl": "/trades/20003803480",
-      "sourcePage": 7
+      "sourcePage": 8
     },
     {
       "id": "20003803479",
@@ -13506,7 +13545,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431156",
       "tradeUrl": "/trades/20003803384",
-      "sourcePage": 6
+      "sourcePage": 7
     },
     {
       "id": "20003803383",
@@ -17250,7 +17289,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431539",
       "tradeUrl": "/trades/20003803288",
-      "sourcePage": 5
+      "sourcePage": 6
     },
     {
       "id": "20003803287",
@@ -20994,7 +21033,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/431405",
       "tradeUrl": "/trades/20003803192",
-      "sourcePage": 4
+      "sourcePage": 5
     },
     {
       "id": "20003803191",
@@ -24738,7 +24777,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/434373",
       "tradeUrl": "/trades/20003803096",
-      "sourcePage": 3
+      "sourcePage": 4
     },
     {
       "id": "20003803095",
@@ -29067,7 +29106,7 @@
       "politicianUrl": "/politicians/H001086",
       "issuerUrl": "/issuers/2332671",
       "tradeUrl": "/trades/20003802990",
-      "sourcePage": 8
+      "sourcePage": 9
     },
     {
       "id": "20003802989",
@@ -35697,7 +35736,7 @@
       "politicianUrl": "/politicians/H001082",
       "issuerUrl": "/issuers/431181",
       "tradeUrl": "/trades/20003802853",
-      "sourcePage": 9
+      "sourcePage": 10
     },
     {
       "id": "20003802852",
@@ -37023,7 +37062,7 @@
       "politicianUrl": "/politicians/P000608",
       "issuerUrl": "/issuers/435544",
       "tradeUrl": "/trades/20003802819",
-      "sourcePage": 10
+      "sourcePage": 11
     },
     {
       "id": "20003802818",
@@ -40494,7 +40533,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/433577",
       "tradeUrl": "/trades/20003802738",
-      "sourcePage": 11
+      "sourcePage": 12
     },
     {
       "id": "20003802737",
@@ -43068,7 +43107,7 @@
       "politicianUrl": "/politicians/M001232",
       "issuerUrl": "/issuers/433387",
       "tradeUrl": "/trades/20003802672",
-      "sourcePage": 12
+      "sourcePage": 13
     },
     {
       "id": "20003802671",
@@ -50322,7 +50361,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/430279",
       "tradeUrl": "/trades/20003802511",
-      "sourcePage": 14
+      "sourcePage": 15
     },
     {
       "id": "20003802510",
@@ -54066,7 +54105,7 @@
       "politicianUrl": "/politicians/K000389",
       "issuerUrl": "/issuers/435282",
       "tradeUrl": "/trades/20003802415",
-      "sourcePage": 13
+      "sourcePage": 14
     },
     {
       "id": "20003802414",
@@ -56250,7 +56289,7 @@
       "politicianUrl": "/politicians/C001123",
       "issuerUrl": "/issuers/2334825",
       "tradeUrl": "/trades/20003802295",
-      "sourcePage": 15
+      "sourcePage": 16
     },
     {
       "id": "20003802284",
@@ -59448,7 +59487,7 @@
       "politicianUrl": "/politicians/B001277",
       "issuerUrl": "/issuers/2335532",
       "tradeUrl": "/trades/10000066795",
-      "sourcePage": 16
+      "sourcePage": 17
     },
     {
       "id": "10000066794",
@@ -63738,7 +63777,7 @@
       "politicianUrl": "/politicians/M001234",
       "issuerUrl": "/issuers/2335530",
       "tradeUrl": "/trades/20003802231",
-      "sourcePage": 17
+      "sourcePage": 18
     },
     {
       "id": "20003802230",
@@ -67404,7 +67443,7 @@
       "politicianUrl": "/politicians/H001086",
       "issuerUrl": "/issuers/431489",
       "tradeUrl": "/trades/20003801795",
-      "sourcePage": 18
+      "sourcePage": 19
     },
     {
       "id": "20003801794",
