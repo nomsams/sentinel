@@ -2,7 +2,7 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-10-27T03:38:54.895Z",
+    "fetchedAt": "2026-10-27T09:34:42.917Z",
     "lastModified": "Tue, 27 Oct 2026 02:01:02 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
