@@ -5,11 +5,11 @@
       "https://en.wikipedia.org/wiki/List_of_United_States_House_of_Representatives_committees",
       "https://en.wikipedia.org/wiki/List_of_United_States_Senate_committees"
     ],
-    "fetchedAt": "2026-11-06T12:29:32.521Z",
+    "fetchedAt": "2026-11-07T11:20:44.014Z",
     "congress": 119,
     "committeeCount": 46,
     "memberCount": 620,
-    "assignmentCount": 1381,
+    "assignmentCount": 1382,
     "updateIntervalHours": 24
   },
   "members": [
@@ -11901,6 +11901,11 @@
       "state": "NY",
       "memberUrl": "https://en.wikipedia.org/wiki/Tom_Suozzi",
       "committees": [
+        {
+          "name": "Strategic Competition between the United States and the Chinese Communist Party (Select)",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Select_Committee_on_Strategic_Competition_between_the_United_States_and_the_Chinese_Communist_Party",
+          "role": "Member"
+        },
         {
           "name": "Ways and Means",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Ways_and_Means",
