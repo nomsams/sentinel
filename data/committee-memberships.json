@@ -5,11 +5,11 @@
       "https://en.wikipedia.org/wiki/List_of_United_States_House_of_Representatives_committees",
       "https://en.wikipedia.org/wiki/List_of_United_States_Senate_committees"
     ],
-    "fetchedAt": "2026-11-15T12:17:16.970Z",
-    "congress": 120,
+    "fetchedAt": "2026-11-16T13:09:58.602Z",
+    "congress": 119,
     "committeeCount": 46,
-    "memberCount": 622,
-    "assignmentCount": 1381,
+    "memberCount": 620,
+    "assignmentCount": 1382,
     "updateIntervalHours": 24
   },
   "members": [
@@ -863,6 +863,11 @@
         {
           "name": "Intelligence (Permanent Select)",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Permanent_Select_Committee_on_Intelligence",
+          "role": "Member"
+        },
+        {
+          "name": "Rules",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
           "role": "Member"
         }
       ]
@@ -2975,20 +2980,6 @@
       ]
     },
     {
-      "name": "Deb Ross",
-      "normalizedName": "deb ross",
-      "chamber": "house",
-      "state": "NC",
-      "memberUrl": "https://en.wikipedia.org/wiki/Deb_Ross",
-      "committees": [
-        {
-          "name": "Rules",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
-          "role": "Member"
-        }
-      ]
-    },
-    {
       "name": "Debbie Dingell",
       "normalizedName": "debbie dingell",
       "chamber": "house",
@@ -3749,6 +3740,11 @@
         {
           "name": "Energy and Commerce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Energy_and_Commerce",
+          "role": "Member"
+        },
+        {
+          "name": "Rules",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
           "role": "Member"
         }
       ]
@@ -4522,20 +4518,6 @@
         {
           "name": "Education and Workforce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Education_and_Workforce",
-          "role": "Member"
-        }
-      ]
-    },
-    {
-      "name": "J.D Ford",
-      "normalizedName": "j d ford",
-      "chamber": "house",
-      "state": "IN",
-      "memberUrl": "https://en.wikipedia.org/wiki/J.D_Ford",
-      "committees": [
-        {
-          "name": "Rules",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
           "role": "Member"
         }
       ]
@@ -5462,7 +5444,7 @@
         {
           "name": "Rules",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
-          "role": "Chair"
+          "role": "Ranking Member"
         }
       ]
     },
@@ -7292,11 +7274,6 @@
           "name": "Judiciary",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
-        },
-        {
-          "name": "Rules",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
-          "role": "Member"
         }
       ]
     },
@@ -8816,6 +8793,11 @@
           "name": "House Administration",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_House_Administration",
           "role": "Member"
+        },
+        {
+          "name": "Rules",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
+          "role": "Member"
         }
       ]
     },
@@ -9044,6 +9026,11 @@
         {
           "name": "Oversight and Government Reform",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Oversight_and_Reform",
+          "role": "Member"
+        },
+        {
+          "name": "Rules",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
           "role": "Member"
         }
       ]
@@ -12312,7 +12299,7 @@
         {
           "name": "Rules",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
-          "role": "Ranking Member"
+          "role": "Chair"
         }
       ]
     },
