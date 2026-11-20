@@ -5,14 +5,42 @@
       "https://en.wikipedia.org/wiki/List_of_United_States_House_of_Representatives_committees",
       "https://en.wikipedia.org/wiki/List_of_United_States_Senate_committees"
     ],
-    "fetchedAt": "2026-11-19T13:55:54.301Z",
+    "fetchedAt": "2026-11-20T13:38:00.115Z",
     "congress": 119,
     "committeeCount": 46,
-    "memberCount": 620,
-    "assignmentCount": 1382,
+    "memberCount": 648,
+    "assignmentCount": 1369,
     "updateIntervalHours": 24
   },
   "members": [
+    {
+      "name": "2020 special election held to replace retiring U.S. senator",
+      "normalizedName": "2020 special election held to replace retiring u s senator",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/2020%E2%80%9321_United_States_Senate_special_election_in_Georgia",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "a series",
+      "normalizedName": "a series",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Category%3AUnited_States_House_of_Representatives",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
     {
       "name": "Aaron Bean",
       "normalizedName": "aaron bean",
@@ -495,6 +523,20 @@
       ]
     },
     {
+      "name": "Andrew Johnson",
+      "normalizedName": "andrew johnson",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Andrew_Johnson",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Andy Barr",
       "normalizedName": "andy barr",
       "chamber": "house",
@@ -525,11 +567,6 @@
       "state": "AZ",
       "memberUrl": "https://en.wikipedia.org/wiki/Andy_Biggs",
       "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
         {
           "name": "Oversight and Government Reform",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Oversight_and_Reform",
@@ -753,6 +790,20 @@
       ]
     },
     {
+      "name": "articles of impeachment",
+      "normalizedName": "articles of impeachment",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Articles_of_impeachment",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Ashley Hinson",
       "normalizedName": "ashley hinson",
       "chamber": "house",
@@ -935,11 +986,6 @@
           "name": "Agriculture",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Agriculture",
           "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
         }
       ]
     },
@@ -953,11 +999,6 @@
         {
           "name": "Budget",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Budget",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -982,11 +1023,6 @@
         {
           "name": "Intelligence (Permanent Select)",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Permanent_Select_Committee_on_Intelligence",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -1160,6 +1196,20 @@
       ]
     },
     {
+      "name": "Bill Clinton",
+      "normalizedName": "bill clinton",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Bill_Clinton",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Bill Foster",
       "normalizedName": "bill foster",
       "chamber": "house",
@@ -1279,6 +1329,20 @@
       ]
     },
     {
+      "name": "Blue slip",
+      "normalizedName": "blue slip",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Blue_slip_(U.S._House_of_Representatives)",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Bob Brady",
       "normalizedName": "bob brady",
       "chamber": "joint",
@@ -1288,6 +1352,20 @@
         {
           "name": "Joint Committee on Printing",
           "url": "https://en.wikipedia.org/wiki/Joint_Committee_on_Printing",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "Bob Goodlatte",
+      "normalizedName": "bob goodlatte",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Bob_Goodlatte",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -1316,11 +1394,6 @@
         {
           "name": "Education and Workforce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Education_and_Workforce",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         },
         {
@@ -1410,11 +1483,6 @@
           "role": "Member"
         },
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Transportation and Infrastructure",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Transportation_and_Infrastructure",
           "role": "Member"
@@ -1469,11 +1537,6 @@
         {
           "name": "Budget",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Budget",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         },
         {
@@ -1741,6 +1804,20 @@
       ]
     },
     {
+      "name": "by seniority",
+      "normalizedName": "by seniority",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Seniority_in_the_United_States_House_of_Representatives",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Byron Donalds",
       "normalizedName": "byron donalds",
       "chamber": "house",
@@ -1897,11 +1974,6 @@
         {
           "name": "Budget",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Budget",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         },
         {
@@ -2205,11 +2277,6 @@
       "memberUrl": "https://en.wikipedia.org/wiki/Chuy_Garc%C3%ADa",
       "committees": [
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Transportation and Infrastructure",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Transportation_and_Infrastructure",
           "role": "Member"
@@ -2360,6 +2427,20 @@
       ]
     },
     {
+      "name": "Closed session",
+      "normalizedName": "closed session",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Closed_session_of_the_United_States_Congress",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Cory Booker",
       "normalizedName": "cory booker",
       "chamber": "senate",
@@ -2493,11 +2574,6 @@
         {
           "name": "Homeland Security",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Homeland_Security",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -2671,11 +2747,6 @@
           "name": "Foreign Affairs",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Foreign_Affairs",
           "role": "Vice Chair"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
         },
         {
           "name": "Science, Space and Technology",
@@ -3032,20 +3103,6 @@
       ]
     },
     {
-      "name": "Deborah K. Ross",
-      "normalizedName": "deborah k ross",
-      "chamber": "house",
-      "state": null,
-      "memberUrl": "https://en.wikipedia.org/wiki/Deborah_Ross_(politician)",
-      "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        }
-      ]
-    },
-    {
       "name": "Deborah Ross",
       "normalizedName": "deborah ross",
       "chamber": "house",
@@ -3084,6 +3141,20 @@
       ]
     },
     {
+      "name": "Democratic Caucus",
+      "normalizedName": "democratic caucus",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/House_Democratic_Caucus",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Derek Kilmer",
       "normalizedName": "derek kilmer",
       "chamber": "joint",
@@ -3107,11 +3178,6 @@
         {
           "name": "Armed Services",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Armed_Services",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         },
         {
@@ -3335,6 +3401,20 @@
       ]
     },
     {
+      "name": "Donald Trump",
+      "normalizedName": "donald trump",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Donald_Trump",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Doris Matsui",
       "normalizedName": "doris matsui",
       "chamber": "house",
@@ -3344,6 +3424,20 @@
         {
           "name": "Energy and Commerce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Energy_and_Commerce",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "Doug Collins",
+      "normalizedName": "doug collins",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Doug_Collins_(politician)",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -3712,11 +3806,6 @@
           "name": "Homeland Security",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Homeland_Security",
           "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
         }
       ]
     },
@@ -3992,6 +4081,20 @@
       ]
     },
     {
+      "name": "General ticket",
+      "normalizedName": "general ticket",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/General_ticket",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "George Latimer",
       "normalizedName": "george latimer",
       "chamber": "house",
@@ -4082,11 +4185,6 @@
         {
           "name": "Education and Workforce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Education_and_Workforce",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         },
         {
@@ -4416,11 +4514,6 @@
       "memberUrl": "https://en.wikipedia.org/wiki/Hank_Johnson",
       "committees": [
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Transportation and Infrastructure",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Transportation_and_Infrastructure",
           "role": "Member"
@@ -4434,11 +4527,6 @@
       "state": "WY",
       "memberUrl": "https://en.wikipedia.org/wiki/Harriet_Hageman",
       "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
         {
           "name": "Natural Resources",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Natural_Resources",
@@ -4504,6 +4592,20 @@
       ]
     },
     {
+      "name": "Huntington–Hill method",
+      "normalizedName": "huntington hill method",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Huntington%E2%80%93Hill_method",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Ilhan Omar",
       "normalizedName": "ilhan omar",
       "chamber": "house",
@@ -4518,6 +4620,62 @@
         {
           "name": "Education and Workforce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Education_and_Workforce",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "in 1867",
+      "normalizedName": "in 1867",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/First_impeachment_inquiry_against_Andrew_Johnson",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "in 1974",
+      "normalizedName": "in 1974",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Impeachment_process_against_Richard_Nixon",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "in 1998",
+      "normalizedName": "in 1998",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Impeachment_inquiry_against_Bill_Clinton",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "in 2019",
+      "normalizedName": "in 2019",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Impeachment_inquiry_against_Donald_Trump",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -4784,20 +4942,6 @@
     {
       "name": "Jamie Raskin",
       "normalizedName": "jamie raskin",
-      "chamber": "house",
-      "state": null,
-      "memberUrl": "https://en.wikipedia.org/wiki/Jamie_Raskin",
-      "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        }
-      ]
-    },
-    {
-      "name": "Jamie Raskin",
-      "normalizedName": "jamie raskin",
       "chamber": "joint",
       "state": "MD",
       "memberUrl": "https://en.wikipedia.org/wiki/Jamie_Raskin",
@@ -4886,11 +5030,6 @@
           "name": "Foreign Affairs",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Foreign_Affairs",
           "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
         }
       ]
     },
@@ -4901,11 +5040,6 @@
       "state": "TX",
       "memberUrl": "https://en.wikipedia.org/wiki/Jasmine_Crockett",
       "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
         {
           "name": "Oversight and Government Reform",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Oversight_and_Reform",
@@ -5112,11 +5246,6 @@
       "memberUrl": "https://en.wikipedia.org/wiki/Jeff_Van_Drew",
       "committees": [
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Transportation and Infrastructure",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Transportation_and_Infrastructure",
           "role": "Member"
@@ -5190,7 +5319,7 @@
       "normalizedName": "jerrold nadler",
       "chamber": "house",
       "state": null,
-      "memberUrl": "https://en.wikipedia.org/wiki/Jerry_Nadler",
+      "memberUrl": "https://en.wikipedia.org/wiki/Jerrold_Nadler",
       "committees": [
         {
           "name": "Judiciary",
@@ -5388,11 +5517,6 @@
       "state": "OH",
       "memberUrl": "https://en.wikipedia.org/wiki/Jim_Jordan",
       "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
         {
           "name": "Oversight and Government Reform",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Oversight_and_Reform",
@@ -5637,11 +5761,6 @@
       "memberUrl": "https://en.wikipedia.org/wiki/Joe_Neguse",
       "committees": [
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Natural Resources",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Natural_Resources",
           "role": "Member"
@@ -5773,6 +5892,20 @@
         {
           "name": "Appropriations",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Appropriations",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "John Conyers",
+      "normalizedName": "john conyers",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/John_Conyers",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -6118,6 +6251,20 @@
       ]
     },
     {
+      "name": "Johnny Isakson",
+      "normalizedName": "johnny isakson",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Johnny_Isakson",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Johnny Olszewski",
       "normalizedName": "johnny olszewski",
       "chamber": "house",
@@ -6437,6 +6584,20 @@
       ]
     },
     {
+      "name": "judicial system",
+      "normalizedName": "judicial system",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Judicial_system",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Judy Chu",
       "normalizedName": "judy chu",
       "chamber": "house",
@@ -6730,11 +6891,6 @@
           "role": "Member"
         },
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Transportation and Infrastructure",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Transportation_and_Infrastructure",
           "role": "Member"
@@ -6890,11 +7046,6 @@
           "name": "Armed Services",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Armed_Services",
           "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
         }
       ]
     },
@@ -6971,20 +7122,6 @@
           "name": "House Administration",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_House_Administration",
           "role": "Vice Chair"
-        }
-      ]
-    },
-    {
-      "name": "Laurel M. Lee",
-      "normalizedName": "laurel m lee",
-      "chamber": "house",
-      "state": null,
-      "memberUrl": "https://en.wikipedia.org/wiki/Laurel_Lee",
-      "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
         }
       ]
     },
@@ -7250,11 +7387,6 @@
           "name": "Homeland Security",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Homeland_Security",
           "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
         }
       ]
     },
@@ -7268,11 +7400,6 @@
         {
           "name": "Education and Workforce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Education_and_Workforce",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -7688,11 +7815,6 @@
           "name": "Education and Workforce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Education_and_Workforce",
           "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
         }
       ]
     },
@@ -7985,11 +8107,6 @@
       "memberUrl": "https://en.wikipedia.org/wiki/Mary_Gay_Scanlon",
       "committees": [
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Rules",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Rules",
           "role": "Member"
@@ -8188,11 +8305,6 @@
         {
           "name": "Foreign Affairs",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Foreign_Affairs",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -9140,6 +9252,20 @@
       ]
     },
     {
+      "name": "Origination Clause",
+      "normalizedName": "origination clause",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Origination_Clause",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Pablo Hernández Rivera",
       "normalizedName": "pablo hernandez rivera",
       "chamber": "house",
@@ -9407,6 +9533,20 @@
       ]
     },
     {
+      "name": "Plural district",
+      "normalizedName": "plural district",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Plural_district",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Pramila Jayapal",
       "normalizedName": "pramila jayapal",
       "chamber": "house",
@@ -9422,7 +9562,16 @@
           "name": "Foreign Affairs",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Foreign_Affairs",
           "role": "Member"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Quorum call",
+      "normalizedName": "quorum call",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Quorum_call",
+      "committees": [
         {
           "name": "Judiciary",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
@@ -9646,6 +9795,20 @@
       ]
     },
     {
+      "name": "Republican Conference",
+      "normalizedName": "republican conference",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/House_Republican_Conference",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Rich McCormick",
       "normalizedName": "rich mccormick",
       "chamber": "house",
@@ -9760,6 +9923,20 @@
         {
           "name": "Joint Committee on Taxation",
           "url": "https://en.wikipedia.org/wiki/Joint_Committee_on_Taxation",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "Richard Nixon",
+      "normalizedName": "richard nixon",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Richard_Nixon",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -10355,6 +10532,20 @@
       ]
     },
     {
+      "name": "Rules suspension",
+      "normalizedName": "rules suspension",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Suspension_of_the_rules_in_the_United_States_Congress",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Russ Fulcher",
       "normalizedName": "russ fulcher",
       "chamber": "house",
@@ -10383,11 +10574,6 @@
         {
           "name": "Energy and Commerce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Energy_and_Commerce",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -10564,6 +10750,20 @@
       ]
     },
     {
+      "name": "Saxbe fix",
+      "normalizedName": "saxbe fix",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Saxbe_fix",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
+          "role": "Member"
+        }
+      ]
+    },
+    {
       "name": "Saxby Chambliss",
       "normalizedName": "saxby chambliss",
       "chamber": "joint",
@@ -10625,11 +10825,6 @@
         {
           "name": "Financial Services",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Financial_Services",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -10706,6 +10901,20 @@
         {
           "name": "Joint Economic Committee",
           "url": "https://en.wikipedia.org/wiki/Joint_Economic_Committee",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "Self-executing rule",
+      "normalizedName": "self executing rule",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Self-executing_rule",
+      "committees": [
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -11024,11 +11233,6 @@
           "role": "Member"
         },
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Transportation and Infrastructure",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Transportation_and_Infrastructure",
           "role": "Member"
@@ -11131,11 +11335,6 @@
         {
           "name": "Education and Workforce",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Education_and_Workforce",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         },
         {
@@ -11245,11 +11444,6 @@
         {
           "name": "Foreign Affairs",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Foreign_Affairs",
-          "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -11428,11 +11622,6 @@
           "name": "Foreign Affairs",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Foreign_Affairs",
           "role": "Member"
-        },
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
         }
       ]
     },
@@ -11557,11 +11746,6 @@
       "state": "KY",
       "memberUrl": "https://en.wikipedia.org/wiki/Thomas_Massie",
       "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
         {
           "name": "Transportation and Infrastructure",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Transportation_and_Infrastructure",
@@ -11883,11 +12067,6 @@
           "role": "Member"
         },
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Natural Resources",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Natural_Resources",
           "role": "Member"
@@ -11920,11 +12099,6 @@
       "state": "WI",
       "memberUrl": "https://en.wikipedia.org/wiki/Tom_Tiffany",
       "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
         {
           "name": "Natural Resources",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Natural_Resources",
@@ -12131,13 +12305,36 @@
       "memberUrl": "https://en.wikipedia.org/wiki/Troy_Nehls",
       "committees": [
         {
+          "name": "Transportation and Infrastructure",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Transportation_and_Infrastructure",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "name": "Un-American Activities",
+      "normalizedName": "un american activities",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/House_Un-American_Activities_Committee",
+      "committees": [
+        {
           "name": "Judiciary",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Unanimous consent",
+      "normalizedName": "unanimous consent",
+      "chamber": "house",
+      "state": null,
+      "memberUrl": "https://en.wikipedia.org/wiki/Unanimous_consent",
+      "committees": [
         {
-          "name": "Transportation and Infrastructure",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Transportation_and_Infrastructure",
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -12354,11 +12551,6 @@
       "memberUrl": "https://en.wikipedia.org/wiki/Wesley_Hunt",
       "committees": [
         {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
-        {
           "name": "Natural Resources",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Natural_Resources",
           "role": "Member"
@@ -12477,11 +12669,6 @@
       "state": "CA",
       "memberUrl": "https://en.wikipedia.org/wiki/Zoe_Lofgren",
       "committees": [
-        {
-          "name": "Judiciary",
-          "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_the_Judiciary",
-          "role": "Member"
-        },
         {
           "name": "Science, Space and Technology",
           "url": "https://en.wikipedia.org/wiki/United_States_House_Committee_on_Science%2C_Space%2C_and_Technology",
