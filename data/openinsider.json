@@ -2,8 +2,8 @@
   "source": {
     "provider": "OpenInsider",
     "url": "http://openinsider.com/",
-    "fetchedAt": "2026-11-23T02:12:23.841Z",
-    "lastModified": "Sat, 21 Nov 2026 03:16:38 GMT",
+    "fetchedAt": "2026-11-23T10:59:46.188Z",
+    "lastModified": "Mon, 23 Nov 2026 08:05:21 GMT",
     "updateIntervalMinutes": 30,
     "rowCount": 50
   },
@@ -37,26 +37,26 @@
           "tradeValue": 5066953
         },
         {
-          "flags": "7",
+          "flags": "5",
           "filingDate": "2026-11-20 17:43:13",
           "tradeDate": "2026-11-20",
           "ticker": "TTMI",
           "company": "Ttm Technologies Inc",
           "detail": "Printed Circuit Boards",
-          "role": "4",
+          "role": "3",
           "tradeType": "P - Purchase",
-          "price": "$84.36",
-          "quantity": "+50,000",
-          "owned": "377,198",
-          "ownershipChange": "+15%",
-          "value": "+$4,218,141",
+          "price": "$73.60",
+          "quantity": "+35,000",
+          "owned": "277,043",
+          "ownershipChange": "+14%",
+          "value": "+$2,575,941",
           "dayReturn": "",
           "weekReturn": "",
           "monthReturn": "",
           "sixMonthReturn": "",
-          "priceValue": 84.36,
-          "quantityValue": 50000,
-          "tradeValue": 4218141
+          "priceValue": 73.6,
+          "quantityValue": 35000,
+          "tradeValue": 2575941
         },
         {
           "flags": "4 D",
