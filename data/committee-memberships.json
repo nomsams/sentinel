@@ -5,11 +5,11 @@
       "https://en.wikipedia.org/wiki/List_of_United_States_House_of_Representatives_committees",
       "https://en.wikipedia.org/wiki/List_of_United_States_Senate_committees"
     ],
-    "fetchedAt": "2026-11-25T14:59:10.985Z",
+    "fetchedAt": "2026-11-26T14:29:41.797Z",
     "congress": 119,
     "committeeCount": 46,
     "memberCount": 648,
-    "assignmentCount": 1369,
+    "assignmentCount": 1373,
     "updateIntervalHours": 24
   },
   "members": [
@@ -231,7 +231,7 @@
       "normalizedName": "alan armstrong",
       "chamber": "senate",
       "state": "OK",
-      "memberUrl": "https://en.wikipedia.org/wiki/Alan_Armstrong",
+      "memberUrl": "https://en.wikipedia.org/wiki/Alan_S._Armstrong",
       "committees": [
         {
           "name": "Health, Education, Labor and Pensions",
@@ -7180,8 +7180,18 @@
       "memberUrl": "https://en.wikipedia.org/wiki/Lindsey_Graham",
       "committees": [
         {
+          "name": "Appropriations",
+          "url": "https://en.wikipedia.org/wiki/United_States_Senate_Committee_on_Appropriations",
+          "role": "Member"
+        },
+        {
           "name": "Environment and Public Works",
           "url": "https://en.wikipedia.org/wiki/United_States_Senate_Committee_on_Environment_and_Public_Works",
+          "role": "Member"
+        },
+        {
+          "name": "Judiciary",
+          "url": "https://en.wikipedia.org/wiki/United_States_Senate_Committee_on_the_Judiciary",
           "role": "Member"
         }
       ]
@@ -7992,6 +8002,16 @@
       "state": "OK",
       "memberUrl": "https://en.wikipedia.org/wiki/Markwayne_Mullin",
       "committees": [
+        {
+          "name": "Appropriations",
+          "url": "https://en.wikipedia.org/wiki/United_States_Senate_Committee_on_Appropriations",
+          "role": "Member"
+        },
+        {
+          "name": "Health, Education, Labor and Pensions",
+          "url": "https://en.wikipedia.org/wiki/United_States_Senate_Committee_on_Health%2C_Education%2C_Labor_and_Pensions",
+          "role": "Member"
+        },
         {
           "name": "Indian Affairs (Permanent Select)",
           "url": "https://en.wikipedia.org/wiki/United_States_Senate_Committee_on_Indian_Affairs",
